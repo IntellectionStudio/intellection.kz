@@ -1,24 +1,40 @@
-import React, {PropTypes} from 'react';
-import Helmet from 'react-helmet';
+/* @flow */
 
-const DefaultHeadMeta = (props, {metadata: {pkg}}) => (
+import Helmet from 'react-helmet';
+import React, {PropTypes} from 'react';
+
+type PropsType = {|
+  meta?: Array<Object>,
+  scripts?: Array<Object>,
+|};
+type ContextType = {|
+  metadata: Phenomic$Metadata,
+|};
+
+const DefaultHeadMeta = (
+  {meta, scripts}: PropsType,
+  {metadata: {pkg}}: ContextType,
+) => (
   <div hidden>
     <Helmet
       meta={[
         {
           name: 'generator',
-          content: `${process.env.PHENOMIC_NAME} ${process.env.PHENOMIC_VERSION}`,
+          content: `${process.env.PHENOMIC_NAME || ''} ${process.env.PHENOMIC_VERSION || ''}`,
         },
         {property: 'og:site_name', content: pkg.name},
-        {name: 'twitter:site', content: `@${pkg.twitter}`},
-        ...(props.meta ? props.meta : []),
+        {
+          name: 'twitter:site',
+          content: `@${pkg.twitter}`,
+        },
+        ...(meta || []),
       ]}
       script={[
         {
           src: 'https://cdn.polyfill.io/v2/polyfill.min.js' +
             '?features=es6&flags=gated',
         },
-        ...(props.scripts ? props.scripts : []),
+        ...(scripts || []),
       ]}
     />
 
@@ -34,11 +50,6 @@ const DefaultHeadMeta = (props, {metadata: {pkg}}) => (
     <style>{'@-ms-viewport { width: device-width; }'}</style>
   </div>
 );
-
-DefaultHeadMeta.propTypes = {
-  meta: React.PropTypes.arrayOf(React.PropTypes.object),
-  scripts: React.PropTypes.arrayOf(React.PropTypes.object),
-};
 
 DefaultHeadMeta.contextTypes = {
   metadata: PropTypes.object.isRequired,

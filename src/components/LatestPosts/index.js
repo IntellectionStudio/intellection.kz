@@ -1,18 +1,31 @@
-import React, {PropTypes} from 'react';
-import enhanceCollection from 'phenomic/lib/enhance-collection';
+/* @flow */
 
-import PagesList from '../../components/PagesList';
+import enhanceCollection from 'phenomic/lib/enhance-collection';
+import React, {PropTypes} from 'react';
+
+import PagesList from 'components/PagesList';
+import type {PostType} from 'types';
 
 import styles from './index.css';
 
-const defaultNumberOfPosts = 6;
+const DEFAULT_NUMBER_OF_POSTS = 6;
 
-const LatestPosts = (props, {collection}) => {
+type PropsType = {|
+  numberOfPosts?: number,
+|};
+type ContextType = {|
+  collection: Array<PostType>,
+|};
+
+const LatestPosts = (
+  {numberOfPosts = DEFAULT_NUMBER_OF_POSTS}: PropsType,
+  {collection}: ContextType,
+) => {
   const latestPosts = enhanceCollection(collection, {
     filter: {layout: 'Post'},
     sort: 'date',
     reverse: true,
-  }).slice(0, props.numberOfPosts || defaultNumberOfPosts);
+  }).slice(0, numberOfPosts);
 
   return (
     <div>
@@ -22,10 +35,6 @@ const LatestPosts = (props, {collection}) => {
       <PagesList pages={latestPosts} />
     </div>
   );
-};
-
-LatestPosts.propTypes = {
-  numberOfPosts: PropTypes.number,
 };
 
 LatestPosts.contextTypes = {

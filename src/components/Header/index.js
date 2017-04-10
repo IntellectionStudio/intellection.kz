@@ -1,13 +1,18 @@
-import React, {PropTypes} from 'react';
+/* @flow */
+
 import {Link} from 'phenomic';
+import React, {PropTypes} from 'react';
 import Svg from 'react-svg-inline';
 
-import twitterSvg from '../icons/iconmonstr-twitter-1.svg';
 import gitHubSvg from '../icons/iconmonstr-github-1.svg';
-
 import styles from './index.css';
+import twitterSvg from '../icons/iconmonstr-twitter-1.svg';
 
-const Header = (props, {metadata: {pkg}}) => (
+type ContextType = {|
+  metadata: Phenomic$Metadata,
+|};
+
+const Header = (props: Object, {metadata: {pkg}}: ContextType) => (
   <header className={styles.header}>
     <nav className={styles.nav}>
       <div className={styles.navPart1}>

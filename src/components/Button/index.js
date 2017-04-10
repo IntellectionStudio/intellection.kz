@@ -1,14 +1,30 @@
-import React, {PropTypes} from 'react';
+/* @flow */
+
 import cx from 'classnames';
+import React from 'react';
 
 import styles from './index.css';
 
-const Button = ({className, secondary, light, big, ...otherProps}) => (
+type PropsType = {|
+  className?: string,
+  secondary?: boolean,
+  light?: boolean,
+  big?: boolean,
+|};
+
+const Button = (
+  {
+    className,
+    secondary = false,
+    light = false,
+    big = false,
+    ...otherProps
+  }: PropsType,
+) => (
   <span
     role="button"
     {...otherProps}
-    className={cx({
-      [className]: className,
+    className={cx(className, {
       [styles.button]: true,
       [styles.secondary]: secondary,
       [styles.light]: light,
@@ -16,14 +32,6 @@ const Button = ({className, secondary, light, big, ...otherProps}) => (
     })}
   />
 );
-
-Button.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  secondary: PropTypes.bool,
-  light: PropTypes.bool,
-  big: PropTypes.bool,
-};
 
 Button.displayName = 'Button';
 

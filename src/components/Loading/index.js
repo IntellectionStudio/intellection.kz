@@ -1,5 +1,7 @@
-import React from 'react';
+/* @flow */
+
 import Helmet from 'react-helmet';
+import React from 'react';
 import TopBarProgressIndicator from 'react-topbar-progress-indicator';
 
 import styles from './index.css';

@@ -1,15 +1,17 @@
-import React, {PropTypes} from 'react';
+/* @flow */
+
+import React from 'react';
 
 import styles from './index.css';
 
-const Content = props => (
+type PropsType = {|
+  children?: React$Element<any>,
+|};
+
+const Content = ({children}: PropsType) => (
   <div className={styles.content}>
-    {props.children}
+    {children}
   </div>
 );
-
-Content.propTypes = {
-  children: PropTypes.node,
-};
 
 export default Content;

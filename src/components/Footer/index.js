@@ -1,3 +1,5 @@
+/* @flow */
+
 import React from 'react';
 
 import styles from './index.css';
@@ -12,7 +14,7 @@ const Footer = () => (
       >
         {'Website generated with '}
         <span className={styles.phenomicReferenceName}>
-          {`<${process.env.PHENOMIC_NAME} />`}
+          {`<${process.env.PHENOMIC_NAME || ''} />`}
         </span>
       </a>
     </p>

@@ -1,11 +1,19 @@
-import React, {PropTypes} from 'react';
+/* @flow */
+
 import {Link} from 'phenomic';
+import React from 'react';
 
 import Button from '../../components/Button';
-
 import styles from './index.css';
 
-const PagePreview = ({__url, title, date, description}) => {
+type PropsType = {|
+  __url: string,
+  title: string,
+  date?: string,
+  description?: string,
+|};
+
+const PagePreview = ({__url, title, date, description}: PropsType) => {
   const pageDate = date ? new Date(date) : null;
 
   return (
@@ -28,13 +36,6 @@ const PagePreview = ({__url, title, date, description}) => {
       </Link>
     </div>
   );
-};
-
-PagePreview.propTypes = {
-  __url: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  date: PropTypes.string,
-  description: PropTypes.string,
 };
 
 export default PagePreview;

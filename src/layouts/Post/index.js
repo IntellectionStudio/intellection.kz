@@ -1,11 +1,17 @@
-import React, {PropTypes} from 'react';
+/* @flow */
 
-import LatestPosts from '../../components/LatestPosts';
-import Page from '../Page';
+import React from 'react';
+
+import LatestPosts from 'components/LatestPosts';
+import Page from 'layouts/Page';
 
 import styles from './index.css';
 
-const Post = props => {
+type PropsType = {|
+  head: Object,
+|};
+
+const Post = (props: PropsType) => {
   // it's up to you to choose what to do with this layout ;)
   const pageDate = props.head.date ? new Date(props.head.date) : null;
 
@@ -27,10 +33,6 @@ const Post = props => {
       <LatestPosts />
     </Page>
   );
-};
-
-Post.propTypes = {
-  head: PropTypes.object.isRequired,
 };
 
 export default Post;

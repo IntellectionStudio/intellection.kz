@@ -1,10 +1,22 @@
-import React, {PropTypes} from 'react';
+/* @flow */
 
-import Page from '../Page';
+import React from 'react';
+
+import Page from 'layouts/Page';
 
 import styles from './index.css';
 
-const PageError = ({error, errorText}) => (
+const ERROR_NOT_FOUND_CODE = 404;
+
+type PropsType = {
+  error?: number | string,
+  errorText?: string,
+};
+
+const PageError = (
+  // $FlowFixMe
+  {error = ERROR_NOT_FOUND_CODE, errorText = 'Page Not Found'}: PropsType,
+) => (
   <Page
     head={{
       // hero credit: https://www.flickr.com/photos/mypubliclands/16101654539/
@@ -19,7 +31,7 @@ const PageError = ({error, errorText}) => (
           {' '}
           {errorText}
         </p>
-        {error === 404 &&
+        {error === ERROR_NOT_FOUND_CODE &&
           <div>
             {'It seems you found a broken link. '}
             {'Sorry about that. '}
@@ -30,15 +42,5 @@ const PageError = ({error, errorText}) => (
     </div>
   </Page>
 );
-
-PageError.propTypes = {
-  error: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  errorText: PropTypes.string,
-};
-
-PageError.defaultProps = {
-  error: 404,
-  errorText: 'Page Not Found',
-};
 
 export default PageError;
