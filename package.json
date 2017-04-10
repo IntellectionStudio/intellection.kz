@@ -8,10 +8,10 @@
   "scripts": {
     "lint:js": "eslint --fix .",
     "lint:css": "stylelint \"src/**/*.css\"",
-    "lint": "npm-run-all --parallel typecheck lint:*",
+    "lint": "npm-run-all --parallel lint:*",
     "typecheck": "flow check .",
     "pretest": "npm run lint",
-    "test": "npm run build",
+    "test": "npm-run-all --parallel typecheck lint",
     "commitmsg": "validate-commit-msg",
     "precommit": "lint-staged",
     "prepush": "npm test",
