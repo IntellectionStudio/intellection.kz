@@ -2,3 +2,4 @@ scripts/
 dist/
 flow-typed/
 !.eslintrc.js
+webpack.config.js
