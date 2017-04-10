@@ -1,0 +1,14 @@
+# OS X
+.DS_Store*
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# npm
+node_modules
+*.log
+
+# phenomic build
+dist
