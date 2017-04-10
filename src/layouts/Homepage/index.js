@@ -5,7 +5,11 @@ import React from 'react';
 import LatestPosts from 'components/LatestPosts';
 import Page from 'layouts/Page';
 
-const Homepage = (props: Object) => (
+type PropsType = {
+  head: Object,
+};
+
+const Homepage = (props: PropsType) => (
   <Page {...props}>
     <LatestPosts />
   </Page>

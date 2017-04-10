@@ -3,15 +3,12 @@
 import {Link} from 'phenomic';
 import React from 'react';
 
+import type {PostType} from 'types';
+
 import Button from '../../components/Button';
 import styles from './index.css';
 
-type PropsType = {|
-  __url: string,
-  title: string,
-  date?: string,
-  description?: string,
-|};
+type PropsType = PostType & {};
 
 const PagePreview = ({__url, title, date, description}: PropsType) => {
   const pageDate = date ? new Date(date) : null;

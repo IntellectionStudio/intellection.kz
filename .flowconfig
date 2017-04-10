@@ -6,6 +6,9 @@
 .*/node_modules/.*/tests/
 .*/node_modules/babel.*/
 .*/node_modules/fbjs/
+.*/node_modules/phenomic/
+.*/node_modules/react-topbar-progress-indicator/
+.*/node_modules/stylelint/
 <PROJECT_ROOT>/dist/
 
 [libs]
