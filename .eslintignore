@@ -1,0 +1,4 @@
+scripts/
+dist/
+flow-typed/
+!.eslintrc.js

@@ -1,19 +1,7 @@
-# [Phenomic](https://github.com/MoOx/phenomic) phenomic-theme-base
+# intellection.kz
 
-## Install dependencies
+🚧 WIP
 
-```sh
-npm install
-```
+## LICENSE
 
-## Run development server
-
-```sh
-npm start
-```
-
-## Build for production
-
-```sh
-npm run build
-```
+Copyright (c) 2017 IntellectionStudio, LLC. All rights reserved.

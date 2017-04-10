@@ -1,16 +1,18 @@
-import React from "react"
-import { Route } from "react-router"
-import { PageContainer as PhenomicPageContainer } from "phenomic"
+/* @flow */
 
-import AppContainer from "./AppContainer"
-import Page from "./layouts/Page"
-import PageError from "./layouts/PageError"
-import Homepage from "./layouts/Homepage"
-import Post from "./layouts/Post"
+import React from 'react';
+import {Route} from 'react-router';
+import {PageContainer as PhenomicPageContainer} from 'phenomic';
 
-const PageContainer = (props) => (
+import AppContainer from './AppContainer';
+import Page from './layouts/Page';
+import PageError from './layouts/PageError';
+import Homepage from './layouts/Homepage';
+import Post from './layouts/Post';
+
+const PageContainer = (props: Object) => (
   <PhenomicPageContainer
-    { ...props }
+    {...props}
     layouts={{
       Page,
       PageError,
@@ -18,10 +20,10 @@ const PageContainer = (props) => (
       Post,
     }}
   />
-)
+);
 
 export default (
-  <Route component={ AppContainer }>
-    <Route path="*" component={ PageContainer } />
+  <Route component={AppContainer}>
+    <Route path="*" component={PageContainer} />
   </Route>
-)
+);

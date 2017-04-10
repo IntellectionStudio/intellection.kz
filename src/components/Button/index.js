@@ -1,21 +1,21 @@
-import React, { PropTypes } from "react"
-import cx from "classnames"
+import React, {PropTypes} from 'react';
+import cx from 'classnames';
 
-import styles from "./index.css"
+import styles from './index.css';
 
-const Button = ({ className, secondary, light, big, ...otherProps }) => (
+const Button = ({className, secondary, light, big, ...otherProps}) => (
   <span
     role="button"
-    { ...otherProps }
-    className={ cx({
+    {...otherProps}
+    className={cx({
       [className]: className,
       [styles.button]: true,
       [styles.secondary]: secondary,
       [styles.light]: light,
       [styles.big]: big,
-    }) }
+    })}
   />
-)
+);
 
 Button.propTypes = {
   children: PropTypes.node,
@@ -23,8 +23,8 @@ Button.propTypes = {
   secondary: PropTypes.bool,
   light: PropTypes.bool,
   big: PropTypes.bool,
-}
+};
 
-Button.displayName = "Button"
+Button.displayName = 'Button';
 
-export default Button
+export default Button;

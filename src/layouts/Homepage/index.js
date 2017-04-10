@@ -1,14 +1,12 @@
-import React from "react"
+import React from 'react';
 
-import LatestPosts from "../../components/LatestPosts"
-import Page from "../Page"
+import LatestPosts from '../../components/LatestPosts';
+import Page from '../Page';
 
-const Homepage = (props) => {
-  return (
-    <Page { ...props }>
-      <LatestPosts />
-    </Page>
-  )
-}
+const Homepage = props => (
+  <Page {...props}>
+    <LatestPosts />
+  </Page>
+);
 
-export default Homepage
+export default Homepage;
