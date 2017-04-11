@@ -2,7 +2,7 @@
   "name": "intellection",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://github.com/IntellectionStudio/intellection.kz",
+  "homepage": "https://intellection.netlify.com",
   "repository": "IntellectionStudio/intellection.kz",
   "license": "GPL-3.0",
   "scripts": {
@@ -71,6 +71,18 @@
           "babel-preset-es2015",
           "babel-preset-stage-0",
           "babel-preset-react"
+        ],
+        "plugins": [
+          "babel-plugin-syntax-flow",
+          "babel-plugin-transform-flow-strip-types",
+          [
+            "babel-plugin-module-resolver",
+            {
+              "root": [
+                "./src"
+              ]
+            }
+          ]
         ]
       },
       "webpack-development": {
@@ -114,6 +126,18 @@
           "babel-preset-stage-0",
           "babel-preset-es2015",
           "babel-preset-react"
+        ],
+        "plugins": [
+          "babel-plugin-syntax-flow",
+          "babel-plugin-transform-flow-strip-types",
+          [
+            "babel-plugin-module-resolver",
+            {
+              "root": [
+                "./src"
+              ]
+            }
+          ]
         ]
       }
     }
