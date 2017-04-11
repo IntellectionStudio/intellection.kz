@@ -1,5 +1,6 @@
 /* @flow */
 
+import {FormattedMessage} from 'react-intl';
 import {Link} from 'phenomic';
 import React, {PropTypes} from 'react';
 import Svg from 'react-svg-inline';
@@ -17,7 +18,7 @@ const Header = (props: Object, {metadata: {pkg}}: ContextType) => (
     <nav className={styles.nav}>
       <div className={styles.navPart1}>
         <Link className={styles.link} to={'/'}>
-          {'Home'}
+          <FormattedMessage id="header.title" />
         </Link>
       </div>
       <div className={styles.navPart2}>

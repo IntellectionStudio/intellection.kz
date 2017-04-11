@@ -149,6 +149,7 @@
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-helmet": "^5.0.2",
+    "react-intl": "^2.2.3",
     "react-router": "^2.3.0",
     "react-svg-inline": "^1.2.0",
     "react-topbar-progress-indicator": "^1.0.0",
