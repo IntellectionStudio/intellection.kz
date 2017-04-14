@@ -1,12 +1,18 @@
+import {StyleSheet} from "aphrodite"
+import phenomicClient from 'phenomic/lib/client';
+
 // hot loading HRM Patch
 import 'react-hot-loader/patch';
 // fetch polyfill
 import 'whatwg-fetch';
-import phenomicClient from 'phenomic/lib/client';
 
 import metadata from '../src/metadata.js';
 import routes from '../src/routes.js';
 import store from '../src/store.js';
+
+if (window._aphrodite) {
+  StyleSheet.rehydrate(window._aphrodite)
+}
 
 phenomicClient({metadata, routes, store});
 
