@@ -6,12 +6,14 @@ import flattenObject from 'utils/flattenObject';
 
 const locales = ['ru', 'en'];
 
-locales.forEach((locale: string) => // $FlowFixMe
-  addLocaleData(require(`react-intl/locale-data/${locale}`))); // eslint-disable-line import/no-dynamic-require, global-require
+/* eslint-disable import/no-dynamic-require, global-require */
+locales.forEach((locale: string) =>
+  addLocaleData(require(`react-intl/locale-data/${locale}`)),
+);
 
-const getMessages = (
-  locale: string, // $FlowFixMe
-) => flattenObject(require(`../locales/${locale}.json`)); // eslint-disable-line import/no-dynamic-require, global-require
+const getMessages = (locale: string) =>
+  flattenObject(require(`../locales/${locale}.json`));
+/* eslint-enable import/no-dynamic-require, global-require */
 
 const getIntlForLocale = (localeCandidate: string) => {
   const locale = locales.includes(localeCandidate)

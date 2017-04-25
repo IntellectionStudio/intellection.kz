@@ -12,15 +12,13 @@ type PropsType = {|
   big?: boolean,
 |};
 
-const Button = (
-  {
-    className,
-    secondary = false,
-    light = false,
-    big = false,
-    ...otherProps
-  }: PropsType,
-) => (
+const Button = ({
+  className,
+  secondary = false,
+  light = false,
+  big = false,
+  ...otherProps
+}: PropsType) => (
   <span
     role="button"
     {...otherProps}
