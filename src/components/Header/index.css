@@ -6,7 +6,7 @@
 .header {
   height: var(--header-height);
   width: 100%;
-  background-color: var(--header-bg-color);
+  background-color: #51A9F2;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -19,15 +19,16 @@
 }
 
 .logo {
+  composes: grow from 'tachyons/src/_hovers.css';
   max-height: 100%;
   max-width: 100%;
 }
 
 .burgerContainer {
-
 }
 
 .burger {
+  composes: grow from 'tachyons/src/_hovers.css';
   font-size: 1.5rem;
   color: white;
   min-width: 48px;

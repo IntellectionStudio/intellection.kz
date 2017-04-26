@@ -65,7 +65,10 @@ export default (config = {}) => {
         {
           test: /\.css$/,
           exclude: /\.global\.css$/,
-          include: path.resolve(__dirname, "src"),
+          include: [
+            path.resolve(__dirname, "src"),
+            path.resolve(__dirname, "src", "tachyons", "src")
+          ],
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
             use: [
@@ -118,7 +121,10 @@ export default (config = {}) => {
           // depending on your need, you might need to scope node_modules
           // for global CSS if you want to keep CSS Modules by default
           // for your own CSS. If so, uncomment the line below
-          include: path.resolve(__dirname, "node_modules"),
+          include: [
+            path.resolve(__dirname, "node_modules", "normalize.css"),
+            path.resolve(__dirname, "node_modules", "tachyons", "css")
+          ],
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
             use: [
