@@ -1,5 +1,5 @@
 module.exports = config => [
-  // require('stylelint')({}),
+  require('stylelint')({}),
   require('postcss-cssnext')({
     browsers: 'last 2 versions',
     features: {

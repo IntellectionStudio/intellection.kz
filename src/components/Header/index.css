@@ -1,12 +1,12 @@
 :root {
   --header-height: 80px;
-  --header-bg-color: #51A9F2;
+  --header-bg-color: #51a9f2;
 }
 
 .header {
   height: var(--header-height);
   width: 100%;
-  background-color: #51A9F2;
+  background-color: var(--header-bg-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -25,6 +25,7 @@
 }
 
 .burgerContainer {
+  margin-right: 8px;
 }
 
 .burger {
@@ -32,5 +33,5 @@
   font-size: 1.5rem;
   color: white;
   min-width: 48px;
-  min-height:48px;
+  min-height: 48px;
 }
