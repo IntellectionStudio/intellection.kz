@@ -1,15 +1,16 @@
 /* @flow */
 
 import React from 'react';
+import {Link} from 'phenomic';
 
 import styles from './index.css';
 import logo from './logo.png';
 
 const Header = () => (
   <header className={styles.header}>
-    <div className={styles.logoContainer}>
+    <Link className={styles.logoLink} to="/">
       <img className={styles.logo} src={logo} alt="Logo" />
-    </div>
+    </Link>
     <div className={styles.burgerContainer}>
       <button className={styles.burger}>☰</button>
     </div>
