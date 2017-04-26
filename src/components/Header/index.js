@@ -11,9 +11,11 @@ const Header = () => (
     <Link className={styles.logoLink} to="/">
       <img className={styles.logo} src={logo} alt="Logo" />
     </Link>
-    <div className={styles.burgerContainer}>
-      <button className={styles.burger}>☰</button>
-    </div>
+    <a className={styles.burger}>
+      <span className={styles.bar} />
+      <span className={styles.barMid} />
+      <span className={styles.bar} />
+    </a>
   </header>
 );
 
