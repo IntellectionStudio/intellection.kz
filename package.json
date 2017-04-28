@@ -38,11 +38,14 @@
     "extends": "stylelint-config-standard",
     "rules": {
       "max-empty-lines": 2,
-      "property-no-unknown": [ true, {
-        "ignoreProperties": [
-          "composes"
-        ]
-      }]
+      "property-no-unknown": [
+        true,
+        {
+          "ignoreProperties": [
+            "composes"
+          ]
+        }
+      ]
     }
   },
   "#babel": "webpack-(development|production) are useful for webpack 2, otherwise use development|production",
