@@ -1,12 +1,9 @@
 /* @flow */
 
-import {BodyContainer, joinUri, Link} from 'phenomic';
+import {joinUri} from 'phenomic';
 import Helmet from 'react-helmet';
 import React, {PropTypes} from 'react';
 import warning from 'warning';
-
-import Button from 'components/Button';
-import Loading from 'components/Loading';
 
 import styles from './index.css';
 
@@ -71,33 +68,8 @@ const Page = (
   return (
     <div className={styles.page}>
       <Helmet title={metaTitle} meta={meta} />
-      {
-        <div
-          className={styles.hero}
-          style={
-            head.hero && {
-              background: `#111 url(${head.hero}) 50% 50% / cover`,
-            }
-          }
-        >
-          <div className={styles.header}>
-            <div className={styles.wrapper}>
-              <h1 className={styles.heading}>{head.title}</h1>
-              {head.cta &&
-                <Link to={head.cta.link}>
-                  <Button className={styles.cta} light {...head.cta.props}>
-                    {head.cta.label}
-                  </Button>
-                </Link>}
-            </div>
-          </div>
-        </div>
-      }
-      <div className={`${styles.wrapper} ${styles.pageContent}`}>
+      <div className={styles.wrapper}>
         {header}
-        <div className={styles.body}>
-          {isLoading ? <Loading /> : <BodyContainer>{body}</BodyContainer>}
-        </div>
         {children}
         {footer}
       </div>
