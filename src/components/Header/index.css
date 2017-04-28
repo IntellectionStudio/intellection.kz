@@ -1,12 +1,11 @@
 :root {
   --header-height: 80px;
-  --header-bg-color: #51a9f2;
 }
 
 .header {
   height: var(--header-height);
   width: 100%;
-  background-color: var(--header-bg-color);
+  background-color: var(--colorPrimary);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
