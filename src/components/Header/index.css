@@ -1,9 +1,9 @@
 :root {
-  --header-height: 80px;
+  --headerHeight: 80px;
 }
 
 .header {
-  height: var(--header-height);
+  height: var(--headerHeight);
   width: 100%;
   background-color: var(--colorPrimary);
   display: flex;
