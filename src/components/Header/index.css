@@ -2,15 +2,22 @@
   --headerHeight: 80px;
 }
 
-.header {
+.headerWrapper {
   height: var(--headerHeight);
   width: 100%;
   background-color: var(--colorPrimary);
+}
+
+.header {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 0 36px;
+  max-width: 992px;
+  margin: 0 auto;
 }
 
 .logoLink {
@@ -22,6 +29,49 @@
   composes: grow from 'tachyons/src/_hovers.css';
   max-height: 100%;
   max-width: 100%;
+}
+
+.nav {
+  display: none;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 16px;
+}
+
+.navItem {
+  margin-left: 2.25rem;
+}
+
+.about {
+  composes: navItem;
+}
+
+.development {
+  composes: navItem;
+}
+
+.startups {
+  composes: navItem;
+}
+
+.courses {
+  composes: navItem;
+}
+
+.courses {
+  composes: navItem;
+}
+
+.knowledge {
+  composes: navItem;
+}
+
+.videos {
+  composes: navItem;
+}
+
+.blog {
+  composes: navItem;
 }
 
 .burger {
@@ -47,4 +97,20 @@
 .barMid {
   composes: bar;
   margin: 4.5px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .headerWrapper {
+    height: 6rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .burger {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
 }
