@@ -22,25 +22,25 @@
   text-align: center;
 }
 
-.content-item {
+.contentItem {
   width: 100%;
 }
 
 .heading {
-  composes: content-item;
+  composes: contentItem;
   font-size: 1.3rem;
   font-weight: normal;
   margin: 0;
 }
 
 .description {
-  composes: content-item;
+  composes: contentItem;
   margin-top: 8px;
   margin-bottom: 65px;
   z-index: 1;
 }
 
 .buttonWrapper {
-  composes: content-item;
+  composes: contentItem;
   z-index: 1;
 }
