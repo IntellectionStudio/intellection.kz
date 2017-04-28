@@ -8,5 +8,4 @@
   flex-direction: column;
   align-self: center;
   width: 100%;
-  max-width: var(--maxWidth);
 }
