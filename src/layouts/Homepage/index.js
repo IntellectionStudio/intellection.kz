@@ -3,7 +3,7 @@
 import React from 'react';
 
 import Page from 'layouts/Page';
-import BackgroundVideo from 'components/BackgroundVideo';
+import HeroVideo from 'components/HeroVideo';
 import Card from 'components/Card';
 
 import styles from './index.css';
@@ -14,7 +14,7 @@ type PropsType = {
 
 const Homepage = (props: PropsType) => (
   <Page {...props}>
-    <BackgroundVideo />
+    <HeroVideo />
     <div className={styles.additionalServices}>
       <Card />
       <Card />
