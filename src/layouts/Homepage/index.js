@@ -15,7 +15,7 @@ type PropsType = {
 const Homepage = (props: PropsType) => (
   <Page {...props}>
     <HeroVideo />
-    <div className={styles.additionalServices}>
+    <div className={styles.heroModule}>
       <Card />
       <Card />
       <Card />
