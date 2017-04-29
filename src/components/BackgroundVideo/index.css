@@ -1,0 +1,47 @@
+.backgroundVideoWrapper {
+  height: 420px;
+  background: var(--colorPrimary) linear-gradient(var(--colorPrimary), var(--colorPrimaryLight));
+}
+
+.background {
+  opacity: 0.2;
+  height: 100%;
+
+  /* background: url("./videoPlaceholder.png") center no-repeat; */
+}
+
+.backgroundVideo {
+  display: none;
+}
+
+.content {
+  margin-top: -340px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.contentItem {
+  width: 100%;
+}
+
+.heading {
+  composes: contentItem;
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.description {
+  composes: contentItem;
+  margin-top: 8px;
+  margin-bottom: 65px;
+  z-index: 1;
+}
+
+.buttonWrapper {
+  composes: contentItem;
+  z-index: 1;
+}
