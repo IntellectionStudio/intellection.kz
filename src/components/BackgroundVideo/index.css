@@ -12,6 +12,7 @@
 
 .backgroundVideo {
   display: none;
+  height: 100%;
 }
 
 .content {
@@ -44,4 +45,10 @@
 .buttonWrapper {
   composes: contentItem;
   z-index: 1;
+}
+
+@media screen and (min-width: 480px) {
+  .backgroundVideo {
+    display: block;
+  }
 }
