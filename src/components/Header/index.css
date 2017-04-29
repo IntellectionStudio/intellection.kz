@@ -39,7 +39,12 @@
 }
 
 .navItem {
+  composes: grow from 'tachyons/src/_hovers.css';
   margin-left: 2.25rem;
+}
+
+.navItem:hover {
+  text-decoration: none;
 }
 
 .about {
