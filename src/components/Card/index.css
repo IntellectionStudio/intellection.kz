@@ -34,6 +34,7 @@
 }
 
 .heading {
+  padding: 0;
   font-size: 18px;
   font-weight: normal;
   margin: 18px 20px 11px 0;
@@ -43,4 +44,34 @@
   font-size: 14px;
   margin: 0 20px 0 0;
   line-height: normal;
+}
+
+@media screen and (min-width: 48rem) {
+  .root {
+    padding: 0;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  .root:first-child {
+    margin-left: 12px;
+    margin-right: 0;
+  }
+
+  .root:last-child {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
+  .image {
+    margin-right: 12px;
+  }
+
+  .heading {
+    margin: 8px 8px 8px 0;
+  }
+
+  .detail {
+    margin-right: 8px;
+  }
 }

@@ -15,7 +15,7 @@ const Card = () => (
       <div>
         <h6 className={styles.heading}>Услуги разработки</h6>
         <p className={styles.detail}>
-          I have hinted that I would often jerk poor Queequeg from between.
+          I have hinted that I would often jerk poor Queequeg
         </p>
       </div>
     </a>
