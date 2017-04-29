@@ -1,5 +1,9 @@
+:root {
+  --video-height: 420px;
+}
+
 .backgroundVideoWrapper {
-  height: 420px;
+  height: var(--video-height);
   background: var(--colorPrimary) linear-gradient(var(--colorPrimary), var(--colorPrimaryLight));
 }
 
