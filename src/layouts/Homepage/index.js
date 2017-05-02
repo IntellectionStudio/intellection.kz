@@ -14,11 +14,13 @@ type PropsType = {
 
 const Homepage = (props: PropsType) => (
   <Page {...props}>
-    <HeroVideo />
-    <div className={styles.cards}>
-      <Card />
-      <Card />
-      <Card />
+    <div className={styles.hero}>
+      <HeroVideo />
+      <div className={styles.cards}>
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   </Page>
 );

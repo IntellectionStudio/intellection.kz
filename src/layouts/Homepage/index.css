@@ -9,3 +9,17 @@
     padding: 0 0.75rem;
   }
 }
+
+@media screen and (min-width: 62rem) {
+  .cards {
+    height: 30rem;
+    width: 32.20339%;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

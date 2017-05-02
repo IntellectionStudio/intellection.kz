@@ -51,7 +51,13 @@
   z-index: 1;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30rem) {
+  .backgroundVideoWrapper {
+    width: 66.10169%;
+    height: 30rem;
+    margin-right: 1.69492%;
+  }
+
   .backgroundVideo {
     display: block;
   }
