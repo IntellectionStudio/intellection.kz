@@ -1,7 +1,6 @@
 .root {
   height: 7.5rem;
   margin-top: 1.5rem;
-  float: left;
   display: block;
   width: 100%;
   padding: 0 22px;
@@ -50,18 +49,12 @@
 @media screen and (min-width: 48rem) {
   .root {
     padding: 0;
-    margin-left: 6px;
-    margin-right: 6px;
+    margin-right: 1.69492%;
+    width: 32.20339%;
   }
 
-  .root:first-child {
-    margin-left: 12px;
+  .root:nth-child(3n) {
     margin-right: 0;
-  }
-
-  .root:last-child {
-    margin-left: 0;
-    margin-right: 12px;
   }
 
   .image {
