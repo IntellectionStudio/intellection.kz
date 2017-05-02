@@ -3,9 +3,8 @@
   margin-top: 1.5rem;
   float: left;
   display: block;
-  margin-right: 1.69492%;
   width: 100%;
-  padding: 0 1.5rem;
+  padding: 0 22px;
 }
 
 .container {
@@ -34,16 +33,18 @@
 }
 
 .heading {
+  color: #303234;
   padding: 0;
   font-size: 18px;
   font-weight: normal;
-  margin: 18px 20px 11px 0;
+  margin: 18px 10px 11px 0;
 }
 
 .detail {
+  color: #747e80;
   font-size: 14px;
-  margin: 0 20px 0 0;
-  line-height: normal;
+  margin: 0 20px 10px 0;
+  line-height: 1rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -68,10 +69,13 @@
   }
 
   .heading {
-    margin: 8px 8px 8px 0;
+    margin-left: 1px;
+    font-size: 13px;
+    line-height: normal;
   }
 
   .detail {
-    margin-right: 8px;
+    margin-left: 1px;
+    font-size: 10px;
   }
 }
