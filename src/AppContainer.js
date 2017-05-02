@@ -11,7 +11,6 @@ import getIntlForLocale from 'utils/getIntlForLocale';
 import Header from 'components/Header';
 
 import 'normalize.css/normalize.css';
-import 'tachyons/css/tachyons.css';
 import './index.global.css';
 import './highlight.global.css';
 
