@@ -4,6 +4,29 @@
   display: block;
   width: 100%;
   padding: 0 22px;
+
+  @media screen and (min-width: 48rem) {
+    padding: 0;
+    margin-right: 1.69492%;
+    width: 32.20339%;
+  }
+
+  @media screen and (min-width: 62rem) {
+    width: 100%;
+    height: 9rem;
+  }
+}
+
+.root:nth-child(3n) {
+  @media screen and (min-width: 48rem) {
+    margin-right: 0;
+  }
+}
+
+.root:first-child {
+  @media screen and (min-width: 62rem) {
+    margin-top: 0;
+  }
 }
 
 .container {
@@ -26,9 +49,17 @@
 .image {
   border-bottom-left-radius: 0.375rem;
   border-top-left-radius: 0.375rem;
-  height: 7.5rem;
+  height: 100%;
   width: auto;
   margin-right: 27px;
+
+  @media screen and (min-width: 48rem) {
+    margin-right: 12px;
+  }
+
+  @media screen and (min-width: 62rem) {
+    margin-right: 27px;
+  }
 }
 
 .heading {
@@ -37,6 +68,16 @@
   font-size: 18px;
   font-weight: normal;
   margin: 18px 10px 11px 0;
+
+  @media screen and (min-width: 48rem) {
+    margin-left: 1px;
+    font-size: 13px;
+    line-height: normal;
+  }
+
+  @media screen and (min-width: 62rem) {
+    font-size: 18px;
+  }
 }
 
 .detail {
@@ -44,42 +85,13 @@
   font-size: 14px;
   margin: 0 20px 10px 0;
   line-height: 1rem;
-}
 
-@media screen and (min-width: 48rem) {
-  .root {
-    padding: 0;
-    margin-right: 1.69492%;
-    width: 32.20339%;
-  }
-
-  .root:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  .image {
-    margin-right: 12px;
-  }
-
-  .heading {
-    margin-left: 1px;
-    font-size: 13px;
-    line-height: normal;
-  }
-
-  .detail {
+  @media screen and (min-width: 48rem) {
     margin-left: 1px;
     font-size: 10px;
   }
-}
 
-@media screen and (min-width: 62rem) {
-  .root {
-    width: 100%;
-    height: 9rem;
-  }
-
-  .root:first-child {
-    margin-top: 0;
+  @media screen and (min-width: 62rem) {
+    font-size: 14px;
   }
 }
