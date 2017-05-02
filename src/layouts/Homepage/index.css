@@ -1,11 +1,11 @@
-.heroModule {
+.cards {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
 @media screen and (min-width: 48rem) {
-  .heroModule {
-    flex-wrap: nowrap;
+  .cards {
+    padding: 0 0.75rem;
   }
 }
