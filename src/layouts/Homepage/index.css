@@ -1,3 +1,7 @@
+.hero {
+  z-index: 1000;
+}
+
 .cards {
   width: 100%;
   display: flex;

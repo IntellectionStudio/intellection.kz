@@ -6,6 +6,7 @@
   height: var(--headerHeight);
   width: 100%;
   background-color: var(--colorPrimary);
+  z-index: 10000;
 }
 
 .header {
