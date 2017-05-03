@@ -1,5 +1,7 @@
 .hero {
   z-index: 1000;
+  max-width: 62rem;
+  margin: 0 auto;
 }
 
 .cards {
