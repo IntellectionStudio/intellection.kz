@@ -2,6 +2,12 @@
   z-index: 1000;
   max-width: 62rem;
   margin: 0 auto;
+
+  @media screen and (min-width: 62rem) {
+    display: flex;
+    flex-wrap: wrap;
+    height: 660px;
+  }
 }
 
 .cards {
@@ -9,29 +15,21 @@
   display: flex;
   flex-wrap: wrap;
   background: #fff;
-}
 
-@media screen and (min-width: 48rem) {
-  .cards {
+  @media screen and (min-width: 48rem) {
     padding: 0 0.75rem;
   }
-}
 
-@media screen and (min-width: 62rem) {
-  .cards {
+  @media screen and (min-width: 62rem) {
     height: 30rem;
     width: 32.20339%;
     flex-direction: column;
     padding-left: 0;
     background: transparent;
   }
+}
 
-  .hero {
-    display: flex;
-    flex-wrap: wrap;
-    height: 660px;
-  }
-
+@media screen and (min-width: 62rem) {
   .hero::before {
     content: '';
     width: 100%;
