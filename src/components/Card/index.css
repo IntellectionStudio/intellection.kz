@@ -65,9 +65,17 @@
 .heading {
   color: #303234;
   padding: 0;
-  font-size: 18px;
-  font-weight: normal;
   margin: 18px 10px 11px 0;
+  margin-left: 1px;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+
+  @media screen and (min-width: 375px) {
+    font-size: 18px;
+    margin: 18px 10px 11px 0;
+    line-height: 1rem;
+  }
 
   @media screen and (min-width: 48rem) {
     margin-left: 1px;
