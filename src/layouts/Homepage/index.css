@@ -1,6 +1,6 @@
 .hero {
   z-index: 1000;
-  max-width: 62rem;
+  max-width: 73.75rem;
   margin: 0 auto;
 
   @media screen and (min-width: 62rem) {
@@ -26,6 +26,10 @@
     flex-direction: column;
     padding-left: 0;
     background: transparent;
+  }
+
+  @media screen and (min-width: 73.75rem) {
+    padding-right: 0;
   }
 }
 
