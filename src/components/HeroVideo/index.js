@@ -28,7 +28,7 @@ const HeroVideo = () => (
           <img
             alt="Play Video"
             className={styles.playIcon}
-            src="https://d125fmws0bore1.cloudfront.net/assets/svgs/icon-video-white-b3c98bb05b8833c23892d0d4fc626582c3c32146b147ef4417ea159b80ace033.svg"
+            src="/assets/play.png"
           />
         </div>
       </a>
