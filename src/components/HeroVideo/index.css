@@ -147,9 +147,8 @@
 
 .playIcon {
   composes: grow from 'tachyons/src/_hovers.css';
-  width: 48px;
 
   @media screen and (min-width: 30rem) {
-    width: 60px;
+    width: 125px;
   }
 }
