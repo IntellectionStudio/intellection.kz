@@ -10,30 +10,6 @@
   }
 }
 
-.cards {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  background: #fff;
-
-  @media screen and (min-width: 48rem) {
-    padding: 0 0.75rem;
-  }
-
-  @media screen and (min-width: 62rem) {
-    height: 30rem;
-    width: 32.20339%;
-    flex-direction: column;
-    padding-left: 0;
-    background: transparent;
-  }
-
-  @media screen and (min-width: 73.75rem) {
-    padding-right: 0;
-    padding-left: 2rem;
-  }
-}
-
 @media screen and (min-width: 62rem) {
   .hero::before {
     content: '';
@@ -48,5 +24,31 @@
     /* transform-origin: left bottom; */
 
     /* transform: skew(0deg, -15deg); */
+  }
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding-bottom: 1.875rem;
+
+  @media screen and (min-width: 48rem) {
+    padding: 0 0.75rem 1.875rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    height: 30rem;
+    width: 32.20339%;
+    flex-direction: column;
+    padding-left: 0;
+    padding-bottom: 0;
+    background: transparent;
+  }
+
+  @media screen and (min-width: 73.75rem) {
+    padding-right: 0;
+    padding-left: 2rem;
   }
 }
