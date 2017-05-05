@@ -21,6 +21,23 @@ const Homepage = (props: PropsType) => (
         <Card />
         <Card />
       </div>
+      <div className={styles.startupsWrapper}>
+        <div className={styles.title}>
+          <h1 className={styles.titleHeading}>Наши стартапы</h1>
+          <p className={styles.titleDescription}>
+            Then going through some small strange motions with it—whether indispensable to the
+          </p>
+        </div>
+        <div className={styles.startup}>
+          <div className={styles.startupPicture} />
+          <div className={styles.startupInfo}>
+            <h2 className={styles.startupTitle}>Qazaq App</h2>
+            <p className={styles.startupDescription}>
+              Приложение по изучению казахского языка
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </Page>
 );
