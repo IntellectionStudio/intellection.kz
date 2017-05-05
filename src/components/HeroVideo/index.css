@@ -130,25 +130,48 @@
 
 .overlayHeading {
   margin-top: 0;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
+  margin-bottom: 0;
+  font-size: 1.5rem;
   line-height: 2.25rem;
   color: #fff;
   font-weight: 300;
 
   @media screen and (min-width: 48rem) {
-    margin-bottom: 2.25rem;
+    font-size: 1.75rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    font-size: 2.5rem;
   }
 }
 
 .overlayDescription {
   color: #fff;
+  margin-top: 0.5rem;
+
+  @media screen and (min-width: 48rem) {
+    font-size: 1.125rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    margin-top: 1rem;
+  }
 }
 
 .playIcon {
   composes: grow from 'tachyons/src/_hovers.css';
+  margin-top: 3.25rem;
 
   @media screen and (min-width: 30rem) {
     width: 125px;
+  }
+
+  @media screen and (min-width: 48rem) {
+    margin-top: 1.5rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    width: 150px;
+    margin-top: 3rem;
   }
 }
