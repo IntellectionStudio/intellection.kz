@@ -30,7 +30,9 @@ const Homepage = (props: PropsType) => (
           Then going through some small strange motions with it—whether indispensable to the
         </p>
       </div>
-      <StartupCard />
+      {Object.entries(props.head.startups).map(([key, startup]) => (
+        <StartupCard key={key} {...startup} />
+      ))}
     </div>
   </Page>
 );
