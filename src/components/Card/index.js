@@ -4,18 +4,21 @@ import React from 'react';
 
 import styles from './index.css';
 
-const Card = () => (
+type PropsType = {|
+  link: string,
+  image: string,
+  heading: string,
+  text: string,
+|};
+
+const Card = ({link, image, heading, text}: PropsType) => (
   <div className={styles.root}>
     <a className={styles.container}>
-      <img
-        className={styles.image}
-        src="https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-partner-f8%401x.png"
-        alt="Software development process"
-      />
+      <img className={styles.image} src={image} alt={link} />
       <div>
-        <h6 className={styles.heading}>Услуги разработки</h6>
+        <h6 className={styles.heading}>{heading}</h6>
         <p className={styles.detail}>
-          I have hinted that I would often jerk poor from between.
+          {text}
         </p>
       </div>
     </a>
