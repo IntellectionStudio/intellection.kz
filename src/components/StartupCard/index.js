@@ -17,7 +17,7 @@ const StartupCard = ({image, text, title}: PropsType) => (
     </div>
     <div className={styles.info}>
       <h2 className={styles.title}>{title}</h2>
-      <p className={styles.description}>
+      <p className={styles.text}>
         {text}
       </p>
     </div>

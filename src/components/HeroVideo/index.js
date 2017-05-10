@@ -5,14 +5,14 @@ import React from 'react';
 import styles from './index.css';
 
 type PropsType = {|
-  heading: string,
   image: string,
   playIcon: string,
   sources: Array<string>,
   text: string,
+  title: string,
 |};
 
-const HeroVideo = ({heading, image, playIcon, sources, text}: PropsType) => (
+const HeroVideo = ({image, playIcon, sources, text, title}: PropsType) => (
   <div className={styles.heroVideo}>
     <div
       className={styles.contain}
@@ -33,9 +33,9 @@ const HeroVideo = ({heading, image, playIcon, sources, text}: PropsType) => (
         </video>
       </div>
       <a className={styles.overlay} href="">
-        <div className={styles.overlayContent}>
-          <h1 className={styles.overlayHeading}>{heading}</h1>
-          <p className={styles.overlayDescription}>{text}</p>
+        <div className={styles.content}>
+          <h1 className={styles.title}>{title}</h1>
+          <p className={styles.text}>{text}</p>
           <img alt="Play Video" className={styles.playIcon} src={playIcon} />
         </div>
       </a>

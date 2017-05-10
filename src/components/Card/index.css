@@ -62,7 +62,7 @@
   }
 }
 
-.heading {
+.title {
   color: #303234;
   padding: 0;
   margin: 18px 10px 11px 0;
@@ -88,7 +88,7 @@
   }
 }
 
-.detail {
+.text {
   color: #747e80;
   font-size: 14px;
   margin: 0 20px 10px 0;

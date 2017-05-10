@@ -23,12 +23,12 @@ const Homepage = (props: PropsType) => (
         ))}
       </div>
     </div>
-    <div className={styles.startupsWrapper}>
-      <div className={styles.title}>
-        <h1 className={styles.titleHeading}>
-          {props.head.startupsSection.heading}
+    <div>
+      <div className={styles.content}>
+        <h1 className={styles.title}>
+          {props.head.startupsSection.title}
         </h1>
-        <p className={styles.titleDescription}>
+        <p className={styles.text}>
           {props.head.startupsSection.text}
         </p>
       </div>

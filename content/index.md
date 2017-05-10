@@ -3,7 +3,7 @@ title: Стартап центр - intellection.kz
 layout: Homepage
 hero:
   video:
-    heading: Стартап центр Intellection
+    title: Стартап центр Intellection
     text: Пару слов о компании
     image: /assets/videoPlaceholder.png
     sources:
@@ -15,20 +15,20 @@ hero:
     courses:
       link: "courses"
       image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-nd-intro-to-programming%401x.png
-      heading: Учись прогать
+      title: Учись прогать
       text: I have hinted that I would often jerk poor from between
     blog:
       link: "blog"
       image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-partner-f8%401x.png
-      heading: Читай крутой стаф
+      title: Читай крутой стаф
       text: I have hinted that I would often jerk poor from between
     knowledgeBase:
       link: "knowledgeBase"
       image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-nd-digital-marketing%401x.png
-      heading: Это бесплатно?!
+      title: Это бесплатно?!
       text: I have hinted that I would often jerk poor from between
 startupsSection:
-  heading: Наши стартапы
+  title: Наши стартапы
   text: Then going through some small strange motions with it—whether indispensable to the
   startups:
     QazaqApp:

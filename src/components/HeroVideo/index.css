@@ -122,7 +122,7 @@
   }
 }
 
-.overlayContent {
+.content {
   width: 100%;
   position: relative;
   top: 50%;
@@ -130,7 +130,7 @@
   text-align: center;
 }
 
-.overlayHeading {
+.title {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.5rem;
@@ -147,7 +147,7 @@
   }
 }
 
-.overlayDescription {
+.text {
   color: #fff;
   margin-top: 0.5rem;
 

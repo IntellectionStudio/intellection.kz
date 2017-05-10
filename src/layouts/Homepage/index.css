@@ -53,18 +53,18 @@
   }
 }
 
-.title {
+.content {
   padding: 3.875rem 3rem;
   text-align: center;
 }
 
-.titleHeading {
+.title {
   font-size: 1.5rem;
   font-weight: normal;
   color: #36383a;
 }
 
-.titleDescription {
+.text {
   font-size: 1.125rem;
   line-height: normal;
   color: #747e80;
