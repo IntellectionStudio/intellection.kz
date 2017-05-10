@@ -1,6 +1,7 @@
 /* @flow */
 
 import React from 'react';
+import {Link} from 'phenomic';
 
 import styles from './index.css';
 
@@ -13,7 +14,7 @@ type PropsType = {|
 
 const Card = ({link, image, heading, text}: PropsType) => (
   <div className={styles.root}>
-    <a className={styles.container}>
+    <Link className={styles.container} to={link}>
       <img className={styles.image} src={image} alt={link} />
       <div>
         <h6 className={styles.heading}>{heading}</h6>
@@ -21,7 +22,7 @@ const Card = ({link, image, heading, text}: PropsType) => (
           {text}
         </p>
       </div>
-    </a>
+    </Link>
   </div>
 );
 
