@@ -25,14 +25,16 @@ const Homepage = (props: PropsType) => (
     </div>
     <div className={styles.startupsWrapper}>
       <div className={styles.title}>
-        <h1 className={styles.titleHeading}>Наши стартапы</h1>
+        <h1 className={styles.titleHeading}>
+          {props.head.startupsSection.heading}
+        </h1>
         <p className={styles.titleDescription}>
-          Then going through some small strange motions with it—whether indispensable to the
+          {props.head.startupsSection.text}
         </p>
       </div>
-      {Object.entries(props.head.startups).map(([key, startup]) => (
-        <StartupCard key={key} {...startup} />
-      ))}
+      {Object.entries(
+        props.head.startupsSection.startups,
+      ).map(([key, startup]) => <StartupCard key={key} {...startup} />)}
     </div>
   </Page>
 );

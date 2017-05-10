@@ -27,13 +27,16 @@ hero:
       image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-nd-digital-marketing%401x.png
       heading: Это бесплатно?!
       text: I have hinted that I would often jerk poor from between
-startups:
-  QazaqApp:
-    image: http://is2.mzstatic.com/image/thumb/Purple111/v4/d4/e3/cf/d4e3cf6b-bdb0-26c0-8553-4683955968a2/source/175x175bb.jpg
-    title: Qazaq App
-    text: Приложение по изучению казахского языка
-  Albumen:
-    image: http://intellection.kz/wp-content/uploads/2016/07/albumenLogo-300x300.jpg
-    title: Albumen
-    text: Распечатай фото с телефона в виде альбома
+startupsSection:
+  heading: Наши стартапы
+  text: Then going through some small strange motions with it—whether indispensable to the
+  startups:
+    QazaqApp:
+      image: http://is2.mzstatic.com/image/thumb/Purple111/v4/d4/e3/cf/d4e3cf6b-bdb0-26c0-8553-4683955968a2/source/175x175bb.jpg
+      title: Qazaq App
+      text: Приложение по изучению казахского языка
+    Albumen:
+      image: http://intellection.kz/wp-content/uploads/2016/07/albumenLogo-300x300.jpg
+      title: Albumen
+      text: Распечатай фото с телефона в виде альбома
 ---
