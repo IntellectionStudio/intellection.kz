@@ -5,6 +5,7 @@ import React from 'react';
 import Page from 'layouts/Page';
 import HeroVideo from 'components/HeroVideo';
 import Card from 'components/Card';
+import StartupCard from 'components/StartupCard';
 
 import styles from './index.css';
 
@@ -29,15 +30,7 @@ const Homepage = (props: PropsType) => (
           Then going through some small strange motions with it—whether indispensable to the
         </p>
       </div>
-      <div className={styles.startup}>
-        <div className={styles.startupPicture} />
-        <div className={styles.startupInfo}>
-          <h2 className={styles.startupTitle}>Qazaq App</h2>
-          <p className={styles.startupDescription}>
-            Приложение по изучению казахского языка
-          </p>
-        </div>
-      </div>
+      <StartupCard />
     </div>
   </Page>
 );

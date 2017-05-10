@@ -70,35 +70,3 @@
   color: #747e80;
   margin-bottom: 0;
 }
-
-.startup {
-  height: 279px;
-  width: 302px;
-  background: #fff;
-  border-radius: 0.625rem;
-  margin: 0 auto 3rem;
-}
-
-.startupPicture {
-  height: 123px;
-  width: 100%;
-  background: #ccc;
-  border-top-left-radius: 0.625rem;
-  border-top-right-radius: 0.625rem;
-}
-
-.startupInfo {
-  padding: 1.625rem;
-  text-align: center;
-}
-
-.startupTitle {
-  font-size: 1.25rem;
-  color: #494b4e;
-  font-weight: normal;
-}
-
-.startupDescription {
-  color: #494b4e;
-  font-size: 1rem;
-}

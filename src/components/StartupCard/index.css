@@ -1,0 +1,31 @@
+.container {
+  height: 279px;
+  width: 302px;
+  background: #fff;
+  border-radius: 0.625rem;
+  margin: 0 auto 3rem;
+}
+
+.picture {
+  height: 123px;
+  width: 100%;
+  background: #ccc;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+
+.info {
+  padding: 1.625rem;
+  text-align: center;
+}
+
+.titleitle {
+  font-size: 1.25rem;
+  color: #494b4e;
+  font-weight: normal;
+}
+
+.description {
+  color: #494b4e;
+  font-size: 1rem;
+}
