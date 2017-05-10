@@ -15,9 +15,6 @@ const Header = () => (
         <Link className={styles.about} to="/">
           О нас
         </Link>
-        <Link className={styles.development} to="/">
-          Услуги разработки
-        </Link>
         <Link className={styles.startups} to="/">
           Наши стартапы
         </Link>
