@@ -4,32 +4,39 @@ import React from 'react';
 
 import styles from './index.css';
 
-const HeroVideo = () => (
+type PropsType = {|
+  heading: string,
+  image: string,
+  playIcon: string,
+  sources: Array<string>,
+  text: string,
+|};
+
+const HeroVideo = ({heading, image, playIcon, sources, text}: PropsType) => (
   <div className={styles.heroVideo}>
-    <div className={styles.contain}>
+    <div
+      className={styles.contain}
+      style={{
+        background: `linear-gradient(rgba(81, 169, 242, 0.8), rgba(186, 219, 250, 0.8)), url('${image}') center center no-repeat`,
+      }}
+    >
       <div className={styles.heroVideoBackground}>
         <video
           className={styles.responsiveVideo}
-          poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg"
+          poster={image}
           playsInline
           autoPlay
           muted
           loop
         >
-          <source src="https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.mp4" />
-          <source src="https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.ogv" />
-          <source src="https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.webm" />
+          {Object.values(sources).map(src => <source key={src} src={src} />)}
         </video>
       </div>
       <a className={styles.overlay} href="">
         <div className={styles.overlayContent}>
-          <h1 className={styles.overlayHeading}>Стартап центр Intellection</h1>
-          <p className={styles.overlayDescription}>Пару слов о компании</p>
-          <img
-            alt="Play Video"
-            className={styles.playIcon}
-            src="/assets/play.png"
-          />
+          <h1 className={styles.overlayHeading}>{heading}</h1>
+          <p className={styles.overlayDescription}>{text}</p>
+          <img alt="Play Video" className={styles.playIcon} src={playIcon} />
         </div>
       </a>
     </div>
