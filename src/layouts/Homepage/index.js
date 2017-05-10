@@ -18,8 +18,8 @@ const Homepage = (props: PropsType) => (
     <div className={styles.hero}>
       <HeroVideo {...props.head.hero.video} />
       <div className={styles.cards}>
-        {Object.values(props.head.hero.cards).map(card => (
-          <Card key={card.link} {...card} />
+        {Object.entries(props.head.hero.cards).map(([key, card]) => (
+          <Card key={key} {...card} />
         ))}
       </div>
     </div>
