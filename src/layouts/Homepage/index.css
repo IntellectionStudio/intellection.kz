@@ -92,7 +92,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 73.75rem;
-  margin: 0 auto 3rem;
+  margin: 0 auto;
   justify-content: center;
 }
 
@@ -129,4 +129,5 @@
   color: var(--colorPrimary);
   background-color: #fff;
   border: 0.125rem solid var(--colorPrimary);
+  margin-bottom: 5.125rem;
 }
