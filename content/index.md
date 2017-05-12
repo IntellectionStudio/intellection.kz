@@ -42,6 +42,7 @@ startupsSection:
     Camellia:
       image: http://intellection.kz/wp-content/uploads/2016/07/Camellia_logo-300x300.png
       title: Camellia
+      text: Выберете букет, скажите нам кому и когда его доставить
     Wallswap:
       image: http://intellection.kz/wp-content/uploads/2016/07/Wallswap_logo-300x300.png
       title: Wallswap
