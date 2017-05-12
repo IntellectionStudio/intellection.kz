@@ -1,6 +1,7 @@
 /* @flow */
 
 import React from 'react';
+import {Link} from 'phenomic';
 
 import Page from 'layouts/Page';
 import HeroVideo from 'components/HeroVideo';
@@ -36,6 +37,11 @@ const Homepage = (props: PropsType) => (
         {Object.entries(
           props.head.startupsSection.startups,
         ).map(([key, startup]) => <StartupCard key={key} {...startup} />)}
+      </div>
+      <div className={styles.buttonContainer}>
+        <Link className={styles.button} to="startups">
+          {props.head.startupsSection.buttonText}
+        </Link>
       </div>
     </div>
   </Page>

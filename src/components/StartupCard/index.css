@@ -1,4 +1,6 @@
 .container {
+  composes: grow from 'tachyons/src/_hovers.css';
+  cursor: pointer;
   height: 279px;
   width: 302px;
   background: #fff;

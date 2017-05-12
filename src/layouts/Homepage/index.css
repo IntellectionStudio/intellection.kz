@@ -95,3 +95,38 @@
   margin: 0 auto 3rem;
   justify-content: center;
 }
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  composes: grow from 'tachyons/src/_hovers.css';
+  display: block;
+  cursor: pointer;
+  appearance: none;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: middle;
+  height: 3rem;
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 3rem;
+  -webkit-font-smoothing: antialiased;
+
+  /* box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, 0.15); */
+  border-radius: 1.5rem;
+  letter-spacing: 0.125rem;
+  transition: all 0.3s ease;
+  width: 13.75rem;
+  color: var(--colorPrimary);
+  background-color: #fff;
+  border: 0.125rem solid var(--colorPrimary);
+}

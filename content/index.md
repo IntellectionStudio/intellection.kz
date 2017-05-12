@@ -30,6 +30,7 @@ hero:
 startupsSection:
   title: Наши стартапы
   text: Then going through some small strange motions with it—whether indispensable to the
+  buttonText: Все проекты
   startups:
     QazaqApp:
       image: http://is2.mzstatic.com/image/thumb/Purple111/v4/d4/e3/cf/d4e3cf6b-bdb0-26c0-8553-4683955968a2/source/175x175bb.jpg
