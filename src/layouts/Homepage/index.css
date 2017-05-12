@@ -75,4 +75,6 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 73.75rem;
+  margin: 0 auto 3rem;
+  justify-content: center;
 }
