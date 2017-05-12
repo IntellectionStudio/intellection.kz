@@ -126,8 +126,8 @@
   letter-spacing: 0.125rem;
   transition: all 0.3s ease;
   width: 13.75rem;
-  color: var(--colorPrimary);
-  background-color: #fff;
+  color: #fff;
+  background-color: var(--colorPrimary);
   border: 0.125rem solid var(--colorPrimary);
   margin-bottom: 5.125rem;
 }
