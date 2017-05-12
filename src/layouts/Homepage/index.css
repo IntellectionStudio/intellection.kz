@@ -56,12 +56,20 @@
 .content {
   padding: 3.875rem 3rem;
   text-align: center;
+
+  @media screen and (min-width: 48rem) {
+    padding: 2rem 3rem;
+  }
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: normal;
   color: #36383a;
+
+  @media screen and (min-width: 62rem) {
+    font-size: 2.75rem;
+  }
 }
 
 .text {
@@ -69,6 +77,10 @@
   line-height: normal;
   color: #747e80;
   margin-bottom: 0;
+
+  @media screen and (min-width: 48rem) {
+    margin-top: 0;
+  }
 }
 
 .startups {
