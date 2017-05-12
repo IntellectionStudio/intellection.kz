@@ -74,4 +74,5 @@
 .startups {
   display: flex;
   flex-wrap: wrap;
+  max-width: 73.75rem;
 }
