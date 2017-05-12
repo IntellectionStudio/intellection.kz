@@ -32,9 +32,11 @@ const Homepage = (props: PropsType) => (
           {props.head.startupsSection.text}
         </p>
       </div>
-      {Object.entries(
-        props.head.startupsSection.startups,
-      ).map(([key, startup]) => <StartupCard key={key} {...startup} />)}
+      <div className={styles.startups}>
+        {Object.entries(
+          props.head.startupsSection.startups,
+        ).map(([key, startup]) => <StartupCard key={key} {...startup} />)}
+      </div>
     </div>
   </Page>
 );

@@ -70,3 +70,8 @@
   color: #747e80;
   margin-bottom: 0;
 }
+
+.startups {
+  display: flex;
+  flex-wrap: wrap;
+}
