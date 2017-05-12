@@ -49,7 +49,7 @@ startupsSection:
       title: Wallswap
       text: Меняйте заставки на телефонах друзей
     Lunchapp:
-      image: http://intellection.kz/wp-content/uploads/2016/07/lunchapp_logo-300x300.pn
+      image: http://intellection.kz/wp-content/uploads/2016/07/lunchapp_logo-300x300.png
       title: Lunchapp
       text: Выбирайте вкусные обеды в Алматы
 ---
