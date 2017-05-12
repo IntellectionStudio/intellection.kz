@@ -2,6 +2,7 @@
 
 import React from 'react';
 import {Link} from 'phenomic';
+import {mapObjIndexed, values} from 'ramda';
 
 import Page from 'layouts/Page';
 import HeroVideo from 'components/HeroVideo';
@@ -14,20 +15,18 @@ type PropsType = {
   head: Object,
 };
 
+const renderCard = (card, key) => <Card key={key} {...card} />;
+const renderStartupCard = (startup, key) => (
+  <StartupCard key={key} {...startup} />
+);
+const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
+
 const Homepage = (props: PropsType) => (
   <Page {...props}>
     <div className={styles.hero}>
       <HeroVideo {...props.head.hero.video} />
       <div className={styles.cards}>
-        {Object.entries(props.head.hero.cards).map(([key, card]) => (
-          <Card
-            key={key}
-            link={card.link}
-            image={card.image}
-            title={card.title}
-            text={card.text}
-          />
-        ))}
+        {mapVal(renderCard, props.head.hero.cards)}
       </div>
     </div>
     <div>
@@ -40,16 +39,7 @@ const Homepage = (props: PropsType) => (
         </p>
       </div>
       <div className={styles.startups}>
-        {Object.entries(
-          props.head.startupsSection.startups,
-        ).map(([key, startup]) => (
-          <StartupCard
-            key={key}
-            image={startup.image}
-            title={startup.title}
-            text={startup.text}
-          />
-        ))}
+        {mapVal(renderStartupCard, props.head.startupsSection.startups)}
       </div>
       <div className={styles.buttonContainer}>
         <Link className={styles.button} to="startups">
