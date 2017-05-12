@@ -39,4 +39,15 @@ startupsSection:
       image: http://intellection.kz/wp-content/uploads/2016/07/albumenLogo-300x300.jpg
       title: Albumen
       text: Распечатай фото с телефона в виде альбома
+    Camellia:
+      image: http://intellection.kz/wp-content/uploads/2016/07/Camellia_logo-300x300.png
+      title: Camellia
+    Wallswap:
+      image: http://intellection.kz/wp-content/uploads/2016/07/Wallswap_logo-300x300.png
+      title: Wallswap
+      text: Меняйте заставки на телефонах друзей
+    Lunchapp:
+      image: http://intellection.kz/wp-content/uploads/2016/07/lunchapp_logo-300x300.pn
+      title: Lunchapp
+      text: Выбирайте вкусные обеды в Алматы
 ---
