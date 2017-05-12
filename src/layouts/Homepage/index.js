@@ -20,7 +20,13 @@ const Homepage = (props: PropsType) => (
       <HeroVideo {...props.head.hero.video} />
       <div className={styles.cards}>
         {Object.entries(props.head.hero.cards).map(([key, card]) => (
-          <Card key={key} {...card} />
+          <Card
+            key={key}
+            link={card.link}
+            image={card.image}
+            title={card.title}
+            text={card.text}
+          />
         ))}
       </div>
     </div>
@@ -36,7 +42,14 @@ const Homepage = (props: PropsType) => (
       <div className={styles.startups}>
         {Object.entries(
           props.head.startupsSection.startups,
-        ).map(([key, startup]) => <StartupCard key={key} {...startup} />)}
+        ).map(([key, startup]) => (
+          <StartupCard
+            key={key}
+            image={startup.image}
+            title={startup.title}
+            text={startup.text}
+          />
+        ))}
       </div>
       <div className={styles.buttonContainer}>
         <Link className={styles.button} to="startups">
