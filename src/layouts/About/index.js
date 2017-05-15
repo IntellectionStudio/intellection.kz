@@ -15,23 +15,23 @@ const Homepage = (props: PropsType) => (
     <div className={styles.hero}>
       <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>
-          Стартап центр Intellection
+          {props.head.hero.title}
         </h1>
         <p className={styles.heroText}>
-          They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+          {props.head.hero.text}
         </p>
       </div>
     </div>
     <div className={styles.video}>
       <div className={styles.videoContent}>
         <h1 className={styles.videoTitle}>
-          Бла-бла-бла-бла-бла-бла
+          {props.head.video.title}
         </h1>
         <p className={styles.videoText}>
-          They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+          {props.head.hero.text}
         </p>
         <a className={styles.videoButton}>
-          Смотреть видео
+          {props.head.video.buttonText}
           <img
             className={styles.playIcon}
             src="/assets/play-blue.svg"
@@ -43,10 +43,10 @@ const Homepage = (props: PropsType) => (
     <div className={styles.team}>
       <div className={styles.teamContent}>
         <h1 className={styles.teamTitle}>
-          Наша команда
+          {props.head.team.title}
         </h1>
         <p className={styles.teamText}>
-          They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+          {props.head.team.text}
         </p>
       </div>
     </div>
