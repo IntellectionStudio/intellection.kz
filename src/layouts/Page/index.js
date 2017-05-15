@@ -5,6 +5,8 @@ import Helmet from 'react-helmet';
 import React, {PropTypes} from 'react';
 import warning from 'warning';
 
+import Header from 'components/Header';
+
 import styles from './index.css';
 
 type PropsType = {|
@@ -69,7 +71,7 @@ const Page = (
     <div className={styles.page}>
       <Helmet title={metaTitle} meta={meta} />
       <div className={styles.wrapper}>
-        {header}
+        <Header white={__url !== '/'} />
         {children}
         {footer}
       </div>
