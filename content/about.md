@@ -13,16 +13,19 @@ team:
   text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
   topManagers:
     Bakytzhan:
+      image: /assets/dummy-profile.jpeg
       firstName: Бакытжан
       lastName: Байжикенов
       position: CEO
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
     Ilyas:
+      image: /assets/dummy-profile.jpeg
       firstName: Ильяс
       lastName: Исатаев
       position: Product Inventor
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
     Gulsum:
+      image: /assets/dummy-profile.jpeg
       firstName: Гульсум
       lastName: Байжикенова
       position: CFO

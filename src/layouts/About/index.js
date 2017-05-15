@@ -1,14 +1,21 @@
 /* @flow */
 
 import React from 'react';
+import {mapObjIndexed, values} from 'ramda';
 
 import Page from 'layouts/Page';
+import TopManagerCard from 'components/TopManagerCard';
 
 import styles from './index.css';
 
 type PropsType = {
   head: Object,
 };
+
+const renderTopManagerCard = (topManager, key) => (
+  <TopManagerCard key={key} {...topManager} />
+);
+const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 
 const Homepage = (props: PropsType) => (
   <Page {...props}>
@@ -50,7 +57,9 @@ const Homepage = (props: PropsType) => (
         </p>
       </div>
     </div>
-    <div className={styles.management} />
+    <div className={styles.management}>
+      {mapVal(renderTopManagerCard, props.head.team.topManagers)}
+    </div>
   </Page>
 );
 
