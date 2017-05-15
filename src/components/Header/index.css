@@ -109,6 +109,11 @@
   background: white;
 }
 
+.barBlue,
+.barMidBlue {
+  background: var(--colorPrimary);
+}
+
 .barMid {
   composes: bar;
   margin: 4.5px 0;

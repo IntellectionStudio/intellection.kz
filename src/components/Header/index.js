@@ -41,9 +41,21 @@ const Header = ({white}: PropsType) => (
         </Link>
       </nav>
       <a className={styles.burger}>
-        <span className={styles.bar} />
-        <span className={styles.barMid} />
-        <span className={styles.bar} />
+        <span
+          className={cx(styles.bar, {
+            [styles.barBlue]: white,
+          })}
+        />
+        <span
+          className={cx(styles.bar, {
+            [styles.barMidBlue]: white,
+          })}
+        />
+        <span
+          className={cx(styles.bar, {
+            [styles.barBlue]: white,
+          })}
+        />
       </a>
     </header>
   </div>
