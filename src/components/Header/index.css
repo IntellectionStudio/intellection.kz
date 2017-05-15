@@ -6,7 +6,13 @@
   height: var(--headerHeight);
   width: 100%;
   background-color: var(--colorPrimary);
+  color: white;
   z-index: 10000;
+}
+
+.white {
+  background-color: #fff;
+  color: var(--colorPrimary);
 }
 
 .header {
@@ -39,7 +45,6 @@
 .nav {
   display: none;
   flex-wrap: wrap;
-  color: white;
   font-size: 16px;
 }
 

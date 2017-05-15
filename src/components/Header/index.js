@@ -2,17 +2,26 @@
 
 import React from 'react';
 import {Link} from 'phenomic';
+import cx from 'classnames';
 
 import styles from './index.css';
 
-const Header = () => (
-  <div className={styles.headerWrapper}>
+type PropsType = {
+  white: string,
+};
+
+const Header = ({white}: PropsType) => (
+  <div
+    className={cx(styles.headerWrapper, {
+      [styles.white]: white,
+    })}
+  >
     <header className={styles.header}>
       <Link className={styles.logoLink} to="/">
         <img className={styles.logo} src="/assets/logo.png" alt="Logo" />
       </Link>
       <nav className={styles.nav}>
-        <Link className={styles.about} to="/">
+        <Link className={styles.about} to="/about">
           О нас
         </Link>
         <Link className={styles.startups} to="/">
