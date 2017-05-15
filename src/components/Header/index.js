@@ -18,7 +18,9 @@ const Header = ({white}: PropsType) => (
   >
     <header className={styles.header}>
       <Link className={styles.logoLink} to="/">
-        <img className={styles.logo} src="/assets/logo.png" alt="Logo" />
+        {white
+          ? <img className={styles.logo} src="/assets/logo2.png" alt="Logo" />
+          : <img className={styles.logo} src="/assets/logo.png" alt="Logo" />}
       </Link>
       <nav className={styles.nav}>
         <Link className={styles.about} to="/about">
