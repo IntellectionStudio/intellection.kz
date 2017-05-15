@@ -6,6 +6,15 @@
 @font-face {
   font-family: ProximaNova;
   src: url("/assets/ProximaNovaRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url('/assets/ProximaNovaLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 /*
