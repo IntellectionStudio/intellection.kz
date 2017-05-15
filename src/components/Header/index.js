@@ -7,7 +7,7 @@ import cx from 'classnames';
 import styles from './index.css';
 
 type PropsType = {
-  white: string,
+  white: boolean,
 };
 
 const Header = ({white}: PropsType) => (
