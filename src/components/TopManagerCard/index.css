@@ -35,8 +35,12 @@
   text-align: center;
 }
 
-.text {
+.textWrapper {
   width: 60%;
   font-size: 0.75rem;
   padding: 1rem 2rem 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
