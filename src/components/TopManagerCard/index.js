@@ -16,8 +16,8 @@ const Header = ({image, firstName, lastName, position, text}: PropsType) => (
   <div className={styles.container}>
     <div className={styles.profile}>
       <img className={styles.image} src={image} alt="Profile" />
-      <h2>{firstName} {lastName}</h2>
-      <h3>{position}</h3>
+      <h2 className={styles.name}>{firstName} {lastName}</h2>
+      <h3 className={styles.position}>{position}</h3>
     </div>
     <div className={styles.text}>
       {text}

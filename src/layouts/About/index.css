@@ -107,3 +107,7 @@
 .teamText {
   composes: videoText;
 }
+
+.management {
+  margin-top: -1.5rem;
+}
