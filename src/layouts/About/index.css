@@ -114,4 +114,12 @@
 
 .teamMembers {
   padding: 1.875rem 2.25rem 3.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (min-width: 25rem) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

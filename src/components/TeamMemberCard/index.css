@@ -5,6 +5,17 @@
   justify-content: center;
   align-items: center;
   margin-top: 5.375rem;
+
+  @media screen and (min-width: 25rem) {
+    width: 180px;
+    margin-left: 0.5rem;
+  }
+}
+
+.container:first-child {
+  @media screen and (min-width: 25rem) {
+    margin-left: 0;
+  }
 }
 
 .profile {
@@ -35,10 +46,16 @@
   font-size: 0.75rem;
   font-weight: normal;
   margin: 0;
+  text-align: center;
 }
 
 .text {
   font-size: 0.75rem;
   padding: 1rem 2.25rem 2rem;
   text-align: center;
+
+  @media screen and (min-width: 25rem) {
+    font-size: 0.625rem;
+    padding: 0.5rem 1rem;
+  }
 }
