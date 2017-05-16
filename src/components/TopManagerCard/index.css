@@ -26,6 +26,7 @@
   margin-bottom: 0;
   text-align: center;
   width: 100%;
+  line-height: 1rem;
 }
 
 .position {
@@ -35,6 +36,7 @@
   margin: 0;
   text-align: center;
   width: 100%;
+  line-height: 1rem;
 }
 
 .textWrapper {
@@ -45,4 +47,9 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.text {
+  line-height: 1rem;
+  color: #747e80;
 }
