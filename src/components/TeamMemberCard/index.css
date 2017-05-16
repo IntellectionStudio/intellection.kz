@@ -1,3 +1,44 @@
 .container {
   background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.375rem;
+}
+
+.profile {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+}
+
+.name {
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #2f2f2f;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.position {
+  color: #747e80;
+  font-size: 0.75rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.text {
+  font-size: 0.75rem;
+  padding: 1rem 2.25rem 2rem;
+  text-align: center;
 }
