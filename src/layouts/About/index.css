@@ -56,8 +56,13 @@
 
 .videoContent {
   composes: heroContent;
-  margin-top: 1.125rem;
-  margin-bottom: 1.125rem;
+  margin: 1.125rem 0;
+  padding: 4rem 2rem;
+
+  @media screen and (min-width: 48rem) {
+    width: 60%;
+    text-align: left;
+  }
 }
 
 .videoTitle {
@@ -68,6 +73,10 @@
 .videoText {
   composes: heroText;
   width: 16rem;
+
+  @media screen and (min-width: 48rem) {
+    width: 100%;
+  }
 }
 
 .videoButton {
@@ -99,6 +108,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 48rem) {
+    display: none;
+  }
 }
 
 .playIcon {
@@ -106,6 +119,17 @@
   height: 20px;
   margin-bottom: 5px;
   margin-left: 0.5rem;
+}
+
+.videoFrame {
+  display: none;
+
+  @media screen and (min-width: 48rem) {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    background: url('/assets/videoPlaceholder.png') center center no-repeat;
+  }
 }
 
 .team {
