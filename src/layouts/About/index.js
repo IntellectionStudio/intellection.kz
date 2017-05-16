@@ -5,6 +5,7 @@ import {mapObjIndexed, values} from 'ramda';
 
 import Page from 'layouts/Page';
 import TopManagerCard from 'components/TopManagerCard';
+import TeamMemberCard from 'components/TeamMemberCard';
 
 import styles from './index.css';
 
@@ -14,6 +15,9 @@ type PropsType = {
 
 const renderTopManagerCard = (topManager, key) => (
   <TopManagerCard key={key} {...topManager} />
+);
+const renderTeamMemberCard = (teamMember, key) => (
+  <TeamMemberCard key={key} {...teamMember} />
 );
 const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 
@@ -59,6 +63,9 @@ const Homepage = (props: PropsType) => (
     </div>
     <div className={styles.management}>
       {mapVal(renderTopManagerCard, props.head.team.topManagers)}
+    </div>
+    <div className={styles.teamMembers}>
+      {mapVal(renderTeamMemberCard, props.head.team.teamMembers)}
     </div>
   </Page>
 );
