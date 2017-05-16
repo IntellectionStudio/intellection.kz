@@ -25,6 +25,7 @@
   color: #2f2f2f;
   margin-bottom: 0;
   text-align: center;
+  width: 100%;
 }
 
 .position {
@@ -33,6 +34,7 @@
   font-weight: normal;
   margin: 0;
   text-align: center;
+  width: 100%;
 }
 
 .textWrapper {
