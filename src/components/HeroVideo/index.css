@@ -163,17 +163,14 @@
 .playIcon {
   composes: grow from 'tachyons/src/_hovers.css';
   margin-top: 3.25rem;
-
-  @media screen and (min-width: 30rem) {
-    width: 125px;
-  }
+  width: 60px;
 
   @media screen and (min-width: 48rem) {
     margin-top: 1.5rem;
   }
 
   @media screen and (min-width: 62rem) {
-    width: 150px;
+    width: 90px;
     margin-top: 3rem;
   }
 }
