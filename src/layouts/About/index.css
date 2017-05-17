@@ -253,9 +253,14 @@
 
 .teamTitle {
   composes: heroTitle;
+  color: #303234;
 
   @media screen and (min-width: 48rem) {
     font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 48rem) {
+    font-size: 2.75rem;
   }
 }
 
