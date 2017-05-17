@@ -31,6 +31,12 @@
   width: 100px;
   height: 100px;
   margin-top: -50px;
+
+  @media screen and (min-width: 25rem) {
+    width: 4rem;
+    height: 4rem;
+    margin-top: -2rem;
+  }
 }
 
 .name {
