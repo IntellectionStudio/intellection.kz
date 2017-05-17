@@ -20,7 +20,7 @@
     width: 23rem;
   }
 
-  @media screen and (min-width: 64rem) {
+  @media screen and (min-width: 62rem) {
     width: 32.5rem;
   }
 }
@@ -33,7 +33,7 @@
     font-size: 1.6875rem;
   }
 
-  @media screen and (min-width: 64rem) {
+  @media screen and (min-width: 62rem) {
     font-size: 2.75rem;
   }
 }
@@ -43,7 +43,7 @@
   font-size: 1rem;
   margin-top: 0;
 
-  @media screen and (min-width: 64rem) {
+  @media screen and (min-width: 62rem) {
     font-size: 1.125rem;
   }
 }
@@ -53,11 +53,30 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  color: #747e80;
   background: white;
+}
+
+.videoWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #747e80;
 
   @media screen and (min-width: 48rem) {
     justify-content: space-between;
+  }
+
+  @media screen and (min-width: 62rem) {
+    width: 77.5%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 74rem) {
+    width: 77.5%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -86,6 +105,16 @@
     padding-right: 3.5rem;
     text-align: left;
   }
+
+  @media screen and (min-width: 62rem) {
+    font-size: 2rem;
+    padding-left: 0;
+    padding-right: 10%;
+  }
+
+  @media screen and (min-width: 74rem) {
+    font-size: 2.75rem;
+  }
 }
 
 .videoText {
@@ -99,6 +128,12 @@
     padding-left: 3rem;
     padding-right: 3.5rem;
     text-align: left;
+  }
+
+  @media screen and (min-width: 62rem) {
+    padding-left: 0;
+    padding-right: 10%;
+    font-size: 1.125rem;
   }
 }
 
@@ -153,6 +188,11 @@
     height: 300px;
     background: var(--colorPrimary);
   }
+
+  @media screen and (min-width: 62rem) {
+    border-radius: 10px;
+    width: 50%;
+  }
 }
 
 .videoFrameImage {
@@ -165,9 +205,14 @@
     background: url('/assets/videoPlaceholder.png') center center no-repeat;
     opacity: 0.58;
   }
+
+  @media screen and (min-width: 62rem) {
+    border-radius: 10px;
+    width: 100%;
+  }
 }
 
-.playIcon {
+.bigPlayIcon {
   display: none;
 
   @media screen and (min-width: 48rem) {

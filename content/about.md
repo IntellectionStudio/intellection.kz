@@ -5,7 +5,7 @@ hero:
   title: Стартап центр Intellection
   text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
 video:
-  title: Бла-бла-бла-бла-бла-бла
+  title: Бла-бла-бла-бла-бла
   text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
   buttonText: Смотреть видео
   playIcon: /assets/play.png

@@ -34,29 +34,31 @@ const Homepage = (props: PropsType) => (
       </div>
     </div>
     <div className={styles.video}>
-      <div className={styles.videoContent}>
-        <h1 className={styles.videoTitle}>
-          {props.head.video.title}
-        </h1>
-        <p className={styles.videoText}>
-          {props.head.hero.text}
-        </p>
-        <a className={styles.videoButton}>
-          {props.head.video.buttonText}
+      <div className={styles.videoWrapper}>
+        <div className={styles.videoContent}>
+          <h1 className={styles.videoTitle}>
+            {props.head.video.title}
+          </h1>
+          <p className={styles.videoText}>
+            {props.head.hero.text}
+          </p>
+          <a className={styles.videoButton}>
+            {props.head.video.buttonText}
+            <img
+              className={styles.playIcon}
+              src="/assets/play-blue.svg"
+              alt="Play"
+            />
+          </a>
+        </div>
+        <div className={styles.videoFrame}>
+          <div className={styles.videoFrameImage} />
           <img
-            className={styles.playIcon}
-            src="/assets/play-blue.svg"
-            alt="Play"
+            alt="Play Video"
+            className={styles.bigPlayIcon}
+            src="/assets/play.png"
           />
-        </a>
-      </div>
-      <div className={styles.videoFrame}>
-        <div className={styles.videoFrameImage} />
-        <img
-          alt="Play Video"
-          className={styles.playIcon}
-          src="/assets/play.png"
-        />
+        </div>
       </div>
     </div>
     <div className={styles.team}>
