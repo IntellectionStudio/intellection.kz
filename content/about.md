@@ -8,6 +8,7 @@ video:
   title: Бла-бла-бла-бла-бла-бла
   text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
   buttonText: Смотреть видео
+  playIcon: /assets/play.png
 team:
   title: Наша команда
   text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
