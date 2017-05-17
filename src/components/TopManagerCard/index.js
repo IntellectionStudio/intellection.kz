@@ -15,9 +15,13 @@ type PropsType = {
 const Header = ({image, firstName, lastName, position, text}: PropsType) => (
   <div className={styles.container}>
     <div className={styles.profile}>
-      <img className={styles.image} src={image} alt="Profile" />
-      <h2 className={styles.name}>{firstName} {lastName}</h2>
-      <h3 className={styles.position}>{position}</h3>
+      <div className={styles.imageWrapper}>
+        <img className={styles.image} src={image} alt="Profile" />
+      </div>
+      <div className={styles.namePosition}>
+        <h2 className={styles.name}>{firstName} {lastName}</h2>
+        <h3 className={styles.position}>{position}</h3>
+      </div>
     </div>
     <div className={styles.textWrapper}>
       <div className={styles.text}>

@@ -3,6 +3,17 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 1.5rem;
+
+  @media screen and (min-width: 48rem) {
+    width: 32.5%;
+    margin-right: 1%;
+  }
+}
+
+.container:last-child {
+  @media screen and (min-width: 48rem) {
+    margin-right: 0;
+  }
 }
 
 .profile {
@@ -12,11 +23,35 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 48rem) {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 1.5rem 1rem 0.5rem;
+  }
+}
+
+.imageWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
   border-radius: 50%;
   width: 100px;
+
+  @media screen and (min-width: 48rem) {
+    width: 4rem;
+  }
+}
+
+.namePosition {
+  @media screen and (min-width: 48rem) {
+    margin-left: 1rem;
+  }
 }
 
 .name {
@@ -27,6 +62,14 @@
   text-align: center;
   width: 100%;
   line-height: 1rem;
+
+  @media screen and (min-width: 48rem) {
+    width: auto;
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+  }
 }
 
 .position {
@@ -37,6 +80,12 @@
   text-align: center;
   width: 100%;
   line-height: 1rem;
+
+  @media screen and (min-width: 48rem) {
+    width: auto;
+    text-align: left;
+    font-size: 0.625rem;
+  }
 }
 
 .textWrapper {
@@ -47,6 +96,11 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 48rem) {
+    width: 100%;
+    padding: 0.5rem 1rem 1rem;
+  }
 }
 
 .text {
