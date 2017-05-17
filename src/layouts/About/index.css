@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+.heroWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 77.5rem;
+}
+
 .heroContent {
   display: flex;
   flex-wrap: wrap;
@@ -57,6 +65,14 @@
 }
 
 .videoWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 77.5rem;
+}
+
+.videoContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -238,6 +254,13 @@
   composes: hero;
   background: transparent;
   color: #747e80;
+}
+
+.teamWrapper {
+  composes: heroWrapper;
+  background: transparent;
+  color: #747e80;
+  max-width: 77.5rem;
 
   @media screen and (min-width: 48rem) {
     margin-top: 1.125rem;
@@ -269,10 +292,19 @@
 }
 
 .management {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.managementWrapper {
   margin-top: -1.5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  max-width: 77.5rem;
 
   @media screen and (min-width: 48rem) {
     margin-left: 0.5rem;
@@ -286,10 +318,19 @@
 }
 
 .teamMembers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamMembersWrapper {
   padding: 1.875rem 2.25rem 3.875rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  max-width: 77.5rem;
 
   @media screen and (min-width: 25rem) {
     padding-left: 0;

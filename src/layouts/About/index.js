@@ -24,60 +24,70 @@ const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 const Homepage = (props: PropsType) => (
   <Page {...props}>
     <div className={styles.hero}>
-      <div className={styles.heroContent}>
-        <h1 className={styles.heroTitle}>
-          {props.head.hero.title}
-        </h1>
-        <p className={styles.heroText}>
-          {props.head.hero.text}
-        </p>
+      <div className={styles.heroWrapper}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>
+            {props.head.hero.title}
+          </h1>
+          <p className={styles.heroText}>
+            {props.head.hero.text}
+          </p>
+        </div>
       </div>
     </div>
     <div className={styles.video}>
       <div className={styles.videoWrapper}>
-        <div className={styles.videoContent}>
-          <h1 className={styles.videoTitle}>
-            {props.head.video.title}
-          </h1>
-          <p className={styles.videoText}>
-            {props.head.hero.text}
-          </p>
-          <a className={styles.videoButton}>
-            {props.head.video.buttonText}
-            <img
-              className={styles.playIcon}
-              src="/assets/play-blue.svg"
-              alt="Play"
-            />
-          </a>
-        </div>
-        <div className={styles.videoFrame}>
-          <div className={styles.videoFrameImage} />
-          <div className={styles.bigPlayIconWrapper}>
-            <img
-              alt="Play Video"
-              className={styles.bigPlayIcon}
-              src="/assets/play-white.svg"
-            />
+        <div className={styles.videoContainer}>
+          <div className={styles.videoContent}>
+            <h1 className={styles.videoTitle}>
+              {props.head.video.title}
+            </h1>
+            <p className={styles.videoText}>
+              {props.head.hero.text}
+            </p>
+            <a className={styles.videoButton}>
+              {props.head.video.buttonText}
+              <img
+                className={styles.playIcon}
+                src="/assets/play-blue.svg"
+                alt="Play"
+              />
+            </a>
+          </div>
+          <div className={styles.videoFrame}>
+            <div className={styles.videoFrameImage} />
+            <div className={styles.bigPlayIconWrapper}>
+              <img
+                alt="Play Video"
+                className={styles.bigPlayIcon}
+                src="/assets/play-white.svg"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div className={styles.team}>
-      <div className={styles.teamContent}>
-        <h1 className={styles.teamTitle}>
-          {props.head.team.title}
-        </h1>
-        <p className={styles.teamText}>
-          {props.head.team.text}
-        </p>
+      <div className={styles.teamWrapper}>
+        <div className={styles.teamContent}>
+          <h1 className={styles.teamTitle}>
+            {props.head.team.title}
+          </h1>
+          <p className={styles.teamText}>
+            {props.head.team.text}
+          </p>
+        </div>
       </div>
     </div>
     <div className={styles.management}>
-      {mapVal(renderTopManagerCard, props.head.team.topManagers)}
+      <div className={styles.managementWrapper}>
+        {mapVal(renderTopManagerCard, props.head.team.topManagers)}
+      </div>
     </div>
     <div className={styles.teamMembers}>
-      {mapVal(renderTeamMemberCard, props.head.team.teamMembers)}
+      <div className={styles.teamMembersWrapper}>
+        {mapVal(renderTeamMemberCard, props.head.team.teamMembers)}
+      </div>
     </div>
   </Page>
 );
