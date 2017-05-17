@@ -35,6 +35,17 @@
     flex-wrap: nowrap;
     padding: 1rem 1rem 0.5rem;
   }
+
+  @media screen and (min-width: 68rem) {
+    width: 40%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.5rem 1rem 1.875rem;
+  }
+
+  @media screen and (min-width: 77.5rem) {
+    padding: 2rem 2rem 1.5rem 1.5rem;
+  }
 }
 
 .imageWrapper {
@@ -51,11 +62,20 @@
   @media screen and (min-width: 48rem) {
     width: 4rem;
   }
+
+  @media screen and (min-width: 68rem) {
+    width: 100%;
+    max-width: 130px;
+  }
 }
 
 .namePosition {
   @media screen and (min-width: 48rem) {
     margin-left: 1rem;
+  }
+
+  @media screen and (min-width: 68rem) {
+    margin-left: 0;
   }
 }
 
@@ -75,6 +95,18 @@
     margin-bottom: 0.25rem;
     font-size: 0.75rem;
   }
+
+  @media screen and (min-width: 68rem) {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  @media screen and (min-width: 77.5rem) {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
 }
 
 .position {
@@ -91,6 +123,12 @@
     text-align: left;
     font-size: 0.625rem;
   }
+
+  @media screen and (min-width: 68rem) {
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+  }
 }
 
 .textWrapper {
@@ -105,6 +143,11 @@
   @media screen and (min-width: 48rem) {
     width: 100%;
     padding: 0.5rem 1rem 1rem;
+  }
+
+  @media screen and (min-width: 68rem) {
+    width: 60%;
+    padding: 1rem 1rem 1rem 0;
   }
 }
 
