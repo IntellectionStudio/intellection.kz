@@ -219,6 +219,11 @@
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
+
+  @media screen and (min-width: 62rem) {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 }
 
 .teamMembers {
@@ -235,5 +240,10 @@
   @media screen and (min-width: 48rem) {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
 }
