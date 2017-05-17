@@ -10,6 +10,11 @@
     width: 180px;
     margin-left: 0.5rem;
   }
+
+  @media screen and (min-width: 48rem) {
+    width: 24.5%;
+    margin-left: 0.5%;
+  }
 }
 
 .container:first-child {
