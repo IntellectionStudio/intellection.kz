@@ -53,11 +53,13 @@ const Homepage = (props: PropsType) => (
         </div>
         <div className={styles.videoFrame}>
           <div className={styles.videoFrameImage} />
-          <img
-            alt="Play Video"
-            className={styles.bigPlayIcon}
-            src="/assets/play.png"
-          />
+          <div className={styles.bigPlayIconWrapper}>
+            <img
+              alt="Play Video"
+              className={styles.bigPlayIcon}
+              src="/assets/play-white.svg"
+            />
+          </div>
         </div>
       </div>
     </div>
