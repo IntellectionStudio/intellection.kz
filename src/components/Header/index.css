@@ -97,24 +97,6 @@
   text-decoration: none;
 }
 
-.burger {
-  composes: grow from 'tachyons/src/_hovers.css';
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 48px;
-  height: 49px;
-  padding: 15px 9px;
-  margin-right: -9px;
-  cursor: pointer;
-
-  @media screen and (min-width: 992px) {
-    display: none;
-  }
-}
-
 .bar {
   display: block;
   width: 100%;
@@ -130,4 +112,70 @@
 .barMid {
   composes: bar;
   margin: 4.5px 0;
+}
+
+/* Burger Menu */
+.burger {
+  composes: grow from 'tachyons/src/_hovers.css';
+  width: 48px;
+  height: 49px;
+  cursor: pointer;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+}
+
+.burgerDetail {
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.burgerDetail span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 80%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 5px;
+  top: 15px;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burgerDetail span:nth-child(1) {
+  top: 16px;
+}
+
+.burgerDetail span:nth-child(2),
+.burgerDetail span:nth-child(3) {
+  top: 23px;
+}
+
+.burgerDetail span:nth-child(4) {
+  top: 30px;
+}
+
+.burgerDetailOpen span:nth-child(1) {
+  top: 28px;
+  width: 0%;
+  left: 50%;
+}
+
+.burgerDetailOpen span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.burgerDetailOpen span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.burgerDetailOpen span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }

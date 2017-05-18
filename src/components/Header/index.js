@@ -16,6 +16,41 @@ class Header extends Component {
     open: false,
   };
 
+  renderMenuButton() {
+    if (this.state.open) {
+      return (
+        <button
+          className={styles.burger}
+          onClick={() => this.setState({open: !this.state.open})}
+        >
+          <span className={styles.menuOpened}>^</span>
+        </button>
+      );
+    }
+    return (
+      <button
+        className={styles.burger}
+        onClick={() => this.setState({open: !this.state.open})}
+      >
+        <span
+          className={cx(styles.bar, {
+            [styles.barBlue]: this.props.white,
+          })}
+        />
+        <span
+          className={cx(styles.bar, {
+            [styles.barMidBlue]: this.props.white,
+          })}
+        />
+        <span
+          className={cx(styles.bar, {
+            [styles.barBlue]: this.props.white,
+          })}
+        />
+      </button>
+    );
+  }
+
   render() {
     const {white} = this.props;
     return (
@@ -92,22 +127,17 @@ class Header extends Component {
               Блог
             </Link>
           </nav>
-          <button className={styles.burger}>
-            <span
-              className={cx(styles.bar, {
-                [styles.barBlue]: white,
-              })}
-            />
-            <span
-              className={cx(styles.bar, {
-                [styles.barMidBlue]: white,
-              })}
-            />
-            <span
-              className={cx(styles.bar, {
-                [styles.barBlue]: white,
-              })}
-            />
+          <button
+            className={cx(styles.burger, {
+              [styles.burgerDetail]: true,
+              [styles.burgerDetailOpen]: this.state.open,
+            })}
+            onClick={() => this.setState({open: !this.state.open})}
+          >
+            <span />
+            <span />
+            <span />
+            <span />
           </button>
         </header>
       </div>
