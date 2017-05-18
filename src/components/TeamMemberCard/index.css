@@ -29,7 +29,7 @@
 }
 
 .profile {
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -43,14 +43,14 @@
   margin-top: -50px;
 
   @media screen and (min-width: 25rem) {
-    width: 4rem;
-    height: 4rem;
-    margin-top: -2rem;
+    width: 75px;
+    height: 75px;
+    margin-top: -37.5px;
   }
 
   @media screen and (min-width: 68rem) {
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: auto;
     max-width: 130px;
   }
 }
@@ -59,9 +59,10 @@
   font-size: 0.875rem;
   font-weight: normal;
   color: #2f2f2f;
-  margin-bottom: 0;
+  margin-bottom: 0.25rem;
   text-align: center;
   line-height: 1rem;
+  width: 100%;
 }
 
 .position {
@@ -71,6 +72,7 @@
   margin: 0;
   text-align: center;
   line-height: 1rem;
+  width: 100%;
 }
 
 .text {
@@ -81,7 +83,10 @@
   color: #747e80;
 
   @media screen and (min-width: 25rem) {
-    font-size: 0.625rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    padding-bottom: 2rem;
   }
 }

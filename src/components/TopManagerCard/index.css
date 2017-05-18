@@ -70,6 +70,8 @@
 }
 
 .namePosition {
+  width: 100%;
+
   @media screen and (min-width: 48rem) {
     margin-left: 1rem;
   }
@@ -83,17 +85,15 @@
   font-size: 0.875rem;
   font-weight: normal;
   color: #2f2f2f;
-  margin-bottom: 0;
   text-align: center;
   width: 100%;
   line-height: 1rem;
+  margin-bottom: 0.25rem;
 
   @media screen and (min-width: 48rem) {
     width: auto;
     margin-top: 0;
     text-align: left;
-    margin-bottom: 0.25rem;
-    font-size: 0.75rem;
   }
 
   @media screen and (min-width: 68rem) {
@@ -104,8 +104,8 @@
   }
 
   @media screen and (min-width: 77.5rem) {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+    font-size: 1rem;
+    line-height: 1rem;
   }
 }
 
@@ -121,7 +121,6 @@
   @media screen and (min-width: 48rem) {
     width: auto;
     text-align: left;
-    font-size: 0.625rem;
   }
 
   @media screen and (min-width: 68rem) {
@@ -133,7 +132,6 @@
 
 .textWrapper {
   width: 60%;
-  font-size: 0.75rem;
   padding: 1rem 2rem 1rem 0;
   display: flex;
   flex-wrap: wrap;
@@ -152,6 +150,8 @@
 }
 
 .text {
-  line-height: 1rem;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 300;
   color: #747e80;
 }
