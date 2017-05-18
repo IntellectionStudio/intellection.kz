@@ -40,9 +40,6 @@ const Footer = () => (
         </div>
       </div>
       <div className={styles.copyright}>
-        <Link to="/" className={styles.logoLink}>
-          <img className={styles.logo} src="/assets/logo.png" alt="Logo" />
-        </Link>
         <div className={styles.copyrightText}>
           <div>
             © 2017 Intellection.kz
@@ -51,6 +48,9 @@ const Footer = () => (
             All Right Reserved
           </div>
         </div>
+        <Link to="/" className={styles.logoLink}>
+          <img className={styles.logo} src="/assets/logo.png" alt="Logo" />
+        </Link>
       </div>
     </div>
   </footer>
