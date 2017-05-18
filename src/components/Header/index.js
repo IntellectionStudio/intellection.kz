@@ -92,7 +92,7 @@ class Header extends Component {
               Блог
             </Link>
           </nav>
-          <button className={styles.burger} onClick={this.toggleNav}>
+          <button className={styles.burger}>
             <span
               className={cx(styles.bar, {
                 [styles.barBlue]: white,
