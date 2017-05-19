@@ -1,7 +1,7 @@
 /* @flow */
 
-import React from 'react';
-import Slider from 'react-slick';
+import React, {Component} from 'react';
+import {mapObjIndexed, values} from 'ramda';
 
 import Page from 'layouts/Page';
 
@@ -11,24 +11,31 @@ type PropsType = {
   head: Object,
 };
 
-const Homepage = (props: PropsType) => (
-  <Page {...props}>
-    <div className={styles.container}>
-      <Slider
-        arrows={false}
-        infinite={false}
-        slidesToShow={5}
-        slidesToScroll={1}
-      >
-        <div><h3>1</h3></div>
-        <div><h3>2</h3></div>
-        <div><h3>3</h3></div>
-        <div><h3>4</h3></div>
-        <div><h3>5</h3></div>
-        <div><h3>6</h3></div>
-      </Slider>
-    </div>
-  </Page>
-);
+const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
+
+class Homepage extends Component {
+  props: PropsType;
+
+  renderStartupLogo = (startup, key) => (
+    <button key={key} className={styles.logoButton}>
+      <img className={styles.logo} src={startup.logo} alt={`${key} Logo`} />
+    </button>
+  );
+
+  render() {
+    return (
+      <Page {...this.props}>
+        <div className={styles.container}>
+          <div className={styles.logos}>
+            {mapVal(this.renderStartupLogo, this.props.head.startups)}
+          </div>
+          <div className={styles.startup}>
+            Startups
+          </div>
+        </div>
+      </Page>
+    );
+  }
+}
 
 export default Homepage;
