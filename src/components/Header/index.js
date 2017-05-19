@@ -131,6 +131,7 @@ class Header extends Component {
             className={cx(styles.burger, {
               [styles.burgerDetail]: true,
               [styles.burgerDetailOpen]: this.state.open,
+              [styles.burgerDetailWhite]: white,
             })}
             onClick={() => this.setState({open: !this.state.open})}
           >

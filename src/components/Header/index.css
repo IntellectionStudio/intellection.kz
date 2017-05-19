@@ -171,6 +171,10 @@
   transition: 0.25s ease-in-out;
 }
 
+.burgerDetailWhite span {
+  background: var(--colorPrimary);
+}
+
 .burgerDetail span:nth-child(1) {
   top: 16px;
 }
