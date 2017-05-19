@@ -14,7 +14,12 @@ type PropsType = {
 const Homepage = (props: PropsType) => (
   <Page {...props}>
     <div className={styles.container}>
-      <Slider infinite={false} slidesToShow={5} slidesToScroll={1}>
+      <Slider
+        arrows={false}
+        infinite={false}
+        slidesToShow={5}
+        slidesToScroll={1}
+      >
         <div><h3>1</h3></div>
         <div><h3>2</h3></div>
         <div><h3>3</h3></div>
