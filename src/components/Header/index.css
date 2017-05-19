@@ -50,25 +50,22 @@
   display: flex;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.25s linear;
 
   @media screen and (min-width: 62rem) {
     height: 100%;
     visibility: visible;
     opacity: 1;
     position: static;
-    display: flex;
     flex-wrap: wrap;
     align-items: center;
     font-size: 16px;
+    transition-delay: 0s;
   }
 }
 
 .open {
-  display: flex;
   flex-direction: column;
-  visibility: visible;
-  opacity: 1;
   justify-content: space-between;
   align-items: center;
   position: absolute;
@@ -84,6 +81,8 @@
   padding-bottom: 111px;
   font-size: 24px;
   font-weight: 300;
+  visibility: visible;
+  opacity: 1;
 
   @media screen and (min-width: 62rem) {
     position: static;
