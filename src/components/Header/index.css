@@ -47,10 +47,15 @@
 }
 
 .nav {
-  display: none;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s linear;
 
   @media screen and (min-width: 62rem) {
     height: 100%;
+    visibility: visible;
+    opacity: 1;
     position: static;
     display: flex;
     flex-wrap: wrap;
@@ -62,6 +67,8 @@
 .open {
   display: flex;
   flex-direction: column;
+  visibility: visible;
+  opacity: 1;
   justify-content: space-between;
   align-items: center;
   position: absolute;
