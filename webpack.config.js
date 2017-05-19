@@ -7,6 +7,7 @@ import PhenomicLoaderFeedWebpackPlugin
   from "phenomic/lib/loader-feed-webpack-plugin"
 import PhenomicLoaderSitemapWebpackPlugin
   from "phenomic/lib/loader-sitemap-webpack-plugin"
+import CopyWebpackPlugin from "copy-webpack-plugin"
 
 import pkg from "./package.json"
 
@@ -210,6 +211,10 @@ export default (config = {}) => {
         filename: "[name].[hash].css",
         disable: config.dev,
       }),
+
+      new CopyWebpackPlugin([
+        {from: 'admin', to: 'admin'},
+      ]),
 
       ...config.production && [
         new webpack.optimize.UglifyJsPlugin(

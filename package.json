@@ -20,7 +20,9 @@
   },
   "phenomic": {
     "CNAME": false,
-    "devPort": 3000
+    "devPort": 3000,
+    "source": "content",
+    "assets": "content/assets"
   },
   "config": {
     "validate-commit-msg": {
@@ -188,6 +190,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-optimize": "^1.0.1",
     "babel-preset-stage-0": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.1",
     "eslint": "^3.19.0",
     "eslint-config-anvilabs": "^8.2.1",

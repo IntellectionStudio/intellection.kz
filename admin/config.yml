@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: owner/repo # replace by your repo
+  branch: master # replace if you want netlify-cms publish on a different branch
+
+public_folder: "content" # the same as your phenomic.source in your package.json
+media_folder: "content/assets" # the same as your phenomic.assets in your package.json
+
+collections:
+  - name: "post"
+    label: "Post"
+    folder: "content/posts" # a subfolder of your public_folder
+    create: true
+    card: {type: "alltype", text: "title"}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+    meta:
+      - {label: "Publish Date", name: "date", widget: "datetime"}
