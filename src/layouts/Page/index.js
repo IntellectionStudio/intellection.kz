@@ -1,12 +1,11 @@
 /* @flow */
 
-import {BodyContainer, joinUri, Link} from 'phenomic';
+import {joinUri} from 'phenomic';
 import Helmet from 'react-helmet';
 import React, {PropTypes} from 'react';
 import warning from 'warning';
 
-import Button from 'components/Button';
-import Loading from 'components/Loading';
+import Header from 'components/Header';
 
 import styles from './index.css';
 
@@ -44,9 +43,9 @@ const Page = (
 
   const metaTitle = head.metaTitle ? head.metaTitle : head.title;
 
-  const socialImage = head.hero && head.hero.match('://')
-    ? head.hero
-    : joinUri(process.env.PHENOMIC_USER_URL, head.hero);
+  // const socialImage = head.hero && head.hero.match('://')
+  //   ? head.hero
+  //   : joinUri(process.env.PHENOMIC_USER_URL, head.hero);
 
   const meta = [
     {property: 'og:type', content: 'article'},
@@ -55,7 +54,7 @@ const Page = (
       property: 'og:url',
       content: joinUri(process.env.PHENOMIC_USER_URL, __url),
     },
-    {property: 'og:image', content: socialImage},
+    // {property: 'og:image', content: socialImage},
     {property: 'og:description', content: head.description},
     {name: 'twitter:card', content: 'summary'},
     {name: 'twitter:title', content: metaTitle},
@@ -64,40 +63,15 @@ const Page = (
       content: `@${pkg.twitter}`,
     },
     {name: 'twitter:description', content: head.description},
-    {name: 'twitter:image', content: socialImage},
+    // {name: 'twitter:image', content: socialImage},
     {name: 'description', content: head.description},
   ];
 
   return (
     <div className={styles.page}>
       <Helmet title={metaTitle} meta={meta} />
-      {
-        <div
-          className={styles.hero}
-          style={
-            head.hero && {
-              background: `#111 url(${head.hero}) 50% 50% / cover`,
-            }
-          }
-        >
-          <div className={styles.header}>
-            <div className={styles.wrapper}>
-              <h1 className={styles.heading}>{head.title}</h1>
-              {head.cta &&
-                <Link to={head.cta.link}>
-                  <Button className={styles.cta} light {...head.cta.props}>
-                    {head.cta.label}
-                  </Button>
-                </Link>}
-            </div>
-          </div>
-        </div>
-      }
-      <div className={`${styles.wrapper} ${styles.pageContent}`}>
-        {header}
-        <div className={styles.body}>
-          {isLoading ? <Loading /> : <BodyContainer>{body}</BodyContainer>}
-        </div>
+      <div className={styles.wrapper}>
+        <Header white={__url !== '/'} />
         {children}
         {footer}
       </div>

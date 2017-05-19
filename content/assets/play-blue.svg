@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="138px" height="138px" viewBox="0 0 138 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Play-Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Play-Button" transform="translate(4.000000, 4.000000)">
+            <g id="Circle" stroke-width="8" stroke="#51A9F2">
+                <g id="path-1-link">
+                    <ellipse id="path-1" cx="64.959268" cy="64.9495271" rx="64.959268" ry="64.9495271"></ellipse>
+                </g>
+            </g>
+            <polygon id="Triangle" fill="#51A9F2" transform="translate(67.911965, 64.949530) rotate(90.000000) translate(-67.911965, -64.949530) " points="67.9119649 48.4169226 88.5808228 81.4821366 47.2431067 81.4821366"></polygon>
+        </g>
+    </g>
+</svg>

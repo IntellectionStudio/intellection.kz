@@ -1,13 +1,14 @@
 module.exports = config => [
-  require('stylelint')(),
+  require('stylelint')({}),
   require('postcss-cssnext')({
     browsers: 'last 2 versions',
     features: {
       customProperties: {
         variables: {
           maxWidth: '60rem',
+          colorPrimary: '#51a9f2',
+          colorPrimaryLight: '#badbfa',
           colorPrimaryDark: '#107491',
-          colorPrimary: '#007acc',
           colorSecondaryDark: '#22846C',
           colorSecondary: '#46BE77',
           colorNeutralDark: '#111',

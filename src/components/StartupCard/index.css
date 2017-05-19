@@ -1,0 +1,40 @@
+.container {
+  composes: grow from 'tachyons/src/_hovers.css';
+  cursor: pointer;
+  height: 279px;
+  width: 302px;
+  background: #fff;
+  border-radius: 0.625rem;
+  margin: 0 1.125rem 2.25rem;
+}
+
+.imageContainer {
+  height: 123px;
+  width: 100%;
+  background: #ccc;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+
+.image {
+  max-height: 100%;
+  width: 100%;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+
+.info {
+  padding: 0 3.5rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.25rem;
+  color: #494b4e;
+  font-weight: normal;
+}
+
+.text {
+  color: #494b4e;
+  font-size: 1rem;
+}

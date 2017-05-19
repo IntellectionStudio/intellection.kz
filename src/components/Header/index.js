@@ -1,46 +1,150 @@
 /* @flow */
 
+import React, {Component} from 'react';
 import {Link} from 'phenomic';
-import React, {PropTypes} from 'react';
-import Svg from 'react-svg-inline';
+import cx from 'classnames';
 
-import gitHubSvg from '../icons/iconmonstr-github-1.svg';
 import styles from './index.css';
-import twitterSvg from '../icons/iconmonstr-twitter-1.svg';
 
-type ContextType = {|
-  metadata: Phenomic$Metadata,
-|};
-
-const Header = (props: Object, {metadata: {pkg}}: ContextType) => (
-  <header className={styles.header}>
-    <nav className={styles.nav}>
-      <div className={styles.navPart1}>
-        <Link className={styles.link} to={'/'}>
-          {'Home'}
-        </Link>
-      </div>
-      <div className={styles.navPart2}>
-        {pkg.twitter &&
-          <a
-            href={`https://twitter.com/${pkg.twitter}`}
-            className={styles.link}
-          >
-            <Svg svg={twitterSvg} cleanup />
-            {'Twitter'}
-          </a>}
-        {pkg.repository &&
-          <a href={pkg.repository} className={styles.link}>
-            <Svg svg={gitHubSvg} cleanup />
-            {'GitHub'}
-          </a>}
-      </div>
-    </nav>
-  </header>
-);
-
-Header.contextTypes = {
-  metadata: PropTypes.object.isRequired,
+type PropsType = {
+  white: boolean,
 };
+
+class Header extends Component {
+  props: PropsType;
+  state = {
+    open: false,
+  };
+
+  renderMenuButton() {
+    if (this.state.open) {
+      return (
+        <button
+          className={styles.burger}
+          onClick={() => this.setState({open: !this.state.open})}
+        >
+          <span className={styles.menuOpened}>^</span>
+        </button>
+      );
+    }
+    return (
+      <button
+        className={styles.burger}
+        onClick={() => this.setState({open: !this.state.open})}
+      >
+        <span
+          className={cx(styles.bar, {
+            [styles.barBlue]: this.props.white,
+          })}
+        />
+        <span
+          className={cx(styles.bar, {
+            [styles.barMidBlue]: this.props.white,
+          })}
+        />
+        <span
+          className={cx(styles.bar, {
+            [styles.barBlue]: this.props.white,
+          })}
+        />
+      </button>
+    );
+  }
+
+  render() {
+    const {white} = this.props;
+    return (
+      <div
+        className={cx(styles.headerWrapper, {
+          [styles.white]: white,
+        })}
+      >
+        <header className={styles.header}>
+          <Link className={styles.logoLink} to="/">
+            {white
+              ? <img
+                  className={styles.logo}
+                  src="/assets/logo2.png"
+                  alt="Logo"
+                />
+              : <img
+                  className={styles.logo}
+                  src="/assets/logo.png"
+                  alt="Logo"
+                />}
+          </Link>
+          <nav
+            className={cx(styles.nav, {
+              [styles.open]: this.state.open,
+              [styles.navWhite]: white,
+            })}
+          >
+            <Link
+              className={cx(styles.navItem, {
+                [styles.navItemOpen]: this.state.open,
+              })}
+              to="/about"
+            >
+              О нас
+            </Link>
+            <Link
+              className={cx(styles.navItem, {
+                [styles.navItemOpen]: this.state.open,
+              })}
+              to="/"
+            >
+              Наши стартапы
+            </Link>
+            <Link
+              className={cx(styles.navItem, {
+                [styles.navItemOpen]: this.state.open,
+              })}
+              to="/"
+            >
+              Курсы
+            </Link>
+            <Link
+              className={cx(styles.navItem, {
+                [styles.navItemOpen]: this.state.open,
+              })}
+              to="/"
+            >
+              Knowledge Base
+            </Link>
+            <Link
+              className={cx(styles.navItem, {
+                [styles.navItemOpen]: this.state.open,
+              })}
+              to="/"
+            >
+              Наши видео
+            </Link>
+            <Link
+              className={cx(styles.navItem, {
+                [styles.navItemOpen]: this.state.open,
+              })}
+              to="/"
+            >
+              Блог
+            </Link>
+          </nav>
+          <button
+            className={cx(styles.burger, {
+              [styles.burgerDetail]: true,
+              [styles.burgerDetailOpen]: this.state.open,
+              [styles.burgerDetailWhite]: white,
+            })}
+            onClick={() => this.setState({open: !this.state.open})}
+          >
+            <span />
+            <span />
+            <span />
+            <span />
+          </button>
+        </header>
+      </div>
+    );
+  }
+}
 
 export default Header;

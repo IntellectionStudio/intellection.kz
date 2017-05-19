@@ -65,7 +65,10 @@ export default (config = {}) => {
         {
           test: /\.css$/,
           exclude: /\.global\.css$/,
-          include: path.resolve(__dirname, "src"),
+          include: [
+            path.resolve(__dirname, "src"),
+            path.resolve(__dirname, "src", "tachyons", "src")
+          ],
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
             use: [
@@ -113,13 +116,15 @@ export default (config = {}) => {
         // and use the following one
         // ! \\ If you want global CSS for node_modules only, just uncomment
         // this section and the `include` part
-        /*
         {
           test: /\.css$/,
           // depending on your need, you might need to scope node_modules
           // for global CSS if you want to keep CSS Modules by default
           // for your own CSS. If so, uncomment the line below
-          // include: path.resolve(__dirname, "node_modules"),
+          include: [
+            path.resolve(__dirname, "node_modules", "normalize.css"),
+            path.resolve(__dirname, "node_modules", "tachyons", "css")
+          ],
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
             use: [
@@ -131,7 +136,6 @@ export default (config = {}) => {
             ]
           }),
         },
-        */
         // ! \\ if you want to use Sass or LESS, you can add sass-loader or
         // less-loader after postcss-loader (or replacing it).
         // ! \\ You will also need to adjust the file extension
