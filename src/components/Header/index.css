@@ -63,6 +63,7 @@
     opacity: 1;
     width: auto;
     position: static;
+    background: var(--colorPrimary);
     flex-wrap: wrap;
     align-items: center;
     font-size: 16px;
@@ -107,6 +108,7 @@
     min-height: auto;
     padding: 0;
     font-weight: normal;
+    background: var(--colorPrimary);
   }
 }
 
