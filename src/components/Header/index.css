@@ -71,6 +71,12 @@
   }
 }
 
+.navWhite {
+  @media screen and (min-width: 62rem) {
+    background: white;
+  }
+}
+
 .open {
   flex-direction: column;
   justify-content: space-between;

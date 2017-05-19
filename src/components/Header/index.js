@@ -76,6 +76,7 @@ class Header extends Component {
           <nav
             className={cx(styles.nav, {
               [styles.open]: this.state.open,
+              [styles.navWhite]: white,
             })}
           >
             <Link
