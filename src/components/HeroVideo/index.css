@@ -160,6 +160,13 @@
   }
 }
 
+.playIconButton {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
 .playIcon {
   composes: grow from 'tachyons/src/_hovers.css';
   margin-top: 3.25rem;
