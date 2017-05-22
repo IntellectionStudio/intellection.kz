@@ -118,13 +118,14 @@ export default (config = {}) => {
         // ! \\ If you want global CSS for node_modules only, just uncomment
         // this section and the `include` part
         {
-          test: /\.css$/,
+          test: /\.s?css$/,
           // depending on your need, you might need to scope node_modules
           // for global CSS if you want to keep CSS Modules by default
           // for your own CSS. If so, uncomment the line below
           include: [
             path.resolve(__dirname, "node_modules", "normalize.css"),
-            path.resolve(__dirname, "node_modules", "tachyons", "css")
+            path.resolve(__dirname, "node_modules", "tachyons", "css"),
+            path.resolve(__dirname, "node_modules", "react-modal-video", "scss"),
           ],
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
@@ -133,6 +134,9 @@ export default (config = {}) => {
               {
                 loader: "postcss-loader",
                 query: { "plugins": postcssPlugins },
+              },
+              {
+                loader: "sass-loader",
               },
             ]
           }),
