@@ -22,7 +22,7 @@
     "CNAME": false,
     "devPort": 3000,
     "source": "content",
-    "assets": "content/assets"
+    "assets": "assets"
   },
   "config": {
     "validate-commit-msg": {
