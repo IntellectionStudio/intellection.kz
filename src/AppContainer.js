@@ -10,6 +10,7 @@ import Footer from 'components/Footer';
 import getIntlForLocale from 'utils/getIntlForLocale';
 
 import 'normalize.css/normalize.css';
+// $FlowFixMe
 import 'react-modal-video/scss/modal-video.scss';
 import './index.global.css';
 import './highlight.global.css';
