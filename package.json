@@ -50,68 +50,8 @@
       ]
     }
   },
-  "#babel": "webpack-(development|production) are useful for webpack 2, otherwise use development|production",
   "babel": {
-    "presets": [
-      "babel-preset-env",
-      "babel-preset-es2015",
-      "babel-preset-stage-0",
-      "babel-preset-react"
-    ],
-    "plugins": [
-      "babel-plugin-syntax-flow",
-      "babel-plugin-transform-flow-strip-types",
-      [
-        "babel-plugin-module-resolver",
-        {
-          "root": [
-            "./src"
-          ]
-        }
-      ]
-    ],
-    "env": {
-      "development": {
-        "plugins": [
-          "babel-plugin-transform-react-jsx-source",
-          "babel-plugin-transform-react-jsx-self",
-          "react-hot-loader/babel",
-          "babel-plugin-transform-runtime"
-        ]
-      },
-      "production": {
-        "presets": [
-          "babel-preset-react-optimize"
-        ]
-      },
-      "webpack-development": {
-        "presets": [
-          [
-            "babel-preset-env",
-            {
-              "modules": false
-            }
-          ]
-        ],
-        "plugins": [
-          "babel-plugin-transform-react-jsx-source",
-          "babel-plugin-transform-react-jsx-self",
-          "react-hot-loader/babel",
-          "babel-plugin-transform-runtime"
-        ]
-      },
-      "webpack-production": {
-        "presets": [
-          "babel-preset-react-optimize",
-          [
-            "babel-preset-env",
-            {
-              "modules": false
-            }
-          ]
-        ]
-      }
-    }
+    "extends": "./babelrc"
   },
   "dependencies": {
     "classnames": "^2.2.5",

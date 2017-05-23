@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "react",
+    "env",
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "syntax-flow",
+    "transform-flow-strip-types",
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
+  ],
+  "env": {
+    "production": {
+      "presets": [
+        "react-optimize"
+      ]
+    }
+  }
+}
