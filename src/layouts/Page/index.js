@@ -6,6 +6,7 @@ import React, {PropTypes} from 'react';
 import warning from 'warning';
 
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 
 import styles from './index.css';
 
@@ -73,7 +74,7 @@ const Page = (
       <div className={styles.wrapper}>
         <Header white={__url !== '/'} />
         {children}
-        {footer}
+        <Footer homepage={__url === '/'} />
       </div>
     </div>
   );

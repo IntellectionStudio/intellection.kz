@@ -7,10 +7,14 @@
   width: 100%;
   background-color: var(--colorPrimary);
   color: white;
-  z-index: 10;
+  z-index: 9999;
 
   @media screen and (min-width: 48rem) {
     height: 6rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    background-color: transparent;
   }
 }
 
@@ -63,7 +67,7 @@
     opacity: 1;
     width: auto;
     position: static;
-    background: var(--colorPrimary);
+    background: transparent;
     flex-wrap: wrap;
     align-items: center;
     font-size: 16px;
@@ -162,6 +166,8 @@
   width: 48px;
   height: 49px;
   cursor: pointer;
+  border: none;
+  background-color: inherit;
 
   @media screen and (min-width: 992px) {
     display: none;
