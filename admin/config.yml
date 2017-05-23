@@ -17,12 +17,11 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
     meta:
       - {label: "Publish Date", name: "date", widget: "datetime"}
-
-collections:
   - name: "pages"
-    label: Page
+    label: "Page"
     folder: "content"
     create: true
+    card: {type: "alltype", text: "title"}
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
