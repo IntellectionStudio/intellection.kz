@@ -1,18 +1,19 @@
 /* @flow */
 
+import {pure} from 'recompact';
 import React from 'react';
 
 import styles from './index.css';
 
-type PropsType = {
+type HeaderOwnPropsType = {|
   image: string,
   firstName: string,
   lastName: string,
   position: string,
   text: string,
-};
+|};
 
-const Header = ({image, firstName, lastName, position, text}: PropsType) => (
+const Header = ({image, firstName, lastName, position, text}) => (
   <div className={styles.container}>
     <div className={styles.profile}>
       <img className={styles.image} src={image} alt="Profile" />
@@ -25,4 +26,6 @@ const Header = ({image, firstName, lastName, position, text}: PropsType) => (
   </div>
 );
 
-export default Header;
+const EnhancedHeader: EnhancedComponentType<HeaderOwnPropsType> = pure(Header);
+
+export default EnhancedHeader;

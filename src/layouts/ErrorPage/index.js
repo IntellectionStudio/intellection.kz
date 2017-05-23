@@ -1,5 +1,6 @@
 /* @flow */
 
+import {pure} from 'recompact';
 import React from 'react';
 
 import Page from 'layouts/Page';
@@ -8,12 +9,12 @@ import styles from './index.css';
 
 const ERROR_NOT_FOUND_CODE = 404;
 
-type PropsType = {
+type ErrorPageOwnPropsType = {
   error?: number | string,
   errorText?: string,
 };
 
-const PageError = (
+const ErrorPage = (
   // $FlowFixMe
   {error = ERROR_NOT_FOUND_CODE, errorText = 'Page Not Found'}: PropsType,
 ) => (
@@ -43,4 +44,8 @@ const PageError = (
   </Page>
 );
 
-export default PageError;
+const EnhancedErrorPage: EnhancedComponentType<ErrorPageOwnPropsType> = pure(
+  ErrorPage,
+);
+
+export default EnhancedErrorPage;

@@ -12,9 +12,9 @@ declare module 'phenomic/lib/redux/createStore' {
   declare module.exports: $Exports<'phenomic/lib/redux/createStore/index'>;
 }
 
-declare type Phenomic$Metadata = {|
-  pkg: {|
+declare type Phenomic$MetadataType = {
+  pkg: {
     name: string,
     twitter: string,
-  |},
-|};
+  },
+};

@@ -1,18 +1,19 @@
 /* @flow */
 
+import {pure} from 'recompact';
 import React from 'react';
 
 import styles from './index.css';
 
-type PropsType = {
+type TopManagerCardOwnPropsType = {|
   image: string,
   firstName: string,
   lastName: string,
   position: string,
   text: string,
-};
+|};
 
-const Header = ({image, firstName, lastName, position, text}: PropsType) => (
+const TopManagerCard = ({image, firstName, lastName, position, text}) => (
   <div className={styles.container}>
     <div className={styles.profile}>
       <div className={styles.imageWrapper}>
@@ -31,4 +32,8 @@ const Header = ({image, firstName, lastName, position, text}: PropsType) => (
   </div>
 );
 
-export default Header;
+const EnhancedTopManagerCard: EnhancedComponentType<
+  TopManagerCardOwnPropsType,
+> = pure(TopManagerCard);
+
+export default EnhancedTopManagerCard;

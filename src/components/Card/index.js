@@ -1,18 +1,19 @@
 /* @flow */
 
-import React from 'react';
 import {Link} from 'phenomic';
+import {pure} from 'recompact';
+import React from 'react';
 
 import styles from './index.css';
 
-type PropsType = {|
+type CardOwnPropsType = {|
   link: string,
   image: string,
   title: string,
   text: string,
 |};
 
-const Card = ({link, image, title, text}: PropsType) => (
+const Card = ({link, image, title, text}) => (
   <div className={styles.root}>
     <Link className={styles.container} to={link}>
       <img className={styles.image} src={image} alt={link} />
@@ -26,4 +27,6 @@ const Card = ({link, image, title, text}: PropsType) => (
   </div>
 );
 
-export default Card;
+const EnhancedCard: EnhancedComponentType<CardOwnPropsType> = pure(Card);
+
+export default EnhancedCard;

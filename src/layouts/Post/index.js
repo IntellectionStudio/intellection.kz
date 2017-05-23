@@ -1,17 +1,17 @@
 /* @flow */
 
+import {pure} from 'recompact';
 import React from 'react';
 
-import LatestPosts from 'components/LatestPosts';
 import Page from 'layouts/Page';
 
 import styles from './index.css';
 
-type PropsType = {|
+type PostOwnPropsType = {|
   head: Object,
 |};
 
-const Post = (props: PropsType) => {
+const Post = props => {
   // it's up to you to choose what to do with this layout ;)
   const pageDate = props.head.date ? new Date(props.head.date) : null;
 
@@ -28,11 +28,10 @@ const Post = (props: PropsType) => {
           </header>
         </div>
       }
-    >
-      <hr />
-      <LatestPosts />
-    </Page>
+    />
   );
 };
 
-export default Post;
+const EnhancedPost: EnhancedComponentType<PostOwnPropsType> = pure(Post);
+
+export default EnhancedPost;

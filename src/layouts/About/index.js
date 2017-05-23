@@ -1,5 +1,6 @@
 /* @flow */
 
+import {pure} from 'recompact';
 import React from 'react';
 import {mapObjIndexed, values} from 'ramda';
 
@@ -9,7 +10,7 @@ import TeamMemberCard from 'components/TeamMemberCard';
 
 import styles from './index.css';
 
-type PropsType = {
+type HomepageOwnPropsType = {
   head: Object,
 };
 
@@ -21,7 +22,7 @@ const renderTeamMemberCard = (teamMember, key) => (
 );
 const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 
-const Homepage = (props: PropsType) => (
+const HomePage = props => (
   <Page {...props}>
     <div className={styles.hero}>
       <div className={styles.heroWrapper}>
@@ -92,4 +93,8 @@ const Homepage = (props: PropsType) => (
   </Page>
 );
 
-export default Homepage;
+const EnhancedHomePage: EnhancedComponentType<HomepageOwnPropsType> = pure(
+  HomePage,
+);
+
+export default EnhancedHomePage;

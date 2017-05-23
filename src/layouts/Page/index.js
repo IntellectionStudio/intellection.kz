@@ -1,6 +1,7 @@
 /* @flow */
 
 import {joinUri} from 'phenomic';
+import {pure} from 'recompact';
 import Helmet from 'react-helmet';
 import React, {PropTypes} from 'react';
 import warning from 'warning';
@@ -9,7 +10,7 @@ import Header from 'components/Header';
 
 import styles from './index.css';
 
-type PropsType = {|
+type PageOwnPropsType = {|
   __filename?: string,
   __url?: string,
   isLoading?: boolean,
@@ -19,22 +20,10 @@ type PropsType = {|
   footer?: React$Element<any>,
   children?: React$Element<any>,
 |};
-type ContextType = {|
-  metadata: Phenomic$Metadata,
-|};
 
 const Page = (
-  {
-    isLoading,
-    __filename,
-    __url,
-    head,
-    body,
-    header,
-    footer,
-    children,
-  }: PropsType,
-  {metadata: {pkg}}: ContextType,
+  {isLoading, __filename, __url, head, body, header, footer, children},
+  {metadata: {pkg}}: $FlowFixMe,
 ) => {
   warning(
     typeof head.title === 'string',
@@ -83,4 +72,6 @@ Page.contextTypes = {
   metadata: PropTypes.object.isRequired,
 };
 
-export default Page;
+const EnhancedPage: EnhancedComponentType<PageOwnPropsType> = pure(Page);
+
+export default EnhancedPage;

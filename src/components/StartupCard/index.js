@@ -1,16 +1,17 @@
 /* @flow */
 
+import {pure} from 'recompact';
 import React from 'react';
 
 import styles from './index.css';
 
-type PropsType = {|
+type StartupCardOwnPropsType = {|
   image: string,
   text: string,
   title: string,
 |};
 
-const StartupCard = ({image, text, title}: PropsType) => (
+const StartupCard = ({image, text, title}) => (
   <div className={styles.container}>
     <div className={styles.imageContainer}>
       <img className={styles.image} src={image} alt={title} />
@@ -24,4 +25,8 @@ const StartupCard = ({image, text, title}: PropsType) => (
   </div>
 );
 
-export default StartupCard;
+const EnhancedStartupCard: EnhancedComponentType<
+  StartupCardOwnPropsType,
+> = pure(StartupCard);
+
+export default EnhancedStartupCard;

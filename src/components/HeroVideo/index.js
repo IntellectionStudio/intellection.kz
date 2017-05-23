@@ -1,22 +1,24 @@
 /* @flow */
 
+import {pure} from 'recompact';
 import React, {Component} from 'react';
 import ModalVideo from 'react-modal-video';
 
 import styles from './index.css';
 
-type PropsType = {|
+type HeroVideoOwnPropsType = {|
   image: string,
   playIcon: string,
   sources: Array<string>,
   text: string,
   title: string,
 |};
+type HeroVideoStateType = {|
+  isOpen: boolean,
+|};
 
 class HeroVideo extends Component {
-  props: PropsType;
-
-  state = {
+  state: HeroVideoStateType = {
     isOpen: false,
   };
 
@@ -76,4 +78,8 @@ class HeroVideo extends Component {
   }
 }
 
-export default HeroVideo;
+const EnhancedHeroVideo: EnhancedComponentType<HeroVideoOwnPropsType> = pure(
+  HeroVideo,
+);
+
+export default EnhancedHeroVideo;

@@ -1,21 +1,20 @@
 /* @flow */
 
-import React, {Component} from 'react';
 import {mapObjIndexed, values} from 'ramda';
+import {pure} from 'recompact';
+import React, {Component} from 'react';
 
 import Page from 'layouts/Page';
 
 import styles from './index.css';
 
-type PropsType = {
+type StartupsOwnPropsType = {|
   head: Object,
-};
+|};
 
 const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 
-class Homepage extends Component {
-  props: PropsType;
-
+class Startups extends Component {
   renderStartupLogo = (startup: Object, key: string) => (
     <button key={key} className={styles.logoButton}>
       <img className={styles.logo} src={startup.logo} alt={`${key} Logo`} />
@@ -38,4 +37,8 @@ class Homepage extends Component {
   }
 }
 
-export default Homepage;
+const EnhancedStartups: EnhancedComponentType<StartupsOwnPropsType> = pure(
+  Startups,
+);
+
+export default EnhancedStartups;

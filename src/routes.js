@@ -6,19 +6,21 @@ import {PageContainer as PhenomicPageContainer} from 'phenomic';
 
 import AppContainer from './AppContainer';
 import Page from './layouts/Page';
-import PageError from './layouts/PageError';
-import Homepage from './layouts/Homepage';
+import ErrorPage from './layouts/ErrorPage';
+import HomePage from './layouts/HomePage';
 import About from './layouts/About';
 import Startups from './layouts/Startups';
 import Post from './layouts/Post';
 
-const PageContainer = (props: Object) => (
+type PageContainerOwnPropsType = {||};
+
+const PageContainer = (props: PageContainerOwnPropsType) => (
   <PhenomicPageContainer
     {...props}
     layouts={{
       Page,
-      PageError,
-      Homepage,
+      ErrorPage,
+      HomePage,
       About,
       Startups,
       Post,
@@ -26,8 +28,10 @@ const PageContainer = (props: Object) => (
   />
 );
 
-export default (
+const Routes = () => (
   <Route component={AppContainer}>
     <Route path="*" component={PageContainer} />
   </Route>
 );
+
+export default Routes;

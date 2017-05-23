@@ -1,18 +1,21 @@
 /* @flow */
 
-import React, {Component} from 'react';
 import {Link} from 'phenomic';
+import {pure} from 'recompact';
+import React, {Component} from 'react';
 import cx from 'classnames';
 
 import styles from './index.css';
 
-type PropsType = {
+type HeaderOwnPropsType = {|
   white: boolean,
-};
+|};
+type HeaderStateType = {|
+  open: boolean,
+|};
 
 class Header extends Component {
-  props: PropsType;
-  state = {
+  state: HeaderStateType = {
     open: false,
   };
 
@@ -147,4 +150,6 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const EnhancedHeader: EnhancedComponentType<HeaderOwnPropsType> = pure(Header);
+
+export default EnhancedHeader;
