@@ -16,17 +16,17 @@ hero:
       link: "startups"
       image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-partner-f8%401x.png
       title: Стартапы
-      text: I have hinted that I would often jerk poor from between
+      text: Наши проекты в сфере мобильных приложений, веб-сайтов, технологий виртуальной реальности
     knowledgeBase:
       link: "knowledgeBase"
       image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-nd-digital-marketing%401x.png
       title: Ресурсы
-      text: I have hinted that I would often jerk poor from between
+      text: Мы не боимся делиться нашими знаниями. Здесь полезные ссылки из разных источников
     courses:
       link: "courses"
       image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-nd-intro-to-programming%401x.png
       title: Курсы
-      text: I have hinted that I would often jerk poor from between
+      text: Обучение в нашем центре это первый шаг в вашей карьере программиста, бизнесмена или стартапера
 startupsSection:
   title: Наши стартапы
   text: Then going through some small strange motions with it—whether indispensable to the

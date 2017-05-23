@@ -6,9 +6,9 @@ import cx from 'classnames';
 
 import styles from './index.css';
 
-type PropsType = {
+type PropsType = {|
   white: boolean,
-};
+|};
 
 class Header extends Component {
   props: PropsType;

@@ -150,14 +150,17 @@
 .text {
   color: #fff;
   margin-top: 0.5rem;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+  font-size: 0.75rem;
 
-  @media screen and (min-width: 48rem) {
+  /* @media screen and (min-width: 48rem) {
     font-size: 1.125rem;
   }
 
   @media screen and (min-width: 62rem) {
     margin-top: 1rem;
-  }
+  } */
 }
 
 .playIconButton {
@@ -177,7 +180,7 @@
   }
 
   @media screen and (min-width: 62rem) {
-    width: 90px;
+    width: 4rem;
     margin-top: 3rem;
   }
 }
