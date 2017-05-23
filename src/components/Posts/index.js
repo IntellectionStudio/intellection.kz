@@ -10,7 +10,7 @@ type PropsType = {|
 |};
 
 type ContextType = {|
-  collection: Array<PostType>,
+  collection: Array<Object>,
 |};
 
 const Posts = ({topic}: PropsType, {collection}: ContextType) => {
@@ -22,9 +22,7 @@ const Posts = ({topic}: PropsType, {collection}: ContextType) => {
     <div>
       {posts.length
         ? <ul className={styles.list}>
-            {posts.map((post: PostType) => (
-              <div key={post.title}>{post.title}</div>
-            ))}
+            {posts.map(post => <div key={post.title}>{post.title}</div>)}
           </ul>
         : 'No posts yet.'}
     </div>

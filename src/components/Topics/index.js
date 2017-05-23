@@ -7,11 +7,13 @@ import {Link} from 'phenomic';
 import Topic from '../Topic';
 import styles from './index.css';
 
+type PropsType = {||};
+
 type ContextType = {|
-  collection: Array<PostType>,
+  collection: Array<Object>,
 |};
 
-const Topics = (props, {collection}: ContextType) => {
+const Topics = (props: PropsType, {collection}: ContextType) => {
   const topics = enhanceCollection(collection, {
     filter: {layout: 'TopicPage'},
   });

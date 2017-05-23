@@ -3,11 +3,12 @@
 import {Link} from 'phenomic';
 import React from 'react';
 
-import type {PostType} from 'types';
-
 import styles from './index.css';
 
-type PropsType = PostType & {};
+type PropsType = {|
+  __url: string,
+  title: string,
+|};
 
 const Topic = ({__url, title}: PropsType) => (
   <div className={styles.wrapper}>

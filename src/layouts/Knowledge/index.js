@@ -5,9 +5,12 @@ import React from 'react';
 import Topics from 'components/Topics';
 
 import Page from '../Page';
-// import styles from './index.css'; className={styles.container}
 
-const Knowledge = props => (
+type PropsType = {
+  head: Object,
+};
+
+const Knowledge = (props: PropsType) => (
   <Page {...props}>
     <div>
       <Topics />
