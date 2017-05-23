@@ -6,7 +6,6 @@ import React from 'react';
 import Container from 'components/Container';
 import Content from 'components/Content';
 import DefaultHeadMeta from 'components/DefaultHeadMeta';
-import Footer from 'components/Footer';
 import getIntlForLocale from 'utils/getIntlForLocale';
 
 import 'normalize.css/normalize.css';
@@ -32,7 +31,6 @@ const AppContainer = ({location: {query}, children}: PropsType) => {
         <Content>
           {children}
         </Content>
-        <Footer />
       </Container>
     </IntlProvider>
   );

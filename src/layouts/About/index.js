@@ -42,9 +42,14 @@ const Homepage = (props: PropsType) => (
             <h1 className={styles.videoTitle}>
               {props.head.video.title}
             </h1>
-            <p className={styles.videoText}>
-              {props.head.hero.text}
-            </p>
+            <div className={styles.videoText}>
+              {mapVal(
+                (text, key) => (
+                  <p key={key}><b>{text.title}</b> - {text.detail}</p>
+                ),
+                props.head.video.texts,
+              )}
+            </div>
             <a className={styles.videoButton}>
               {props.head.video.buttonText}
               <img

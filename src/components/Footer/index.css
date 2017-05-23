@@ -9,6 +9,11 @@
   align-items: center;
 }
 
+.whiteBackground {
+  background: white;
+  color: #313131;
+}
+
 .container {
   opacity: 0.8;
   display: flex;
