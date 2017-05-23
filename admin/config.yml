@@ -17,3 +17,15 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
     meta:
       - {label: "Publish Date", name: "date", widget: "datetime"}
+
+collections:
+  - name: "pages"
+    label: Page
+    folder: "content"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "string"}
+    meta:
+      - {label: "Publish Date", name: "date", widget: "datetime"}
