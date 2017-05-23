@@ -10,6 +10,8 @@ import PageError from './layouts/PageError';
 import Homepage from './layouts/Homepage';
 import About from './layouts/About';
 import Startups from './layouts/Startups';
+import Knowledge from './layouts/Knowledge';
+import TopicPage from './layouts/TopicPage';
 import Post from './layouts/Post';
 
 const PageContainer = (props: Object) => (
@@ -21,6 +23,8 @@ const PageContainer = (props: Object) => (
       Homepage,
       About,
       Startups,
+      Knowledge,
+      TopicPage,
       Post,
     }}
   />

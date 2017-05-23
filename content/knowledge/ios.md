@@ -1,7 +1,8 @@
 ---
-title: First Post, no hero.
+id: ios
+title: iOS Posts
 date: 2016-01-22
-layout: Post
+layout: TopicPage
 ---
 
 This is the first post!
