@@ -29,6 +29,7 @@ class Header extends Component {
 
   renderLink = ({title, path}: HeaderLinkType) => (
     <Link
+      key={`${title}-${path}`}
       className={cx(styles.navItem, {
         [styles.navItemOpen]: this.state.isOpen,
       })}
