@@ -92,7 +92,7 @@ export default (config = {}) => {
                 // query for postcss can't be used right now
                 // https://github.com/postcss/postcss-loader/issues/99
                 // meanwhile, see webpack.LoaderOptionsPlugin in plugins list
-                // query: { plugins: postcssPlugins },
+                query: { plugins: postcssPlugins },
               },
             ],
           }),
@@ -110,7 +110,7 @@ export default (config = {}) => {
                 // query for postcss can't be used right now
                 // https://github.com/postcss/postcss-loader/issues/99
                 // meanwhile, see webpack.LoaderOptionsPlugin in plugins list
-                // query: { plugins: postcssPlugins },
+                query: { plugins: postcssPlugins },
               },
             ],
           }),

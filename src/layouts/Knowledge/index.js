@@ -3,14 +3,11 @@ import React from 'react';
 
 import Page from '../Page';
 import styles from './index.css';
-import LatestPosts from '../../components/LatestPosts';
 
-const Knowledge = props =>
-  console.log(props) ||
-  <Page {...props}>
-    <div className={styles.knowledge}>
-      <LatestPosts />
-    </div>
-  </Page>;
+const Knowledge = (props: PhenomicPagePropsType) => (
+  <Page {...Page.pickPageProps(props)}>
+    <div className={styles.knowledge} />
+  </Page>
+);
 
 export default Knowledge;

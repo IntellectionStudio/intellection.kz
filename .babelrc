@@ -1,0 +1,31 @@
+{
+  "presets": [
+    "react",
+    "env",
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "syntax-flow",
+    "transform-flow-strip-types",
+    "ramda",
+    [
+      "module-resolver", {
+        "root": ["./src"]
+      }
+    ],
+    [
+      "lodash", {
+        "id": "recompact"
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "presets": [
+        "react-optimize"
+      ]
+    }
+  }
+}

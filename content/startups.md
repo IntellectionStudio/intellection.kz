@@ -1,6 +1,6 @@
 ---
 title: Наши стартапы
-layout: Startups
+layout: StartupsPage
 default:
   image: /assets/startups-bg-main.png
   title: Наши стартапы
