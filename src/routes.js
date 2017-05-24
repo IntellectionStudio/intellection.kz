@@ -6,7 +6,7 @@ import React from 'react';
 
 import AboutPage from 'layouts/AboutPage';
 import ErrorPage from 'layouts/ErrorPage';
-import HomePage from 'layouts/Homepage';
+import HomePage from 'layouts/HomePage';
 import Page from 'layouts/Page';
 import PostPage from 'layouts/PostPage';
 import StartupsPage from 'layouts/StartupsPage';
