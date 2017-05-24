@@ -19,7 +19,7 @@ const PagesList = ({pages}: PropsType) => (
             <li key={page.title}><PagePreview {...page} /></li>
           ))}
         </ul>
-      : 'No posts yet.'}
+      : 'No posts yet.1'}
   </div>
 );
 
