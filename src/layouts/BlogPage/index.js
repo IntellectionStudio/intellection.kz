@@ -13,7 +13,7 @@ type BlogPageStateType = {|
   posts: Array<PostType>,
 |};
 
-class Blog extends Component {
+class BlogPage extends Component {
   props: BlogPageOwnPropsType;
 
   state: BlogPageStateType = {
@@ -30,13 +30,8 @@ class Blog extends Component {
   }
 
   render() {
-    const pageProps = {
-      head: {title: 'Hello'},
-      ...Page.pickPageProps(this.props),
-    };
-
     return (
-      <Page {...pageProps}>
+      <Page {...this.props}>
         <div className={styles.container}>
           {this.state.posts.length
             ? <li className={styles.list}>
@@ -55,4 +50,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog;
+export default BlogPage;

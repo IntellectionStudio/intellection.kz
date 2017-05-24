@@ -5,9 +5,11 @@ import {Route} from 'react-router';
 import React from 'react';
 
 import AboutPage from 'layouts/AboutPage';
-import Blog from 'layouts/Blog';
+import BlogPage from 'layouts/BlogPage';
 import ErrorPage from 'layouts/ErrorPage';
 import HomePage from 'layouts/HomePage';
+import KnowledgePage from 'layouts/KnowledgePage';
+import TopicPage from 'layouts/TopicPage';
 import Page from 'layouts/Page';
 import PostPage from 'layouts/PostPage';
 import StartupsPage from 'layouts/StartupsPage';
@@ -22,9 +24,12 @@ const PageContainer = (props: PageContainerOwnPropsType) => (
     layouts={{
       Page,
       ErrorPage,
-      HomePage,
       AboutPage,
+      BlogPage,
+      KnowledgePage,
+      HomePage,
       StartupsPage,
+      TopicPage,
       PostPage,
     }}
   />
@@ -32,7 +37,6 @@ const PageContainer = (props: PageContainerOwnPropsType) => (
 
 const Routes = (
   <Route component={AppContainer}>
-    <Route path="/blog" component={Blog} />
     <Route path="*" component={PageContainer} />
   </Route>
 );
