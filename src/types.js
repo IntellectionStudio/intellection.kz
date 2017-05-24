@@ -1,5 +1,10 @@
 /* @flow */
 
+export type HeaderLinkType = {
+  title: string,
+  path: string,
+};
+
 export type TeamMemberType = {
   image: string,
   firstName: string,
