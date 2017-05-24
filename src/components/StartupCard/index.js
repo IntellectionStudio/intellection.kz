@@ -3,15 +3,15 @@
 import {pure} from 'recompact';
 import React from 'react';
 
+import type {StartupCardType} from 'types';
+
 import styles from './index.css';
 
 type StartupCardOwnPropsType = {|
-  image: string,
-  text: string,
-  title: string,
+  startupCard: StartupCardType,
 |};
 
-const StartupCard = ({image, text, title}) => (
+const StartupCard = ({startupCard: {image, text, title}}) => (
   <div className={styles.container}>
     <div className={styles.imageContainer}>
       <img className={styles.image} src={image} alt={title} />

@@ -4,16 +4,15 @@ import {Link} from 'phenomic';
 import {pure} from 'recompact';
 import React from 'react';
 
+import type {CardType} from 'types';
+
 import styles from './index.css';
 
 type CardOwnPropsType = {|
-  link: string,
-  image: string,
-  title: string,
-  text: string,
+  card: CardType,
 |};
 
-const Card = ({link, image, title, text}) => (
+const Card = ({card: {link, image, title, text}}) => (
   <div className={styles.root}>
     <Link className={styles.container} to={link}>
       <img className={styles.image} src={image} alt={link} />

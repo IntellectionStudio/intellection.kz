@@ -1,28 +1,49 @@
 /* @flow */
 
 import {Link} from 'phenomic';
-import {mapObjIndexed, values} from 'ramda';
 import React from 'react';
 
+import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
 import HeroVideo from 'components/HeroVideo';
 import Card from 'components/Card';
 import StartupCard from 'components/StartupCard';
+import type {CardType, StartupCardType} from 'types';
 
 import styles from './index.css';
 
-const renderCard = (card, key) => <Card key={key} {...card} />;
-const renderStartupCard = (startup, key) => (
-  <StartupCard key={key} {...startup} />
-);
-const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
+type HomePageOwnPropsType = {|
+  /* :: ...PhenomicPagePropsType, */
+  head: {
+    hero: {
+      cards: {
+        +[key: string]: CardType,
+      },
+    },
+    startupsSection: {
+      startups: {
+        +[key: string]: StartupCardType,
+      },
+    },
+  } & PhenomicPageHeadType,
+|};
 
-const HomePage = (props: PhenomicPagePropsType) => (
-  <Page {...props}>
+const renderCard = (card: CardType) => (
+  <Card key={`${card.title}-${card.text}`} card={card} />
+);
+const renderStartupCard = (startupCard: StartupCardType) => (
+  <StartupCard
+    key={`${startupCard.title}-${startupCard.text}`}
+    startupCard={startupCard}
+  />
+);
+
+const HomePage = (props: HomePageOwnPropsType) => (
+  <Page {...Page.pickPageProps(props)}>
     <div className={styles.hero}>
       <HeroVideo {...props.head.hero.video} />
       <div className={styles.cards}>
-        {mapVal(renderCard, props.head.hero.cards)}
+        {mapValues(renderCard)(props.head.hero.cards)}
       </div>
     </div>
     <div>
@@ -35,7 +56,7 @@ const HomePage = (props: PhenomicPagePropsType) => (
         </p>
       </div>
       <div className={styles.startups}>
-        {mapVal(renderStartupCard, props.head.startupsSection.startups)}
+        {mapValues(renderStartupCard)(props.head.startupsSection.startups)}
       </div>
       <div className={styles.buttonContainer}>
         <Link className={styles.button} to="startups">

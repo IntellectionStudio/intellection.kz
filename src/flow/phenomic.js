@@ -12,11 +12,13 @@ declare module 'phenomic/lib/redux/createStore' {
   declare module.exports: $Exports<'phenomic/lib/redux/createStore/index'>;
 }
 
+declare type PhenomicPageHeadType = {
+  title: ?string,
+  layout: string,
+} & {+[key: string]: $FlowFixMe};
+
 declare type PhenomicPagePropsType = {|
   __filename?: string,
   __url?: string,
-  head: {
-    title: ?string,
-    layout: string,
-  } & {+[key: string]: $FlowFixMe},
+  head: PhenomicPageHeadType,
 |};

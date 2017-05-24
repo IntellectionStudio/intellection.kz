@@ -4,12 +4,16 @@ import {pure} from 'recompact';
 import React, {Component} from 'react';
 import ModalVideo from 'react-modal-video';
 
+import mapValues from 'utils/mapValues';
+
 import styles from './index.css';
 
 type HeroVideoOwnPropsType = {|
   image: string,
   playIcon: string,
-  sources: Array<string>,
+  sources: {
+    +[key: string]: string,
+  },
   text: string,
   title: string,
 |};
@@ -22,9 +26,9 @@ class HeroVideo extends Component {
     isOpen: false,
   };
 
-  openModal() {
-    this.setState({isOpen: false});
-  }
+  handlePlayButtonClick = () => this.setState({isOpen: true});
+
+  renderSource = (src: string) => <source key={src} src={src} />;
 
   render() {
     const {image, playIcon, sources, text, title} = this.props;
@@ -51,9 +55,7 @@ class HeroVideo extends Component {
               muted
               loop
             >
-              {Object.values(sources).map(src => (
-                <source key={src} src={src} />
-              ))}
+              {mapValues(this.renderSource)(sources)}
             </video>
           </div>
           <div className={styles.overlay}>
@@ -62,7 +64,7 @@ class HeroVideo extends Component {
               <p className={styles.text}>{text}</p>
               <button
                 className={styles.playIconButton}
-                onClick={() => this.setState({isOpen: true})}
+                onClick={this.handlePlayButtonClick}
               >
                 <img
                   alt="Play Video"

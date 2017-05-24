@@ -1,15 +1,13 @@
 /* @flow */
 
-import {mapObjIndexed, values} from 'ramda';
 import React, {Component} from 'react';
 
+import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
 
 import styles from './index.css';
 
 type StartupsPageOwnPropsType = PhenomicPagePropsType;
-
-const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 
 class StartupsPage extends Component {
   props: StartupsPageOwnPropsType;
@@ -22,10 +20,10 @@ class StartupsPage extends Component {
 
   render() {
     return (
-      <Page {...this.props}>
+      <Page {...Page.pickPageProps(this.props)}>
         <div className={styles.container}>
           <div className={styles.logos}>
-            {mapVal(this.renderStartupLogo, this.props.head.startups)}
+            {mapValues(this.renderStartupLogo)(this.props.head.startups)}
           </div>
           <div className={styles.startup}>
             Startups

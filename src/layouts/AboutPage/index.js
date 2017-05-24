@@ -1,11 +1,11 @@
 /* @flow */
 
-import {mapObjIndexed, values} from 'ramda';
 import React from 'react';
 
+import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
-import TopManagerCard from 'components/TopManagerCard';
 import TeamMemberCard from 'components/TeamMemberCard';
+import TopManagerCard from 'components/TopManagerCard';
 import type {TeamMemberType} from 'types';
 
 import styles from './index.css';
@@ -22,10 +22,9 @@ const renderTeamMemberCard = (teamMember: TeamMemberType) => (
     teamMember={teamMember}
   />
 );
-const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 
 const AboutPage = (props: PhenomicPagePropsType) => (
-  <Page {...props}>
+  <Page {...Page.pickPageProps(props)}>
     <div className={styles.hero}>
       <div className={styles.heroWrapper}>
         <div className={styles.heroContent}>
@@ -84,12 +83,12 @@ const AboutPage = (props: PhenomicPagePropsType) => (
     </div>
     <div className={styles.management}>
       <div className={styles.managementWrapper}>
-        {mapVal(renderTopManagerCard, props.head.team.topManagers)}
+        {mapValues(renderTopManagerCard)(props.head.team.topManagers)}
       </div>
     </div>
     <div className={styles.teamMembers}>
       <div className={styles.teamMembersWrapper}>
-        {mapVal(renderTeamMemberCard, props.head.team.teamMembers)}
+        {mapValues(renderTeamMemberCard)(props.head.team.teamMembers)}
       </div>
     </div>
   </Page>

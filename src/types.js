@@ -12,3 +12,16 @@ export type TeamMemberType = {
   position: string,
   text: string,
 };
+
+export type CardType = {
+  link: string,
+  image: string,
+  title: string,
+  text: string,
+};
+
+export type StartupCardType = {
+  image: string,
+  text: string,
+  title: string,
+};
