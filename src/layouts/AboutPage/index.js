@@ -1,28 +1,30 @@
 /* @flow */
 
 import React from 'react';
-import {mapObjIndexed, values} from 'ramda';
 
+import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
-import TopManagerCard from 'components/TopManagerCard';
 import TeamMemberCard from 'components/TeamMemberCard';
+import TopManagerCard from 'components/TopManagerCard';
+import type {TeamMemberType} from 'types';
 
 import styles from './index.css';
 
-type PropsType = {
-  head: Object,
-};
-
-const renderTopManagerCard = (topManager, key) => (
-  <TopManagerCard key={key} {...topManager} />
+const renderTopManagerCard = (topManager: TeamMemberType) => (
+  <TopManagerCard
+    key={`${topManager.firstName}-${topManager.lastName}`}
+    teamMember={topManager}
+  />
 );
-const renderTeamMemberCard = (teamMember, key) => (
-  <TeamMemberCard key={key} {...teamMember} />
+const renderTeamMemberCard = (teamMember: TeamMemberType) => (
+  <TeamMemberCard
+    key={`${teamMember.firstName}-${teamMember.lastName}`}
+    teamMember={teamMember}
+  />
 );
-const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 
-const Homepage = (props: PropsType) => (
-  <Page {...props}>
+const AboutPage = (props: PhenomicPagePropsType) => (
+  <Page {...Page.pickPageProps(props)}>
     <div className={styles.hero}>
       <div className={styles.heroWrapper}>
         <div className={styles.heroContent}>
@@ -43,7 +45,7 @@ const Homepage = (props: PropsType) => (
               {props.head.video.title}
             </h1>
             <div className={styles.videoText}>
-              {mapVal(
+              {mapValues(
                 (text, key) => (
                   <p key={key}><b>{text.title}</b> - {text.detail}</p>
                 ),
@@ -86,15 +88,15 @@ const Homepage = (props: PropsType) => (
     </div>
     <div className={styles.management}>
       <div className={styles.managementWrapper}>
-        {mapVal(renderTopManagerCard, props.head.team.topManagers)}
+        {mapValues(renderTopManagerCard)(props.head.team.topManagers)}
       </div>
     </div>
     <div className={styles.teamMembers}>
       <div className={styles.teamMembersWrapper}>
-        {mapVal(renderTeamMemberCard, props.head.team.teamMembers)}
+        {mapValues(renderTeamMemberCard)(props.head.team.teamMembers)}
       </div>
     </div>
   </Page>
 );
 
-export default Homepage;
+export default AboutPage;

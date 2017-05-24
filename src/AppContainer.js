@@ -14,14 +14,17 @@ import 'react-modal-video/scss/modal-video.scss';
 import './index.global.css';
 import './highlight.global.css';
 
-type PropsType = {
-  children?: React$Element<any>,
+type AppContainerOwnPropsType = {|
   location: {
     query: Object,
   },
-};
+  children?: React$Element<any>,
+|};
 
-const AppContainer = ({location: {query}, children}: PropsType) => {
+const AppContainer = ({
+  location: {query},
+  children,
+}: AppContainerOwnPropsType) => {
   const intlConfig = getIntlForLocale(query.locale);
 
   return (

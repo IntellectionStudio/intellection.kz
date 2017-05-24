@@ -1,23 +1,12 @@
 ---
 title: О нас
-layout: About
+layout: AboutPage
 hero:
   title: Стартап центр Intellection
-  text: Мы любим программирование и новые технологии и даже верим, что живем в VR
+  text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
 video:
-  texts:
-    vision:
-      title: Наше видение
-      detail: Построить в Казахстане всемирноизвестный центр ИТ продуктов для мирового рынка
-    mission:
-      title: Наша миссия
-      detail: Мы сделаем нашу страну известной посредством создания технологических продуктов на стыке инновационных решений
-    strategy:
-      title: Наша стратегия
-      detail: 1) Приносить инноваций в традиционные бизнесы. 2) Создавать продукты используя новейшие достижения индустрии
-    goal:
-      title: Наша цель
-      detail: Создание первого казахского Юникорна
+  title: Бла-бла-бла-бла-бла
+  text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
   buttonText: Смотреть видео
   playIcon: /assets/play-white.png
 team:
@@ -32,14 +21,14 @@ team:
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
     Ilyas:
       image: /assets/dummy-profile.jpeg
-      firstName: Илияс
+      firstName: Ильяс
       lastName: Исатаев
       position: Product Inventor
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
     Gulsum:
       image: /assets/dummy-profile.jpeg
       firstName: Гульсум
-      lastName: Елюбаева
+      lastName: Байжикенова
       position: CFO
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
   teamMembers:
@@ -121,6 +110,12 @@ team:
       lastName: Фамилия
       position: Sales
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+    Aktilek:
+      image: /assets/dummy-profile.jpeg
+      firstName: Актилек
+      lastName: Жумадил
+      position: Sales
+      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Sultan:
       image: /assets/dummy-profile.jpeg
       firstName: Султан
@@ -132,11 +127,29 @@ team:
       firstName: Жангали
       lastName: Пернебаев
       position: IOS Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.               
+      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+    Yersultan:
+      image: /assets/dummy-profile.jpeg
+      firstName: Ерсултан
+      lastName: Фамилия
+      position: Developer
+      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+    Yerdaulet:
+      image: /assets/dummy-profile.jpeg
+      firstName: Ердаулет
+      lastName: Беков
+      position: Developer
+      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Zhanna:
       image: /assets/dummy-profile.jpeg
       firstName: Жанна
       lastName: Фамилия
       position: Content maker
+      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+    AlmasKairatuly:
+      image: /assets/dummy-profile.jpeg
+      firstName: Алмас
+      lastName: Кайратулы
+      position: Developer
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
 ---
