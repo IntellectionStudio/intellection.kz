@@ -3,17 +3,17 @@
 import {pure} from 'recompact';
 import React from 'react';
 
+import type {TeamMemberType} from 'types';
+
 import styles from './index.css';
 
-type HeaderOwnPropsType = {|
-  image: string,
-  firstName: string,
-  lastName: string,
-  position: string,
-  text: string,
+type TeamMemberOwnPropsType = {|
+  teamMember: TeamMemberType,
 |};
 
-const Header = ({image, firstName, lastName, position, text}) => (
+const TeamMember = ({
+  teamMember: {image, firstName, lastName, position, text},
+}) => (
   <div className={styles.container}>
     <div className={styles.profile}>
       <img className={styles.image} src={image} alt="Profile" />
@@ -26,6 +26,8 @@ const Header = ({image, firstName, lastName, position, text}) => (
   </div>
 );
 
-const EnhancedHeader: EnhancedComponentType<HeaderOwnPropsType> = pure(Header);
+const EnhancedTeamMember: EnhancedComponentType<TeamMemberOwnPropsType> = pure(
+  TeamMember,
+);
 
-export default EnhancedHeader;
+export default EnhancedTeamMember;

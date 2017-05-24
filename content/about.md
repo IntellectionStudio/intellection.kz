@@ -1,6 +1,6 @@
 ---
 title: О нас
-layout: About
+layout: AboutPage
 hero:
   title: Стартап центр Intellection
   text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
@@ -127,29 +127,29 @@ team:
       firstName: Жангали
       lastName: Пернебаев
       position: IOS Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.      
+      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Yersultan:
       image: /assets/dummy-profile.jpeg
       firstName: Ерсултан
       lastName: Фамилия
       position: Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.      
+      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Yerdaulet:
       image: /assets/dummy-profile.jpeg
       firstName: Ердаулет
       lastName: Беков
       position: Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.      
+      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Zhanna:
       image: /assets/dummy-profile.jpeg
       firstName: Жанна
       lastName: Фамилия
       position: Content maker
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.      
+      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     AlmasKairatuly:
       image: /assets/dummy-profile.jpeg
       firstName: Алмас
       lastName: Кайратулы
       position: Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.      
+      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
 ---

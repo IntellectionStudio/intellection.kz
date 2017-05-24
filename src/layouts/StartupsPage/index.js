@@ -1,20 +1,19 @@
 /* @flow */
 
 import {mapObjIndexed, values} from 'ramda';
-import {pure} from 'recompact';
 import React, {Component} from 'react';
 
 import Page from 'layouts/Page';
 
 import styles from './index.css';
 
-type StartupsOwnPropsType = {|
-  head: Object,
-|};
+type StartupsPageOwnPropsType = PhenomicPagePropsType;
 
 const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 
-class Startups extends Component {
+class StartupsPage extends Component {
+  props: StartupsPageOwnPropsType;
+
   renderStartupLogo = (startup: Object, key: string) => (
     <button key={key} className={styles.logoButton}>
       <img className={styles.logo} src={startup.logo} alt={`${key} Logo`} />
@@ -37,8 +36,4 @@ class Startups extends Component {
   }
 }
 
-const EnhancedStartups: EnhancedComponentType<StartupsOwnPropsType> = pure(
-  Startups,
-);
-
-export default EnhancedStartups;
+export default StartupsPage;

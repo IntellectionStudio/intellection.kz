@@ -51,7 +51,6 @@ DefaultHeadMeta.contextTypes = {
 
 const EnhancedDefaultHeadMeta: EnhancedComponentType<
   DefaultHeadMetaOwnPropsType,
-  void,
 > = pure(DefaultHeadMeta);
 
 export default EnhancedDefaultHeadMeta;

@@ -1,8 +1,8 @@
 /* @flow */
 
-import React from 'react';
 import {Link} from 'phenomic';
 import {mapObjIndexed, values} from 'ramda';
+import React from 'react';
 
 import Page from 'layouts/Page';
 import HeroVideo from 'components/HeroVideo';
@@ -11,17 +11,13 @@ import StartupCard from 'components/StartupCard';
 
 import styles from './index.css';
 
-type PropsType = {
-  head: Object,
-};
-
 const renderCard = (card, key) => <Card key={key} {...card} />;
 const renderStartupCard = (startup, key) => (
   <StartupCard key={key} {...startup} />
 );
 const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 
-const Homepage = (props: PropsType) => (
+const HomePage = (props: PhenomicPagePropsType) => (
   <Page {...props}>
     <div className={styles.hero}>
       <HeroVideo {...props.head.hero.video} />
@@ -50,4 +46,4 @@ const Homepage = (props: PropsType) => (
   </Page>
 );
 
-export default Homepage;
+export default HomePage;

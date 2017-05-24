@@ -3,17 +3,17 @@
 import {pure} from 'recompact';
 import React from 'react';
 
+import type {TeamMemberType} from 'types';
+
 import styles from './index.css';
 
 type TopManagerCardOwnPropsType = {|
-  image: string,
-  firstName: string,
-  lastName: string,
-  position: string,
-  text: string,
+  teamMember: TeamMemberType,
 |};
 
-const TopManagerCard = ({image, firstName, lastName, position, text}) => (
+const TopManagerCard = ({
+  teamMember: {image, firstName, lastName, position, text},
+}) => (
   <div className={styles.container}>
     <div className={styles.profile}>
       <div className={styles.imageWrapper}>

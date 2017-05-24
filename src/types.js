@@ -1,8 +1,9 @@
 /* @flow */
 
-export type PostType = {
-  title: string,
-  __url: string,
-  date: ?string,
-  description: ?string,
+export type TeamMemberType = {
+  image: string,
+  firstName: string,
+  lastName: string,
+  position: string,
+  text: string,
 };

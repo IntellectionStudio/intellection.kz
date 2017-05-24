@@ -1,27 +1,29 @@
 /* @flow */
 
-import {pure} from 'recompact';
 import React from 'react';
 
 import Page from 'layouts/Page';
 
 import styles from './index.css';
 
-const ERROR_NOT_FOUND_CODE = 404;
+const STATUS_CODE_NOT_FOUND = 404;
 
 type ErrorPageOwnPropsType = {
-  error?: number | string,
+  error?: number,
   errorText?: string,
-};
+} & PhenomicPagePropsType;
 
-const ErrorPage = (
-  // $FlowFixMe
-  {error = ERROR_NOT_FOUND_CODE, errorText = 'Page Not Found'}: PropsType,
-) => (
+const ErrorPage = ({
+  error = STATUS_CODE_NOT_FOUND,
+  errorText = 'Page Not Found',
+  ...pageProps
+}: ErrorPageOwnPropsType) => (
   <Page
+    {...pageProps}
     head={{
       // hero credit: https://www.flickr.com/photos/mypubliclands/16101654539/
       hero: 'https://farm8.staticflickr.com/7559/16101654539_bee5151340_k.jpg',
+      ...pageProps.head,
     }}
   >
     <div className={styles.container}>
@@ -32,7 +34,7 @@ const ErrorPage = (
           {' '}
           {errorText}
         </p>
-        {error === ERROR_NOT_FOUND_CODE &&
+        {error === STATUS_CODE_NOT_FOUND &&
           <div>
             {'It seems you found a broken link. '}
             {'Sorry about that. '}
@@ -44,8 +46,4 @@ const ErrorPage = (
   </Page>
 );
 
-const EnhancedErrorPage: EnhancedComponentType<ErrorPageOwnPropsType> = pure(
-  ErrorPage,
-);
-
-export default EnhancedErrorPage;
+export default ErrorPage;

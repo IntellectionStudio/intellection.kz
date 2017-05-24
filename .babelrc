@@ -10,9 +10,16 @@
     "syntax-flow",
     "transform-flow-strip-types",
     "ramda",
-    ["module-resolver", {
-      "root": ["./src"]
-    }]
+    [
+      "module-resolver", {
+        "root": ["./src"]
+      }
+    ],
+    [
+      "lodash", {
+        "id": "recompact"
+      }
+    ]
   ],
   "env": {
     "production": {

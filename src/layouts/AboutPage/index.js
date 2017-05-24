@@ -1,28 +1,30 @@
 /* @flow */
 
-import {pure} from 'recompact';
-import React from 'react';
 import {mapObjIndexed, values} from 'ramda';
+import React from 'react';
 
 import Page from 'layouts/Page';
 import TopManagerCard from 'components/TopManagerCard';
 import TeamMemberCard from 'components/TeamMemberCard';
+import type {TeamMemberType} from 'types';
 
 import styles from './index.css';
 
-type HomepageOwnPropsType = {
-  head: Object,
-};
-
-const renderTopManagerCard = (topManager, key) => (
-  <TopManagerCard key={key} {...topManager} />
+const renderTopManagerCard = (topManager: TeamMemberType) => (
+  <TopManagerCard
+    key={`${topManager.firstName}-${topManager.lastName}`}
+    teamMember={topManager}
+  />
 );
-const renderTeamMemberCard = (teamMember, key) => (
-  <TeamMemberCard key={key} {...teamMember} />
+const renderTeamMemberCard = (teamMember: TeamMemberType) => (
+  <TeamMemberCard
+    key={`${teamMember.firstName}-${teamMember.lastName}`}
+    teamMember={teamMember}
+  />
 );
 const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 
-const HomePage = props => (
+const AboutPage = (props: PhenomicPagePropsType) => (
   <Page {...props}>
     <div className={styles.hero}>
       <div className={styles.heroWrapper}>
@@ -93,8 +95,4 @@ const HomePage = props => (
   </Page>
 );
 
-const EnhancedHomePage: EnhancedComponentType<HomepageOwnPropsType> = pure(
-  HomePage,
-);
-
-export default EnhancedHomePage;
+export default AboutPage;

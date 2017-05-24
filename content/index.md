@@ -1,6 +1,6 @@
 ---
 title: Стартап центр - intellection.kz
-layout: Homepage
+layout: HomePage
 hero:
   video:
     title: Стартап центр Intellection
