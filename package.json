@@ -68,6 +68,7 @@
     "react-topbar-progress-indicator": "^1.0.0",
     "recompact": "^3.0.1",
     "redux": "^3.6.0",
+    "rss-parser": "^2.7.0",
     "tachyons": "^4.7.1",
     "warning": "^3.0.0",
     "whatwg-fetch": "^2.0.3"

@@ -1,0 +1,12 @@
+.knowledge {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+  background: white;
+}

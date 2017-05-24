@@ -25,3 +25,8 @@ export type StartupCardType = {
   text: string,
   title: string,
 };
+
+export type PostType = {
+  title: string,
+  link: string,
+};
