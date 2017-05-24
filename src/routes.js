@@ -5,6 +5,7 @@ import {Route} from 'react-router';
 import React from 'react';
 
 import AboutPage from 'layouts/AboutPage';
+import BlogPage from 'layouts/BlogPage';
 import ErrorPage from 'layouts/ErrorPage';
 import HomePage from 'layouts/HomePage';
 import KnowledgePage from 'layouts/KnowledgePage';
@@ -24,6 +25,7 @@ const PageContainer = (props: PageContainerOwnPropsType) => (
       Page,
       ErrorPage,
       AboutPage,
+      BlogPage,
       KnowledgePage,
       HomePage,
       StartupsPage,
