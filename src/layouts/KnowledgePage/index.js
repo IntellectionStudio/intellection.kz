@@ -10,7 +10,7 @@ type PropsType = {
   head: Object,
 };
 
-const Knowledge = (props: PropsType) => (
+const KnowledgePage = (props: PropsType) => (
   <Page {...props}>
     <div>
       <Topics />
@@ -18,4 +18,4 @@ const Knowledge = (props: PropsType) => (
   </Page>
 );
 
-export default Knowledge;
+export default KnowledgePage;

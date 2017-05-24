@@ -1,58 +1,48 @@
 /* @flow */
 
-import React, {Component} from 'react';
 import {Link} from 'phenomic';
+import {pure} from 'recompact';
+import React, {Component} from 'react';
 import cx from 'classnames';
+
+import config from 'config';
+import type {HeaderLinkType} from 'types';
 
 import styles from './index.css';
 
-type PropsType = {|
+type HeaderOwnPropsType = {|
   white: boolean,
+|};
+type HeaderStateType = {|
+  isOpen: boolean,
 |};
 
 class Header extends Component {
-  props: PropsType;
-  state = {
-    open: false,
+  state: HeaderStateType = {
+    isOpen: false,
   };
 
-  renderMenuButton() {
-    if (this.state.open) {
-      return (
-        <button
-          className={styles.burger}
-          onClick={() => this.setState({open: !this.state.open})}
-        >
-          <span className={styles.menuOpened}>^</span>
-        </button>
-      );
-    }
-    return (
-      <button
-        className={styles.burger}
-        onClick={() => this.setState({open: !this.state.open})}
-      >
-        <span
-          className={cx(styles.bar, {
-            [styles.barBlue]: this.props.white,
-          })}
-        />
-        <span
-          className={cx(styles.bar, {
-            [styles.barMidBlue]: this.props.white,
-          })}
-        />
-        <span
-          className={cx(styles.bar, {
-            [styles.barBlue]: this.props.white,
-          })}
-        />
-      </button>
-    );
-  }
+  handleBurgerButtonClick = () =>
+    this.setState(prevState => ({
+      isOpen: !prevState.isOpen,
+    }));
+
+  renderLink = ({title, path}: HeaderLinkType) => (
+    <Link
+      key={`${title}-${path}`}
+      className={cx(styles.navItem, {
+        [styles.navItemOpen]: this.state.isOpen,
+      })}
+      to={path}
+    >
+      {title}
+    </Link>
+  );
 
   render() {
     const {white} = this.props;
+    const {isOpen} = this.state;
+
     return (
       <div
         className={cx(styles.headerWrapper, {
@@ -61,80 +51,27 @@ class Header extends Component {
       >
         <header className={styles.header}>
           <Link className={styles.logoLink} to="/">
-            {white
-              ? <img
-                  className={styles.logo}
-                  src="/assets/logo2.png"
-                  alt="Logo"
-                />
-              : <img
-                  className={styles.logo}
-                  src="/assets/logo.png"
-                  alt="Logo"
-                />}
+            <img
+              className={styles.logo}
+              src={white ? '/assets/logo2.png' : '/assets/logo.png'}
+              alt="Logo"
+            />
           </Link>
           <nav
             className={cx(styles.nav, {
-              [styles.open]: this.state.open,
+              [styles.open]: isOpen,
               [styles.navWhite]: white,
             })}
           >
-            <Link
-              className={cx(styles.navItem, {
-                [styles.navItemOpen]: this.state.open,
-              })}
-              to="/about"
-            >
-              О нас
-            </Link>
-            <Link
-              className={cx(styles.navItem, {
-                [styles.navItemOpen]: this.state.open,
-              })}
-              to="/"
-            >
-              Наши стартапы
-            </Link>
-            <Link
-              className={cx(styles.navItem, {
-                [styles.navItemOpen]: this.state.open,
-              })}
-              to="/"
-            >
-              Курсы
-            </Link>
-            <Link
-              className={cx(styles.navItem, {
-                [styles.navItemOpen]: this.state.open,
-              })}
-              to="/"
-            >
-              Knowledge Base
-            </Link>
-            <Link
-              className={cx(styles.navItem, {
-                [styles.navItemOpen]: this.state.open,
-              })}
-              to="/"
-            >
-              Наши видео
-            </Link>
-            <Link
-              className={cx(styles.navItem, {
-                [styles.navItemOpen]: this.state.open,
-              })}
-              to="/"
-            >
-              Блог
-            </Link>
+            {config.headerLinks.map(this.renderLink)}
           </nav>
           <button
             className={cx(styles.burger, {
               [styles.burgerDetail]: true,
-              [styles.burgerDetailOpen]: this.state.open,
+              [styles.burgerDetailOpen]: this.state.isOpen,
               [styles.burgerDetailWhite]: white,
             })}
-            onClick={() => this.setState({open: !this.state.open})}
+            onClick={this.handleBurgerButtonClick}
           >
             <span />
             <span />
@@ -147,4 +84,6 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const EnhancedHeader: EnhancedComponentType<HeaderOwnPropsType> = pure(Header);
+
+export default EnhancedHeader;

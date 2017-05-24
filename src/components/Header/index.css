@@ -166,6 +166,8 @@
   width: 48px;
   height: 49px;
   cursor: pointer;
+  border: none;
+  background-color: inherit;
 
   @media screen and (min-width: 992px) {
     display: none;

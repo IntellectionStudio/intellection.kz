@@ -1,5 +1,5 @@
 ---
 title: Наши стартапы
-layout: Knowledge
+layout: KnowledgePage
 ---
 Hello World

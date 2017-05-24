@@ -1,20 +1,14 @@
 /* @flow */
 
+import {pure} from 'recompact';
 import Helmet from 'react-helmet';
 import React, {PropTypes} from 'react';
 
-type PropsType = {|
+type DefaultHeadMetaOwnPropsType = {|
   meta?: Array<Object>,
   scripts?: Array<Object>,
 |};
-type ContextType = {|
-  metadata: Phenomic$Metadata,
-|};
-
-const DefaultHeadMeta = (
-  {meta, scripts}: PropsType,
-  {metadata: {pkg}}: ContextType,
-) => (
+const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}: $FlowFixMe) => (
   <div hidden>
     <Helmet
       meta={[
@@ -55,4 +49,8 @@ DefaultHeadMeta.contextTypes = {
   metadata: PropTypes.object.isRequired,
 };
 
-export default DefaultHeadMeta;
+const EnhancedDefaultHeadMeta: EnhancedComponentType<
+  DefaultHeadMetaOwnPropsType,
+> = pure(DefaultHeadMeta);
+
+export default EnhancedDefaultHeadMeta;

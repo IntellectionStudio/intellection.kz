@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: owner/repo # replace by your repo
+  repo: IntellectionStudio/intellection.kz
   branch: master # replace if you want netlify-cms publish on a different branch
 
 public_folder: "content" # the same as your phenomic.source in your package.json
@@ -15,5 +15,16 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+    meta:
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+  - name: "pages"
+    label: "Page"
+    folder: "content"
+    create: true
+    card: {type: "alltype", text: "title"}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "string"}
     meta:
       - {label: "Publish Date", name: "date", widget: "datetime"}
