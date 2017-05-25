@@ -1,0 +1,80 @@
+.logos {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 65px;
+}
+
+.logoButton {
+  display: block;
+  padding: 0;
+  border: 0;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+
+.backgroundStartup {
+  display: block;
+  width: auto;
+  height: 600px;
+  align-items: center;
+  background-size: cover;
+}
+
+.defaultStartupText {
+  display: flex;
+  width: 80%;
+  padding-left: 25%;
+  text-align: center;
+  color: white;
+  font: 100 400 20px/1 '.SF NS Display', sans-serif;
+}
+
+.defaultStartupTitle {
+  width: 80%;
+  padding-left: 25%;
+  text-align: center;
+  padding-top: 5%;
+  color: white;
+  font: 100 400 20px/1 '.SF NS Display', sans-serif;
+}
+
+.startupText {
+  display: flex;
+  width: 80%;
+  padding-left: 25%;
+  text-align: center;
+  color: black;
+  font: 100 400 20px/1 '.SF NS Display', sans-serif;
+  padding-bottom: 1%;
+}
+
+.startupTitle {
+  width: 80%;
+  padding-left: 25%;
+  text-align: center;
+  padding-top: 5%;
+  color: black;
+  font: 100 400 20px/1 '.SF NS Display', sans-serif;
+  padding-bottom: 1%;
+}
+
+.startupImage {
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.learnMore {
+  width: 80%;
+  padding-left: 25%;
+  text-align: center;
+  color: #51a9f2;
+  font-family: sans-serif;
+  font-size: 36;
+  text-decoration: underline;
+}

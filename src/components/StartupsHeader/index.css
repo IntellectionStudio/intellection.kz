@@ -40,8 +40,14 @@
 .logos {
   width: auto;
   height: 40px;
-  margin: 13px 7px 12px 33px;
+  margin: 13px 0 12px;
   display: flex;
+  padding-right: 33px;
+  padding-left: 33px;
+}
+
+.logos:last-child {
+  padding-right: 0;
 }
 
 .scrollRightButton {

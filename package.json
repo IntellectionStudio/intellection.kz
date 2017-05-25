@@ -162,6 +162,7 @@
     "react-dom": "^15.5.4",
     "react-helmet": "^5.0.3",
     "react-intl": "^2.2.3",
+    "react-measure": "^1.4.7",
     "react-router": "^2.3.0",
     "react-slick": "^0.14.11",
     "react-svg-inline": "^2.0.0",
