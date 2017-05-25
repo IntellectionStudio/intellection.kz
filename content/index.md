@@ -1,10 +1,10 @@
 ---
 title: Стартап центр - intellection.kz
-layout: Homepage
+layout: HomePage
 hero:
   video:
     title: Стартап центр Intellection
-    text: Пару слов о компании
+    text: UNDERSTANDING PERFECTION
     image: /assets/videoPlaceholder.png
     sources:
       mp4: https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.mp4
@@ -12,21 +12,21 @@ hero:
       webm: https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.webm
     playIcon: /assets/play-white.svg
   cards:
-    courses:
-      link: "courses"
-      image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-nd-intro-to-programming%401x.png
-      title: Учись прогать
-      text: I have hinted that I would often jerk poor from between
-    blog:
-      link: "blog"
+    startups:
+      link: "startups"
       image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-partner-f8%401x.png
-      title: Читай крутой стаф
-      text: I have hinted that I would often jerk poor from between
+      title: Стартапы
+      text: Наши проекты в сфере мобильных приложений, веб-сайтов, технологий виртуальной реальности
     knowledgeBase:
       link: "knowledgeBase"
       image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-nd-digital-marketing%401x.png
-      title: Это бесплатно?!
-      text: I have hinted that I would often jerk poor from between
+      title: Ресурсы
+      text: Мы не боимся делиться нашими знаниями. Здесь полезные ссылки из разных источников
+    courses:
+      link: "courses"
+      image: https://s3-us-west-1.amazonaws.com/udacity-content/modules/module-nd-intro-to-programming%401x.png
+      title: Курсы
+      text: Обучение в нашем центре это первый шаг в вашей карьере программиста, бизнесмена или стартапера
 startupsSection:
   title: Наши стартапы
   text: Then going through some small strange motions with it—whether indispensable to the

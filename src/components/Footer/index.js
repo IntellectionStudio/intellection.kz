@@ -1,12 +1,22 @@
 /* @flow */
 
-import React from 'react';
 import {Link} from 'phenomic';
+import {pure} from 'recompact';
+import cx from 'classnames';
+import React from 'react';
 
 import styles from './index.css';
 
-const Footer = () => (
-  <footer className={styles.footer}>
+type FooterOwnPropsType = {|
+  homepage: boolean,
+|};
+
+const Footer = ({homepage}) => (
+  <footer
+    className={cx(styles.footer, {
+      [styles.whiteBackground]: homepage,
+    })}
+  >
     <div className={styles.container}>
       <div className={styles.studio}>
         <h3 className={styles.title}>О студии</h3>
@@ -56,4 +66,6 @@ const Footer = () => (
   </footer>
 );
 
-export default Footer;
+const EnhancedFooter: EnhancedComponentType<FooterOwnPropsType> = pure(Footer);
+
+export default EnhancedFooter;

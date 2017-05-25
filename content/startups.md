@@ -1,6 +1,6 @@
 ---
 title: Наши стартапы
-layout: Startups
+layout: StartupsPage
 default:
   image: /assets/startup-image.jpg
   title: Наши стартапы

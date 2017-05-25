@@ -1,17 +1,22 @@
 /* @flow */
 
+import {pure} from 'recompact';
 import React from 'react';
 
 import styles from './index.css';
 
-type PropsType = {|
+type ContentOwnPropsType = {|
   children?: React$Element<any>,
 |};
 
-const Content = ({children}: PropsType) => (
+const Content = ({children}) => (
   <div className={styles.content}>
     {children}
   </div>
 );
 
-export default Content;
+const EnhancedContent: EnhancedComponentType<ContentOwnPropsType> = pure(
+  Content,
+);
+
+export default EnhancedContent;

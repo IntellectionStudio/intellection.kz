@@ -7,6 +7,7 @@ import PhenomicLoaderFeedWebpackPlugin
   from "phenomic/lib/loader-feed-webpack-plugin"
 import PhenomicLoaderSitemapWebpackPlugin
   from "phenomic/lib/loader-sitemap-webpack-plugin"
+import CopyWebpackPlugin from "copy-webpack-plugin"
 
 import pkg from "./package.json"
 
@@ -25,6 +26,9 @@ export default (config = {}) => {
   return {
     ...config.dev && {
       devtool: "#cheap-module-eval-source-map",
+    },
+    node: {
+      fs: "empty",
     },
     module: {
       noParse: /\.min\.js/,
@@ -88,7 +92,7 @@ export default (config = {}) => {
                 // query for postcss can't be used right now
                 // https://github.com/postcss/postcss-loader/issues/99
                 // meanwhile, see webpack.LoaderOptionsPlugin in plugins list
-                // query: { plugins: postcssPlugins },
+                query: { plugins: postcssPlugins },
               },
             ],
           }),
@@ -106,7 +110,7 @@ export default (config = {}) => {
                 // query for postcss can't be used right now
                 // https://github.com/postcss/postcss-loader/issues/99
                 // meanwhile, see webpack.LoaderOptionsPlugin in plugins list
-                // query: { plugins: postcssPlugins },
+                query: { plugins: postcssPlugins },
               },
             ],
           }),
@@ -117,13 +121,14 @@ export default (config = {}) => {
         // ! \\ If you want global CSS for node_modules only, just uncomment
         // this section and the `include` part
         {
-          test: /\.css$/,
+          test: /\.s?css$/,
           // depending on your need, you might need to scope node_modules
           // for global CSS if you want to keep CSS Modules by default
           // for your own CSS. If so, uncomment the line below
           include: [
             path.resolve(__dirname, "node_modules", "normalize.css"),
-            path.resolve(__dirname, "node_modules", "tachyons", "css")
+            path.resolve(__dirname, "node_modules", "tachyons", "css"),
+            path.resolve(__dirname, "node_modules", "react-modal-video", "scss"),
           ],
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
@@ -132,6 +137,9 @@ export default (config = {}) => {
               {
                 loader: "postcss-loader",
                 query: { "plugins": postcssPlugins },
+              },
+              {
+                loader: "sass-loader",
               },
             ]
           }),
@@ -210,6 +218,10 @@ export default (config = {}) => {
         filename: "[name].[hash].css",
         disable: config.dev,
       }),
+
+      new CopyWebpackPlugin([
+        {from: 'admin', to: 'admin'},
+      ]),
 
       ...config.production && [
         new webpack.optimize.UglifyJsPlugin(
