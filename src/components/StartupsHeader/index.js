@@ -21,12 +21,17 @@ class StartupsHeader extends Component {
     startupsHeader: {
       width: 0,
       left: 0,
+      right: 0,
     },
-    showRightButton: true,
   };
 
   renderStartupLogo = (startup: Object, key: string) => (
-    <button key={key} className={styles.logoButton}>
+    <button
+      key={key}
+      className={styles.logoButton}
+      // $FlowFixMe
+      onClick={() => this.props.setStartup(key)}
+    >
       <img className={styles.logo} src={startup.logo} alt={`${key} Logo`} />
     </button>
   );
@@ -81,6 +86,19 @@ class StartupsHeader extends Component {
       },
     });
   }
+  logosLeft() {
+    const {startupsHeader, logos} = this.state;
+    if (
+      startupsHeader.width > logos.width ||
+      (startupsHeader.right < logos.width &&
+        logos.left + logos.width < startupsHeader.width)
+    ) {
+      logos.left -= logos.left;
+
+      return logos.left;
+    }
+    return logos.left;
+  }
   render() {
     const {startupsHeader, logos} = this.state;
 
@@ -91,6 +109,7 @@ class StartupsHeader extends Component {
             startupsHeader: {
               ...this.state.startupsHeader,
               width: dimensions.width,
+              right: dimensions.right,
             },
           });
         }}
@@ -113,7 +132,7 @@ class StartupsHeader extends Component {
           >
             <div
               className={styles.logos}
-              style={{marginLeft: `${this.state.logos.left}px`}}
+              style={{marginLeft: `${this.logosLeft()}px`}}
               ref={el => {
                 // $FlowFixMe
                 this.logos = el;
