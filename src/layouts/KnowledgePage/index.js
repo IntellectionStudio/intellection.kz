@@ -1,16 +1,10 @@
-/* @flow */
-
 import React from 'react';
 
 import Topics from 'components/Topics';
 
 import Page from '../Page';
 
-type PropsType = {
-  head: Object,
-};
-
-const KnowledgePage = (props: PropsType) => (
+const KnowledgePage = props => (
   <Page {...props}>
     <div>
       <Topics />

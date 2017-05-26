@@ -1,5 +1,3 @@
-/* @flow */
-
 import {Link} from 'phenomic';
 import React from 'react';
 
@@ -8,37 +6,20 @@ import HeroVideo from 'components/HeroVideo';
 import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
 import StartupCard from 'components/StartupCard';
-import type {CardType, StartupCardType} from 'types';
 
 import styles from './index.css';
 
-type HomePageOwnPropsType = {|
-  /* :: ...PhenomicPagePropsType, */
-  head: {
-    hero: {
-      cards: {
-        +[key: string]: CardType,
-      },
-    },
-    startupsSection: {
-      startups: {
-        +[key: string]: StartupCardType,
-      },
-    },
-  } & PhenomicPageHeadType,
-|};
-
-const renderCard = (card: CardType) => (
+const renderCard = card => (
   <Card key={`${card.title}-${card.text}`} card={card} />
 );
-const renderStartupCard = (startupCard: StartupCardType) => (
+const renderStartupCard = startupCard => (
   <StartupCard
     key={`${startupCard.title}-${startupCard.text}`}
     startupCard={startupCard}
   />
 );
 
-const HomePage = (props: HomePageOwnPropsType) => (
+const HomePage = props => (
   <Page {...Page.pickPageProps(props)}>
     <div className={styles.hero}>
       <HeroVideo {...props.head.hero.video} />

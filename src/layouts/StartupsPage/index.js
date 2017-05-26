@@ -1,5 +1,3 @@
-/* @flow */
-
 import React, {Component} from 'react';
 import {Link} from 'phenomic';
 
@@ -8,9 +6,8 @@ import Page from 'layouts/Page';
 
 import styles from './index.css';
 
-type StartupsPageOwnPropsType = PhenomicPagePropsType;
 class StartupsPage extends Component {
-  props: StartupsPageOwnPropsType;
+  props;
   state = {
     startupToShow: null,
   };

@@ -1,5 +1,3 @@
-/* @flow */
-
 import {pure} from 'recompact';
 import Helmet from 'react-helmet';
 import React from 'react';
@@ -15,8 +13,6 @@ TopBarProgressIndicator.config({
   shadowBlur: 5,
 });
 
-type LoadingOwnPropsType = {||};
-
 const Loading = () => (
   <div>
     <Helmet title={'Loading...'} />
@@ -27,8 +23,6 @@ const Loading = () => (
   </div>
 );
 
-const EnhancedLoading: EnhancedComponentType<LoadingOwnPropsType> = pure(
-  Loading,
-);
+const EnhancedLoading = pure(Loading);
 
 export default EnhancedLoading;

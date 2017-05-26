@@ -1,5 +1,3 @@
-/* @flow */
-
 import * as phenomicReducers from 'phenomic/lib/redux/modules';
 import {combineReducers} from 'redux';
 import createStore from 'phenomic/lib/redux/createStore';

@@ -1,29 +1,26 @@
-/* @flow */
-
 import React from 'react';
 
 import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
 import TeamMemberCard from 'components/TeamMemberCard';
 import TopManagerCard from 'components/TopManagerCard';
-import type {TeamMemberType} from 'types';
 
 import styles from './index.css';
 
-const renderTopManagerCard = (topManager: TeamMemberType) => (
+const renderTopManagerCard = topManager => (
   <TopManagerCard
     key={`${topManager.firstName}-${topManager.lastName}`}
     teamMember={topManager}
   />
 );
-const renderTeamMemberCard = (teamMember: TeamMemberType) => (
+const renderTeamMemberCard = teamMember => (
   <TeamMemberCard
     key={`${teamMember.firstName}-${teamMember.lastName}`}
     teamMember={teamMember}
   />
 );
 
-const AboutPage = (props: PhenomicPagePropsType) => (
+const AboutPage = props => (
   <Page {...Page.pickPageProps(props)}>
     <div className={styles.hero}>
       <div className={styles.heroWrapper}>
