@@ -1,5 +1,3 @@
-/* @flow */
-
 import {PageContainer as PhenomicPageContainer} from 'phenomic';
 import {Route} from 'react-router';
 import React from 'react';
@@ -16,9 +14,7 @@ import StartupsPage from 'layouts/StartupsPage';
 
 import AppContainer from './AppContainer';
 
-type PageContainerOwnPropsType = {||};
-
-const PageContainer = (props: PageContainerOwnPropsType) => (
+const PageContainer = props => (
   <PhenomicPageContainer
     {...props}
     layouts={{

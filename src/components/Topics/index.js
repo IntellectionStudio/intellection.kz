@@ -1,5 +1,3 @@
-/* @flow */
-
 import enhanceCollection from 'phenomic/lib/enhance-collection';
 import React, {PropTypes} from 'react';
 import {Link} from 'phenomic';
@@ -7,13 +5,7 @@ import {Link} from 'phenomic';
 import Topic from '../Topic';
 import styles from './index.css';
 
-type PropsType = {||};
-
-type ContextType = {|
-  collection: Array<Object>,
-|};
-
-const Topics = (props: PropsType, {collection}: ContextType) => {
+const Topics = (props, {collection}) => {
   const topics = enhanceCollection(collection, {
     filter: {layout: 'TopicPage'},
   });

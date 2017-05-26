@@ -1,5 +1,3 @@
-/* @flow */
-
 import {joinUri} from 'phenomic';
 import {pick} from 'ramda';
 import Helmet from 'react-helmet';
@@ -10,16 +8,7 @@ import Footer from 'components/Footer';
 
 import styles from './index.css';
 
-type PageOwnPropsType = {|
-  /* :: ...PhenomicPagePropsType, */
-  footer?: React$Element<any>,
-  children?: React$Element<any>,
-|};
-
-const Page = (
-  {__url, head, footer, children}: PageOwnPropsType,
-  {metadata: {pkg}}: $FlowFixMe,
-) => {
+const Page = ({__url, head, footer, children}, {metadata: {pkg}}) => {
   const meta = [
     {property: 'og:type', content: 'article'},
     {property: 'og:title', content: head.title},
@@ -52,7 +41,7 @@ const Page = (
   );
 };
 
-Page.pickPageProps = (props: Object) =>
+Page.pickPageProps = props =>
   pick(['__filename', '__url', 'head'])({
     ...props,
     head: pick(['title', 'footer', 'children'])(props.head),

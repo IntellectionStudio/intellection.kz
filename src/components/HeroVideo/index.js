@@ -1,5 +1,3 @@
-/* @flow */
-
 import {pure} from 'recompact';
 import React, {Component} from 'react';
 import ModalVideo from 'react-modal-video';
@@ -8,27 +6,14 @@ import mapValues from 'utils/mapValues';
 
 import styles from './index.css';
 
-type HeroVideoOwnPropsType = {|
-  image: string,
-  playIcon: string,
-  sources: {
-    +[key: string]: string,
-  },
-  text: string,
-  title: string,
-|};
-type HeroVideoStateType = {|
-  isOpen: boolean,
-|};
-
 class HeroVideo extends Component {
-  state: HeroVideoStateType = {
+  state = {
     isOpen: false,
   };
 
   handlePlayButtonClick = () => this.setState({isOpen: true});
 
-  renderSource = (src: string) => <source key={src} src={src} />;
+  renderSource = src => <source key={src} src={src} />;
 
   render() {
     const {image, playIcon, sources, text, title} = this.props;
@@ -80,8 +65,6 @@ class HeroVideo extends Component {
   }
 }
 
-const EnhancedHeroVideo: EnhancedComponentType<HeroVideoOwnPropsType> = pure(
-  HeroVideo,
-);
+const EnhancedHeroVideo = pure(HeroVideo);
 
 export default EnhancedHeroVideo;

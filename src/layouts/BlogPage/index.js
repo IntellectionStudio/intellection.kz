@@ -1,32 +1,21 @@
-/* @flow */
-
 import React, {Component} from 'react';
 import parser from 'rss-parser';
 
 import Page from 'layouts/Page';
-import type {PostType} from 'types';
 
 import styles from './index.css';
 
-type BlogPageOwnPropsType = PhenomicPagePropsType;
-type BlogPageStateType = {|
-  posts: Array<PostType>,
-|};
-
 class BlogPage extends Component {
-  props: BlogPageOwnPropsType;
+  props;
 
-  state: BlogPageStateType = {
+  state = {
     posts: [],
   };
 
   componentDidMount() {
-    parser.parseURL(
-      'https://medium.com/feed/@jonwestenberg',
-      (err: Error, parsed: {feed: {entries: Array<PostType>}}) => {
-        this.setState({posts: parsed.feed.entries});
-      },
-    );
+    parser.parseURL('https://medium.com/feed/@jonwestenberg', (err, parsed) => {
+      this.setState({posts: parsed.feed.entries});
+    });
   }
 
   render() {

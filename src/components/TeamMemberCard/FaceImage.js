@@ -1,5 +1,3 @@
-/* @flow */
-
 import {equals, isNil, pickBy, reject} from 'ramda';
 import {pure} from 'recompact';
 import React, {Component} from 'react';
@@ -7,43 +5,18 @@ import ReactDOM from 'react-dom';
 import throttle from 'lodash.throttle';
 
 import mapValues from 'utils/mapValues';
-import type {TeamMemberFaceImageCollectionType} from 'types';
-
-type MouseAreaType =
-  | 'CENTER'
-  | 'TOP'
-  | 'TOP_RIGHT'
-  | 'RIGHT'
-  | 'BOTTOM_RIGHT'
-  | 'BOTTOM'
-  | 'BOTTOM_LEFT'
-  | 'LEFT'
-  | 'TOP_LEFT';
-type BoundingBoxType = {
-  x: [number, number],
-  y: [number, number],
-};
-
-type FaceImageOwnPropsType = {|
-  className?: string,
-  faceImageCollection: ?TeamMemberFaceImageCollectionType,
-  defaultImage: ?string,
-|};
-type FaceImageStateType = {|
-  mouseArea: MouseAreaType,
-|};
 
 const MOUSE_MOVE_THROTTLE_WAIT = 100;
 
 class FaceImage extends Component {
-  state: FaceImageStateType = {
+  state = {
     mouseArea: 'TOP_LEFT',
   };
-  img: ?React$Element<*>;
+  img;
 
-  getMouseAreaBoundingBoxMap = (): ?{[key: MouseAreaType]: BoundingBoxType} => {
+  getMouseAreaBoundingBoxMap = () => {
     const imgDomNode = this.img
-      ? ReactDOM.findDOMNode((this.img: $FlowFixMe)) // eslint-disable-line react/no-find-dom-node
+      ? ReactDOM.findDOMNode(this.img) // eslint-disable-line react/no-find-dom-node
       : null;
 
     if (!imgDomNode) {
@@ -55,7 +28,7 @@ class FaceImage extends Component {
       left: selfLeft,
       right: selfRight,
       bottom: selfBottom,
-    } = (imgDomNode: $FlowFixMe).getBoundingClientRect();
+    } = imgDomNode.getBoundingClientRect();
 
     const topBounds = [0, selfTop];
     const centerXBounds = [selfLeft, selfRight];
@@ -81,7 +54,7 @@ class FaceImage extends Component {
     document.addEventListener('mousemove', this.handleMouseMove);
   }
 
-  getFaceImageForMouseArea = (mouseArea: MouseAreaType) => {
+  getFaceImageForMouseArea = mouseArea => {
     const {faceImageCollection} = this.props;
 
     if (!faceImageCollection) {
@@ -112,11 +85,11 @@ class FaceImage extends Component {
     }
   };
 
-  captureImage = (img: React$Element<*>) => {
+  captureImage = img => {
     this.img = img;
   };
 
-  handleMouseMove = throttle((event: MouseEvent) => {
+  handleMouseMove = throttle(event => {
     const boundingBoxMap = this.getMouseAreaBoundingBoxMap();
 
     if (!boundingBoxMap) {
@@ -156,8 +129,6 @@ class FaceImage extends Component {
   }
 }
 
-const EnhancedFaceImage: EnhancedComponentType<FaceImageOwnPropsType> = pure(
-  FaceImage,
-);
+const EnhancedFaceImage = pure(FaceImage);
 
 export default EnhancedFaceImage;

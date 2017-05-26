@@ -1,24 +1,14 @@
-/* @flow */
-
 import {Link} from 'phenomic';
 import {pure} from 'recompact';
 import React, {Component} from 'react';
 import cx from 'classnames';
 
 import config from 'config';
-import type {HeaderLinkType} from 'types';
 
 import styles from './index.css';
 
-type HeaderOwnPropsType = {|
-  white: boolean,
-|};
-type HeaderStateType = {|
-  isOpen: boolean,
-|};
-
 class Header extends Component {
-  state: HeaderStateType = {
+  state = {
     isOpen: false,
   };
 
@@ -27,7 +17,7 @@ class Header extends Component {
       isOpen: !prevState.isOpen,
     }));
 
-  renderLink = ({title, path}: HeaderLinkType) => (
+  renderLink = ({title, path}) => (
     <Link
       key={`${title}-${path}`}
       className={cx(styles.navItem, {
@@ -84,6 +74,6 @@ class Header extends Component {
   }
 }
 
-const EnhancedHeader: EnhancedComponentType<HeaderOwnPropsType> = pure(Header);
+const EnhancedHeader = pure(Header);
 
 export default EnhancedHeader;
