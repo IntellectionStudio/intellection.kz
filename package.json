@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "lodash.throttle": "^4.1.1",
     "normalize.css": "^7.0.0",
     "phenomic": "^0.21.1",
     "ramda": "^0.23.0",
