@@ -1,16 +1,8 @@
-/* @flow */
-
 import {pure} from 'recompact';
 import React from 'react';
 
-import type {TeamMemberType} from 'types';
-
 import FaceImage from './FaceImage';
 import styles from './index.css';
-
-type TeamMemberCardOwnPropsType = {|
-  teamMember: TeamMemberType,
-|};
 
 const TeamMemberCard = ({
   teamMember: {faceImageCollection, image, firstName, lastName, position, text},
@@ -31,8 +23,6 @@ const TeamMemberCard = ({
   </div>
 );
 
-const EnhancedTeamMemberCard: EnhancedComponentType<
-  TeamMemberCardOwnPropsType,
-> = pure(TeamMemberCard);
+const EnhancedTeamMemberCard = pure(TeamMemberCard);
 
 export default EnhancedTeamMemberCard;

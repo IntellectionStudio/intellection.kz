@@ -1,5 +1,3 @@
-/* @flow */
-
 import React from 'react';
 
 import Page from 'layouts/Page';
@@ -8,17 +6,11 @@ import styles from './index.css';
 
 const STATUS_CODE_NOT_FOUND = 404;
 
-type ErrorPageOwnPropsType = {|
-  /* :: ...PhenomicPagePropsType, */
-  error?: number,
-  errorText?: string,
-|};
-
 const ErrorPage = ({
   error = STATUS_CODE_NOT_FOUND,
   errorText = 'Page Not Found',
   ...restProps
-}: ErrorPageOwnPropsType) => {
+}) => {
   const pageProps = Page.pickPageProps(restProps);
 
   return (

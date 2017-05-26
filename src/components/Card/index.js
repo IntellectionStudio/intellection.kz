@@ -1,16 +1,8 @@
-/* @flow */
-
 import {Link} from 'phenomic';
 import {pure} from 'recompact';
 import React from 'react';
 
-import type {CardType} from 'types';
-
 import styles from './index.css';
-
-type CardOwnPropsType = {|
-  card: CardType,
-|};
 
 const Card = ({card: {link, image, title, text}}) => (
   <div className={styles.root}>
@@ -26,6 +18,6 @@ const Card = ({card: {link, image, title, text}}) => (
   </div>
 );
 
-const EnhancedCard: EnhancedComponentType<CardOwnPropsType> = pure(Card);
+const EnhancedCard = pure(Card);
 
 export default EnhancedCard;

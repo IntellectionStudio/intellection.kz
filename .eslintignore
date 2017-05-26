@@ -1,6 +1,5 @@
 scripts/
 dist/
-flow-typed/
 !.eslintrc.js
 webpack.config.js
 postcss.config.js

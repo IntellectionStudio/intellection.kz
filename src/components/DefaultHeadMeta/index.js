@@ -1,14 +1,8 @@
-/* @flow */
-
 import {pure} from 'recompact';
 import Helmet from 'react-helmet';
 import React, {PropTypes} from 'react';
 
-type DefaultHeadMetaOwnPropsType = {|
-  meta?: Array<Object>,
-  scripts?: Array<Object>,
-|};
-const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}: $FlowFixMe) => (
+const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}) => (
   <div hidden>
     <Helmet
       meta={[
@@ -49,8 +43,6 @@ DefaultHeadMeta.contextTypes = {
   metadata: PropTypes.object.isRequired,
 };
 
-const EnhancedDefaultHeadMeta: EnhancedComponentType<
-  DefaultHeadMetaOwnPropsType,
-> = pure(DefaultHeadMeta);
+const EnhancedDefaultHeadMeta = pure(DefaultHeadMeta);
 
 export default EnhancedDefaultHeadMeta;

@@ -1,19 +1,9 @@
-/* @flow */
-
 import enhanceCollection from 'phenomic/lib/enhance-collection';
 import React, {PropTypes} from 'react';
 
 import styles from './index.css';
 
-type PropsType = {|
-  topic: string,
-|};
-
-type ContextType = {|
-  collection: Array<Object>,
-|};
-
-const Posts = ({topic}: PropsType, {collection}: ContextType) => {
+const Posts = ({topic}, {collection}) => {
   const posts = enhanceCollection(collection, {
     filter: {topic},
   });

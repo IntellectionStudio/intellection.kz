@@ -1,9 +1,7 @@
-/* @flow */
-
 import {chain, map, toPairs, fromPairs} from 'ramda';
 
-const flattenObj = (obj: Object) => {
-  const flatten = (object: Object) =>
+const flattenObj = obj => {
+  const flatten = object =>
     chain(([k, v]) => {
       if (typeof v === 'object') {
         return map(([k_, v_]) => [`${k}.${k_}`, v_], flatten(v));

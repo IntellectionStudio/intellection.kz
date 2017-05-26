@@ -1,12 +1,4 @@
-/* @flow */
-
-import type {HeaderLinkType} from 'types';
-
-type ConfigType = {
-  headerLinks: Array<HeaderLinkType>,
-};
-
-const config: ConfigType = {
+const config = {
   headerLinks: [
     {
       title: 'О нас',
