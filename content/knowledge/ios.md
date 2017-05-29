@@ -1,8 +1,10 @@
 ---
 id: ios
-title: iOS Posts
+title: iOS
 date: 2016-01-22
 layout: TopicPage
+featured: true
+about: They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
 ---
 
 This is the first post!
