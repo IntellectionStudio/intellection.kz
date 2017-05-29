@@ -1,15 +1,9 @@
-/* @flow */
-
 import {Link} from 'phenomic';
 import {pure} from 'recompact';
 import cx from 'classnames';
 import React from 'react';
 
 import styles from './index.css';
-
-type FooterOwnPropsType = {|
-  homepage: boolean,
-|};
 
 const Footer = ({homepage}) => (
   <footer
@@ -66,6 +60,6 @@ const Footer = ({homepage}) => (
   </footer>
 );
 
-const EnhancedFooter: EnhancedComponentType<FooterOwnPropsType> = pure(Footer);
+const EnhancedFooter = pure(Footer);
 
 export default EnhancedFooter;

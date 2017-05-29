@@ -33,6 +33,16 @@ team:
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
   teamMembers:
     Almas:
+      faceImageCollection:
+        top: /assets/face-top.jpg
+        right: /assets/face-right.jpg
+        center: /assets/face-center.jpg
+        bottomLeft: /assets/face-bottom-left.jpg
+        bottomRight: /assets/face-bottom-right.jpg
+        topLeft: /assets/face-top-left.jpg
+        topRight: /assets/face-top-right.jpg
+        bottom: /assets/face-bottom.jpg
+        left: /assets/face-left.jpg
       image: /assets/dummy-profile.jpeg
       firstName: Алмас
       lastName: Акчабаев

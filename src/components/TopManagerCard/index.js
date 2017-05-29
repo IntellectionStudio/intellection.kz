@@ -1,15 +1,7 @@
-/* @flow */
-
 import {pure} from 'recompact';
 import React from 'react';
 
-import type {TeamMemberType} from 'types';
-
 import styles from './index.css';
-
-type TopManagerCardOwnPropsType = {|
-  teamMember: TeamMemberType,
-|};
 
 const TopManagerCard = ({
   teamMember: {image, firstName, lastName, position, text},
@@ -32,8 +24,6 @@ const TopManagerCard = ({
   </div>
 );
 
-const EnhancedTopManagerCard: EnhancedComponentType<
-  TopManagerCardOwnPropsType,
-> = pure(TopManagerCard);
+const EnhancedTopManagerCard = pure(TopManagerCard);
 
 export default EnhancedTopManagerCard;
