@@ -1,30 +1,73 @@
 backend:
   name: github
   repo: IntellectionStudio/intellection.kz
-  branch: master # replace if you want netlify-cms publish on a different branch
+  branch: master
 
-public_folder: "content" # the same as your phenomic.source in your package.json
-media_folder: "content/assets" # the same as your phenomic.assets in your package.json
+publish_mode: editorial_workflow
+public_folder: "content"
+media_folder: "content/assets"
 
 collections:
-  - name: "post"
-    label: "Post"
-    folder: "content/posts" # a subfolder of your public_folder
-    create: true
-    card: {type: "alltype", text: "title"}
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-    meta:
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-  - name: "pages"
-    label: "Page"
+  - name: "aboutPage"
+    label: "AboutPage"
     folder: "content"
-    create: true
-    card: {type: "alltype", text: "title"}
+    card: {
+      type: "alltype",
+      text: "title"
+    }
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Layout", name: "layout", widget: "string"}
+      - {
+          label: "Meta Title",
+          name: "title",
+          widget: "string"
+        }
+      - {
+          label: "Hero",
+          name: "hero",
+          widget: "object",
+          fields: [
+            {
+              label: "Title",
+              name: "title",
+              widget: "string"
+            },
+            {
+              label: "Text",
+              name: "text",
+              widget: 'text'
+            }
+          ]
+        }
+      - {
+          label: "Video",
+          name: "video",
+          widget: "object",
+          fields: [
+            {
+              label: "Title",
+              name: "title",
+              widget: "string"
+            },
+            {
+              label: "Text",
+              name: "text",
+              widget: "text"
+            },
+            {
+              label: "Button Text",
+              name: "buttonText",
+              widget: "string"
+            },
+            {
+              label: "URL",
+              name: "url",
+              widget: "string"
+            }
+          ]
+        }
     meta:
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime"
+        }
