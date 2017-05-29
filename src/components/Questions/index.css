@@ -1,0 +1,31 @@
+.latestPosts {
+  text-align: center;
+}
+
+.bigTitle {
+  font-size: 24px;
+  color: #303234;
+  margin-bottom: 5%;
+}
+
+.questionWrap {
+  display: -webkit-box;
+}
+
+.numeration {
+  font-size: 44px;
+  color: #949494;
+  padding: 5% 5% 0 0;
+  margin-right: 10%;
+  width: 5%;
+}
+
+.question {
+  font-size: 16px;
+  color: #000;
+}
+
+.numberOfItems {
+  font-size: 13px;
+  color: #949494;
+}

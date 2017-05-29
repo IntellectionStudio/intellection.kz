@@ -1,4 +1,5 @@
 ---
+id: vr
 title: Virtual Reality
 date: 2016-02-14
 layout: TopicPage
