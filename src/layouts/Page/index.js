@@ -3,8 +3,7 @@ import {pick} from 'ramda';
 import Helmet from 'react-helmet';
 import React, {PropTypes} from 'react';
 
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import {Footer, Header} from 'components';
 
 import styles from './index.css';
 

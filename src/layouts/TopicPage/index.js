@@ -1,8 +1,7 @@
 import React from 'react';
 
-import Posts from 'components/Posts';
-
-import Page from '../Page';
+import {Posts} from 'components';
+import Page from 'layouts/Page';
 
 const TopicPage = props => (
   <Page {...props}>
