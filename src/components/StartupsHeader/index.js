@@ -8,7 +8,7 @@ import cx from 'classnames';
 import styles from './index.css';
 
 type PropsType = {
-  head: Object,
+  startups: Object,
 };
 const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 class StartupsHeader extends Component {
@@ -24,7 +24,6 @@ class StartupsHeader extends Component {
       right: 0,
     },
   };
-
   renderStartupLogo = (startup: Object, key: string) => (
     <button
       key={key}
@@ -35,7 +34,6 @@ class StartupsHeader extends Component {
       <img className={styles.logo} src={startup.logo} alt={`${key} Logo`} />
     </button>
   );
-
   renderRightButton() {
     const {startupsHeader, logos} = this.state;
     const logosRight = logos.left + logos.width;
@@ -101,7 +99,6 @@ class StartupsHeader extends Component {
   }
   render() {
     const {startupsHeader, logos} = this.state;
-
     return (
       <Measure
         onMeasure={dimensions => {
@@ -138,7 +135,7 @@ class StartupsHeader extends Component {
                 this.logos = el;
               }}
             >
-              {mapVal(this.renderStartupLogo, this.props.head.startups)}
+              {mapVal(this.renderStartupLogo, this.props.startups)}
             </div>
           </Measure>
           {this.renderRightButton()}

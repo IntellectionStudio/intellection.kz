@@ -63,11 +63,37 @@
 }
 
 .backgroundStartup {
-  display: block;
-  width: auto;
+  display: flex;
+  width: 100%;
   height: 600px;
   align-items: center;
+  justify-content: center;
+  background-size: contain;
+}
+
+.imageBackground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageStartup {
+  display: flex;
+  width: 418px;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
   background-size: cover;
+
+  @media screen and (min-width: 376px) {
+    width: 615px;
+    height: 600px;
+  }
+
+  @media screen and (min-width: 769px) {
+    width: auto;
+    height: 600px;
+  }
 }
 
 .defaultStartupText {
@@ -109,9 +135,9 @@
 }
 
 .startupImage {
-  display: flex;
-  width: auto;
-  height: auto;
+  display: block;
+  width: 100%;
+  height: 600px;
   align-items: center;
   justify-content: center;
   background-size: cover;
