@@ -1,11 +1,9 @@
 import {Link} from 'phenomic';
 import React from 'react';
 
-import Card from 'components/Card';
-import HeroVideo from 'components/HeroVideo';
+import {Card, HeroVideo, StartupCard} from 'components';
 import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
-import StartupCard from 'components/StartupCard';
 
 import styles from './index.css';
 
