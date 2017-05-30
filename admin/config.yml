@@ -8,66 +8,15 @@ public_folder: "content"
 media_folder: "content/assets"
 
 collections:
-  - name: "aboutPage"
-    label: "AboutPage"
-    folder: "content"
-    card: {
-      type: "alltype",
-      text: "title"
-    }
-    fields:
-      - {
-          label: "Meta Title",
-          name: "title",
-          widget: "string"
-        }
-      - {
-          label: "Hero",
-          name: "hero",
-          widget: "object",
-          fields: [
-            {
-              label: "Title",
-              name: "title",
-              widget: "string"
-            },
-            {
-              label: "Text",
-              name: "text",
-              widget: 'text'
-            }
-          ]
-        }
-      - {
-          label: "Video",
-          name: "video",
-          widget: "object",
-          fields: [
-            {
-              label: "Title",
-              name: "title",
-              widget: "string"
-            },
-            {
-              label: "Text",
-              name: "text",
-              widget: "text"
-            },
-            {
-              label: "Button Text",
-              name: "buttonText",
-              widget: "string"
-            },
-            {
-              label: "URL",
-              name: "url",
-              widget: "string"
-            }
-          ]
-        }
-    meta:
-      - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime"
-        }
+  - {name: "aboutPage",
+    label: "AboutPage",
+    folder: "content",
+    card: {type: "alltype",text: "title"},
+    fields: [
+      {label: "Meta Title",name: "title",widget: "string"},
+      {label: "Hero",name: "hero",widget: "object",fields: [{label: "Title",name: "title",widget: "string"},{label: "Text",name: "text",widget: 'text'}]},
+      {label: "Video",name: "video",widget: "object",fields: [{label: "Title",name: "title",widget: "string"},{label: "Text",name: "text",widget: "text"},{label: "Button Text",name: "buttonText",widget: "string"},{label: "URL",name: "url",widget: "string"}]},
+    ],
+    meta: {label: "Publish Date",name: "date",widget: "datetime"}}
+  - {name: "404", label: "404 Page", folder: "content/404", fields: [{label: "layout", name: "layout", widget: "string"}, {label: "route", name: "route", widget: "string"}],
+    meta: {label: "Publish Date",name: "date",widget: "datetime"}}
