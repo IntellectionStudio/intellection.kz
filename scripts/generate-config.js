@@ -73,16 +73,13 @@ const mapToNetlifyFields = (value, key, result = []) => {
 const prepareForNetlify = (filePath) => {
   const contents = fs.readFileSync(filePath, 'utf-8');
   const data = fm(contents);
-  // data.attributes.body = data.body;
-  console.log(data);
+  data.attributes.body = data.body;
   return mapToNetlifyFields(data.attributes);
 }
 
 const walk = (file, context) => {
   const filePath = path.join(context, file);
-  console.log(file);
   if (file === INDEX) {
-    console.log('happenning')
     const baseDir = path.basename(context);
 
     if (baseDir === CONTENT_DIR) {
@@ -120,7 +117,6 @@ const walk = (file, context) => {
     }
   } else { // then it is just a record
     let lastCollection = config.collections[config.collections.length - 1];
-    console.log(!lastCollection.fields);
     if (!lastCollection.fields) {
       lastCollection.fields = prepareForNetlify(filePath);
     }
