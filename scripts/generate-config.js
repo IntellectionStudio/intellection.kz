@@ -46,14 +46,22 @@ const rewriteFile = (filePath, contents) => {
 // LOGIC
 const mapToNetlifyFields = (value, key, result = []) => {
   if (typeof value === 'string') {
-    result.push({
-      label: key,
-      name: key,
-      widget: value.length > 72 ? 'text' : 'string',
-    });
+    if (key === 'body') {
+      result.push({
+        label: capitalize(key),
+        name: key,
+        widget: 'markdown',
+      });
+    } else {
+      result.push({
+        label: capitalize(key),
+        name: key,
+        widget: value.length > 72 ? 'text' : 'string',
+      });
+    }
   } else if (typeof value === 'object' && key) { // not initial object
     result.push({
-      label: key,
+      label: capitalize(key),
       name: key,
       widget: 'object',
       fields: [].concat(
