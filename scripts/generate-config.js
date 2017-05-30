@@ -54,9 +54,11 @@ const mapToNetlifyFields = (value, key, result = []) => {
       label: key,
       name: key,
       widget: 'object',
-      fields: Object.entries(value).map(([k, v]) => {
-        return mapToNetlifyFields(v, k, []);
-      }),
+      fields: [].concat(
+        ...Object.entries(value).map(([k, v]) => {
+          return mapToNetlifyFields(v, k, []);
+        })
+      ),
     });
   } else if (typeof value === 'object' && !key) {
     Object.entries(value).forEach(([k, v]) => {
