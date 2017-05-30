@@ -2,7 +2,6 @@ backend:
     name: github
     repo: IntellectionStudio/intellection.kz
     branch: master
-publish_mode: editorial_workflow
 public_folder: content
 media_folder: content/assets
 collections:
