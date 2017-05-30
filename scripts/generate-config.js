@@ -30,8 +30,8 @@ const isDirectory = filePath => {
   return fs.lstatSync(filePath).isDirectory();
 }
 
-const getRelativeDirPath = (aPath, from) => {
-  const absoluteDir = path.parse(aPath).dir;
+const getRelativeDirPath = (aPath, from, dir) => {
+  const absoluteDir = dir ? aPath.toString() : path.parse(aPath).dir;
   const contentDirIndex = absoluteDir.indexOf(CONTENT_DIR);
   const relativeDir = absoluteDir.substr(contentDirIndex, absoluteDir.length);
   return relativeDir;
@@ -70,26 +70,53 @@ const prepareForNetlify = (filePath) => {
   const contents = fs.readFileSync(filePath, 'utf-8');
   const data = fm(contents);
   // data.attributes.body = data.body;
-  console.log(mapToNetlifyFields(data.attributes));
+  console.log(data);
   return mapToNetlifyFields(data.attributes);
 }
 
 const walk = (file, context) => {
   const filePath = path.join(context, file);
+  console.log(file);
   if (file === INDEX) {
+    console.log('happenning')
     const baseDir = path.basename(context);
 
-    config.collections.push({
-      name: baseDir === CONTENT_DIR ? 'homepage' : baseDir,
-      label: baseDir === CONTENT_DIR ? 'Home Page' : `${capitalize(baseDir)} Page`,
-      folder: baseDir === CONTENT_DIR ? CONTENT_DIR : getRelativeDirPath(filePath, CONTENT_DIR),
-      create: false,
-      fields: prepareForNetlify(filePath),
-    });
+    if (baseDir === CONTENT_DIR) {
+      config.collections.push({
+        name: 'homepage',
+        label: 'Home Page',
+        folder: CONTENT_DIR,
+        create: false,
+        fields: prepareForNetlify(filePath),
+      });
+    } else {
+      config.collections[config.collections.length - 1] = {
+        name: baseDir,
+        label: `${capitalize(baseDir)} Page`,
+        folder: baseDir === CONTENT_DIR ? CONTENT_DIR : getRelativeDirPath(filePath, CONTENT_DIR),
+        create: false,
+        fields: prepareForNetlify(filePath),
+      }
+    }
   } else if (isDirectory(filePath)) {
-    fs.readdirSync(filePath).forEach(file => walk(file, filePath));
+    if (file !== 'assets') {
+      if (file !== CONTENT_DIR) {
+        config.collections.push({
+          name: file,
+          label: capitalize(file),
+          folder: getRelativeDirPath(filePath, CONTENT_DIR, true),
+          create: true,
+        });
+      }
+      fs.readdirSync(filePath)
+      .forEach(f => walk(f, filePath));
+    }
   } else { // then it is just a record
-
+    let lastCollection = config.collections[config.collections.length - 1];
+    console.log(!lastCollection.fields);
+    if (!lastCollection.fields) {
+      lastCollection.fields = prepareForNetlify(filePath);
+    }
   }
 }
 
