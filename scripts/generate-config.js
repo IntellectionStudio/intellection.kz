@@ -9,6 +9,8 @@ const CONTEXT_DIR = path.join(__dirname, '..');
 const CONTENT_DIR_PATH = path.join(CONTEXT_DIR, CONTENT_DIR);
 const CONFIG_FILE_PATH = path.join(CONTEXT_DIR, 'admin', 'config.yml');
 
+const meta = {label: "Publish Date",name: "date",widget: "datetime"};
+
 let config = {
   backend: {
     name: 'github',
@@ -90,6 +92,7 @@ const walk = (file, context) => {
         folder: CONTENT_DIR,
         create: false,
         fields: prepareForNetlify(filePath),
+        meta
       });
     } else {
       config.collections[config.collections.length - 1] = {
@@ -98,6 +101,7 @@ const walk = (file, context) => {
         folder: baseDir === CONTENT_DIR ? CONTENT_DIR : getRelativeDirPath(filePath, CONTENT_DIR),
         create: false,
         fields: prepareForNetlify(filePath),
+        meta
       }
     }
   } else if (isDirectory(filePath)) {
@@ -108,6 +112,7 @@ const walk = (file, context) => {
           label: capitalize(file),
           folder: getRelativeDirPath(filePath, CONTENT_DIR, true),
           create: true,
+          meta
         });
       }
       fs.readdirSync(filePath)
