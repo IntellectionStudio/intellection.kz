@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="109px" viewBox="0 0 110 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Play Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="34.1316539" cy="33.2164948" rx="34.1316539" ry="33.2164948"></ellipse>
+        <filter x="-57.1%" y="-36.1%" width="214.3%" height="217.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="15" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1.5" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="15" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Курс" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Курс-(Mobile)" transform="translate(-132.000000, -397.000000)">
+            <g id="Video" transform="translate(-1313.000000, 257.000000)">
+                <g id="Play-Button" transform="translate(1466.000000, 146.000000)">
+                    <g id="Circle">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke="#FFFFFF" stroke-width="3" xlink:href="#path-1"></use>
+                    </g>
+                    <polygon id="Triangle" fill="#FFFFFF" transform="translate(35.683093, 33.216495) rotate(-270.000000) translate(-35.683093, -33.216495) " points="35.6830928 24.7613871 46.5431645 41.6716026 24.8230211 41.6716026"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

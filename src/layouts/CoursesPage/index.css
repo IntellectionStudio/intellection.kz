@@ -1,3 +1,178 @@
 .container {
-  background-color: '#f1f2ff';
+  background-color: #f9f9f9;
+}
+
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #303234;
+  text-align: center;
+  margin: 30px 20px 25px;
+}
+
+.headingText {
+  font-size: 14px;
+  margin: 13px 0 0;
+  width: 100%;
+}
+
+.headingTitle {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+}
+
+.video {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 358px;
+  background: var(--colorPrimary);
+}
+
+.videoImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/videoPlaceholder.png') center center no-repeat;
+  opacity: 0.58;
+}
+
+.playIconWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -358px;
+  opacity: 1;
+}
+
+.playIcon {
+  display: block;
+  width: 67px;
+  height: 67px;
+  z-index: 9999;
+}
+
+.about {
+  margin: 51px 35px 60px;
+}
+
+.aboutTitle {
+  color: #303234;
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.aboutText {
+  color: #707070;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+.benefits {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.benefit {
+  padding-left: 1em;
+  text-indent: -1em;
+  color: #707070;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.benefit::before {
+  content: url('/assets/list-bullet.png');
+  padding-right: 16px;
+}
+
+.statsPlaceholder {
+  margin: 40px 55px 71px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.individual {
+  margin: 0 68px;
+  text-align: center;
+}
+
+.individualTitle {
+  color: #222328;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.attributes {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.attribute {
+  width: 90px;
+}
+
+.attributeHeader {
+  color: #4f5362;
+  font-size: 42px;
+  line-height: 42px;
+}
+
+.attributeText {
+  color: #abacb9;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price {
+  margin-bottom: 30px;
+}
+
+.priceTitle {
+  color: #4f5362;
+  font-size: 30px;
+  font-weight: normal;
+  margin-top: 13px;
+  margin-bottom: 2px;
+}
+
+.priceText {
+  color: #abacb9;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.ctaContainer {
+  margin-bottom: 75px;
+}
+
+.cta {
+  padding: 14px;
+  text-align: center;
+  background: #51a9f2;
+  color: white;
+  width: 100%;
+  border: 0;
+  border-radius: 40px;
 }
