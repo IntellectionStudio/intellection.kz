@@ -15,14 +15,16 @@ const CoursesPage = props => (
           Курс разработки мобильных приложений
         </h1>
       </div>
-      <div className={styles.video}>
-        <div className={styles.videoImage} />
-        <div className={styles.playIconWrapper}>
-          <img
-            alt="Play Video"
-            className={styles.playIcon}
-            src="/assets/play-white-2.svg"
-          />
+      <div className={styles.videoSection}>
+        <div className={styles.video}>
+          <div className={styles.videoImage} />
+          <div className={styles.playIconWrapper}>
+            <img
+              alt="Play Video"
+              className={styles.playIcon}
+              src="/assets/play-white-2.svg"
+            />
+          </div>
         </div>
       </div>
       <div className={styles.about}>
@@ -43,6 +45,11 @@ const CoursesPage = props => (
         </ul>
       </div>
       <div className={styles.statsContainer}>
+        <img
+          className={styles.statsIcon}
+          src="/assets/stats-icon.png"
+          alt="Stats Icon"
+        />
         <img
           className={styles.statsPlaceholder}
           src="/assets/stats-placeholder.png"
