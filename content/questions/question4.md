@@ -1,7 +1,9 @@
 ---
-title: New version of iOS
+id: 4
+question: What is Android?
+title: Android
 text: vsavf
 image: /assets/videoPlaceholder.png
 layout: Post
-topic: ios
+subject: android
 ---
