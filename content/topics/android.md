@@ -1,7 +1,11 @@
 ---
-title: Android Posts
+id: android
+title: Android
+route: /knowledge/android
 date: 2016-02-14
 layout: TopicPage
+featured: true
+about: They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
 # hero credit: https://www.flickr.com/photos/igotz/15669216853/
 hero: https://farm8.staticflickr.com/7479/15669216853_aa8e70eae1_o.jpg
 ---
