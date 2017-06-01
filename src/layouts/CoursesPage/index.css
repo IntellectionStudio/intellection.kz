@@ -33,6 +33,10 @@
   @media screen and (min-width: 768px) {
     font-size: 24px;
   }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 18px;
+  }
 }
 
 .headingTitle {
@@ -46,6 +50,11 @@
     font-size: 36px;
     line-height: 54px;
     margin-top: 20px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 48px;
+    font-size: 72px;
   }
 }
 
@@ -98,6 +107,10 @@
   width: 67px;
   height: 67px;
   z-index: 9999;
+}
+
+.main {
+  width: 100%;
 }
 
 .about {
@@ -157,6 +170,14 @@
 .benefit::before {
   content: url('/assets/list-bullet.png');
   padding-right: 16px;
+}
+
+.mainRight {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .statsContainer {
