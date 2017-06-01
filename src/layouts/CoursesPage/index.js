@@ -98,6 +98,48 @@ const CoursesPage = props => (
               </div>
             </div>
           </div>
+
+          <div className={styles.individual}>
+            <h2 className={styles.individualTitle}>
+              КОРПОРАТИВНЫЙ КУРС
+            </h2>
+            <div className={styles.attributes}>
+              <div className={styles.attribute}>
+                <div className={styles.attributeHeader}>∞</div>
+                <p className={styles.attributeText}>Довольных студентов</p>
+              </div>
+              <div className={styles.attribute}>
+                <div className={styles.attributeHeader}>17</div>
+                <p className={styles.attributeText}>Сломанных телефонов</p>
+              </div>
+              <div className={styles.attribute}>
+                <div className={styles.attributeHeader}>
+                  <img
+                    className={styles.attributeHeaderImage}
+                    src="/assets/apple-icon.png"
+                    alt="Apple Icon"
+                  />
+                </div>
+                <p className={styles.attributeText}>Сломанных телефонов</p>
+              </div>
+              <div className={styles.attribute}>
+                <div className={styles.attributeHeader}>0</div>
+                <p className={styles.attributeText}>Негативных отзывов</p>
+              </div>
+            </div>
+            <div className={styles.individualSummary}>
+              <div className={styles.price}>
+                <h3 className={styles.priceTitle}>160 тыс.</h3>
+                <p className={styles.priceText}>тенге за курс</p>
+              </div>
+              <div className={styles.ctaContainer}>
+                <button className={styles.cta2}>
+                  Оставить заявку
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
