@@ -9,6 +9,10 @@
   @media screen and (min-width: 768px) {
     padding-bottom: 130px;
   }
+
+  @media screen and (min-width: 1186px) {
+    padding-bottom: 0;
+  }
 }
 
 .heading {
@@ -54,7 +58,7 @@
 
   @media screen and (min-width: 1400px) {
     font-size: 48px;
-    font-size: 72px;
+    width: 900px;
   }
 }
 
@@ -111,6 +115,10 @@
 
 .main {
   width: 100%;
+
+  @media screen and (min-width: 1100px) {
+    display: flex;
+  }
 }
 
 .about {
@@ -118,6 +126,15 @@
 
   @media screen and (min-width: 768px) {
     margin: 82px 122px 105px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    width: 45%;
+    margin: 5% 5% 15%;
+  }
+
+  @media screen and (min-width: 1400px) {
+    margin: 5% 5% 15% 8%;
   }
 }
 
@@ -131,6 +148,10 @@
   @media screen and (min-width: 768px) {
     font-size: 36px;
     margin-bottom: 37px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    font-size: 44px;
   }
 }
 
@@ -157,6 +178,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  @media screen and (min-width: 1100px) {
+    margin-top: 15%;
+  }
 }
 
 .benefit {
@@ -174,10 +199,18 @@
 
 .mainRight {
   width: 100%;
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  display: flex;
+
+  @media screen and (min-width: 1100px) {
+    width: 55%;
+  }
+
+  @media screen and (min-width: 1186px) {
+    display: block;
+  }
 }
 
 .statsContainer {
@@ -190,6 +223,10 @@
   @media screen and (min-width: 768px) {
     padding-bottom: 35px;
     padding-top: 0;
+  }
+
+  @media screen and (min-width: 1100px) {
+    padding-top: 12%;
   }
 }
 
