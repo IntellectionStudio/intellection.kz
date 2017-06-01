@@ -1,21 +1,65 @@
-import React from 'react';
+import enhanceCollection from 'phenomic/lib/enhance-collection';
+import React, {PropTypes, Component} from 'react';
+import {Link} from 'phenomic';
 
 import Questions from 'components/Questions';
+import Posts from 'components/Posts';
 
 import Page from '../Page';
 import styles from './index.css';
 
-const TopicPage = props => (
-  <Page {...props}>
-    <div className={styles.path}>
-      <div>Knowledge Base</div>
-      <div className={styles.gt}>&gt;</div>
-      <div className={styles.pathColored}>{props.head.title}</div>
-    </div>
-    <div className={styles.questions}>
-      <Questions topic={props.head.id} />
-    </div>
-  </Page>
-);
+class TopicPage extends Component {
+  static contextTypes = {
+    collection: PropTypes.array.isRequired,
+  };
+
+  state = {
+    currentQuestion: null,
+    questions: [],
+  };
+
+  componentWillMount() {
+    const {collection} = this.context;
+    const questions = enhanceCollection(collection, {
+      filter: content =>
+        content.question && content.subject === this.props.head.id,
+    });
+
+    this.setState({
+      questions,
+      currentQuestion: questions.length ? questions[0].id : null,
+    });
+  }
+
+  setCurrentQuestion = id => {
+    this.setState({currentQuestion: id});
+  };
+
+  render() {
+    return (
+      <Page {...this.props}>
+        <div className={styles.path}>
+          <Link className={styles.backButton1} to={'/knowledge'}>
+            &lt; Back to Knowledge Base
+          </Link>
+          <Link className={styles.backButton2} to={'/knowledge'}>
+            Knowledge Base
+          </Link>
+          <div className={styles.gt}>&gt;</div>
+          <div className={styles.pathColored}>{this.props.head.title}</div>
+        </div>
+        <div className={styles.questions}>
+          <Questions
+            topic={this.props.head.id}
+            setCurrentQuestion={this.setCurrentQuestion}
+            questions={this.state.questions}
+            currentQuestion={this.state.currentQuestion}
+          />
+          <Posts question={this.state.currentQuestion} />
+        </div>
+      </Page>
+    );
+  }
+}
 
 export default TopicPage;

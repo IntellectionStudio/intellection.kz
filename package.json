@@ -63,6 +63,7 @@
     "react-helmet": "^5.0.3",
     "react-intl": "^2.2.3",
     "react-modal-video": "^1.0.4",
+    "react-player": "^0.18.0",
     "react-router": "2.3.0",
     "react-svg-inline": "^2.0.0",
     "react-topbar-progress-indicator": "^1.0.0",

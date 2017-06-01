@@ -1,6 +1,7 @@
 ---
 id: vr
 title: Virtual Reality
+route: /knowledge/vr
 date: 2016-02-14
 layout: TopicPage
 featured: true

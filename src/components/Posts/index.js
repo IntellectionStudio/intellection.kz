@@ -1,20 +1,72 @@
 import enhanceCollection from 'phenomic/lib/enhance-collection';
 import React, {PropTypes} from 'react';
+import ReactPlayer from 'react-player';
+import {Link} from 'phenomic';
 
 import styles from './index.css';
 
-const Posts = ({topic}, {collection}) => {
+const Posts = ({question}, {collection}) => {
   const posts = enhanceCollection(collection, {
-    filter: {topic},
+    filter: contents => contents.questionId === question,
   });
 
   return (
-    <div>
+    <div className={styles.mainDiv}>
       {posts.length
-        ? <ul className={styles.list}>
-            {posts.map(post => <div key={post.title}>{post.title}</div>)}
-          </ul>
-        : 'No posts yet.'}
+        ? <div className={styles.posts}>
+            {posts.map(post => (
+              <div key={post.title} className={styles.post}>
+                {post.image &&
+                  <div>
+                    <div
+                      className={styles.postImage}
+                      style={{
+                        background: `url('${post.image}') center center no-repeat`,
+                      }}
+                    />
+                    <div className={styles.postTitle}>{post.title}</div>
+                    <div className={styles.postText}>{post.description}</div>
+                  </div>}
+                {post.video &&
+                  <div>
+                    <ReactPlayer
+                      url={post.video}
+                      className={styles.postVideo}
+                      controls
+                      width="100%"
+                      height="240px"
+                    />
+                    <div className={styles.postTitle}>{post.title}</div>
+                    <div className={styles.postText}>{post.description}</div>
+                  </div>}
+                {post.link &&
+                  <div>
+                    <div
+                      className={styles.postLinkImage}
+                      style={{
+                        background: `url('${post.linkImage}') center center no-repeat`,
+                      }}
+                    >
+                      <Link
+                        className={styles.postLinkButton}
+                        to={post.link}
+                        target="_blank"
+                      >
+                        ОТКРЫТЬ
+                      </Link>
+                    </div>
+                    <div className={styles.postTitle}>{post.title}</div>
+                    <div className={styles.postText}>{post.description}</div>
+                  </div>}
+                {post.text &&
+                  <div>
+                    <div className={styles.postTitle}>{post.title}</div>
+                    <div className={styles.postText}>{post.description}</div>
+                  </div>}
+              </div>
+            ))}
+          </div>
+        : 'No posts yett.'}
     </div>
   );
 };

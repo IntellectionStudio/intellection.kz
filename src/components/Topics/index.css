@@ -100,7 +100,7 @@
   background-color: white;
   margin-bottom: 20px;
   box-shadow: 0 3px 10px #c7c7c7;
-  width: 165px;
+  width: 330px;
 
   @media screen and (min-width: 409px) {
     margin-right: 15px;
@@ -146,7 +146,6 @@
 
 .featuredTopicImage {
   height: 150px;
-  width: 165px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   background: url('/assets/videoPlaceholder.png') center center no-repeat;

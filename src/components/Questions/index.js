@@ -1,13 +1,13 @@
 import enhanceCollection from 'phenomic/lib/enhance-collection';
 import React, {PropTypes} from 'react';
+import cx from 'classnames';
 
 import styles from './index.css';
 
-const Questions = ({topic}, {collection}) => {
-  const posts = enhanceCollection(collection, {
-    filter: {subject: topic},
-  });
-
+const Questions = (
+  {topic, setCurrentQuestion, questions, currentQuestion},
+  {collection},
+) => {
   const title = enhanceCollection(collection, {
     filter: {id: topic},
   });
@@ -15,36 +15,57 @@ const Questions = ({topic}, {collection}) => {
   let int = 0;
 
   return (
-    <div>
+    <div className={styles.questions}>
       <div>
         {title.length
-          ? <ul className={styles.bigTitle}>
+          ? <div>
               {title.map(subject => (
-                <div key={subject.title}>
+                <div key={subject.title} className={styles.bigTitle}>
                   {subject.title}
                 </div>
               ))}
-            </ul>
-          : 'No posts yet.'}
+            </div>
+          : 'No questions yet.'}
       </div>
-      {posts.length
-        ? <ul className={styles.list}>
-            {posts.map(post => (
-              <div key={post.questionWrap} className={styles.questionWrap}>
-                <ul key={post.numeration} className={styles.numeration}>
+      {questions.length
+        ? <div className={styles.list}>
+            {questions.map(question => (
+              <button
+                key={question.questionWrap}
+                className={styles.questionWrap}
+                onClick={() => setCurrentQuestion(question.id)}
+              >
+                <div
+                  key={question.numeration}
+                  className={cx(styles.numeration, {
+                    [styles.questionSelected]: currentQuestion === question.id,
+                  })}
+                >
                   {(int += 1)}.
-                </ul>
-                <div key={post.question1} className={styles.wrap}>
-                  <div key={post.question} className={styles.question}>
-                    {post.question}
+                </div>
+                <div key={question.question1} className={styles.wrap}>
+                  <div
+                    key={question.question}
+                    className={cx(styles.question, {
+                      [styles.questionSelected]: currentQuestion ===
+                        question.id,
+                    })}
+                  >
+                    {question.question}
                   </div>
-                  <div key={post.question2} className={styles.numberOfItems}>
-                    {posts.length} items
+                  <div
+                    key={question.question2}
+                    className={cx(styles.numberOfItems, {
+                      [styles.questionSelected]: currentQuestion ===
+                        question.id,
+                    })}
+                  >
+                    {questions.length} items
                   </div>
                 </div>
-              </div>
+              </button>
             ))}
-          </ul>
+          </div>
         : 'No posts yet.'}
     </div>
   );

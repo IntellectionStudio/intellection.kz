@@ -1,6 +1,7 @@
 ---
 id: android
 title: Android
+route: /knowledge/android
 date: 2016-02-14
 layout: TopicPage
 featured: true

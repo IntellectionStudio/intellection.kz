@@ -1,6 +1,7 @@
 ---
 id: ios
 title: iOS
+route: /knowledge/ios
 date: 2016-01-22
 layout: TopicPage
 featured: true
