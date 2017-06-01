@@ -22,7 +22,7 @@ const CoursesPage = props => (
             <img
               alt="Play Video"
               className={styles.playIcon}
-              src="/assets/play-white-2.svg"
+              src="/assets/play-white.svg"
             />
           </div>
         </div>
