@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Topics from 'components/Topics';
+import {Topics} from 'components';
 
 import Page from '../Page';
 

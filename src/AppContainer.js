@@ -1,9 +1,7 @@
 import {IntlProvider} from 'react-intl';
 import React from 'react';
 
-import Container from 'components/Container';
-import Content from 'components/Content';
-import DefaultHeadMeta from 'components/DefaultHeadMeta';
+import {Container, Content, DefaultHeadMeta} from 'components';
 import getIntlForLocale from 'utils/getIntlForLocale';
 
 import 'normalize.css/normalize.css';

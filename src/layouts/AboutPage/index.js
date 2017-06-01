@@ -2,8 +2,7 @@ import React from 'react';
 
 import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
-import TeamMemberCard from 'components/TeamMemberCard';
-import TopManagerCard from 'components/TopManagerCard';
+import {TeamMemberCard, TopManagerCard} from 'components';
 
 import styles from './index.css';
 
