@@ -1,0 +1,11 @@
+.logos {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoButton {
+  display: block;
+  padding: 0;
+}

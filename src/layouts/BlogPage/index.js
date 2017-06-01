@@ -17,7 +17,6 @@ class BlogPage extends Component {
       this.setState({posts: parsed.feed.entries});
     });
   }
-
   render() {
     return (
       <Page {...this.props}>
@@ -32,7 +31,7 @@ class BlogPage extends Component {
                   </li>
                 ))}
               </li>
-            : 'No posts yet'}
+            : 'No posts yetf'}
         </div>
       </Page>
     );
