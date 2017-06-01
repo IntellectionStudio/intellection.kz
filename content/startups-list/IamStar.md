@@ -1,8 +1,9 @@
 ---
-logo: /assets/logo-grey-i-am-star.png
+logo: /assets/logo-grey-iamstar.png
+logo1: /assets/logo-coloured-iamstar.png
 image: /assets/startup-iamstar.png
-title: Я звезда
-text: Все новости Казахстана в одном приложении. Теперь вам не нужно перебегать из одного приложения в другое для поиска новостей от ваших любимых ресурсов. Феникс - все последние новости Казахстана и мира в одно касание.
+title: I am star
+text: Все новости Казахстана в одном приложении.
 link: "http://apple.co/2ijJFrM"
 layout: StartupsPage
 ---

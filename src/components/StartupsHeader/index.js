@@ -1,19 +1,17 @@
-/* @flow */
-
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import Measure from 'react-measure';
 import {mapObjIndexed, values} from 'ramda';
 import cx from 'classnames';
 
 import styles from './index.css';
 
-type PropsType = {
-  startups: Object,
-};
 const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 class StartupsHeader extends Component {
-  props: PropsType;
-  state: Object = {
+  static propTypes = {
+    startups: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+    selectedStartup: PropTypes.string,
+  };
+  state = {
     logos: {
       width: 0,
       left: 0,
@@ -24,16 +22,33 @@ class StartupsHeader extends Component {
       right: 0,
     },
   };
-  renderStartupLogo = (startup: Object, key: string) => (
+  renderStartupLogo = (startup, key) => (
     <button
-      key={key}
+      key={startup.title}
       className={styles.logoButton}
       // $FlowFixMe
-      onClick={() => this.props.setStartup(key)}
+      onClick={() => {
+        this.props.setStartup(startup.title);
+      }}
     >
-      <img className={styles.logo} src={startup.logo} alt={`${key} Logo`} />
+      <img
+        className={styles.logo}
+        src={
+          this.props.selectedStartup !== startup.title
+            ? startup.logo
+            : startup.logo1
+        }
+        alt={`${key} Logo`}
+      />
     </button>
   );
+
+  logoSwitch(logo, logo1) {
+    if (this.state.clicked) {
+      return logo1;
+    }
+    return logo;
+  }
   renderRightButton() {
     const {startupsHeader, logos} = this.state;
     const logosRight = logos.left + logos.width;
@@ -76,7 +91,7 @@ class StartupsHeader extends Component {
     }
     return null;
   }
-  moveLeft(left: number) {
+  moveLeft(left) {
     this.setState({
       logos: {
         ...this.state.logos,
@@ -131,7 +146,6 @@ class StartupsHeader extends Component {
               className={styles.logos}
               style={{marginLeft: `${this.logosLeft()}px`}}
               ref={el => {
-                // $FlowFixMe
                 this.logos = el;
               }}
             >

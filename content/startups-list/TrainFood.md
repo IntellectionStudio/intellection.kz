@@ -1,5 +1,6 @@
 ---
-logo: /assets/logo-grey-qazaq-adventure.png
+logo: /assets/logo-grey-kazakhadventure.png
+logo1: /assets/logo-coloured-kazakhadventure.png
 image: /assets/startup-trainfood.png
 title: Trainfood
 text: Сервис по доставке готовой еды  на станциях в пассажирские поезда.

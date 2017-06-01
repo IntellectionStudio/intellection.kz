@@ -12,7 +12,6 @@ class StartupsPage extends Component {
   state = {
     startupToShow: null,
   };
-  // $FlowFixMe
   setStartup = startupToShow => this.setState({startupToShow});
   renderContent() {
     const {collection} = this.context;
@@ -28,55 +27,60 @@ class StartupsPage extends Component {
     if (startupToShow == null) {
       const {image, title, text} = defaultCase[0];
       return (
-        <div
-          className={styles.backgroundStartup}
-          style={{
-            background: `url(${image}) center center no-repeat`,
-          }}
-        >
-          <div className={styles.defaultStartupTitle}>
-            {title}
-          </div>
-          <div className={styles.defaultStartupText}>
-            {text}
+        <div className={styles.content}>
+          <div
+            className={styles.backgroundStartup}
+            style={{
+              background: `url(${image}) center center no-repeat`,
+            }}
+          >
+            <div className={styles.defaultBox}>
+              <h1 className={styles.defaultStartupTitle}>
+                {title}
+              </h1>
+              <p className={styles.defaultStartupText}>
+                {text}
+              </p>
+            </div>
           </div>
         </div>
       );
     }
-    const {image, title, text, link} = startups[startupToShow];
+    const {image, title, text, link} = startups.filter(
+      startup => startup.title === this.state.startupToShow,
+    )[0];
+
     return (
-      <div>
-        <div className={styles.startupTitle}>
-          {title}
+      <div className={styles.content}>
+        <div className={styles.info}>
+          <h1 className={styles.startupTitle}>
+            {title}
+          </h1>
+          <p className={styles.startupText}>
+            {text}
+          </p>
+          <div className={styles.learnMore}>
+            <Link to={link}>
+              Подробнее &gt;
+            </Link>
+          </div>
         </div>
-        <div className={styles.startupText}>
-          {text}
-        </div>
-        <div className={styles.learnMore}>
-          <Link to={link}>
-            Подробнее
-          </Link>
-        </div>
-        <div className={styles.imageBackground}>
-          <img className={styles.imageStartup} src={image} alt={`images`} />
+        <div className={styles.imageWrapper}>
+          <div
+            className={styles.imageStartup}
+            style={{
+              background: `url('${image}') center center / contain no-repeat`,
+            }}
+          />
         </div>
       </div>
     );
   }
-  /*    <div
-        className={styles.backgroundStartup}
-        style={{
-          background: `url(${image}) center center no-repeat`,
-        }}
-      />*/
   render() {
     const {collection} = this.context;
-    //  console.log(collection);
     const startups = enhanceCollection(collection, {
       filter: contents => contents.__filename.startsWith('startups-list'),
     });
-    //  console.log('bla bla bla', startups.length);
-    // console.log('bla bla bla', startups);
     return (
       <Page {...this.props}>
         <div className={styles.container}>
@@ -84,8 +88,9 @@ class StartupsPage extends Component {
             ? <StartupsHeader
                 setStartup={this.setStartup}
                 startups={startups}
+                selectedStartup={this.state.startupToShow}
               />
-            : 'No posts yet.'}
+            : 'No startups yet.'}
         </div>
         {this.renderContent()}
       </Page>

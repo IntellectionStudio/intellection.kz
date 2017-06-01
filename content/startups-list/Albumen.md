@@ -1,7 +1,8 @@
 ---
-logo: /assets/logo-grey-qazaq-adventure.png
+logo: /assets/logo-grey-albumen.png
+logo1: /assets/logo-coloured-albumen.png
 image: /assets/startup-albumen.png
 title: Albumen
-text: Albumen - это первое приложение в Казахстане для распечатки фотоальбомов с вашего смартфонаБольшинство фотографии навсегда остаются в памяти наших телефонов. Мы считаем, что многие из них были бы прекрасны в печатном виде! Наш сервис позволяет распечатывать фотографии в виде альбомов прямо с вашего телефона.
+text: Изучай казахский язык с удовольствием
 link: "http://apple.co/2ijJFrM"
 ---

@@ -1,8 +1,9 @@
 ---
-logo: /assets/logo-grey-qazaq-app.png
+logo: /assets/logo-grey-qazaqapp.png
+logo1: /assets/logo-coloured-qazaqapp.png
 image: /assets/startup-qazaqapp.png
 title: Qazaq App
-text: Приложение, которое дает возможность каждому человеку выучить казахский язык, используя современные технологии и специально разработанную методику. Теперь вы сможете не только увеличить свой словарный запас, но и узнать интересные факты о городах Казахстана и известных казахских батырах.
+text: Изучай казахский язык с удовольствием
 link: "http://apple.co/2ijJFrM"
 layout: StartupsPage
 ---

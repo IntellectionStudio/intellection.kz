@@ -1,6 +1,6 @@
 :root {
   --startupsHeader-height: 65px;
-  --startupsHeader-bg: #f7f7f7;
+  --startupsHeader-bg: #f3f3f3;
 }
 
 .normalizeButton {
@@ -61,9 +61,13 @@
   height: 38px;
   margin-right: 30px;
   background: transparent;
+  border: 0;
+  outline: none;
 }
 
 .logo {
   width: 100%;
   height: 100%;
+  border: 0;
+  outline: none;
 }
