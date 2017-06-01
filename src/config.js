@@ -6,23 +6,23 @@ const config = {
     },
     {
       title: 'Наши стартапы',
-      path: '/',
+      path: '/startups',
     },
     {
       title: 'Курсы',
-      path: '/',
+      path: '/courses',
     },
     {
       title: 'Knowledge Base',
-      path: '/',
+      path: '/knowledge',
     },
     {
       title: 'Наше видео',
-      path: '/',
+      path: 'https://www.youtube.com/channel/UCtQaoQC6hC0v5uVpJ8iB-xg',
     },
     {
       title: 'Блог',
-      path: '/',
+      path: 'https://blog.intellection.kz/',
     },
   ],
 };

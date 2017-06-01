@@ -1,16 +1,22 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 40rem;
-  margin: 1rem auto;
-  padding: 1rem 0;
 }
 
 .title {
+  text-align: center;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #303234;
+  font-size: 18px;
   align-self: center;
-  font-size: 1.2rem;
-  font-weight: 900;
-  color: blue;
+
+  @media screen and (min-width: 409px) {
+    text-align: left;
+    padding-bottom: 0;
+    align-self: flex-start;
+  }
 }
 
 .meta {
