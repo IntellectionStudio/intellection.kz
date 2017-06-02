@@ -47,16 +47,26 @@ const CoursesPage = props => (
         </div>
         <div className={styles.mainRight}>
           <div className={styles.statsContainer}>
-            <img
-              className={styles.statsIcon}
-              src="/assets/stats-icon.png"
-              alt="Stats Icon"
-            />
-            <img
-              className={styles.statsPlaceholder}
-              src="/assets/stats-placeholder.png"
-              alt="Paysa Stats"
-            />
+            <div className={styles.divStatsIcon}>
+              <img
+                className={styles.statsIcon}
+                src="/assets/stats-icon.png"
+                alt="Stats Icon"
+              />
+            </div>
+            <div className={styles.divInfo}>
+              <div className={styles.divSalary}>
+                <h2 className={styles.salaryAmount}>
+                  $125k
+                </h2>
+                <p className={styles.salaryText}>СРЕДНЯЯ ЗАРПЛАТА</p>
+              </div>
+              <img
+                className={styles.statsPlaceholder}
+                src="/assets/stats-placeholder.png"
+                alt="Paysa Stats"
+              />
+            </div>
           </div>
           <div className={styles.individual}>
             <h2 className={styles.individualTitle}>

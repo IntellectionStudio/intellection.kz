@@ -17,6 +17,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: ProximaNova;
+  src: url('/assets/ProximaNovaBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 /*
  * box model like it should be
  *

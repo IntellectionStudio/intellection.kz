@@ -218,12 +218,6 @@
   justify-content: center;
   padding: 40px 55px 71px;
 
-  @media screen and (min-width: 768px) {
-    padding-bottom: 10%;
-    padding-top: 0;
-    padding-right: 0;
-  }
-
   @media screen and (min-width: 1100px) {
     padding-top: 12%;
   }
@@ -240,18 +234,45 @@
   }
 }
 
+.divStatsIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .statsIcon {
   display: none;
+  margin: 20%;
 
   @media screen and (min-width: 768px) {
     display: block;
   }
 }
 
-.statsPlaceholder {
-  @media screen and (min-width: 768px) {
-    margin-left: 50px;
-  }
+.divInfo {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.divSalary {
+  display: inline-grid;
+  align-items: center;
+}
+
+.salaryAmount {
+  color: #4f5362;
+  font-size: 42px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0;
+}
+
+.salaryText {
+  color: #a8acb9;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .individual {
