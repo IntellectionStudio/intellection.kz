@@ -1,6 +1,6 @@
 ---
-logo: /assets/logo-grey-kazakhadventure.png
-logo1: /assets/logo-coloured-kazakhadventure.png
+logo: /assets/logo-grey-kitapp.png
+logo1: /assets/logo-coloured-kitapp.png
 image: /assets/startup-kitapp.png
 title: Kitapp
 text: Продажа и покупки подержанных книг и учебников.

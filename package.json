@@ -63,12 +63,10 @@
     "react-helmet": "^5.0.3",
     "react-intl": "^2.2.3",
     "react-measure": "^1.4.7",
-    "react-router": "^2.3.0",
-    "react-slick": "^0.14.11",
     "react-modal-video": "^1.0.4",
-
     "react-player": "^0.18.0",
     "react-router": "2.3.0",
+    "react-slick": "^0.14.11",
     "react-svg-inline": "^2.0.0",
     "react-topbar-progress-indicator": "^1.0.0",
     "recompact": "^3.0.2",
