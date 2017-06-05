@@ -23,7 +23,6 @@ class StartupsPage extends Component {
       filter: contents => contents.__filename.startsWith('default-startups'),
     });
     const {startupToShow} = this.state;
-
     if (startupToShow == null) {
       const {image, title, text} = defaultCase[0];
       return (
@@ -81,6 +80,7 @@ class StartupsPage extends Component {
     const startups = enhanceCollection(collection, {
       filter: contents => contents.__filename.startsWith('startups-list'),
     });
+
     return (
       <Page {...this.props}>
         <div className={styles.container}>
