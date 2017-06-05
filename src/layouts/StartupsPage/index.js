@@ -1,6 +1,7 @@
+import {Link} from 'phenomic';
+import {pure} from 'recompact';
 import enhanceCollection from 'phenomic/lib/enhance-collection';
 import React, {PropTypes, Component} from 'react';
-import {Link} from 'phenomic';
 
 import StartupsHeader from 'components/StartupsHeader';
 import Page from 'layouts/Page';
@@ -8,50 +9,46 @@ import Page from 'layouts/Page';
 import styles from './index.css';
 
 class StartupsPage extends Component {
-  props;
   state = {
-    startupToShow: null,
+    selectedStartupIdx: null,
   };
-  setStartup = startupToShow => this.setState({startupToShow});
-  renderContent() {
-    const {collection} = this.context;
-    const startups = enhanceCollection(collection, {
-      filter: contents => contents.__filename.startsWith('startups-list'),
-    });
 
-    const defaultCase = enhanceCollection(collection, {
+  handleStartupSelect = selectedStartupIdx =>
+    this.setState({selectedStartupIdx});
+
+  renderDefaultStartup = () => {
+    const defaultStartups = enhanceCollection(this.context.collection, {
       filter: contents => contents.__filename.startsWith('default-startups'),
     });
-    const {startupToShow} = this.state;
-
-    if (startupToShow == null) {
-      const {image, title, text} = defaultCase[0];
-      return (
-        <div className={styles.content}>
-          <div
-            className={styles.backgroundStartup}
-            style={{
-              background: `url(${image}) center center no-repeat`,
-            }}
-          >
-            <div className={styles.defaultBox}>
-              <h1 className={styles.defaultStartupTitle}>
-                {title}
-              </h1>
-              <p className={styles.defaultStartupText}>
-                {text}
-              </p>
-            </div>
-          </div>
-        </div>
-      );
-    }
-    const {image, title, text, link} = startups.filter(
-      startup => startup.title === this.state.startupToShow,
-    )[0];
+    const {image, title, text} = defaultStartups[0];
 
     return (
-      <div className={styles.content}>
+      <div
+        className={styles.backgroundStartup}
+        style={{
+          background: `url(${image}) center center no-repeat`,
+        }}
+      >
+        <div className={styles.defaultBox}>
+          <h1 className={styles.defaultStartupTitle}>
+            {title}
+          </h1>
+          <p className={styles.defaultStartupText}>
+            {text}
+          </p>
+        </div>
+      </div>
+    );
+  };
+
+  renderStartup = () => {
+    const startups = enhanceCollection(this.context.collection, {
+      filter: contents => contents.__filename.startsWith('startups-list'),
+    });
+    const {image, title, text, link} = startups[this.state.selectedStartupIdx];
+
+    return (
+      <div>
         <div className={styles.info}>
           <h1 className={styles.startupTitle}>
             {title}
@@ -75,20 +72,31 @@ class StartupsPage extends Component {
         </div>
       </div>
     );
-  }
+  };
+
+  renderContent = () => (
+    <div className={styles.content}>
+      {this.state.selectedStartupIdx !== null &&
+        this.state.selectedStartupIdx !== undefined
+        ? this.renderStartup()
+        : this.renderDefaultStartup()}
+    </div>
+  );
+
   render() {
     const {collection} = this.context;
     const startups = enhanceCollection(collection, {
       filter: contents => contents.__filename.startsWith('startups-list'),
     });
+
     return (
       <Page {...this.props}>
         <div className={styles.container}>
           {startups.length
             ? <StartupsHeader
-                setStartup={this.setStartup}
                 startups={startups}
-                selectedStartup={this.state.startupToShow}
+                selectedStartupIdx={this.state.selectedStartupIdx}
+                onStartupSelect={this.handleStartupSelect}
               />
             : 'No startups yet.'}
         </div>
@@ -101,4 +109,6 @@ StartupsPage.contextTypes = {
   collection: PropTypes.array.isRequired,
 };
 
-export default StartupsPage;
+const EnhancedStartupsPage = pure(StartupsPage);
+
+export default EnhancedStartupsPage;

@@ -1,16 +1,19 @@
+import {pure} from 'recompact';
 import React, {Component, PropTypes} from 'react';
 import Measure from 'react-measure';
-import {mapObjIndexed, values} from 'ramda';
 import cx from 'classnames';
+
+import mapValues from 'utils/mapValues';
 
 import styles from './index.css';
 
-const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 class StartupsHeader extends Component {
   static propTypes = {
-    startups: PropTypes.object, // eslint-disable-line react/forbid-prop-types
-    selectedStartup: PropTypes.string,
+    startups: PropTypes.arrayOf(PropTypes.object).isRequired, // eslint-disable-line react/forbid-prop-types
+    selectedStartupIdx: PropTypes.number,
+    onStartupSelect: PropTypes.func.isRequired,
   };
+
   state = {
     logos: {
       width: 0,
@@ -22,134 +25,138 @@ class StartupsHeader extends Component {
       right: 0,
     },
   };
-  renderStartupLogo = (startup, key) => (
-    <button
-      key={startup.title}
-      className={styles.logoButton}
-      // $FlowFixMe
-      onClick={() => {
-        this.props.setStartup(startup.title);
-      }}
-    >
-      <img
-        className={styles.logo}
-        src={
-          this.props.selectedStartup !== startup.title
-            ? startup.logo
-            : startup.logo1
-        }
-        alt={`${key} Logo`}
-      />
-    </button>
-  );
 
-  logoSwitch(logo, logo1) {
-    if (this.state.clicked) {
-      return logo1;
-    }
-    return logo;
-  }
-  renderRightButton() {
+  logosLeft = () => {
     const {startupsHeader, logos} = this.state;
-    const logosRight = logos.left + logos.width;
-    const startupsHeaderRight = startupsHeader.width;
-    if (logosRight > startupsHeaderRight) {
-      return (
-        <button
-          className={styles.scrollRightButton}
-          onClick={() => {
-            if (logosRight - startupsHeaderRight < startupsHeaderRight) {
-              this.moveLeft(startupsHeaderRight - logosRight);
-            } else {
-              this.moveLeft(-startupsHeader.width);
-            }
-          }}
-        >
-          <img src="/assets/Right.png" alt="scrollbutton" />
-        </button>
-      );
-    }
-    return null;
-  }
-  renderLeftButton() {
-    const {startupsHeader, logos} = this.state;
-    if (logos.left < 0) {
-      return (
-        <button
-          className={styles.scrollLeftButton}
-          onClick={() => {
-            if (startupsHeader.width + logos.left > 0) {
-              this.moveLeft(-logos.left);
-            } else {
-              this.moveLeft(startupsHeader.width);
-            }
-          }}
-        >
-          <img src="/assets/Left.png" alt="left" />
-        </button>
-      );
-    }
-    return null;
-  }
-  moveLeft(left) {
-    this.setState({
-      logos: {
-        ...this.state.logos,
-        left: this.state.logos.left + left,
-      },
-    });
-  }
-  logosLeft() {
-    const {startupsHeader, logos} = this.state;
+
     if (
       startupsHeader.width > logos.width ||
       (startupsHeader.right < logos.width &&
         logos.left + logos.width < startupsHeader.width)
     ) {
-      logos.left -= logos.left;
-
-      return logos.left;
+      this.setState(prevState => ({
+        logos: {...prevState.logos, left: logos.left - logos.left},
+      }));
     }
+
     return logos.left;
-  }
+  };
+
+  moveLeft = left => {
+    this.setState(prevState => ({
+      logos: {
+        ...prevState.logos,
+        left: prevState.logos.left + left,
+      },
+    }));
+  };
+
+  handleLeftButtonClick = () => {
+    const {startupsHeader, logos} = this.state;
+
+    this.moveLeft(
+      startupsHeader.width + logos.left > 0
+        ? -logos.left
+        : startupsHeader.width,
+    );
+  };
+
+  handleRightButtonClick = () => {
+    const {startupsHeader, logos} = this.state;
+    const logosRight = logos.left + logos.width;
+    const startupsHeaderRight = startupsHeader.width;
+
+    this.moveLeft(
+      logosRight - startupsHeaderRight < startupsHeaderRight
+        ? startupsHeaderRight - logosRight
+        : -startupsHeader.width,
+    );
+  };
+
+  handleContainerMeasure = dimensions =>
+    this.setState(prevState => ({
+      startupsHeader: {
+        ...prevState.startupsHeader,
+        width: dimensions.width,
+        right: dimensions.right,
+      },
+    }));
+
+  handleContentMeasure = dimensions =>
+    this.setState(prevState => ({
+      logos: {
+        ...prevState.logos,
+        width: dimensions.width,
+      },
+    }));
+
+  captureLogos = logos => {
+    this.logos = logos;
+  };
+
+  renderStartupLogo = (startup, idx) => {
+    const {onStartupSelect, selectedStartupIdx} = this.props;
+
+    const handleClick = () => onStartupSelect(idx);
+
+    return (
+      <button
+        key={startup.title}
+        className={styles.logoButton}
+        onClick={handleClick}
+      >
+        <img
+          className={styles.logo}
+          src={idx === selectedStartupIdx ? startup.logo1 : startup.logo}
+          alt={`${startup.title}-logo`}
+        />
+      </button>
+    );
+  };
+
+  renderRightButton = () => {
+    const {startupsHeader, logos} = this.state;
+    const logosRight = logos.left + logos.width;
+    const startupsHeaderRight = startupsHeader.width;
+
+    return logosRight > startupsHeaderRight
+      ? <button
+          className={styles.scrollRightButton}
+          onClick={this.handleRightButtonClick}
+        >
+          <img src="/assets/Right.png" alt="scrollbutton" />
+        </button>
+      : null;
+  };
+
+  renderLeftButton = () =>
+    this.state.logos.left < 0
+      ? <button
+          className={styles.scrollLeftButton}
+          onClick={this.handleLeftButtonClick}
+        >
+          <img src="/assets/Left.png" alt="left" />
+        </button>
+      : null;
+
   render() {
     const {startupsHeader, logos} = this.state;
+
     return (
-      <Measure
-        onMeasure={dimensions => {
-          this.setState({
-            startupsHeader: {
-              ...this.state.startupsHeader,
-              width: dimensions.width,
-              right: dimensions.right,
-            },
-          });
-        }}
-      >
+      <Measure onMeasure={this.handleContainerMeasure}>
         <div
           className={cx(styles.startupsHeader, {
             [styles.centerLogos]: startupsHeader.width > logos.width,
           })}
         >
           {this.renderLeftButton()}
-          <Measure
-            onMeasure={dimensions => {
-              this.setState({
-                logos: {
-                  ...this.state.logos,
-                  width: dimensions.width,
-                },
-              });
-            }}
-          >
+          <Measure onMeasure={this.handleContentMeasure}>
             <div
+              ref={this.captureLogos}
               className={styles.logos}
               style={{marginLeft: `${this.logosLeft()}px`}}
-              ref={el => {
-                this.logos = el;
-              }}
             >
-              {mapVal(this.renderStartupLogo, this.props.startups)}
+              {mapValues(this.renderStartupLogo, this.props.startups)}
             </div>
           </Measure>
           {this.renderRightButton()}
@@ -159,4 +166,6 @@ class StartupsHeader extends Component {
   }
 }
 
-export default StartupsHeader;
+const EnhancedStartupsHeader = pure(StartupsHeader);
+
+export default EnhancedStartupsHeader;
