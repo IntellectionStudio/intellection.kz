@@ -3,7 +3,7 @@ import {Route} from 'react-router';
 import React from 'react';
 
 import AboutPage from 'layouts/AboutPage';
-import BlogPage from 'layouts/BlogPage';
+import CoursesPage from 'layouts/CoursesPage';
 import ErrorPage from 'layouts/ErrorPage';
 import HomePage from 'layouts/HomePage';
 import KnowledgePage from 'layouts/KnowledgePage';
@@ -21,7 +21,7 @@ const PageContainer = props => (
       Page,
       ErrorPage,
       AboutPage,
-      BlogPage,
+      CoursesPage,
       KnowledgePage,
       HomePage,
       StartupsPage,
