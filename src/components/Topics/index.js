@@ -9,7 +9,6 @@ const Topics = (props, {collection}) => {
   const topics = enhanceCollection(collection, {
     filter: {layout: 'TopicPage'},
   });
-
   return (
     <div className={styles.mainDiv}>
       <div className={styles.hero}>

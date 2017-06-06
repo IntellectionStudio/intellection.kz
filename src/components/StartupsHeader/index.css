@@ -1,0 +1,73 @@
+:root {
+  --startupsHeader-height: 65px;
+  --startupsHeader-bg: #f3f3f3;
+}
+
+.normalizeButton {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.scrollButton {
+  composes: normalizeButton;
+  height: var(--startupsHeader-height);
+  position: absolute;
+  top: 80px;
+  color: #828282;
+  background: var(--startupsHeader-bg);
+  width: 25px;
+}
+
+.startupsHeader {
+  width: 100%;
+  background: var(--startupsHeader-bg);
+  height: var(--startupsHeader-height);
+  overflow: hidden;
+  display: flex;
+}
+
+.centerLogos {
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollLeftButton {
+  composes: scrollButton;
+  left: 0;
+}
+
+.logos {
+  width: auto;
+  height: 40px;
+  margin: 13px 0 12px;
+  display: flex;
+  padding-right: 33px;
+  padding-left: 33px;
+}
+
+.logos:last-child {
+  padding-right: 0;
+}
+
+.scrollRightButton {
+  composes: scrollButton;
+  right: 0;
+}
+
+.logoButton {
+  composes: normalizeButton;
+  width: 38px;
+  height: 38px;
+  margin-right: 30px;
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+}
