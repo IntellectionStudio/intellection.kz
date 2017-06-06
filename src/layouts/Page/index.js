@@ -3,11 +3,16 @@ import {pick} from 'ramda';
 import Helmet from 'react-helmet';
 import React, {PropTypes} from 'react';
 
-import {Footer, Header} from 'components';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+import Loading from 'components/Loading';
 
 import styles from './index.css';
 
-const Page = ({__url, head, footer, children}, {metadata: {pkg}}) => {
+const Page = (
+  {__url, head, footer, children, isLoading},
+  {metadata: {pkg}},
+) => {
   const meta = [
     {property: 'og:type', content: 'article'},
     {property: 'og:title', content: head.title},
@@ -27,15 +32,16 @@ const Page = ({__url, head, footer, children}, {metadata: {pkg}}) => {
     // {name: 'twitter:image', content: socialImage},
     {name: 'description', content: head.description},
   ];
-
   return (
     <div className={styles.page}>
       <Helmet title={head.title} meta={meta} />
-      <div className={styles.wrapper}>
-        <Header white={__url !== '/'} />
-        {children}
-        <Footer homepage={__url === '/'} />
-      </div>
+      {isLoading
+        ? <Loading />
+        : <div className={styles.wrapper}>
+            <Header white={__url !== '/'} />
+            {children}
+            <Footer homepage={__url === '/'} />
+          </div>}
     </div>
   );
 };

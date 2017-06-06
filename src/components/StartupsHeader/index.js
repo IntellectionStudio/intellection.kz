@@ -34,9 +34,7 @@ class StartupsHeader extends Component {
       (startupsHeader.right < logos.width &&
         logos.left + logos.width < startupsHeader.width)
     ) {
-      this.setState(prevState => ({
-        logos: {...prevState.logos, left: logos.left - logos.left},
-      }));
+      logos.left -= logos.left;
     }
 
     return logos.left;

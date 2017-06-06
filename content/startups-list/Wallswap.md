@@ -1,7 +1,7 @@
 ---
-logo: /assets/logo-grey-wallswap.png
-logo1: /assets/logo-coloured-wallswap.png
-image: /assets/startup-wallswap.png
+logo: /assets/logo-grey-wallswap.jpg
+logo1: /assets/logo-coloured-wallswap.jpg
+image: /assets/startup-wallswapp.jpg
 title: WallSwapp
 text: Позволяет друзьям менять заставки на телефоне друг друга.
 link: "http://apple.co/2ijJFrM"
