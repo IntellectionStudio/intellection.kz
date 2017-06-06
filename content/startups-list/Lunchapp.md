@@ -1,7 +1,7 @@
 ---
-logo: /assets/logo-grey-kazakhadventure.png
-logo1: /assets/logo-coloured-kazakhadventure.png
-image: /assets/startup-lunchapp.png
+logo: /assets/logo-grey-kazakhadventure.jpg
+logo1: /assets/logo-coloured-kazakhadventure.jpg
+image: /assets/startup-lunchapp.jpg
 title: LunchApp
 text: Комплексные обеды и бизнес-ланчи Алматы.
 link: "http://apple.co/2ijJFrM"
