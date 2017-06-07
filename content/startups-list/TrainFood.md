@@ -1,6 +1,6 @@
 ---
-grey_logo: /assets/logo-grey-kazakhadventure.jpg
-coloured_logo: /assets/logo-coloured-kazakhadventure.jpg
+grey_logo: /assets/logo-grey-traincafe.jpg
+coloured_logo: /assets/logo-coloured-traincafe.jpg
 image: /assets/startup-trainfood.jpg
 small_image: /assets/startup-albumen-copy.jpg
 title: Trainfood
