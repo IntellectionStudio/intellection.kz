@@ -16,7 +16,7 @@ const Footer = ({homepage}) => (
         <div className={styles.studio}>
           <h3 className={styles.title}>О студии</h3>
           <p className={styles.text}>
-            Небольшой текст о студии Intellection
+            Мы любим программирование и новые технологии и даже верим, что живем в VR.
           </p>
         </div>
         <div className={styles.contacts}>

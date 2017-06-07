@@ -17,7 +17,7 @@ const config = {
       path: '/knowledge',
     },
     {
-      title: 'Наше видео',
+      title: 'Наши видео',
       path: 'https://www.youtube.com/channel/UCtQaoQC6hC0v5uVpJ8iB-xg',
     },
     {
