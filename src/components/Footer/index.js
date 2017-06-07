@@ -27,20 +27,22 @@ const Footer = ({homepage}) => (
       <div className={styles.socialBlock}>
         <h3 className={styles.title}>Мы в сети</h3>
         <div className={styles.social}>
-          <Link className={styles.socialButton} to="facebook">
-            <img
-              className={styles.buttonIcon}
-              src="/assets/facebook.png"
-              alt="Facebook"
+          <div className={styles.socialButton}>
+            <Link
+              className={cx(styles.buttonIcon, {
+                [styles.buttonIcon2]: homepage,
+              })}
+              to="facebook"
             />
-          </Link>
-          <Link className={styles.socialButton} to="instagram">
-            <img
-              className={styles.buttonIcon}
-              src="/assets/instagram.png"
-              alt="Instagram"
+          </div>
+          <div className={styles.socialButton}>
+            <Link
+              className={cx(styles.buttonIcon3, {
+                [styles.buttonIcon4]: homepage,
+              })}
+              to="instagram"
             />
-          </Link>
+          </div>
         </div>
       </div>
       <div className={styles.copyright}>
@@ -52,9 +54,12 @@ const Footer = ({homepage}) => (
             All Right Reserved
           </div>
         </div>
-        <Link to="/" className={styles.logoLink}>
-          <img className={styles.logo} src="/assets/logo.png" alt="Logo" />
-        </Link>
+        <Link
+          to="/"
+          className={cx(styles.logoLink, {
+            [styles.logoGreyLink]: homepage,
+          })}
+        />
       </div>
     </div>
   </footer>

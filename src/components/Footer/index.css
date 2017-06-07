@@ -93,7 +93,32 @@
   composes: grow from 'tachyons/src/_hovers.css';
   width: 100%;
   max-width: 24px;
-  max-height: 24px;
+  height: 24px;
+  background: url('/assets/facebook.png') center center no-repeat;
+}
+
+.buttonIcon2 {
+  composes: grow from 'tachyons/src/_hovers.css';
+  width: 100%;
+  max-width: 24px;
+  height: 24px;
+  background: url('/assets/fb-grey.png') center center no-repeat;
+}
+
+.buttonIcon3 {
+  composes: grow from 'tachyons/src/_hovers.css';
+  width: 100%;
+  max-width: 24px;
+  height: 24px;
+  background: url('/assets/instagram.png') center center no-repeat;
+}
+
+.buttonIcon4 {
+  composes: grow from 'tachyons/src/_hovers.css';
+  width: 100%;
+  max-width: 24px;
+  height: 24px;
+  background: url('/assets/insta-grey.png') center center no-repeat;
 }
 
 .copyright {
@@ -118,14 +143,20 @@
 
 .logoLink {
   composes: grow from 'tachyons/src/_hovers.css';
-  width: 30%;
+  width: 85px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  background: url('/assets/logo.png') center center no-repeat;
 }
 
-.logo {
+.logoGreyLink {
+  composes: grow from 'tachyons/src/_hovers.css';
   width: 85px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: url('/assets/logo-grey.png') center center no-repeat;
 
   @media screen and (min-width: 664px) {
     order: 2;
