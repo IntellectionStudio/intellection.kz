@@ -105,7 +105,11 @@ class StartupsHeader extends Component {
       >
         <img
           className={styles.logo}
-          src={idx === selectedStartupIdx ? startup.logo1 : startup.logo}
+          src={
+            idx === selectedStartupIdx
+              ? startup.coloured_logo
+              : startup.grey_logo
+          }
           alt={`${startup.title}-logo`}
         />
       </button>
