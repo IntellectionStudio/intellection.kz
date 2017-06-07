@@ -14,8 +14,8 @@
     "commitmsg": "validate-commit-msg",
     "precommit": "lint-staged",
     "prepush": "npm test",
-    "start": "phenomic start",
-    "build": "phenomic build"
+    "start": "node scripts/generate-config.js && phenomic start",
+    "build": "node scripts/generate-config.js && phenomic build"
   },
   "phenomic": {
     "CNAME": false,
