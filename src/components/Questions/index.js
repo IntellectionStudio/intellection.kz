@@ -31,21 +31,19 @@ const Questions = (
         ? <div className={styles.list}>
             {questions.map(question => (
               <button
-                key={question.questionWrap}
+                key={question.id}
                 className={styles.questionWrap}
                 onClick={() => setCurrentQuestion(question.id)}
               >
                 <div
-                  key={question.numeration}
                   className={cx(styles.numeration, {
                     [styles.questionSelected]: currentQuestion === question.id,
                   })}
                 >
                   {(int += 1)}.
                 </div>
-                <div key={question.question1} className={styles.wrap}>
+                <div className={styles.wrap}>
                   <div
-                    key={question.question}
                     className={cx(styles.question, {
                       [styles.questionSelected]: currentQuestion ===
                         question.id,
@@ -54,7 +52,6 @@ const Questions = (
                     {question.question}
                   </div>
                   <div
-                    key={question.question2}
                     className={cx(styles.numberOfItems, {
                       [styles.questionSelected]: currentQuestion ===
                         question.id,
