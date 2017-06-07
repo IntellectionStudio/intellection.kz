@@ -191,10 +191,6 @@
   @media screen and (min-width: 896px) {
     height: 370px;
   }
-
-  @media screen and (min-width: 1024px) {
-    height: 420px;
-  }
 }
 
 .imageStartup {
