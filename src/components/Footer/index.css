@@ -3,10 +3,6 @@
   padding: 1rem 2.75rem;
   color: #fff;
   -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 .whiteBackground {
@@ -18,7 +14,6 @@
   opacity: 0.8;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
   margin: 0 auto;
 
@@ -29,7 +24,28 @@
   @media screen and (min-width: 77.5rem) {
     max-width: 77.5rem;
     padding-bottom: 2rem;
+    flex-wrap: nowrap;
   }
+}
+
+.miniContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (min-width: 41.5rem) {
+    flex-direction: row;
+  }
+}
+
+.topContainer {
+  composes: miniContainer;
+}
+
+.bottomContainer {
+  composes: miniContainer;
 }
 
 .block {
