@@ -1,5 +1,6 @@
 import {pure} from 'recompact';
 import React, {Component, PropTypes} from 'react';
+import Measure from 'react-measure';
 
 class responsiveImage extends Component {
   // background - if set to true, the component will render a background image
@@ -17,6 +18,9 @@ class responsiveImage extends Component {
 
   state = {
     info: {},
+    image: {
+      width: 0,
+    },
   };
 
   componentWillMount() {
@@ -24,18 +28,35 @@ class responsiveImage extends Component {
       info: require(`../../../content${this.props.name}`), // eslint-disable-line import/no-dynamic-require, global-require
     });
   }
-
+  handleBackgroundMeasure = dimensions =>
+    this.setState(prevState => ({
+      image: {
+        ...prevState.screenInfo,
+        width: dimensions.width,
+      },
+    }));
   // receives the image, src and gets it by using require
   render() {
-    console.log('======', this.state);
     if (this.props.background) {
+      const images = this.state.info.srcSet
+        .split(',')
+        .map(intermediateValue => intermediateValue.split(' '))
+        .map(array => ({width: array[1], path: array[0]}));
+
+      const bestFitImage = images.reduce(
+        (acc, cur) =>
+          parseInt(cur.width, 10) < this.state.image.width ? cur.path : acc,
+        this.state.info.src,
+      );
       return (
-        <div
-          className={this.props.className}
-          style={{
-            background: `url('${this.state.info.src}') center center / contain no-repeat`,
-          }}
-        />
+        <Measure onMeasure={this.handleBackgroundMeasure}>
+          <div
+            className={this.props.className}
+            style={{
+              background: `url('${bestFitImage}') center center / contain no-repeat`,
+            }}
+          />
+        </Measure>
       );
     }
     return (
