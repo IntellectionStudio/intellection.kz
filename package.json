@@ -14,7 +14,7 @@
     "commitmsg": "validate-commit-msg",
     "precommit": "lint-staged",
     "prepush": "npm test",
-    "start": "node scripts/generate-config.js && phenomic start",
+    "start": "phenomic start",
     "build": "node scripts/generate-config.js && phenomic build"
   },
   "phenomic": {
