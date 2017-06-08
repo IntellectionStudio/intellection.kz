@@ -94,7 +94,6 @@ class StartupsHeader extends Component {
 
   renderStartupLogo = (startup, idx) => {
     const {onStartupSelect, selectedStartupIdx} = this.props;
-
     const handleClick = () => onStartupSelect(idx);
 
     return (
@@ -103,6 +102,7 @@ class StartupsHeader extends Component {
         className={styles.logoButton}
         onClick={handleClick}
       >
+
         <img
           className={styles.logo}
           src={
