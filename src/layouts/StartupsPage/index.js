@@ -17,7 +17,7 @@ class StartupsPage extends Component {
     this.setState({selectedStartupIdx});
 
   renderDefaultStartup = () => {
-    const {image, title, text} = this.props.head.default;
+    const {image, title, text} = this.props.head.default || {};
 
     return (
       <div
