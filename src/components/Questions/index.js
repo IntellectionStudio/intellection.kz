@@ -12,8 +12,6 @@ const Questions = (
     filter: {id: topic},
   });
 
-  let int = 0;
-
   return (
     <div className={styles.questions}>
       <div>
@@ -29,7 +27,7 @@ const Questions = (
       </div>
       {questions.length
         ? <div className={styles.list}>
-            {questions.map(question => (
+            {questions.map((question, idx) => (
               <button
                 key={question.id}
                 className={styles.questionWrap}
@@ -40,7 +38,7 @@ const Questions = (
                     [styles.questionSelected]: currentQuestion === question.id,
                   })}
                 >
-                  {(int += 1)}.
+                  {idx + 1}.
                 </div>
                 <div className={styles.wrap}>
                   <div
