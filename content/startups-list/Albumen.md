@@ -1,8 +1,8 @@
 ---
-logo: /assets/logo-grey-albumen.png
-logo1: /assets/logo-coloured-albumen.png
-image: /assets/startup-albumen.png
+grey_logo: /assets/logo-grey-albumen.jpg
+coloured_logo: /assets/logo-coloured-albumen.jpg
+image: /assets/startup-albumen.jpg
 title: Albumen
-text: Изучай казахский язык с удовольствием
+text: Фотоальбомы с вашего мобильного телефона
 link: "http://apple.co/2ijJFrM"
 ---

@@ -174,26 +174,21 @@
 .imageWrapper {
   display: flex;
   height: 209px;
-  width: 200%;
+  width: 518px;
 
-  @media screen and (min-width: 512px) {
-    height: 285px;
+  @media screen and (min-width: 560px) {
+    height: 240px;
+    width: 100%;
   }
 
-  @media screen and (min-width: 640px) {
-    height: 357px;
+  @media screen and (min-width: 660px) {
+    height: 280px;
+    width: 100%;
   }
 
   @media screen and (min-width: 768px) {
     height: 320px;
-  }
-
-  @media screen and (min-width: 896px) {
-    height: 370px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    height: 420px;
+    width: 100%;
   }
 }
 
@@ -205,8 +200,8 @@
 
 .startupText {
   display: flex;
-  width: 100%;
-  padding-left: 5%;
+  width: 90%;
+  padding-left: 15%;
   text-align: center;
   color: #303234;
   font-family: ProximaNova;
@@ -351,5 +346,15 @@
 
   @media screen and (min-width: 1400px) {
     background-size: 1700px 1010px !important;
+  }
+
+  @media screen and (min-width: 1649px) {
+    background: url('/assets/startup-background-image.jpg') center center no-repeat !important;
+    background-size: 1907px 818px !important;
+  }
+
+  @media screen and (min-width: 2000px) {
+    background: url('/assets/startup-background-image.jpg') center center no-repeat !important;
+    background-size: 2500px 1010px !important;
   }
 }

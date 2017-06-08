@@ -3,16 +3,27 @@ title: О нас
 layout: AboutPage
 hero:
   title: Стартап центр Intellection
-  text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+  text: Мы сделаем нашу страну известной, создав первого казахского "ИТ-юникорна"
 video:
-  title: Бла-бла-бла-бла-бла
-  text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+  texts:
+    vision:
+      title: Наше видение
+      detail: Построить в Казахстане всемирноизвестный центр ИТ продуктов для мирового рынка
+    mission:
+      title: Наша миссия
+      detail: Мы сделаем нашу страну известной посредством создания технологических продуктов на стыке инновационных решений.
+    strategy:
+      title: Наша стратегия
+      detail: 1) Приносить инноваций в традиционные бизнесы. 2) Создавать продукты используя новейшие достижения индустрии.
+    aim:
+      title: Наша цель
+      detail: Создание первого казахского Юникорна.
   buttonText: Смотреть видео
   playIcon: /assets/play-white.png
   url: ''
 team:
   title: Наша команда
-  text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+  text: Самая светлая и молодая команда из экспертов мирового уровня. При всех наших достижениях главное для нас - оставаться хорошими.
   topManagers:
     Bakytzhan:
       image: /assets/dummy-profile.jpeg

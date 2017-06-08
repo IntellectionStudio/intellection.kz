@@ -1,9 +1,9 @@
 ---
-logo: /assets/logo-grey-qazaqapp.png
-logo1: /assets/logo-coloured-qazaqapp.png
-image: /assets/startup-qazaqapp.png
+grey_logo: /assets/logo-grey-qazaqapp.jpg
+coloured_logo: /assets/logo-coloured-qazaqapp.jpg
+image: /assets/startup-qazaqapp.jpg
 title: Qazaq App
-text: Изучай казахский язык с удовольствием
+text: Приложение по изучению казахского языка
 link: "http://apple.co/2ijJFrM"
 layout: StartupsPage
 ---

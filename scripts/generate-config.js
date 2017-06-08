@@ -125,7 +125,8 @@ const walk = (file, context) => {
     }
   } else { // then it is just a record
     let lastCollection = config.collections[config.collections.length - 1];
-    if (!lastCollection.fields) {
+    console.log(!lastCollection);
+    if (lastCollection && !lastCollection.fields) {
       lastCollection.fields = prepareForNetlify(filePath);
     }
   }

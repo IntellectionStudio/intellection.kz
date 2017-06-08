@@ -1,9 +1,9 @@
 ---
-logo: /assets/logo-grey-iamstar.png
-logo1: /assets/logo-coloured-iamstar.png
-image: /assets/startup-iamstar.png
-title: I am star
-text: Все новости Казахстана в одном приложении.
+grey_logo: /assets/logo-grey-iamstar.jpg
+coloured_logo: /assets/logo-coloured-iamstar.jpg
+image: /assets/startup-iamstar.jpg
+title: Я звезда!
+text: Видео-платформа для проведения кастингов и конкурсов
 link: "http://apple.co/2ijJFrM"
 layout: StartupsPage
 ---

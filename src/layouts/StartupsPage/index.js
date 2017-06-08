@@ -17,10 +17,7 @@ class StartupsPage extends Component {
     this.setState({selectedStartupIdx});
 
   renderDefaultStartup = () => {
-    const defaultStartups = enhanceCollection(this.context.collection, {
-      filter: contents => contents.__filename.startsWith('default-startups'),
-    });
-    const {image, title, text} = defaultStartups[0];
+    const {image, title, text} = this.props.head.default;
 
     return (
       <div

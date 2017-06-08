@@ -1,9 +1,9 @@
 ---
-logo: /assets/logo-grey-kazakhadventure.png
-logo1: /assets/logo-coloured-kazakhadventure.png
-image: /assets/startup-trainfood.png
+grey_logo: /assets/logo-grey-traincafe.jpg
+coloured_logo: /assets/logo-coloured-traincafe.jpg
+image: /assets/startup-trainfood.jpg
 title: Trainfood
-text: Сервис по доставке готовой еды  на станциях в пассажирские поезда.
+text: Сервис по доставке еды в поезда
 link: "http://apple.co/2ijJFrM"
 layout: StartupsPage
 ---
