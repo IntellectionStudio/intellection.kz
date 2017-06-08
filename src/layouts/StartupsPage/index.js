@@ -71,14 +71,13 @@ class StartupsPage extends Component {
     );
   };
 
-  renderContent = () => (
+  renderContent = () =>
     <div className={styles.content}>
       {this.state.selectedStartupIdx !== null &&
         this.state.selectedStartupIdx !== undefined
         ? this.renderStartup()
         : this.renderDefaultStartup()}
-    </div>
-  );
+    </div>;
 
   render() {
     const {collection} = this.context;
