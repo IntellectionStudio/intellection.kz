@@ -40,6 +40,12 @@
   }
 }
 
+.videoButton {
+  z-index: 9999;
+  background-color: transparent;
+  border: 0;
+}
+
 .headingTitle {
   width: 100%;
   margin-top: 8px;
