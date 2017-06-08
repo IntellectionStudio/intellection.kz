@@ -1,5 +1,5 @@
 import {pure} from 'recompact';
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import Measure from 'react-measure';
 import cx from 'classnames';
 
@@ -8,12 +8,6 @@ import mapValues from 'utils/mapValues';
 import styles from './index.css';
 
 class StartupsHeader extends Component {
-  static propTypes = {
-    startups: PropTypes.arrayOf(PropTypes.object).isRequired, // eslint-disable-line react/forbid-prop-types
-    selectedStartupIdx: PropTypes.number,
-    onStartupSelect: PropTypes.func.isRequired,
-  };
-
   state = {
     logos: {
       width: 0,

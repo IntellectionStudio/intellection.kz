@@ -4,6 +4,7 @@ import enhanceCollection from 'phenomic/lib/enhance-collection';
 import React, {PropTypes, Component} from 'react';
 
 import StartupsHeader from 'components/StartupsHeader';
+import Image from 'components/Image';
 import Page from 'layouts/Page';
 
 import styles from './index.css';
@@ -17,7 +18,7 @@ class StartupsPage extends Component {
     this.setState({selectedStartupIdx});
 
   renderDefaultStartup = () => {
-    const {image, title, text} = this.props.head.default;
+    const {image, title, text} = this.props.head.default || {};
 
     return (
       <div
@@ -60,12 +61,7 @@ class StartupsPage extends Component {
           </div>
         </div>
         <div className={styles.imageWrapper}>
-          <div
-            className={styles.imageStartup}
-            style={{
-              background: `url('${image}') center center / contain no-repeat`,
-            }}
-          />
+          <Image className={styles.imageStartup} name={image} background />
         </div>
       </div>
     );
@@ -83,7 +79,8 @@ class StartupsPage extends Component {
   render() {
     const {collection} = this.context;
     const startups = enhanceCollection(collection, {
-      filter: contents => contents.__filename.startsWith('startups-list'),
+      filter: contents =>
+        contents.__filename && contents.__filename.startsWith('startups-list'),
     });
 
     return (

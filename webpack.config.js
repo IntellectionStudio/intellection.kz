@@ -8,6 +8,8 @@ import PhenomicLoaderFeedWebpackPlugin
 import PhenomicLoaderSitemapWebpackPlugin
   from "phenomic/lib/loader-sitemap-webpack-plugin"
 import CopyWebpackPlugin from "copy-webpack-plugin"
+import ImageminPlugin from 'imagemin-webpack-plugin'
+import imageminMozjpeg from 'imagemin-mozjpeg';
 
 import pkg from "./package.json"
 
@@ -199,6 +201,18 @@ export default (config = {}) => {
 
         // copy assets and return generated path in js
         {
+          test: /\.(jpe?g|png|gif)$/,
+          loaders: [
+            {
+              loader: 'responsive-loader',
+              query: {
+                name: "[path][name].[hash].",
+                context: path.join(__dirname, config.source),
+              }
+            }
+          ]
+        },
+        {
           test: /\.(html|ico|eot|otf|webp|ttf|woff|woff2)$/,
           loader: "file-loader",
           query: {
@@ -230,6 +244,17 @@ export default (config = {}) => {
           // context is missing (and css modules names can be broken)!
           context: __dirname,
         },
+      }),
+
+      new webpack.LoaderOptionsPlugin({
+        test: /\.(jpe?g|png|gif)$/,
+        options: {
+          responsiveLoader: {
+            sizes: [300, 600, 1200, 2000],
+            placeholder: true,
+            placeholderSize: 50
+          }
+        }
       }),
 
       new PhenomicLoaderFeedWebpackPlugin({
@@ -269,6 +294,35 @@ export default (config = {}) => {
         new webpack.optimize.UglifyJsPlugin(
           { compress: { warnings: false } }
         ),
+
+        new ImageminPlugin({
+          test: /\.(jpe?g|png|gif|svg)$/i,
+          optipng: {
+              optimizationLevel: 7,
+          },
+          pngquant: {
+              quality: '65-90',
+              speed: 4,
+          },
+          gifsicle: {
+              optimizationLevel: 3,
+          },
+          svgo: {
+              plugins: [{
+                  removeViewBox: false,
+                  removeEmptyAttrs: true,
+              }],
+          },
+          jpegtran: {
+              progressive: true,
+          },
+          plugins: [
+              imageminMozjpeg({
+                  quality: 65,
+                  progressive: true,
+              }),
+          ],
+        }),
       ],
     ],
 

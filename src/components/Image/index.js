@@ -1,37 +1,49 @@
 import {pure} from 'recompact';
 import React, {Component, PropTypes} from 'react';
 
-import styles from './index.css';
-
 class responsiveImage extends Component {
   // background - if set to true, the component will render a background image
 
   static propTypes = {
     alt: PropTypes.string.isRequired,
-    background: PropTypes.bool.isRequired,
-    className: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
-    style: PropTypes.string.isRequired,
-    sizes: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired,
-  };
-  state = {
-    width: false,
-    loaded: true,
-    src: false,
+    className: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    background: PropTypes.bool,
   };
 
-  retrieveImageSizes = () => {
-    //  const toRequire = require(`../../../content/src`);
-    //  console.log(toRequire);
+  static defaultProps = {
+    className: null,
   };
+
+  state = {
+    info: {},
+  };
+
+  componentWillMount() {
+    this.setState({
+      info: require(`../../../content${this.props.name}`), // eslint-disable-line import/no-dynamic-require, global-require
+    });
+  }
+
   // receives the image, src and gets it by using require
   render() {
+    console.log('======', this.state);
+    if (this.props.background) {
+      return (
+        <div
+          className={this.props.className}
+          style={{
+            background: `url('${this.state.info.src}') center center / contain no-repeat`,
+          }}
+        />
+      );
+    }
     return (
       <img
-        className={styles.this.props.className}
-        src={this.retrieveImageSizes}
-        alt={``}
+        className={this.props.className}
+        src={this.state.info.src}
+        srcSet={this.state.info.srcSet}
+        alt={this.props.alt}
       />
     );
   }
