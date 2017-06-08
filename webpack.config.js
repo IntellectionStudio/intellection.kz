@@ -208,9 +208,6 @@ export default (config = {}) => {
               query: {
                 name: "[path][name].[hash].",
                 context: path.join(__dirname, config.source),
-                sizes: [300, 600, 1200, 2000],
-                placeholder: true,
-                placeholderSize: 50,
               }
             }
           ]
@@ -247,6 +244,17 @@ export default (config = {}) => {
           // context is missing (and css modules names can be broken)!
           context: __dirname,
         },
+      }),
+
+      new webpack.LoaderOptionsPlugin({
+        test: /\.(jpe?g|png|gif)$/,
+        options: {
+          responsiveLoader: {
+            sizes: [300, 600, 1200, 2000],
+            placeholder: true,
+            placeholderSize: 50
+          }
+        }
       }),
 
       new PhenomicLoaderFeedWebpackPlugin({

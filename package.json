@@ -67,6 +67,7 @@
     "react-measure": "^1.4.7",
     "react-modal-video": "^1.0.4",
     "react-player": "^0.18.0",
+    "react-responsive-image": "^3.3.5",
     "react-router": "2.3.0",
     "react-slick": "^0.14.11",
     "react-svg-inline": "^2.0.0",
