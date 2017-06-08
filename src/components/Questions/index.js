@@ -12,24 +12,22 @@ const Questions = (
     filter: {id: topic},
   });
 
-  let int = 0;
-
   return (
     <div className={styles.questions}>
       <div>
         {title.length
           ? <div>
-              {title.map(subject => (
+              {title.map(subject =>
                 <div key={subject.title} className={styles.bigTitle}>
                   {subject.title}
-                </div>
-              ))}
+                </div>,
+              )}
             </div>
           : 'No questions yet.'}
       </div>
       {questions.length
         ? <div className={styles.list}>
-            {questions.map(question => (
+            {questions.map((question, idx) =>
               <button
                 key={question.id}
                 className={styles.questionWrap}
@@ -40,28 +38,28 @@ const Questions = (
                     [styles.questionSelected]: currentQuestion === question.id,
                   })}
                 >
-                  {(int += 1)}.
+                  {idx + 1}.
                 </div>
                 <div className={styles.wrap}>
                   <div
                     className={cx(styles.question, {
-                      [styles.questionSelected]: currentQuestion ===
-                        question.id,
+                      [styles.questionSelected]:
+                        currentQuestion === question.id,
                     })}
                   >
                     {question.question}
                   </div>
                   <div
                     className={cx(styles.numberOfItems, {
-                      [styles.questionSelected]: currentQuestion ===
-                        question.id,
+                      [styles.questionSelected]:
+                        currentQuestion === question.id,
                     })}
                   >
                     {questions.length} items
                   </div>
                 </div>
-              </button>
-            ))}
+              </button>,
+            )}
           </div>
         : 'No posts yet.'}
     </div>

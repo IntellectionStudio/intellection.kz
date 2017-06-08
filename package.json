@@ -14,8 +14,9 @@
     "commitmsg": "validate-commit-msg",
     "precommit": "lint-staged",
     "prepush": "npm test",
-    "start": "node scripts/generate-config.js && phenomic start",
-    "build": "node scripts/generate-config.js && phenomic build"
+    "start": "phenomic start",
+    "build": "node scripts/generate-config.js && phenomic build",
+    "production": "http-server dist"
   },
   "phenomic": {
     "CNAME": false,
@@ -100,8 +101,11 @@
     "file-loader": "^0.11.1",
     "front-matter": "^2.1.2",
     "history": "2.0.0",
+    "http-server": "^0.10.0",
     "husky": "^0.13.4",
-    "image-webpack-loader": "^3.3.1",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-webpack-plugin": "^1.4.4",
+    "jimp": "^0.2.28",
     "lint-staged": "^3.5.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
@@ -113,6 +117,7 @@
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^3.0.0-beta",
     "react-redux": "^5.0.4",
+    "responsive-loader": "^0.7.0",
     "sass-loader": "^6.0.5",
     "srcset-loader": "^2.0.2",
     "style-loader": "^0.18.1",
