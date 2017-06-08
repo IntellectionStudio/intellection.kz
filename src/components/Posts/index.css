@@ -19,8 +19,12 @@
 .post {
   background-color: white;
   border-radius: 10px;
-  margin: 10% 0;
+  margin: 10% 3%;
   box-shadow: 0 3px 10px #c7c7c7;
+
+  @media screen and (min-width: 400px) {
+    margin: 10% 1%;
+  }
 
   @media screen and (min-width: 1200px) {
     margin: 3% 0;
