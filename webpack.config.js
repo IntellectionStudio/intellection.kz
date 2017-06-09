@@ -35,6 +35,48 @@ export default (config = {}) => {
     module: {
       noParse: /\.min\.js/,
       rules: [
+        // src-set loader is first dur to https://github.com/timse/srcset-loader#user-content-why-is-the-srcset-loader-before-the-other-loaders
+        {
+          // match image files
+          test: /\.(jpe?g|png|svg|gif)$/,
+
+          // match one of the loader's main parameters (sizes and placeholder)
+          resourceQuery: /[?&](sizes|placeholder)(=|&|\[|$)/,
+
+          use: [
+            'srcset-loader',
+
+            // any other loader
+            {
+              loader: "file-loader",
+              query: {
+                hash: 'sha512',
+                digest: 'hex',
+                name: "[path][name].[hash].[ext]",
+                context: path.join(__dirname, config.source),
+              },
+            },
+            'image-webpack-loader?optimizationLevel=7&interlaced=false',
+            {
+              loader: 'image-webpack-loader',
+              query: {
+                mozjpeg: {
+                  progressive: true,
+                },
+                gifsicle: {
+                  interlaced: false,
+                },
+                optipng: {
+                  optimizationLevel: 4,
+                },
+                pngquant: {
+                  quality: '75-90',
+                  speed: 3,
+                },
+              }
+            }
+          ],
+        },
         // *.md => consumed via phenomic special webpack loader
         // allow to generate collection and rss feed.
         {
@@ -166,9 +208,6 @@ export default (config = {}) => {
               query: {
                 name: "[path][name].[hash].",
                 context: path.join(__dirname, config.source),
-                sizes: [300, 600, 1200, 2000],
-                placeholder: true,
-                placeholderSize: 50,
               }
             }
           ]
@@ -205,6 +244,17 @@ export default (config = {}) => {
           // context is missing (and css modules names can be broken)!
           context: __dirname,
         },
+      }),
+
+      new webpack.LoaderOptionsPlugin({
+        test: /\.(jpe?g|png|gif)$/,
+        options: {
+          responsiveLoader: {
+            sizes: [300, 600, 1200, 2000],
+            placeholder: true,
+            placeholderSize: 50
+          }
+        }
       }),
 
       new PhenomicLoaderFeedWebpackPlugin({
