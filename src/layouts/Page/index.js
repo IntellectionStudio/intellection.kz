@@ -36,13 +36,11 @@ const Page = (
   return (
     <div className={styles.page}>
       <Helmet title={head.title} meta={meta} />
-      {isLoading
-        ? <Loading />
-        : <div className={styles.wrapper}>
-            <Header white={__url !== '/'} />
-            {children}
-            <Footer homepage={__url === '/'} />
-          </div>}
+      <div className={styles.wrapper}>
+        <Header white={__url !== '/'} />
+        {isLoading ? <Loading /> : children}
+        <Footer homepage={__url === '/'} />
+      </div>
     </div>
   );
 };
