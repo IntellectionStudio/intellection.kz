@@ -79,7 +79,9 @@ class StartupsPage extends Component {
     const {collection} = this.context;
     const startups = enhanceCollection(collection, {
       filter: contents =>
-        contents.__filename && contents.__filename.startsWith('startups-list'),
+        !!(
+          contents.__filename && contents.__filename.startsWith('startups-list')
+        ),
     });
 
     return (

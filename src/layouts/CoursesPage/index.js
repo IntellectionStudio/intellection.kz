@@ -19,15 +19,23 @@ class CoursesPage extends Component {
   }
 
   render() {
+    const {
+      heading,
+      youtubeVideoId,
+      about,
+      benefits,
+      salary,
+      courses,
+    } = this.props.head;
     return (
       <Page {...this.props}>
         <div className={styles.container}>
           <div className={styles.heading}>
             <p className={styles.headingText}>
-              Курсы №1 в Казахстане
+              {heading.text}
             </p>
             <h1 className={styles.headingTitle}>
-              Курс разработки мобильных приложений
+              {heading.title}
             </h1>
           </div>
           <div className={styles.videoSection}>
@@ -37,7 +45,7 @@ class CoursesPage extends Component {
                 <ModalVideo
                   channel="youtube"
                   isOpen={this.state.isOpen}
-                  videoId="FC0pT9xg1oI"
+                  videoId={youtubeVideoId}
                 />
                 <button onClick={this.openModal} className={styles.videoButton}>
                   <img
@@ -52,23 +60,15 @@ class CoursesPage extends Component {
           <div className={styles.main}>
             <div className={styles.about}>
               <h2 className={styles.aboutTitle}>
-                Что вам даст этот курс?
+                {about.title}
               </h2>
-              <p className={styles.aboutText}>
-                I have hinted that I would often jerk poor Queequeg from between
-                the whale and the ship—where he would occasionally fall, from
-                the incessant.
-              </p>
-              <p className={styles.aboutText}>
-                I have hinted that I would often jerk poor Queequeg from between
-                the whale and the ship—where he would occasionally fall, from
-                the incessant.
-              </p>
+              {about.text.map(text =>
+                <p key={text} className={styles.aboutText}>{text}</p>,
+              )}
               <ul className={styles.benefits}>
-                <li className={styles.benefit}>Вы научитесь писать код</li>
-                <li className={styles.benefit}>Вы научитесь писать код</li>
-                <li className={styles.benefit}>Вы научитесь писать код</li>
-                <li className={styles.benefit}>Вы научитесь писать код</li>
+                {benefits.map(benefit =>
+                  <li key={benefit} className={styles.benefit}>{benefit}</li>,
+                )}
               </ul>
             </div>
             <div className={styles.mainRight}>
@@ -83,9 +83,9 @@ class CoursesPage extends Component {
                 <div className={styles.divInfo}>
                   <div className={styles.divSalary}>
                     <h2 className={styles.salaryAmount}>
-                      $125k
+                      {salary.amount}
                     </h2>
-                    <p className={styles.salaryText}>СРЕДНЯЯ ЗАРПЛАТА</p>
+                    <p className={styles.salaryText}>{salary.text}</p>
                   </div>
                   <img
                     className={styles.statsPlaceholder}
@@ -94,88 +94,55 @@ class CoursesPage extends Component {
                   />
                 </div>
               </div>
-              <div className={styles.individual}>
-                <h2 className={styles.individualTitle}>
-                  Индивидуальный Курс
-                </h2>
-                <div className={styles.attributes}>
-                  <div className={styles.attribute}>
-                    <div className={styles.attributeHeader}>∞</div>
-                    <p className={styles.attributeText}>Довольных студентов</p>
+              {courses.map(course =>
+                <div key={course.title} className={styles.course}>
+                  <h2 className={styles.courseTitle}>
+                    {course.title}
+                  </h2>
+                  <div className={styles.attributes}>
+                    {course.attributes.map(attr =>
+                      <div
+                        key={attr.header ? attr.header : attr.src}
+                        className={styles.attribute}
+                      >
+                        <div className={styles.attributeHeader}>
+                          {!attr.image
+                            ? attr.header
+                            : <img
+                                className={styles.attributeHeaderImage}
+                                src={attr.src}
+                                alt={attr.alt}
+                              />}
+                        </div>
+                        <p className={styles.attributeText}>
+                          {attr.text}
+                        </p>
+                      </div>,
+                    )}
                   </div>
-                  <div className={styles.attribute}>
-                    <div className={styles.attributeHeader}>17</div>
-                    <p className={styles.attributeText}>Сломанных телефонов</p>
-                  </div>
-                  <div className={styles.attribute}>
-                    <div className={styles.attributeHeader}>
-                      <img
-                        className={styles.attributeHeaderImage}
-                        src="/assets/apple-icon.png"
-                        alt="Apple Icon"
-                      />
+                  <div className={styles.courseSummary}>
+                    <div className={styles.price}>
+                      <h3 className={styles.priceTitle}>
+                        {course.price.title}
+                      </h3>
+                      <p className={styles.priceText}>
+                        {course.price.text}
+                      </p>
                     </div>
-                    <p className={styles.attributeText}>Сломанных телефонов</p>
-                  </div>
-                  <div className={styles.attribute}>
-                    <div className={styles.attributeHeader}>0</div>
-                    <p className={styles.attributeText}>Негативных отзывов</p>
-                  </div>
-                </div>
-                <div className={styles.individualSummary}>
-                  <div className={styles.price}>
-                    <h3 className={styles.priceTitle}>60 тыс.</h3>
-                    <p className={styles.priceText}>тенге за курс</p>
-                  </div>
-                  <div className={styles.ctaContainer}>
-                    <button className={styles.cta}>
-                      Оставить заявку
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div className={styles.individual}>
-                <h2 className={styles.individualTitle}>
-                  КОРПОРАТИВНЫЙ КУРС
-                </h2>
-                <div className={styles.attributes}>
-                  <div className={styles.attribute}>
-                    <div className={styles.attributeHeader}>∞</div>
-                    <p className={styles.attributeText}>Довольных студентов</p>
-                  </div>
-                  <div className={styles.attribute}>
-                    <div className={styles.attributeHeader}>17</div>
-                    <p className={styles.attributeText}>Сломанных телефонов</p>
-                  </div>
-                  <div className={styles.attribute}>
-                    <div className={styles.attributeHeader}>
-                      <img
-                        className={styles.attributeHeaderImage}
-                        src="/assets/apple-icon.png"
-                        alt="Apple Icon"
-                      />
+                    <div className={styles.ctaContainer}>
+                      <button
+                        className={
+                          course.button.color === 'blue'
+                            ? styles.cta
+                            : styles.cta2
+                        }
+                      >
+                        {course.button.text}
+                      </button>
                     </div>
-                    <p className={styles.attributeText}>Сломанных телефонов</p>
                   </div>
-                  <div className={styles.attribute}>
-                    <div className={styles.attributeHeader}>0</div>
-                    <p className={styles.attributeText}>Негативных отзывов</p>
-                  </div>
-                </div>
-                <div className={styles.individualSummary}>
-                  <div className={styles.price}>
-                    <h3 className={styles.priceTitle}>160 тыс.</h3>
-                    <p className={styles.priceText}>тенге за курс</p>
-                  </div>
-                  <div className={styles.ctaContainer}>
-                    <button className={styles.cta2}>
-                      Оставить заявку
-                    </button>
-                  </div>
-                </div>
-              </div>
-
+                </div>,
+              )}
             </div>
           </div>
         </div>

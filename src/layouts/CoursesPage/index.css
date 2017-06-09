@@ -194,6 +194,7 @@
   color: #707070;
   font-size: 18px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .benefit::before {
@@ -281,7 +282,7 @@
   text-transform: uppercase;
 }
 
-.individual {
+.course {
   margin: 0 68px;
   text-align: center;
   display: flex;
@@ -295,7 +296,7 @@
   }
 }
 
-.individualTitle {
+.courseTitle {
   width: 100%;
   color: #222328;
   font-size: 14px;
@@ -335,7 +336,7 @@
   text-transform: uppercase;
 }
 
-.individualSummary {
+.courseSummary {
   width: 100%;
   display: flex;
   flex-wrap: wrap;

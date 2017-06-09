@@ -22,7 +22,7 @@ class TopicPage extends Component {
     const {collection} = this.context;
     const questions = enhanceCollection(collection, {
       filter: content =>
-        content.question && content.subject === this.props.head.id,
+        !!(content.question && content.subject === this.props.head.id),
     });
 
     this.setState({
