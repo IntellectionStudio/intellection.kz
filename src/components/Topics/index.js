@@ -1,7 +1,11 @@
 import enhanceCollection from 'phenomic/lib/enhance-collection';
-import React, {Component, PropTypes} from 'react';
+import {pure} from 'recompact';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Measure from 'react-measure';
 import {Link} from 'phenomic';
+
+import {Image} from 'components';
 
 import Topic from '../Topic';
 import styles from './index.css';
@@ -75,16 +79,22 @@ class Topics extends Component {
     });
     return (
       <div className={styles.mainDiv}>
-        <div className={styles.hero}>
+        <Image
+          className={styles.hero}
+          name={'/assets/knowledgeBase.png'}
+          background
+        >
           <div className={styles.heroTextWrapper}>
             <h1 className={styles.heroTitle}>
               Knowledge Base
             </h1>
             <p className={styles.heroText}>
-              They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+              They waited till midnight; but no change took place among the
+              guards, and it became apparent that their yielding to sleep could
+              not be counted on.
             </p>
           </div>
-        </div>
+        </Image>
         <div>
           {topics.length
             ? <div className={styles.featuredTopics}>
@@ -114,4 +124,4 @@ class Topics extends Component {
   }
 }
 
-export default Topics;
+export default pure(Topics);

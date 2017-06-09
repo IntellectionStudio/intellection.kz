@@ -18,6 +18,4 @@ const Card = ({card: {link, image, title, text}}) => (
   </div>
 );
 
-const EnhancedCard = pure(Card);
-
-export default EnhancedCard;
+export default pure(Card);

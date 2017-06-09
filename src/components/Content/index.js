@@ -9,6 +9,4 @@ const Content = ({children}) => (
   </div>
 );
 
-const EnhancedContent = pure(Content);
-
-export default EnhancedContent;
+export default pure(Content);

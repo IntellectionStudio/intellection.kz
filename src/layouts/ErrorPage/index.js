@@ -1,4 +1,5 @@
 import React from 'react';
+import {pure} from 'recompact';
 
 import Page from 'layouts/Page';
 
@@ -44,4 +45,4 @@ const ErrorPage = ({
   );
 };
 
-export default ErrorPage;
+export default pure(ErrorPage);

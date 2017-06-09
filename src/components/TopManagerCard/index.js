@@ -24,6 +24,4 @@ const TopManagerCard = ({
   </div>
 );
 
-const EnhancedTopManagerCard = pure(TopManagerCard);
-
-export default EnhancedTopManagerCard;
+export default pure(TopManagerCard);

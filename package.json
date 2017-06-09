@@ -58,6 +58,7 @@
     "lodash.throttle": "^4.1.1",
     "normalize.css": "^7.0.0",
     "phenomic": "^0.21.1",
+    "prop-types": "^15.5.10",
     "ramda": "^0.24.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

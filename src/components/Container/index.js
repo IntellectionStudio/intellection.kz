@@ -9,6 +9,4 @@ const Container = ({children}) => (
   </div>
 );
 
-const EnhancedContainer = pure(Container);
-
-export default EnhancedContainer;
+export default pure(Container);

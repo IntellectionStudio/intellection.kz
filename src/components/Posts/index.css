@@ -6,6 +6,26 @@
     align-items: flex-end;
     margin: 0;
   }
+
+  @media screen and (min-width: 1500px) {
+    margin-right: 5%;
+  }
+
+  @media screen and (min-width: 1600px) {
+    margin-right: 8%;
+  }
+
+  @media screen and (min-width: 1700px) {
+    margin-right: 10%;
+  }
+
+  @media screen and (min-width: 1800px) {
+    margin-right: 12%;
+  }
+
+  @media screen and (min-width: 1900px) {
+    margin-right: 14.5%;
+  }
 }
 
 .posts {
@@ -72,6 +92,12 @@
   border-top-right-radius: 10px;
 }
 
+.linkContainer {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
 .postLinkImage {
   height: 240px;
   background-size: cover;
@@ -83,14 +109,34 @@
 }
 
 .postLinkButton {
+  width: 210px;
+  height: 45px;
   background-color: white;
   border-radius: 35px;
   color: #51a9f2;
   border-color: transparent;
-  padding: 14px 66.5px;
+  padding: 14px 20px;
   letter-spacing: 2px;
   font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
+  margin: -140px 15% 90px;
+
+  @media screen and (min-width: 400px) {
+    margin: -140px 20% 90px;
+  }
+
+  @media screen and (min-width: 460px) {
+    margin: -140px 25% 90px;
+  }
+
+  @media screen and (min-width: 600px) {
+    margin: -140px 30% 90px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: -140px 35% 100px;
+  }
 }

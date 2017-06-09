@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {pure} from 'recompact';
 import ModalVideo from 'react-modal-video';
 
 import mapValues from 'utils/mapValues';
@@ -57,11 +58,17 @@ class AboutPage extends Component {
                 </h1>
                 <div className={styles.videoText}>
                   {mapValues(
-                    (text, key) => (
-                      <p key={key} className={styles.p}>
-                        <b>{text.title}</b> - {text.detail}
-                      </p>
-                    ),
+                    (text, key) =>
+                      typeof text.detail === 'string'
+                        ? <p key={key} className={styles.p}>
+                            <b>{text.title}</b> - {text.detail}
+                          </p>
+                        : <div key={key}>
+                            <b>{text.title}</b>:
+                            {text.detail.map((listItem, index) => (
+                              <p key={listItem}>{index + 1}) {listItem}</p>
+                            ))}
+                          </div>,
                     this.props.head.video.texts,
                   )}
                 </div>
@@ -126,4 +133,4 @@ class AboutPage extends Component {
   }
 }
 
-export default AboutPage;
+export default pure(AboutPage);

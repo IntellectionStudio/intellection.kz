@@ -74,6 +74,4 @@ class Header extends Component {
   }
 }
 
-const EnhancedHeader = pure(Header);
-
-export default EnhancedHeader;
+export default pure(Header);

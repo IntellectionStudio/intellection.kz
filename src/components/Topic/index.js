@@ -1,4 +1,5 @@
 import React from 'react';
+import {pure} from 'recompact';
 
 import styles from './index.css';
 
@@ -10,4 +11,4 @@ const Topic = ({title}) => (
   </div>
 );
 
-export default Topic;
+export default pure(Topic);

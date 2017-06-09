@@ -1,5 +1,7 @@
 import enhanceCollection from 'phenomic/lib/enhance-collection';
-import React, {PropTypes} from 'react';
+import {pure} from 'recompact';
+import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import styles from './index.css';
@@ -70,4 +72,4 @@ Questions.contextTypes = {
   collection: PropTypes.array.isRequired,
 };
 
-export default Questions;
+export default pure(Questions);
