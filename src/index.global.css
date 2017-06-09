@@ -5,21 +5,21 @@
  */
 @font-face {
   font-family: ProximaNova;
-  src: url("/assets/ProximaNovaRegular.otf") format("opentype");
+  src: url("/assets/fonts/ProximaNovaRegular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: ProximaNova;
-  src: url('/assets/ProximaNovaLight.otf') format('opentype');
+  src: url('/assets/fonts/ProximaNovaLight.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: ProximaNova;
-  src: url('/assets/ProximaNovaBold.otf') format('opentype');
+  src: url('/assets/fonts/ProximaNovaBold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }

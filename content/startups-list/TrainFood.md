@@ -1,7 +1,7 @@
 ---
-grey_logo: /assets/logo-grey-traincafe.jpg
-coloured_logo: /assets/logo-coloured-traincafe.jpg
-image: /assets/startup-trainfood.jpg
+grey_logo: /assets/icons/logo-grey-traincafe.svg
+coloured_logo: /assets/icons/logo-coloured-traincafe.svg
+image: /assets/images/startup-trainfood.jpg
 title: Trainfood
 text: Сервис по доставке еды в поезда
 link: "http://apple.co/2ijJFrM"

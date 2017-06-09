@@ -1,7 +1,7 @@
 ---
-grey_logo: /assets/logo-grey-lunchapp.jpg
-coloured_logo: /assets/logo-coloured-lunchapp.jpg
-image: /assets/startup-lunchapp.jpg
+grey_logo: /assets/icons/logo-grey-lunchapp.svg
+coloured_logo: /assets/icons/logo-coloured-lunchapp.svg
+image: /assets/images/startup-lunchapp.jpg
 title: LunchApp
 text: Бизнес ланчи Алматы
 link: "http://apple.co/2ijJFrM"
