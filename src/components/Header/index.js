@@ -17,7 +17,7 @@ class Header extends Component {
       isOpen: !prevState.isOpen,
     }));
 
-  renderLink = ({title, path}) => (
+  renderLink = ({title, path}) =>
     <Link
       key={`${title}-${path}`}
       className={cx(styles.navItem, {
@@ -26,8 +26,7 @@ class Header extends Component {
       to={path}
     >
       {title}
-    </Link>
-  );
+    </Link>;
 
   render() {
     const {white} = this.props;

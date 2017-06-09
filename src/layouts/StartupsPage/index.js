@@ -67,21 +67,21 @@ class StartupsPage extends Component {
     );
   };
 
-  renderContent = () => (
+  renderContent = () =>
     <div className={styles.content}>
       {this.state.selectedStartupIdx !== null &&
         this.state.selectedStartupIdx !== undefined
         ? this.renderStartup()
         : this.renderDefaultStartup()}
-    </div>
-  );
+    </div>;
 
   render() {
     const {collection} = this.context;
     const startups = enhanceCollection(collection, {
       filter: contents =>
-        !!(contents.__filename &&
-          contents.__filename.startsWith('startups-list')),
+        !!(
+          contents.__filename && contents.__filename.startsWith('startups-list')
+        ),
     });
 
     return (

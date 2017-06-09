@@ -13,15 +13,14 @@ TopBarProgressIndicator.config({
   shadowBlur: 5,
 });
 
-const Loading = () => (
+const Loading = () =>
   <div>
     <Helmet title={'Loading...'} />
     <TopBarProgressIndicator />
     <div className={styles.loader}>
       <div className={styles.spinner} />
     </div>
-  </div>
-);
+  </div>;
 
 const EnhancedLoading = pure(Loading);
 

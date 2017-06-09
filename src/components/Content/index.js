@@ -3,11 +3,10 @@ import React from 'react';
 
 import styles from './index.css';
 
-const Content = ({children}) => (
+const Content = ({children}) =>
   <div className={styles.content}>
     {children}
-  </div>
-);
+  </div>;
 
 const EnhancedContent = pure(Content);
 

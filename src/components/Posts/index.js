@@ -3,6 +3,8 @@ import React, {PropTypes} from 'react';
 import ReactPlayer from 'react-player';
 import {Link} from 'phenomic';
 
+import Image from 'components/Image';
+
 import styles from './index.css';
 
 const Posts = ({question}, {collection}) => {
@@ -14,15 +16,14 @@ const Posts = ({question}, {collection}) => {
     <div className={styles.mainDiv}>
       {posts.length
         ? <div className={styles.posts}>
-            {posts.map(post => (
+            {posts.map(post =>
               <div key={post.title} className={styles.post}>
                 {post.image &&
                   <div>
-                    <div
+                    <Image
                       className={styles.postImage}
-                      style={{
-                        background: `url('${post.image}') center center no-repeat`,
-                      }}
+                      name={post.image}
+                      background
                     />
                     <div className={styles.postTitle}>{post.title}</div>
                     <div className={styles.postText}>{post.description}</div>
@@ -41,12 +42,12 @@ const Posts = ({question}, {collection}) => {
                   </div>}
                 {post.link &&
                   <div>
-                    <div
-                      className={styles.postLinkImage}
-                      style={{
-                        background: `url('${post.linkImage}') center center no-repeat`,
-                      }}
-                    >
+                    <div className={styles.linkContainer}>
+                      <Image
+                        className={styles.postLinkImage}
+                        name={post.linkImage}
+                        background
+                      />
                       <Link
                         className={styles.postLinkButton}
                         to={post.link}
@@ -63,8 +64,8 @@ const Posts = ({question}, {collection}) => {
                     <div className={styles.postTitle}>{post.title}</div>
                     <div className={styles.postText}>{post.description}</div>
                   </div>}
-              </div>
-            ))}
+              </div>,
+            )}
           </div>
         : 'No posts yett.'}
     </div>

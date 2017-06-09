@@ -6,7 +6,7 @@ import styles from './index.css';
 
 const TeamMemberCard = ({
   teamMember: {faceImageCollection, image, firstName, lastName, position, text},
-}) => (
+}) =>
   <div className={styles.container}>
     <div className={styles.profile}>
       <FaceImage
@@ -20,8 +20,7 @@ const TeamMemberCard = ({
     <div className={styles.text}>
       {text}
     </div>
-  </div>
-);
+  </div>;
 
 const EnhancedTeamMemberCard = pure(TeamMemberCard);
 

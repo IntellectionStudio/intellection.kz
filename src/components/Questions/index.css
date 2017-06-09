@@ -11,6 +11,26 @@
   @media screen and (min-width: 1200px) {
     margin-left: 5%;
   }
+
+  @media screen and (min-width: 1500px) {
+    margin-left: 8%;
+  }
+
+  @media screen and (min-width: 1600px) {
+    margin-left: 10%;
+  }
+
+  @media screen and (min-width: 1700px) {
+    margin-left: 12%;
+  }
+
+  @media screen and (min-width: 1800px) {
+    margin-left: 14%;
+  }
+
+  @media screen and (min-width: 1900px) {
+    margin-left: 16%;
+  }
 }
 
 .bigTitle {
