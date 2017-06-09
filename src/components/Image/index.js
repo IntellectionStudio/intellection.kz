@@ -1,5 +1,6 @@
 import {pure} from 'recompact';
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Measure from 'react-measure';
 
 class responsiveImage extends Component {
@@ -67,6 +68,4 @@ class responsiveImage extends Component {
   }
 }
 
-const enhancedResponsiveImage = pure(responsiveImage);
-
-export default enhancedResponsiveImage;
+export default pure(responsiveImage);

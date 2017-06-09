@@ -1,5 +1,7 @@
 import enhanceCollection from 'phenomic/lib/enhance-collection';
-import React, {PropTypes} from 'react';
+import {pure} from 'recompact';
+import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import styles from './index.css';
@@ -17,17 +19,17 @@ const Questions = (
       <div>
         {title.length
           ? <div>
-              {title.map(subject =>
+              {title.map(subject => (
                 <div key={subject.title} className={styles.bigTitle}>
                   {subject.title}
-                </div>,
-              )}
+                </div>
+              ))}
             </div>
           : 'No questions yet.'}
       </div>
       {questions.length
         ? <div className={styles.list}>
-            {questions.map((question, idx) =>
+            {questions.map((question, idx) => (
               <button
                 key={question.id}
                 className={styles.questionWrap}
@@ -43,23 +45,23 @@ const Questions = (
                 <div className={styles.wrap}>
                   <div
                     className={cx(styles.question, {
-                      [styles.questionSelected]:
-                        currentQuestion === question.id,
+                      [styles.questionSelected]: currentQuestion ===
+                        question.id,
                     })}
                   >
                     {question.question}
                   </div>
                   <div
                     className={cx(styles.numberOfItems, {
-                      [styles.questionSelected]:
-                        currentQuestion === question.id,
+                      [styles.questionSelected]: currentQuestion ===
+                        question.id,
                     })}
                   >
                     {questions.length} items
                   </div>
                 </div>
-              </button>,
-            )}
+              </button>
+            ))}
           </div>
         : 'No posts yet.'}
     </div>
@@ -70,4 +72,4 @@ Questions.contextTypes = {
   collection: PropTypes.array.isRequired,
 };
 
-export default Questions;
+export default pure(Questions);

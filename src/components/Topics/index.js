@@ -1,9 +1,11 @@
 import enhanceCollection from 'phenomic/lib/enhance-collection';
-import React, {Component, PropTypes} from 'react';
+import {pure} from 'recompact';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Measure from 'react-measure';
 import {Link} from 'phenomic';
 
-import Image from 'components/Image';
+import {Image} from 'components';
 
 import Topic from '../Topic';
 import styles from './index.css';
@@ -96,14 +98,14 @@ class Topics extends Component {
         <div>
           {topics.length
             ? <div className={styles.featuredTopics}>
-                {topics.filter(topic => topic.featured).map(topic =>
+                {topics.filter(topic => topic.featured).map(topic => (
                   <Link key={topic.title} to={topic.__url}>
                     <div className={styles.featuredTopic}>
                       <div className={styles.featuredTopicImage} />
                       <Topic {...topic} />
                     </div>
-                  </Link>,
-                )}
+                  </Link>
+                ))}
               </div>
             : 'No posts yet.'}
         </div>
@@ -122,4 +124,4 @@ class Topics extends Component {
   }
 }
 
-export default Topics;
+export default pure(Topics);

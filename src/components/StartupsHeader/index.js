@@ -162,6 +162,4 @@ class StartupsHeader extends Component {
   }
 }
 
-const EnhancedStartupsHeader = pure(StartupsHeader);
-
-export default EnhancedStartupsHeader;
+export default pure(StartupsHeader);

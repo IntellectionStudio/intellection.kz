@@ -129,6 +129,4 @@ class FaceImage extends Component {
   }
 }
 
-const EnhancedFaceImage = pure(FaceImage);
-
-export default EnhancedFaceImage;
+export default pure(FaceImage);

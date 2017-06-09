@@ -65,6 +65,4 @@ class HeroVideo extends Component {
   }
 }
 
-const EnhancedHeroVideo = pure(HeroVideo);
-
-export default EnhancedHeroVideo;
+export default pure(HeroVideo);
