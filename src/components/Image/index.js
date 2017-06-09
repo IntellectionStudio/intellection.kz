@@ -42,9 +42,15 @@ class responsiveImage extends Component {
         .map(intermediateValue => intermediateValue.split(' '))
         .map(array => ({width: array[1], path: array[0]}));
 
-      const bestFitImage = images.filter(
+      const imagesBigger = images.filter(
         image => parseInt(image.width, 10) > this.state.image.width,
-      )[0].path;
+      );
+      let bestFitImage;
+      if (imagesBigger.length === 0) {
+        bestFitImage = images[images.length - 1].path;
+      } else {
+        bestFitImage = imagesBigger[0].path;
+      }
       return (
         <Measure onMeasure={this.handleBackgroundMeasure}>
           <div
