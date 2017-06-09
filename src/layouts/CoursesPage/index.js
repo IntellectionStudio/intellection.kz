@@ -55,10 +55,14 @@ class CoursesPage extends Component {
                 Что вам даст этот курс?
               </h2>
               <p className={styles.aboutText}>
-                I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant.
+                I have hinted that I would often jerk poor Queequeg from between
+                the whale and the ship—where he would occasionally fall, from
+                the incessant.
               </p>
               <p className={styles.aboutText}>
-                I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant.
+                I have hinted that I would often jerk poor Queequeg from between
+                the whale and the ship—where he would occasionally fall, from
+                the incessant.
               </p>
               <ul className={styles.benefits}>
                 <li className={styles.benefit}>Вы научитесь писать код</li>

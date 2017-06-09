@@ -81,21 +81,23 @@ class Topics extends Component {
               Knowledge Base
             </h1>
             <p className={styles.heroText}>
-              They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+              They waited till midnight; but no change took place among the
+              guards, and it became apparent that their yielding to sleep could
+              not be counted on.
             </p>
           </div>
         </div>
         <div>
           {topics.length
             ? <div className={styles.featuredTopics}>
-                {topics.filter(topic => topic.featured).map(topic => (
+                {topics.filter(topic => topic.featured).map(topic =>
                   <Link key={topic.title} to={topic.__url}>
                     <div className={styles.featuredTopic}>
                       <div className={styles.featuredTopicImage} />
                       <Topic {...topic} />
                     </div>
-                  </Link>
-                ))}
+                  </Link>,
+                )}
               </div>
             : 'No posts yet.'}
         </div>

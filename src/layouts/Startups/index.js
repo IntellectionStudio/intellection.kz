@@ -16,11 +16,10 @@ const mapVal = (fn, obj) => values(mapObjIndexed(fn, obj));
 class Homepage extends Component {
   props: PropsType;
 
-  renderStartupLogo = (startup: Object, key: string) => (
+  renderStartupLogo = (startup: Object, key: string) =>
     <button key={key} className={styles.logoButton}>
       <img className={styles.logo} src={startup.logo} alt={`${key} Logo`} />
-    </button>
-  );
+    </button>;
 
   render() {
     return (

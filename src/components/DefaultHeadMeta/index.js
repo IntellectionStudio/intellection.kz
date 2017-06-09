@@ -2,13 +2,14 @@ import {pure} from 'recompact';
 import Helmet from 'react-helmet';
 import React, {PropTypes} from 'react';
 
-const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}) => (
+const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}) =>
   <div hidden>
     <Helmet
       meta={[
         {
           name: 'generator',
-          content: `${process.env.PHENOMIC_NAME || ''} ${process.env.PHENOMIC_VERSION || ''}`,
+          content: `${process.env.PHENOMIC_NAME || ''} ${process.env
+            .PHENOMIC_VERSION || ''}`,
         },
         {property: 'og:site_name', content: pkg.name},
         {
@@ -19,8 +20,9 @@ const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}) => (
       ]}
       script={[
         {
-          src: 'https://cdn.polyfill.io/v2/polyfill.min.js' +
-            '?features=es6&flags=gated',
+          src:
+            'https://cdn.polyfill.io/v2/polyfill.min.js' +
+              '?features=es6&flags=gated',
         },
         ...(scripts || []),
       ]}
@@ -36,8 +38,7 @@ const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}) => (
       ]}
     />
     <style>{'@-ms-viewport { width: device-width; }'}</style>
-  </div>
-);
+  </div>;
 
 DefaultHeadMeta.contextTypes = {
   metadata: PropTypes.object.isRequired,
