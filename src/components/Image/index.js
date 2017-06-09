@@ -17,17 +17,12 @@ class responsiveImage extends Component {
   };
 
   state = {
-    info: {},
+    info: require(`../../../content${this.props.name}`), // eslint-disable-line import/no-dynamic-require, global-require
     image: {
       width: 0,
     },
   };
 
-  componentWillMount() {
-    this.setState({
-      info: require(`../../../content${this.props.name}`), // eslint-disable-line import/no-dynamic-require, global-require
-    });
-  }
   handleBackgroundMeasure = dimensions =>
     this.setState(prevState => ({
       image: {
@@ -35,10 +30,11 @@ class responsiveImage extends Component {
         width: dimensions.width,
       },
     }));
-  // receives the image, src and gets it by using require
+
   render() {
+    const info = require(`../../../content${this.props.name}`); // eslint-disable-line import/no-dynamic-require, global-require
     if (this.props.background) {
-      const images = this.state.info.srcSet
+      const images = info.srcSet
         .split(',')
         .map(intermediateValue => intermediateValue.split(' '))
         .map(array => ({width: array[1], path: array[0]}));
@@ -46,8 +42,9 @@ class responsiveImage extends Component {
       const bestFitImage = images.reduce(
         (acc, cur) =>
           parseInt(cur.width, 10) < this.state.image.width ? cur.path : acc,
-        this.state.info.src,
+        info.src,
       );
+
       return (
         <Measure onMeasure={this.handleBackgroundMeasure}>
           <div
@@ -62,7 +59,7 @@ class responsiveImage extends Component {
     return (
       <img
         className={this.props.className}
-        src={this.state.info.src}
+        src={info.src}
         srcSet={this.state.info.srcSet}
         alt={this.props.alt}
       />

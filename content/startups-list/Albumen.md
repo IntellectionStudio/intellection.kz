@@ -1,7 +1,7 @@
 ---
-grey_logo: /assets/logo-grey-albumen.jpg
-coloured_logo: /assets/logo-coloured-albumen.jpg
-image: /assets/startup-albumen.jpg
+grey_logo: /assets/icons/logo-grey-albumen.svg
+coloured_logo: /assets/icons/logo-coloured-albumen.svg
+image: /assets/images/startup-albumen.jpg
 title: Albumen
 text: Фотоальбомы с вашего мобильного телефона
 link: "http://apple.co/2ijJFrM"
