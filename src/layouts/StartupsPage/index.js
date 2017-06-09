@@ -21,12 +21,7 @@ class StartupsPage extends Component {
     const {image, title, text} = this.props.head.default || {};
 
     return (
-      <div
-        className={styles.backgroundStartup}
-        style={{
-          background: `url(${image}) center center no-repeat`,
-        }}
-      >
+      <Image className={styles.imageStartup} name={image} background>
         <div className={styles.defaultBox}>
           <h1 className={styles.defaultStartupTitle}>
             {title}
@@ -35,7 +30,7 @@ class StartupsPage extends Component {
             {text}
           </p>
         </div>
-      </div>
+      </Image>
     );
   };
 
@@ -61,7 +56,12 @@ class StartupsPage extends Component {
           </div>
         </div>
         <div className={styles.imageWrapper}>
-          <Image className={styles.imageStartup} name={image} background />
+          <Image
+            className={styles.imageStartup}
+            name={image}
+            background
+            contain
+          />
         </div>
       </div>
     );

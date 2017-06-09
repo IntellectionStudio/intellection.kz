@@ -347,14 +347,4 @@
   @media screen and (min-width: 1400px) {
     background-size: 1700px 1010px !important;
   }
-
-  @media screen and (min-width: 1649px) {
-    background: url('/assets/images/startup-background-image.jpg') center center no-repeat !important;
-    background-size: 1907px 818px !important;
-  }
-
-  @media screen and (min-width: 2000px) {
-    background: url('/assets/startup-background-image.jpg') center center no-repeat !important;
-    background-size: 100% 100% !important;
-  }
 }
