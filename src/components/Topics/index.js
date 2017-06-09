@@ -3,6 +3,8 @@ import React, {Component, PropTypes} from 'react';
 import Measure from 'react-measure';
 import {Link} from 'phenomic';
 
+import Image from 'components/Image';
+
 import Topic from '../Topic';
 import styles from './index.css';
 
@@ -75,7 +77,11 @@ class Topics extends Component {
     });
     return (
       <div className={styles.mainDiv}>
-        <div className={styles.hero}>
+        <Image
+          className={styles.hero}
+          name={'/assets/knowledgeBase.png'}
+          background
+        >
           <div className={styles.heroTextWrapper}>
             <h1 className={styles.heroTitle}>
               Knowledge Base
@@ -86,7 +92,7 @@ class Topics extends Component {
               not be counted on.
             </p>
           </div>
-        </div>
+        </Image>
         <div>
           {topics.length
             ? <div className={styles.featuredTopics}>
