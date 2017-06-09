@@ -250,7 +250,7 @@ export default (config = {}) => {
         test: /\.(jpe?g|png|gif)$/,
         options: {
           responsiveLoader: {
-            sizes: [300, 600, 1200, 2000],
+            sizes: [100, 250, 500, 750, 1000, 2500, 5000, 10000],
             placeholder: true,
             placeholderSize: 50
           }

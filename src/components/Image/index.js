@@ -10,10 +10,13 @@ class responsiveImage extends Component {
     className: PropTypes.string,
     name: PropTypes.string.isRequired,
     background: PropTypes.bool,
+    children: PropTypes.object,
+    contain: PropTypes.bool,
   };
 
   static defaultProps = {
     className: null,
+    contain: false,
   };
 
   state = {
@@ -24,12 +27,11 @@ class responsiveImage extends Component {
   };
 
   handleBackgroundMeasure = dimensions =>
-    this.setState(prevState => ({
+    this.setState({
       image: {
-        ...prevState.screenInfo,
         width: dimensions.width,
       },
-    }));
+    });
 
   render() {
     const info = require(`../../../content${this.props.name}`); // eslint-disable-line import/no-dynamic-require, global-require
@@ -39,20 +41,19 @@ class responsiveImage extends Component {
         .map(intermediateValue => intermediateValue.split(' '))
         .map(array => ({width: array[1], path: array[0]}));
 
-      const bestFitImage = images.reduce(
-        (acc, cur) =>
-          parseInt(cur.width, 10) < this.state.image.width ? cur.path : acc,
-        info.src,
-      );
-
+      const bestFitImage = images.filter(
+        image => parseInt(image.width, 10) > this.state.image.width,
+      )[0].path;
       return (
         <Measure onMeasure={this.handleBackgroundMeasure}>
           <div
             className={this.props.className}
             style={{
-              background: `url('${bestFitImage}') center center / contain no-repeat`,
+              background: `url('${bestFitImage}') center center / ${this.props.contain ? 'contain' : 'cover'} no-repeat`,
             }}
-          />
+          >
+            {this.props.children}
+          </div>
         </Measure>
       );
     }

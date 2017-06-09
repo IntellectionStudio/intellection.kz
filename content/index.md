@@ -14,17 +14,17 @@ hero:
   cards:
     startups:
       link: "startups"
-      image: /assets/1@2x.png
+      image: /assets/images/homepage-card-startup.jpg
       title: Стартапы
       text: Наши проекты в сфере мобильных приложений, веб-сайтов, технологий виртуальной реальности
     knowledgeBase:
       link: "knowledgeBase"
-      image: /assets/2@2x.png
+      image: /assets/images/homepage-card-resources.jpg
       title: Ресурсы
       text: Мы не боимся делиться нашими знаниями. Здесь полезные ссылки из разных источников
     courses:
       link: "courses"
-      image: /assets/3@2x.png
+      image: /assets/images/homepage-card-courses.jpg
       title: Курсы
       text: Обучение в нашем центре это первый шаг в вашей карьере программиста, бизнесмена или стартапера
 ---
