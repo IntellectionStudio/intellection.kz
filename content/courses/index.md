@@ -24,7 +24,7 @@ courses:
     attributes:
       - image: false
         header: 8
-        text: Недель
+        text: Недель длительность
       - image: false
         header: 48
         text: Индивидуальных часов
