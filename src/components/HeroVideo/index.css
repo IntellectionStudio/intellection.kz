@@ -84,10 +84,10 @@
   background-image: linear-gradient(33deg, rgba(81, 169, 242, 0.58) 0%, rgba(186, 219, 250, 0.58) 100%);
 }
 
-
 .responsiveVideo {
   width: auto;
-  height: 100%;
+
+  /* height: 100%; */
 
   /* background-size: 100% 100%; */
 }
