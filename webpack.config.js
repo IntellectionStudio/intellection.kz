@@ -318,7 +318,7 @@ export default (config = {}) => {
           },
           plugins: [
               imageminMozjpeg({
-                  quality: 65,
+                  quality: 90,
                   progressive: true,
               }),
           ],
