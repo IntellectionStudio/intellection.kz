@@ -81,7 +81,7 @@ class Topics extends Component {
       <div className={styles.mainDiv}>
         <Image
           className={styles.hero}
-          name={'/assets/knowledgeBase.png'}
+          name={'knowledgebase-main.jpg'}
           background
         >
           <div className={styles.heroTextWrapper}>

@@ -1,6 +1,8 @@
 import {pure} from 'recompact';
 import React from 'react';
 
+import {Image} from 'components';
+
 import styles from './index.css';
 
 const TopManagerCard = ({
@@ -9,7 +11,7 @@ const TopManagerCard = ({
   <div className={styles.container}>
     <div className={styles.profile}>
       <div className={styles.imageWrapper}>
-        <img className={styles.image} src={image} alt="Profile" />
+        <Image className={styles.image} name={image} alt="Profile" />
       </div>
       <div className={styles.namePosition}>
         <h2 className={styles.name}>{firstName} {lastName}</h2>

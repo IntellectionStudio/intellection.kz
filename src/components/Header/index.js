@@ -43,7 +43,11 @@ class Header extends Component {
           <Link className={styles.logoLink} to="/">
             <img
               className={styles.logo}
-              src={white ? '/assets/logo2.png' : '/assets/logo.png'}
+              src={
+                white
+                  ? '/assets/icons/logo-intellection-blue.svg'
+                  : '/assets/icons/logo-intellection-white.svg'
+              }
               alt="Logo"
             />
           </Link>

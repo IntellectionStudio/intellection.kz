@@ -21,7 +21,7 @@ class responsiveImage extends Component {
   };
 
   state = {
-    info: require(`../../../content${this.props.name}`), // eslint-disable-line import/no-dynamic-require, global-require
+    info: require(`../../../content/assets/images/${this.props.name}`), // eslint-disable-line import/no-dynamic-require, global-require
     image: {
       width: 0,
     },
@@ -35,7 +35,7 @@ class responsiveImage extends Component {
     });
 
   render() {
-    const info = require(`../../../content${this.props.name}`); // eslint-disable-line import/no-dynamic-require, global-require
+    const info = require(`../../../content/assets/images/${this.props.name}`); // eslint-disable-line import/no-dynamic-require, global-require
     if (this.props.background) {
       const images = info.srcSet
         .split(',')

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="261px" height="81px" viewBox="0 0 261 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Graph</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="162.5" cy="4.5" r="4.5"></circle>
+    </defs>
+    <g id="Курс" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Курс-(Desktop)" transform="translate(-999.000000, -871.000000)">
+            <g id="Information" transform="translate(124.000000, 805.000000)">
+                <g id="Tab" transform="translate(713.000000, 0.000000)">
+                    <g id="Stat" transform="translate(18.000000, 0.000000)">
+                        <g id="Graph" transform="translate(144.000000, 66.000000)">
+                            <g id="Lines" transform="translate(0.000000, 43.000000)" fill="#000000" fill-opacity="0.3">
+                                <rect id="Rectangle-44" x="20" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="40" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="60" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="80" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="100" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="120" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="140" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="160" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="180" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="200" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="220" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="240" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="260" y="0" width="1" height="20"></rect>
+                                <rect id="Rectangle-44" x="0" y="0" width="1" height="20"></rect>
+                            </g>
+                            <path d="M1,79 C10.625,79 11.25,38 21,38 C30.75,38 31.25,71 41,71 C50.75,71 51.125,61 61,61 C70.875,61 71.375,31 81,31 C90.625,31 91.125,62 101,62 C110.875,62 111.125,51 121,51 C130.875,51 131.25,61 141,61 C150.75,61 152.122551,4.78531054 161.997551,4.78531054 C171.872551,4.78531054 171,48 181,48 C191,48 191.25,41 201,41 C210.75,41 211.25,70 221,70 C230.75,70 231.25,62 241,62 C250.75,62 250.75,80 261,80" id="Shape" stroke="#51A9F2" stroke-width="2"></path>
+                            <g id="Oval-33">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                <circle stroke="#51A9F2" stroke-width="2" cx="162.5" cy="4.5" r="3.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
