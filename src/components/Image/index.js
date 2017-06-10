@@ -10,7 +10,7 @@ class Image extends Component {
     alt: PropTypes.string.isRequired,
     className: PropTypes.string,
     name: PropTypes.string.isRequired,
-    background: PropTypes.bool,
+    background: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
@@ -22,6 +22,7 @@ class Image extends Component {
   static defaultProps = {
     className: null,
     contain: false,
+    background: false,
   };
 
   state = {
@@ -60,7 +61,9 @@ class Image extends Component {
           <div
             className={this.props.className}
             style={{
-              background: `url('${bestFitImage}') center center / ${this.props.contain ? 'contain' : 'cover'} no-repeat`,
+              background: typeof this.props.background === 'string'
+                ? `${this.props.background}, url('${bestFitImage}') center center / ${this.props.contain ? 'contain' : 'cover'} no-repeat`
+                : `url('${bestFitImage}') center center / ${this.props.contain ? 'contain' : 'cover'} no-repeat`,
             }}
           >
             {this.props.children}
