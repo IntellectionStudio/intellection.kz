@@ -15,7 +15,7 @@
     "precommit": "lint-staged",
     "prepush": "npm test",
     "start": "phenomic start",
-    "build": "node scripts/generate-config.js && phenomic build",
+    "build": "phenomic build",
     "production": "http-server dist"
   },
   "phenomic": {
