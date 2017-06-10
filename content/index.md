@@ -5,7 +5,7 @@ hero:
   video:
     title: Стартап центр Intellection
     text: UNDERSTANDING PERFECTION
-    image: /assets/videoPlaceholder.png
+    image: videoPlaceholder.jpg
     sources:
       mp4: https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.mp4
       ogv: https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.ogv

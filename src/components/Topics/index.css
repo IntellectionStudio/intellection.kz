@@ -143,8 +143,6 @@
   height: 150px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background: url('/assets/videoPlaceholder.png') center center no-repeat;
-  background-size: cover;
 
   @media screen and (min-width: 409px) {
     height: 208px;

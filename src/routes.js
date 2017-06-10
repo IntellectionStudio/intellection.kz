@@ -9,7 +9,6 @@ import HomePage from 'layouts/HomePage';
 import KnowledgePage from 'layouts/KnowledgePage';
 import TopicPage from 'layouts/TopicPage';
 import Page from 'layouts/Page';
-import PostPage from 'layouts/PostPage';
 import StartupsPage from 'layouts/StartupsPage';
 
 import AppContainer from './AppContainer';
@@ -26,7 +25,6 @@ const PageContainer = props => (
       HomePage,
       StartupsPage,
       TopicPage,
-      PostPage,
     }}
   />
 );

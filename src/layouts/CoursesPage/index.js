@@ -3,6 +3,7 @@ import {pure} from 'recompact';
 import ModalVideo from 'react-modal-video';
 
 import Page from 'layouts/Page';
+import {Image} from 'components';
 
 import styles from './index.css';
 
@@ -41,7 +42,11 @@ class CoursesPage extends Component {
           </div>
           <div className={styles.videoSection}>
             <div className={styles.video}>
-              <div className={styles.videoImage} />
+              <Image
+                className={styles.videoImage}
+                name="videoPlaceholder.jpg"
+                alt="intellection vide placeholder"
+              />
               <div className={styles.playIconWrapper}>
                 <ModalVideo
                   channel="youtube"

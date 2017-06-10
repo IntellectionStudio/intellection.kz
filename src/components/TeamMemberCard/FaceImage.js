@@ -124,6 +124,7 @@ class FaceImage extends Component {
         ref={this.captureImage}
         className={this.props.className}
         name={this.getFaceImageForMouseArea(this.state.mouseArea)}
+        alt="intellection faces"
       />
     );
   }

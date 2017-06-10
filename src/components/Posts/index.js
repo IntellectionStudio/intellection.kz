@@ -26,6 +26,7 @@ const Posts = ({question}, {collection}) => {
                       className={styles.postImage}
                       name={post.image}
                       background
+                      alt={post.title}
                     />
                     <div className={styles.postTitle}>{post.title}</div>
                     <div className={styles.postText}>{post.description}</div>
@@ -49,6 +50,7 @@ const Posts = ({question}, {collection}) => {
                         className={styles.postLinkImage}
                         name={post.linkImage}
                         background
+                        alt={post.title}
                       />
                       <Link
                         className={styles.postLinkButton}
