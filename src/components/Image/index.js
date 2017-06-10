@@ -11,7 +11,10 @@ class Image extends Component {
     className: PropTypes.string,
     name: PropTypes.string.isRequired,
     background: PropTypes.bool,
-    children: PropTypes.object,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]),
     contain: PropTypes.bool,
     ref: PropTypes.func,
   };
