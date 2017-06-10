@@ -110,7 +110,7 @@
   width: 100%;
   max-width: 24px;
   height: 24px;
-  background: url('/assets/facebook.png') center center no-repeat;
+  background: url('/assets/icons/facebook-white.svg') center center no-repeat;
 }
 
 .buttonIcon2 {
@@ -118,7 +118,7 @@
   width: 100%;
   max-width: 24px;
   height: 24px;
-  background: url('/assets/fb-grey.png') center center no-repeat;
+  background: url('/assets/icons/Facebook.svg') center center no-repeat;
 }
 
 .buttonIcon3 {
@@ -126,7 +126,7 @@
   width: 100%;
   max-width: 24px;
   height: 24px;
-  background: url('/assets/instagram.png') center center no-repeat;
+  background: url('/assets/icons/instagram-white.svg') center center no-repeat;
 }
 
 .buttonIcon4 {
@@ -134,7 +134,7 @@
   width: 100%;
   max-width: 24px;
   height: 24px;
-  background: url('/assets/insta-grey.png') center center no-repeat;
+  background: url('/assets/icons/Instagram.svg') center center no-repeat;
 }
 
 .copyright {
@@ -163,7 +163,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: url('/assets/logo.png') center center no-repeat;
+  background: url('/assets/icons/logo-intellection-white.svg') center center no-repeat;
 }
 
 .logoGreyLink {
@@ -172,7 +172,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: url('/assets/logo-grey.png') center center no-repeat;
+  background: url('/assets/icons/logo-intellection-grey.svg') center center no-repeat;
 
   @media screen and (min-width: 664px) {
     order: 2;

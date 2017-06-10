@@ -81,7 +81,7 @@ class AboutPage extends Component {
                   {this.props.head.video.buttonText}
                   <img
                     className={styles.playIcon}
-                    src="/assets/play-blue.svg"
+                    src="/assets/icons/logo-mainpage-playbutton.svg"
                     alt="Play"
                   />
                 </button>
@@ -97,7 +97,7 @@ class AboutPage extends Component {
                       <img
                         alt="Play Video"
                         className={styles.bigPlayIcon}
-                        src="/assets/play-white.svg"
+                        src="/assets/icons/logo-mainpage-playbutton.svg"
                       />
                     </button>
                   </div>

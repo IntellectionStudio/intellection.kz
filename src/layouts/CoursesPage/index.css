@@ -198,7 +198,7 @@
 }
 
 .benefit::before {
-  content: url('/assets/list-bullet.png');
+  content: url('/assets/icons/logo-courses-listbullet.svg');
   padding-right: 16px;
 }
 

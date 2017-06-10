@@ -52,7 +52,7 @@ class CoursesPage extends Component {
                   <img
                     alt="Play Video"
                     className={styles.playIcon}
-                    src="/assets/play-white.svg"
+                    src="/assets/icons/logo-mainpage-playbutton.svg"
                   />
                 </button>
               </div>
@@ -77,7 +77,7 @@ class CoursesPage extends Component {
                 <div className={styles.divStatsIcon}>
                   <img
                     className={styles.statsIcon}
-                    src="/assets/stats-icon.png"
+                    src="/assets/icons/logo-courses-icon.svg"
                     alt="Stats Icon"
                   />
                 </div>
@@ -90,7 +90,7 @@ class CoursesPage extends Component {
                   </div>
                   <img
                     className={styles.statsPlaceholder}
-                    src="/assets/stats-placeholder.png"
+                    src="/assets/icons/logo-courses-graph.svg"
                     alt="Paysa Stats"
                   />
                 </div>
