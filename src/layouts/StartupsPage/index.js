@@ -20,18 +20,23 @@ class StartupsPage extends Component {
   renderDefaultStartup = () => {
     const {image, title, text} = this.props.head.default || {};
 
-    return (
-      <Image className={styles.imageStartup} name={image} background>
-        <div className={styles.defaultBox}>
-          <h1 className={styles.defaultStartupTitle}>
-            {title}
-          </h1>
-          <p className={styles.defaultStartupText}>
-            {text}
-          </p>
-        </div>
-      </Image>
-    );
+    return image
+      ? <Image
+          className={styles.imageStartup}
+          name={image}
+          background
+          alt="Intellection Startup Background"
+        >
+          <div className={styles.defaultBox}>
+            <h1 className={styles.defaultStartupTitle}>
+              {title}
+            </h1>
+            <p className={styles.defaultStartupText}>
+              {text}
+            </p>
+          </div>
+        </Image>
+      : null;
   };
 
   renderStartup = () => {
@@ -61,6 +66,7 @@ class StartupsPage extends Component {
             name={image}
             background
             contain
+            alt={`${title}`}
           />
         </div>
       </div>
@@ -100,10 +106,9 @@ class StartupsPage extends Component {
     );
   }
 }
+
 StartupsPage.contextTypes = {
   collection: PropTypes.array.isRequired,
 };
 
-const EnhancedStartupsPage = pure(StartupsPage);
-
-export default EnhancedStartupsPage;
+export default pure(StartupsPage);

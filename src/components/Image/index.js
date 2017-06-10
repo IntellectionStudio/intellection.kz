@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Measure from 'react-measure';
 
-class responsiveImage extends Component {
+class Image extends Component {
   // background - if set to true, the component will render a background image
 
   static propTypes = {
@@ -13,6 +13,7 @@ class responsiveImage extends Component {
     background: PropTypes.bool,
     children: PropTypes.object,
     contain: PropTypes.bool,
+    ref: PropTypes.func,
   };
 
   static defaultProps = {
@@ -21,10 +22,10 @@ class responsiveImage extends Component {
   };
 
   state = {
-    info: require(`../../../content/assets/images/${this.props.name}`), // eslint-disable-line import/no-dynamic-require, global-require
     image: {
       width: 0,
     },
+    ref: null,
   };
 
   handleBackgroundMeasure = dimensions =>
@@ -64,15 +65,17 @@ class responsiveImage extends Component {
         </Measure>
       );
     }
+    console.log(info);
     return (
       <img
         className={this.props.className}
         src={info.src}
-        srcSet={this.state.info.srcSet}
+        srcSet={info.srcSet}
         alt={this.props.alt}
+        ref={this.props.ref}
       />
     );
   }
 }
 
-export default pure(responsiveImage);
+export default pure(Image);

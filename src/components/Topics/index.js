@@ -30,10 +30,10 @@ class Topics extends Component {
               this.state.fullClickable
                 ? <Link key={`${topic.title}Full`} to={topic.__url}>
                     <div className={styles.cellSquare}>
-                      <img
+                      <Image
                         className={styles.cellImage}
-                        src="/assets/videoPlaceholder.png"
-                        alt="vrh"
+                        name="videoPlaceholder.jpg"
+                        alt={topic.title}
                       />
                       <div className={styles.textWrapper}>
                         <h4 className={styles.cellTitle}>{topic.title}</h4>
@@ -47,10 +47,10 @@ class Topics extends Component {
                 : <div key={`${topic.title}NotFull`}>
                     <div className={styles.cellSquare}>
                       <Link to={topic.__url}>
-                        <img
+                        <Image
                           className={styles.cellImage}
-                          src="/assets/videoPlaceholder.png"
-                          alt="vrh"
+                          name="videoPlaceholder.jpg"
+                          alt={topic.title}
                         />
                       </Link>
                       <div className={styles.textWrapper}>
@@ -83,6 +83,7 @@ class Topics extends Component {
           className={styles.hero}
           name={'knowledgebase-main.jpg'}
           background
+          alt="knowledge main background"
         >
           <div className={styles.heroTextWrapper}>
             <h1 className={styles.heroTitle}>
@@ -101,7 +102,12 @@ class Topics extends Component {
                 {topics.filter(topic => topic.featured).map(topic => (
                   <Link key={topic.title} to={topic.__url}>
                     <div className={styles.featuredTopic}>
-                      <div className={styles.featuredTopicImage} />
+                      <Image
+                        className={styles.featuredTopicImage}
+                        name="videoPlaceholder.jpg"
+                        background
+                        alt={topic.title}
+                      />
                       <Topic {...topic} />
                     </div>
                   </Link>

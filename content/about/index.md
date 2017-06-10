@@ -21,7 +21,7 @@ video:
       title: Наша цель
       detail: Создание первого казахского Юникорна.
   buttonText: Смотреть видео
-  playIcon: /assets/play-white.png
+  playIcon: /assets/icons/logo-mainpage-playbutton.svg
   url: ''
 team:
   title: Наша команда
