@@ -65,7 +65,6 @@ class Image extends Component {
         </Measure>
       );
     }
-    console.log(info);
     return (
       <img
         className={this.props.className}
