@@ -32,7 +32,7 @@ class Topics extends Component {
                     <div className={styles.cellSquare}>
                       <Image
                         className={styles.cellImage}
-                        name="videoPlaceholder.jpg"
+                        name={topic.image}
                         alt={topic.title}
                       />
                       <div className={styles.textWrapper}>
@@ -49,7 +49,7 @@ class Topics extends Component {
                       <Link to={topic.__url}>
                         <Image
                           className={styles.cellImage}
-                          name="videoPlaceholder.jpg"
+                          name={topic.image}
                           alt={topic.title}
                         />
                       </Link>
@@ -104,7 +104,7 @@ class Topics extends Component {
                     <div className={styles.featuredTopic}>
                       <Image
                         className={styles.featuredTopicImage}
-                        name="videoPlaceholder.jpg"
+                        name={topic.image}
                         background
                         alt={topic.title}
                       />

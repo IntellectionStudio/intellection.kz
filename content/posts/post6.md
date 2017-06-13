@@ -6,6 +6,6 @@ topic: vr
 image:
 video:
 link: https://www.android.com/
-linkImage: videoPlaceholder.jpg
+linkImage: knowledgebase-vr.jpg
 text:
 ---
