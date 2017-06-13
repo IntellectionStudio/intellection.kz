@@ -1,10 +1,10 @@
 ---
-id: ar
-title: Augmented Reality
-route: /knowledge/ar
+id: design
+title: Design
+route: /knowledge/design
 date: 2016-02-14
 layout: TopicPage
-featured: false
+featured: true
 about: They waited till midnight; but no change took place among the guards.
-image: knowledgebase-ar.jpg
+image: knowledgebase-design.jpg
 ---
