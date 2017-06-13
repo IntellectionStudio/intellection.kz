@@ -4,7 +4,7 @@ import ModalVideo from 'react-modal-video';
 
 import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
-import {TeamMemberCard, TopManagerCard} from 'components';
+import {TeamMemberCard, TopManagerCard, Image} from 'components';
 
 import styles from './index.css';
 
@@ -88,7 +88,12 @@ class AboutPage extends Component {
               </div>
               <div className={styles.videoDiv}>
                 <div className={styles.videoFrame}>
-                  <div className={styles.videoFrameImage} />
+                  <Image
+                    className={styles.videoFrameImage}
+                    name="videoPlaceholder.jpg"
+                    background
+                    alt="Intellection Video Placeholder"
+                  />
                   <div className={styles.bigPlayIconWrapper}>
                     <button
                       onClick={this.openModal}

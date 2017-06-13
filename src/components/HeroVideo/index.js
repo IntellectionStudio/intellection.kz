@@ -29,7 +29,7 @@ class HeroVideo extends Component {
         <Image
           className={styles.contain}
           name="videoPlaceholder.jpg"
-          background
+          background="linear-gradient(rgba(81, 169, 242, 0.8), rgba(186, 219, 250, 0.8))"
           alt="intellection video placeholder"
         >
           <div className={styles.heroVideoBackground}>
