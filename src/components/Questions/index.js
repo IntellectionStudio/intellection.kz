@@ -23,7 +23,7 @@ const Questions = (
                 </div>,
               )}
             </div>
-          : 'No questions yet.'}
+          : 'No title yet.'}
       </div>
       {questions.length
         ? <div className={styles.list}>
@@ -55,13 +55,13 @@ const Questions = (
                         currentQuestion === question.id,
                     })}
                   >
-                    {questions.length} items
+                    {question.items} items
                   </div>
                 </div>
               </button>,
             )}
           </div>
-        : 'No posts yet.'}
+        : 'No questions yet.'}
     </div>
   );
 };
