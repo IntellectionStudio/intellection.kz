@@ -10,7 +10,7 @@ hero:
       mp4: https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.mp4
       ogv: https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.ogv
       webm: https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.webm
-    playIcon: /assets/icons/logo-mainpage-playbutton.svg
+    playIcon: logo-mainpage-playbutton.svg
   cards:
     startups:
       link: "startups"

@@ -1,6 +1,6 @@
 ---
-grey_logo: /assets/icons/logo-grey-albumen.svg
-coloured_logo: /assets/icons/logo-coloured-albumen.svg
+grey_logo: logo-grey-albumen.svg
+coloured_logo: logo-coloured-albumen.svg
 image: startup-albumen.jpg
 title: Albumen
 text: Фотоальбомы с вашего мобильного телефона

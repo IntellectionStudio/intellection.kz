@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Header from './Header';
 import HeroVideo from './HeroVideo';
 import Image from './Image';
+import SVGImage from './SVGImage';
 import Loading from './Loading';
 import Posts from './Posts';
 import Questions from './Questions';
@@ -34,4 +35,5 @@ export {
   Topic,
   Topics,
   TopManagerCard,
+  SVGImage,
 };

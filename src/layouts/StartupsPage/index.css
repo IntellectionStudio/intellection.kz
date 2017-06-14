@@ -66,7 +66,6 @@
   width: 100%;
   text-align: center;
   color: white;
-  font-family: ProximaNova;
   font-size: 16px;
   margin: 0;
   line-height: 28px;
@@ -82,7 +81,6 @@
   width: 100%;
   text-align: center;
   color: white;
-  font-family: ProximaNova;
   font-size: 24px;
   margin: 0;
   line-height: 50px;
@@ -120,6 +118,10 @@
 
 .info {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .defaultBox {
@@ -200,8 +202,7 @@
 
 .startupText {
   display: flex;
-  width: 90%;
-  padding-left: 15%;
+  width: 375px;
   text-align: center;
   color: #303234;
   font-family: ProximaNova;
@@ -212,54 +213,45 @@
   padding-bottom: 18px;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
+  align-items: center;
+  justify-content: center;
 
-  @media screen and (min-width: 480px) {
-    width: 80%;
-    padding-left: 25%;
-  }
 
   @media screen and (min-width: 512px) {
     font-size: 24px;
     line-height: 40px;
     padding-bottom: 22px;
-    width: 80%;
-    padding-left: 25%;
+    width: 100%;
   }
 
   @media screen and (min-width: 640px) {
     font-size: 30px;
     line-height: 36px;
-    width: 80%;
-    padding-left: 25%;
   }
 
   @media screen and (min-width: 768px) {
     font-size: 36px;
     line-height: 50px;
     padding-bottom: 41px;
-    width: 80%;
-    padding-left: 25%;
+    width: 100%;
   }
 
   @media screen and (min-width: 896px) {
     font-size: 41px;
     line-height: 50px;
-    width: 80%;
-    padding-left: 25%;
+    width: 100%;
   }
 
   @media screen and (min-width: 1024px) {
     font-size: 48px;
     line-height: 60px;
     padding-bottom: 14px;
-    width: 80%;
-    padding-left: 25%;
+    width: 1024px;
   }
 }
 
 .startupTitle {
-  width: 80%;
-  padding-left: 25%;
+  width: 100%;
   text-align: center;
   color: #303234;
   font-family: ProximaNova;
@@ -270,6 +262,8 @@
   padding-top: 41px;
   -webkit-font-smoothing: antialiased;
   font-weight: normal;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: 512px) {
     font-size: 22px;
@@ -301,8 +295,8 @@
 }
 
 .learnMore {
-  width: 80%;
-  padding-left: 25%;
+  display: flex;
+  width: 100%;
   text-align: center;
   color: #51a9f2;
   font-family: ProximaNova;
@@ -312,6 +306,8 @@
   line-height: 57px;
   margin-top: 0;
   -webkit-font-smoothing: antialiased;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: 512px) {
     font-size: 24px;

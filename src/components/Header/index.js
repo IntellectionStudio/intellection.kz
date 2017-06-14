@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import cx from 'classnames';
 
 import config from 'config';
+import {SVGImage} from 'components';
 
 import styles from './index.css';
 
@@ -40,12 +41,12 @@ class Header extends Component {
       >
         <header className={styles.header}>
           <Link className={styles.logoLink} to="/">
-            <img
+            <SVGImage
               className={styles.logo}
-              src={
+              name={
                 white
-                  ? '/assets/icons/logo-intellection-blue.svg'
-                  : '/assets/icons/logo-intellection-white.svg'
+                  ? 'logo-intellection-blue.svg'
+                  : 'logo-intellection-white.svg'
               }
               alt="Logo"
             />

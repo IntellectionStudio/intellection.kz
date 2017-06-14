@@ -1,6 +1,6 @@
 ---
-grey_logo: /assets/icons/logo-grey-wallswapp.svg
-coloured_logo: /assets/icons/logo-coloured-wallswapp.svg
+grey_logo: logo-grey-wallswapp.svg
+coloured_logo: logo-coloured-wallswapp.svg
 image: startup-wallswapp.jpg
 title: Wallswapp
 text: Меняйте заставки и обои на телефонах друзей
