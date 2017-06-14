@@ -1,6 +1,6 @@
 ---
-grey_logo: /assets/icons/logo-grey-iamstar.svg
-coloured_logo: /assets/icons/logo-coloured-iamstar.svg
+grey_logo: logo-grey-iamstar.svg
+coloured_logo: logo-coloured-iamstar.svg
 image: startup-iamstar.jpg
 title: Я звезда!
 text: Видео-платформа для проведения кастингов и конкурсов

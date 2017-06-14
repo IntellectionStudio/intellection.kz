@@ -3,7 +3,7 @@ import {pure} from 'recompact';
 import ModalVideo from 'react-modal-video';
 
 import Page from 'layouts/Page';
-import {Image} from 'components';
+import {Image, SVGImage} from 'components';
 
 import styles from './index.css';
 
@@ -54,10 +54,10 @@ class CoursesPage extends Component {
                   videoId={youtubeVideoId}
                 />
                 <button onClick={this.openModal} className={styles.videoButton}>
-                  <img
+                  <SVGImage
                     alt="Play Video"
                     className={styles.playIcon}
-                    src="/assets/icons/logo-mainpage-playbutton.svg"
+                    name="logo-mainpage-playbutton.svg"
                   />
                 </button>
               </div>
@@ -80,9 +80,9 @@ class CoursesPage extends Component {
             <div className={styles.mainRight}>
               <div className={styles.statsContainer}>
                 <div className={styles.divStatsIcon}>
-                  <img
+                  <SVGImage
                     className={styles.statsIcon}
-                    src="/assets/icons/logo-courses-icon.svg"
+                    name="logo-courses-icon.svg"
                     alt="Stats Icon"
                   />
                 </div>
@@ -93,9 +93,9 @@ class CoursesPage extends Component {
                     </h2>
                     <p className={styles.salaryText}>{salary.text}</p>
                   </div>
-                  <img
+                  <SVGImage
                     className={styles.statsPlaceholder}
-                    src="/assets/icons/logo-courses-graph.svg"
+                    name="logo-courses-graph.svg"
                     alt="Paysa Stats"
                   />
                 </div>
@@ -114,9 +114,9 @@ class CoursesPage extends Component {
                         <div className={styles.attributeHeader}>
                           {!attr.image
                             ? attr.header
-                            : <img
+                            : <SVGImage
                                 className={styles.attributeHeaderImage}
-                                src={attr.src}
+                                name={attr.src}
                                 alt={attr.alt}
                               />}
                         </div>

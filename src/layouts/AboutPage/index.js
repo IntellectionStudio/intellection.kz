@@ -4,7 +4,7 @@ import ModalVideo from 'react-modal-video';
 
 import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
-import {TeamMemberCard, TopManagerCard, Image} from 'components';
+import {TeamMemberCard, TopManagerCard, Image, SVGImage} from 'components';
 
 import styles from './index.css';
 
@@ -79,10 +79,10 @@ class AboutPage extends Component {
                 />
                 <button className={styles.videoButton} onClick={this.openModal}>
                   {this.props.head.video.buttonText}
-                  <img
+                  <SVGImage
                     className={styles.playIcon}
-                    src="/assets/icons/logo-mainpage-playbutton.svg"
-                    alt="Play"
+                    name="logo-mainpage-playbutton.svg"
+                    alt="Intellection Video Placeholder"
                   />
                 </button>
               </div>
@@ -98,13 +98,12 @@ class AboutPage extends Component {
                     <button
                       onClick={this.openModal}
                       className={styles.bigPlayButton}
-                    >
-                      <img
-                        alt="Play Video"
-                        className={styles.bigPlayIcon}
-                        src="/assets/icons/logo-mainpage-playbutton.svg"
-                      />
-                    </button>
+                    />
+                    <SVGImage
+                      className={styles.bigPlayIcon}
+                      name="logo-mainpage-playbutton.svg"
+                      alt="Intellection Video Placeholder"
+                    />
                   </div>
                 </div>
               </div>

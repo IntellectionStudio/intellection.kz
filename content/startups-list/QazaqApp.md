@@ -1,6 +1,6 @@
 ---
-grey_logo: /assets/icons/logo-grey-qazaqapp.svg
-coloured_logo: /assets/icons/logo-coloured-qazaqapp.svg
+grey_logo: logo-grey-qazaqapp.svg
+coloured_logo: logo-coloured-qazaqapp.svg
 image: startup-qazaqapp.jpg
 title: Qazaq App
 text: Приложение по изучению казахского языка

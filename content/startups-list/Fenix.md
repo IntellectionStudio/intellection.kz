@@ -1,6 +1,6 @@
 ---
-grey_logo: /assets/icons/logo-grey-fenix.svg
-coloured_logo: /assets/icons/logo-coloured-fenix.svg
+grey_logo: logo-grey-fenix.svg
+coloured_logo: logo-coloured-fenix.svg
 image: startup-fenix.jpg
 title: Fenix
 text: Аггрегатор казахстанских и мировых новостей

@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import Measure from 'react-measure';
 
 class Image extends Component {
-  // background - if set to true, the component will render a background image
-
   static propTypes = {
     alt: PropTypes.string.isRequired,
     className: PropTypes.string,

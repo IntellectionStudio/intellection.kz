@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import Measure from 'react-measure';
 import cx from 'classnames';
 
+import {SVGImage} from 'components';
 import mapValues from 'utils/mapValues';
 
 import styles from './index.css';
@@ -97,9 +98,9 @@ class StartupsHeader extends Component {
         onClick={handleClick}
       >
 
-        <img
+        <SVGImage
           className={styles.logo}
-          src={
+          name={
             idx === selectedStartupIdx
               ? startup.coloured_logo
               : startup.grey_logo
@@ -120,7 +121,7 @@ class StartupsHeader extends Component {
           className={styles.scrollRightButton}
           onClick={this.handleRightButtonClick}
         >
-          <img src="/assets/icons/logo-startups-right.svg" alt="scrollbutton" />
+          <SVGImage name="logo-startups-right.svg" alt="scrollbutton" />
         </button>
       : null;
   };
@@ -131,7 +132,7 @@ class StartupsHeader extends Component {
           className={styles.scrollLeftButton}
           onClick={this.handleLeftButtonClick}
         >
-          <img src="/assets/icons/logo-startups-left.svg" alt="left" />
+          <SVGImage name="logo-startups-left.svg" alt="left" />
         </button>
       : null;
 

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import ModalVideo from 'react-modal-video';
 
 import mapValues from 'utils/mapValues';
-import {Image} from 'components';
+import {Image, SVGImage} from 'components';
 
 import styles from './index.css';
 
@@ -52,10 +52,10 @@ class HeroVideo extends Component {
                 className={styles.playIconButton}
                 onClick={this.handlePlayButtonClick}
               >
-                <img
+                <SVGImage
                   alt="Play Video"
                   className={styles.playIcon}
-                  src={playIcon}
+                  name={playIcon}
                 />
               </button>
             </div>

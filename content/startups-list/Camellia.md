@@ -1,6 +1,6 @@
 ---
-grey_logo: /assets/icons/logo-grey-camellia.svg
-coloured_logo: /assets/icons/logo-coloured-camellia.svg
+grey_logo: logo-grey-camellia.svg
+coloured_logo: logo-coloured-camellia.svg
 image: startup-cameila.jpg
 title: Camellia
 text: Рынок цветочных магазинов в твоем телефоне
