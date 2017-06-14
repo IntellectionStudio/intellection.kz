@@ -8,18 +8,16 @@ import {TeamMemberCard, TopManagerCard, Image} from 'components';
 
 import styles from './index.css';
 
-const renderTopManagerCard = topManager => (
+const renderTopManagerCard = topManager =>
   <TopManagerCard
     key={`${topManager.firstName}-${topManager.lastName}`}
     teamMember={topManager}
-  />
-);
-const renderTeamMemberCard = teamMember => (
+  />;
+const renderTeamMemberCard = teamMember =>
   <TeamMemberCard
     key={`${teamMember.firstName}-${teamMember.lastName}`}
     teamMember={teamMember}
-  />
-);
+  />;
 
 class AboutPage extends Component {
   constructor() {
@@ -65,9 +63,9 @@ class AboutPage extends Component {
                           </p>
                         : <div key={key}>
                             <b>{text.title}</b>:
-                            {text.detail.map((listItem, index) => (
-                              <p key={listItem}>{index + 1}) {listItem}</p>
-                            ))}
+                            {text.detail.map((listItem, index) =>
+                              <p key={listItem}>{index + 1}) {listItem}</p>,
+                            )}
                           </div>,
                     this.props.head.video.texts,
                   )}
