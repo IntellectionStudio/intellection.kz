@@ -19,17 +19,17 @@ const Questions = (
       <div>
         {title.length
           ? <div>
-              {title.map(subject => (
+              {title.map(subject =>
                 <div key={subject.title} className={styles.bigTitle}>
                   {subject.title}
-                </div>
-              ))}
+                </div>,
+              )}
             </div>
-          : 'No questions yet.'}
+          : 'No title yet.'}
       </div>
       {questions.length
         ? <div className={styles.list}>
-            {questions.map((question, idx) => (
+            {questions.map((question, idx) =>
               <button
                 key={question.id}
                 className={styles.questionWrap}
@@ -45,25 +45,25 @@ const Questions = (
                 <div className={styles.wrap}>
                   <div
                     className={cx(styles.question, {
-                      [styles.questionSelected]: currentQuestion ===
-                        question.id,
+                      [styles.questionSelected]:
+                        currentQuestion === question.id,
                     })}
                   >
                     {question.question}
                   </div>
                   <div
                     className={cx(styles.numberOfItems, {
-                      [styles.questionSelected]: currentQuestion ===
-                        question.id,
+                      [styles.questionSelected]:
+                        currentQuestion === question.id,
                     })}
                   >
-                    {questions.length} items
+                    {question.items} items
                   </div>
                 </div>
-              </button>
-            ))}
+              </button>,
+            )}
           </div>
-        : 'No posts yet.'}
+        : 'No questions yet.'}
     </div>
   );
 };

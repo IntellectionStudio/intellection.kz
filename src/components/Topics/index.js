@@ -99,7 +99,7 @@ class Topics extends Component {
         <div>
           {topics.length
             ? <div className={styles.featuredTopics}>
-                {topics.filter(topic => topic.featured).map(topic => (
+                {topics.filter(topic => topic.featured).map(topic =>
                   <Link key={topic.title} to={topic.__url}>
                     <div className={styles.featuredTopic}>
                       <Image
@@ -110,8 +110,8 @@ class Topics extends Component {
                       />
                       <Topic {...topic} />
                     </div>
-                  </Link>
-                ))}
+                  </Link>,
+                )}
               </div>
             : 'No posts yet.'}
         </div>

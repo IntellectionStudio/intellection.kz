@@ -60,8 +60,14 @@ class Image extends Component {
             className={this.props.className}
             style={{
               background: typeof this.props.background === 'string'
-                ? `${this.props.background}, url('${bestFitImage}') center center / ${this.props.contain ? 'contain' : 'cover'} no-repeat`
-                : `url('${bestFitImage}') center center / ${this.props.contain ? 'contain' : 'cover'} no-repeat`,
+                ? `${this.props
+                    .background}, url('${bestFitImage}') center center / ${this
+                    .props.contain
+                    ? 'contain'
+                    : 'cover'} no-repeat`
+                : `url('${bestFitImage}') center center / ${this.props.contain
+                    ? 'contain'
+                    : 'cover'} no-repeat`,
             }}
           >
             {this.props.children}

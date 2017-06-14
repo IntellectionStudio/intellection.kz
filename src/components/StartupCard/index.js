@@ -3,7 +3,7 @@ import React from 'react';
 
 import styles from './index.css';
 
-const StartupCard = ({startupCard: {image, text, title}}) => (
+const StartupCard = ({startupCard: {image, text, title}}) =>
   <div className={styles.container}>
     <div className={styles.imageContainer}>
       <img className={styles.image} src={image} alt={title} />
@@ -14,7 +14,6 @@ const StartupCard = ({startupCard: {image, text, title}}) => (
         {text}
       </p>
     </div>
-  </div>
-);
+  </div>;
 
 export default pure(StartupCard);
