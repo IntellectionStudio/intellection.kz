@@ -22,6 +22,4 @@ const TeamMemberCard = ({
     </div>
   </div>;
 
-const EnhancedTeamMemberCard = pure(TeamMemberCard);
-
-export default EnhancedTeamMemberCard;
+export default pure(TeamMemberCard);

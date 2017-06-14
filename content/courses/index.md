@@ -29,7 +29,7 @@ courses:
         header: 48
         text: Индивидуальных часов
       - image: true
-        src: /assets/apple-icon.png
+        src: /assets/icons/logo-courses-appleicon.svg
         alt: Apple Icon
         text: Пробный урок
       - image: false
@@ -49,7 +49,7 @@ courses:
         header: 17
         text: Адаптированный силлабус
       - image: true
-        src: /assets/apple-icon.png
+        src: /assets/icons/logo-courses-appleicon.svg
         alt: Apple Icon
         text: Пробный урок
       - image: false

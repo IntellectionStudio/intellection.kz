@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import throttle from 'lodash.throttle';
 
+import {Image} from 'components';
 import mapValues from 'utils/mapValues';
 
 const MOUSE_MOVE_THROTTLE_WAIT = 100;
@@ -119,16 +120,14 @@ class FaceImage extends Component {
 
   render() {
     return (
-      <img
+      <Image
         ref={this.captureImage}
         className={this.props.className}
-        src={this.getFaceImageForMouseArea(this.state.mouseArea)}
-        alt="Profile"
+        name={this.getFaceImageForMouseArea(this.state.mouseArea)}
+        alt="intellection faces"
       />
     );
   }
 }
 
-const EnhancedFaceImage = pure(FaceImage);
-
-export default EnhancedFaceImage;
+export default pure(FaceImage);

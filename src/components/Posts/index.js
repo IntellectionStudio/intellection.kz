@@ -1,9 +1,11 @@
 import enhanceCollection from 'phenomic/lib/enhance-collection';
-import React, {PropTypes} from 'react';
+import {pure} from 'recompact';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
 import {Link} from 'phenomic';
 
-import Image from 'components/Image';
+import {Image} from 'components';
 
 import styles from './index.css';
 
@@ -24,6 +26,7 @@ const Posts = ({question}, {collection}) => {
                       className={styles.postImage}
                       name={post.image}
                       background
+                      alt={post.title}
                     />
                     <div className={styles.postTitle}>{post.title}</div>
                     <div className={styles.postText}>{post.description}</div>
@@ -47,6 +50,7 @@ const Posts = ({question}, {collection}) => {
                         className={styles.postLinkImage}
                         name={post.linkImage}
                         background
+                        alt={post.title}
                       />
                       <Link
                         className={styles.postLinkButton}
@@ -76,4 +80,4 @@ Posts.contextTypes = {
   collection: PropTypes.array.isRequired,
 };
 
-export default Posts;
+export default pure(Posts);

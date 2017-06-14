@@ -22,6 +22,4 @@ const Loading = () =>
     </div>
   </div>;
 
-const EnhancedLoading = pure(Loading);
-
-export default EnhancedLoading;
+export default pure(Loading);

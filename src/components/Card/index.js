@@ -2,12 +2,14 @@ import {Link} from 'phenomic';
 import {pure} from 'recompact';
 import React from 'react';
 
+import {Image} from 'components';
+
 import styles from './index.css';
 
 const Card = ({card: {link, image, title, text}}) =>
   <div className={styles.root}>
     <Link className={styles.container} to={link}>
-      <img className={styles.image} src={image} alt={link} />
+      <Image className={styles.image} name={image} alt={link} />
       <div>
         <h6 className={styles.title}>{title}</h6>
         <p className={styles.text}>
@@ -17,6 +19,4 @@ const Card = ({card: {link, image, title, text}}) =>
     </Link>
   </div>;
 
-const EnhancedCard = pure(Card);
-
-export default EnhancedCard;
+export default pure(Card);

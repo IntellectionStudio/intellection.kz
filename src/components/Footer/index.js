@@ -70,6 +70,4 @@ const Footer = ({homepage}) =>
     </div>
   </footer>;
 
-const EnhancedFooter = pure(Footer);
-
-export default EnhancedFooter;
+export default pure(Footer);

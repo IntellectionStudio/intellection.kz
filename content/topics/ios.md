@@ -6,6 +6,7 @@ date: 2016-01-22
 layout: TopicPage
 featured: true
 about: They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
+image: knowledgebase-ios.jpg
 ---
 
 This is the first post!

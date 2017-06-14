@@ -16,6 +16,4 @@ const StartupCard = ({startupCard: {image, text, title}}) =>
     </div>
   </div>;
 
-const EnhancedStartupCard = pure(StartupCard);
-
-export default EnhancedStartupCard;
+export default pure(StartupCard);

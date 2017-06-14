@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import {pure} from 'recompact';
 import ModalVideo from 'react-modal-video';
 
 import mapValues from 'utils/mapValues';
 import Page from 'layouts/Page';
-import {TeamMemberCard, TopManagerCard} from 'components';
+import {TeamMemberCard, TopManagerCard, Image} from 'components';
 
 import styles from './index.css';
 
@@ -78,14 +79,19 @@ class AboutPage extends Component {
                   {this.props.head.video.buttonText}
                   <img
                     className={styles.playIcon}
-                    src="/assets/play-blue.svg"
+                    src="/assets/icons/logo-mainpage-playbutton.svg"
                     alt="Play"
                   />
                 </button>
               </div>
               <div className={styles.videoDiv}>
                 <div className={styles.videoFrame}>
-                  <div className={styles.videoFrameImage} />
+                  <Image
+                    className={styles.videoFrameImage}
+                    name="videoPlaceholder.jpg"
+                    background
+                    alt="Intellection Video Placeholder"
+                  />
                   <div className={styles.bigPlayIconWrapper}>
                     <button
                       onClick={this.openModal}
@@ -94,7 +100,7 @@ class AboutPage extends Component {
                       <img
                         alt="Play Video"
                         className={styles.bigPlayIcon}
-                        src="/assets/play-white.svg"
+                        src="/assets/icons/logo-mainpage-playbutton.svg"
                       />
                     </button>
                   </div>
@@ -130,4 +136,4 @@ class AboutPage extends Component {
   }
 }
 
-export default AboutPage;
+export default pure(AboutPage);

@@ -1,9 +1,11 @@
 import enhanceCollection from 'phenomic/lib/enhance-collection';
-import React, {Component, PropTypes} from 'react';
+import {pure} from 'recompact';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Measure from 'react-measure';
 import {Link} from 'phenomic';
 
-import Image from 'components/Image';
+import {Image} from 'components';
 
 import Topic from '../Topic';
 import styles from './index.css';
@@ -28,10 +30,10 @@ class Topics extends Component {
               this.state.fullClickable
                 ? <Link key={`${topic.title}Full`} to={topic.__url}>
                     <div className={styles.cellSquare}>
-                      <img
+                      <Image
                         className={styles.cellImage}
-                        src="/assets/videoPlaceholder.png"
-                        alt="vrh"
+                        name={topic.image}
+                        alt={topic.title}
                       />
                       <div className={styles.textWrapper}>
                         <h4 className={styles.cellTitle}>{topic.title}</h4>
@@ -45,10 +47,10 @@ class Topics extends Component {
                 : <div key={`${topic.title}NotFull`}>
                     <div className={styles.cellSquare}>
                       <Link to={topic.__url}>
-                        <img
+                        <Image
                           className={styles.cellImage}
-                          src="/assets/videoPlaceholder.png"
-                          alt="vrh"
+                          name={topic.image}
+                          alt={topic.title}
                         />
                       </Link>
                       <div className={styles.textWrapper}>
@@ -79,8 +81,9 @@ class Topics extends Component {
       <div className={styles.mainDiv}>
         <Image
           className={styles.hero}
-          name={'/assets/knowledgeBase.png'}
+          name={'knowledgebase-main.jpg'}
           background
+          alt="knowledge main background"
         >
           <div className={styles.heroTextWrapper}>
             <h1 className={styles.heroTitle}>
@@ -99,7 +102,12 @@ class Topics extends Component {
                 {topics.filter(topic => topic.featured).map(topic =>
                   <Link key={topic.title} to={topic.__url}>
                     <div className={styles.featuredTopic}>
-                      <div className={styles.featuredTopicImage} />
+                      <Image
+                        className={styles.featuredTopicImage}
+                        name={topic.image}
+                        background
+                        alt={topic.title}
+                      />
                       <Topic {...topic} />
                     </div>
                   </Link>,
@@ -122,4 +130,4 @@ class Topics extends Component {
   }
 }
 
-export default Topics;
+export default pure(Topics);

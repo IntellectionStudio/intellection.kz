@@ -1,6 +1,7 @@
 import {pure} from 'recompact';
 import Helmet from 'react-helmet';
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}) =>
   <div hidden>
@@ -44,6 +45,4 @@ DefaultHeadMeta.contextTypes = {
   metadata: PropTypes.object.isRequired,
 };
 
-const EnhancedDefaultHeadMeta = pure(DefaultHeadMeta);
-
-export default EnhancedDefaultHeadMeta;
+export default pure(DefaultHeadMeta);

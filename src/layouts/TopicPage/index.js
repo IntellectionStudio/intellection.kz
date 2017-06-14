@@ -1,11 +1,12 @@
 import enhanceCollection from 'phenomic/lib/enhance-collection';
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
+import {pure} from 'recompact';
+import PropTypes from 'prop-types';
 import {Link} from 'phenomic';
 
-import Questions from 'components/Questions';
-import Posts from 'components/Posts';
+import {Questions, Posts} from 'components';
+import Page from 'layouts/Page';
 
-import Page from '../Page';
 import styles from './index.css';
 
 class TopicPage extends Component {
@@ -62,4 +63,4 @@ class TopicPage extends Component {
   }
 }
 
-export default TopicPage;
+export default pure(TopicPage);

@@ -1,10 +1,10 @@
 import {Link} from 'phenomic';
 import {pure} from 'recompact';
 import enhanceCollection from 'phenomic/lib/enhance-collection';
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
-import StartupsHeader from 'components/StartupsHeader';
-import Image from 'components/Image';
+import {StartupsHeader, Image} from 'components';
 import Page from 'layouts/Page';
 
 import styles from './index.css';
@@ -20,23 +20,23 @@ class StartupsPage extends Component {
   renderDefaultStartup = () => {
     const {image, title, text} = this.props.head.default || {};
 
-    return (
-      <div
-        className={styles.backgroundStartup}
-        style={{
-          background: `url(${image}) center center no-repeat`,
-        }}
-      >
-        <div className={styles.defaultBox}>
-          <h1 className={styles.defaultStartupTitle}>
-            {title}
-          </h1>
-          <p className={styles.defaultStartupText}>
-            {text}
-          </p>
-        </div>
-      </div>
-    );
+    return image
+      ? <Image
+          className={styles.imageStartup}
+          name={image}
+          background
+          alt="Intellection Startup Background"
+        >
+          <div className={styles.defaultBox}>
+            <h1 className={styles.defaultStartupTitle}>
+              {title}
+            </h1>
+            <p className={styles.defaultStartupText}>
+              {text}
+            </p>
+          </div>
+        </Image>
+      : null;
   };
 
   renderStartup = () => {
@@ -61,7 +61,13 @@ class StartupsPage extends Component {
           </div>
         </div>
         <div className={styles.imageWrapper}>
-          <Image className={styles.imageStartup} name={image} background />
+          <Image
+            className={styles.imageStartup}
+            name={image}
+            background
+            contain
+            alt={`${title}`}
+          />
         </div>
       </div>
     );
@@ -100,10 +106,9 @@ class StartupsPage extends Component {
     );
   }
 }
+
 StartupsPage.contextTypes = {
   collection: PropTypes.array.isRequired,
 };
 
-const EnhancedStartupsPage = pure(StartupsPage);
-
-export default EnhancedStartupsPage;
+export default pure(StartupsPage);

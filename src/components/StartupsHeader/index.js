@@ -120,7 +120,7 @@ class StartupsHeader extends Component {
           className={styles.scrollRightButton}
           onClick={this.handleRightButtonClick}
         >
-          <img src="/assets/Right.png" alt="scrollbutton" />
+          <img src="/assets/icons/logo-startups-right.svg" alt="scrollbutton" />
         </button>
       : null;
   };
@@ -131,7 +131,7 @@ class StartupsHeader extends Component {
           className={styles.scrollLeftButton}
           onClick={this.handleLeftButtonClick}
         >
-          <img src="/assets/Left.png" alt="left" />
+          <img src="/assets/icons/logo-startups-left.svg" alt="left" />
         </button>
       : null;
 
@@ -162,6 +162,4 @@ class StartupsHeader extends Component {
   }
 }
 
-const EnhancedStartupsHeader = pure(StartupsHeader);
-
-export default EnhancedStartupsHeader;
+export default pure(StartupsHeader);

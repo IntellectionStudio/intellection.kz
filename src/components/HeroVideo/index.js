@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ModalVideo from 'react-modal-video';
 
 import mapValues from 'utils/mapValues';
+import {Image} from 'components';
 
 import styles from './index.css';
 
@@ -25,11 +26,11 @@ class HeroVideo extends Component {
           isOpen={this.state.isOpen}
           videoId="FC0pT9xg1oI"
         />
-        <div
+        <Image
           className={styles.contain}
-          style={{
-            background: `linear-gradient(rgba(81, 169, 242, 0.8), rgba(186, 219, 250, 0.8)), url('${image}') center center no-repeat`,
-          }}
+          name="videoPlaceholder.jpg"
+          background="linear-gradient(rgba(81, 169, 242, 0.8), rgba(186, 219, 250, 0.8))"
+          alt="intellection video placeholder"
         >
           <div className={styles.heroVideoBackground}>
             <video
@@ -59,12 +60,10 @@ class HeroVideo extends Component {
               </button>
             </div>
           </div>
-        </div>
+        </Image>
       </div>
     );
   }
 }
 
-const EnhancedHeroVideo = pure(HeroVideo);
-
-export default EnhancedHeroVideo;
+export default pure(HeroVideo);
