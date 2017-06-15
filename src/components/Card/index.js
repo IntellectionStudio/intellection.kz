@@ -6,7 +6,7 @@ import {Image} from 'components';
 
 import styles from './index.css';
 
-const Card = ({card: {link, image, title, text}}) =>
+const Card = ({card: {link, image, title, text}}) => (
   <div className={styles.root}>
     <Link className={styles.container} to={link}>
       <Image className={styles.image} name={image} alt={link} />
@@ -17,6 +17,7 @@ const Card = ({card: {link, image, title, text}}) =>
         </p>
       </div>
     </Link>
-  </div>;
+  </div>
+);
 
 export default pure(Card);
