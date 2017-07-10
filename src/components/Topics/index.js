@@ -36,7 +36,9 @@ class Topics extends Component {
                         alt={topic.title}
                       />
                       <div className={styles.textWrapper}>
-                        <h4 className={styles.cellTitle}>{topic.title}</h4>
+                        <h4 className={styles.cellTitle}>
+                          {topic.title}
+                        </h4>
                         <p className={styles.cellText}>
                           {topic.about}
                         </p>
@@ -55,7 +57,9 @@ class Topics extends Component {
                       </Link>
                       <div className={styles.textWrapper}>
                         <Link to={topic.__url}>
-                          <h4 className={styles.cellTitle}>{topic.title}</h4>
+                          <h4 className={styles.cellTitle}>
+                            {topic.title}
+                          </h4>
                         </Link>
                         <p className={styles.cellText}>
                           {topic.about}
@@ -86,20 +90,18 @@ class Topics extends Component {
           alt="knowledge main background"
         >
           <div className={styles.heroTextWrapper}>
-            <h1 className={styles.heroTitle}>
-              Knowledge Base
-            </h1>
+            <h1 className={styles.heroTitle}>Ресурсы</h1>
             <p className={styles.heroText}>
-              They waited till midnight; but no change took place among the
-              guards, and it became apparent that their yielding to sleep could
-              not be counted on.
+              Мы не боимся делиться нашими знаниями. Здесь мы собрали для вас
+              полезные ссылки из разных источников и отсортировали по темам,
+              которые нас интересуют.
             </p>
           </div>
         </Image>
         <div>
           {topics.length
             ? <div className={styles.featuredTopics}>
-                {topics.filter(topic => topic.featured).map(topic => (
+                {topics.filter(topic => topic.featured).map(topic =>
                   <Link key={topic.title} to={topic.__url}>
                     <div className={styles.featuredTopic}>
                       <Image
@@ -110,8 +112,8 @@ class Topics extends Component {
                       />
                       <Topic {...topic} />
                     </div>
-                  </Link>
-                ))}
+                  </Link>,
+                )}
               </div>
             : 'No posts yet.'}
         </div>

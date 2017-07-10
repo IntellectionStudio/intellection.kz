@@ -4,6 +4,6 @@ title: Backend
 route: /knowledge/backend
 layout: TopicPage
 featured: false
-about: They waited till midnight; but no change took place among the guards.
+about: Серверная часть обычно самая важная составляющая ИТ экосистемы, вокруг которой вьются все ваши фронт энд клиенты. Мы за то, чтобы упрощать. Поэтому советуем использовать готовые серверные решения. А какие именно зависит от вашего бюджета и времени. 
 image: knowledgebase-backend.jpg
 ---
