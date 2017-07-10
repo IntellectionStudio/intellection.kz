@@ -5,7 +5,7 @@ const config = {
       path: '/about',
     },
     {
-      title: 'Наши стартапы',
+      title: 'Стартапы',
       path: '/startups',
     },
     {
@@ -13,11 +13,11 @@ const config = {
       path: '/courses',
     },
     {
-      title: 'Knowledge Base',
+      title: 'Ресурсы',
       path: '/knowledge',
     },
     {
-      title: 'Наши видео',
+      title: 'Видео',
       path: 'https://www.youtube.com/channel/UCtQaoQC6hC0v5uVpJ8iB-xg',
     },
     {

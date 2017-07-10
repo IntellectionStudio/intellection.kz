@@ -23,7 +23,7 @@ const Footer = ({homepage}) => (
         <div className={styles.contacts}>
           <h3 className={styles.title}>Контакты</h3>
           <p className={styles.text}>
-            ул. Сатпаева 30а/3, этаж 3, Алматы, Казахстана
+            ул. Сатпаева 30а/3, этаж 3, Алматы, Казахстан
           </p>
         </div>
       </div>
@@ -36,7 +36,7 @@ const Footer = ({homepage}) => (
                 className={cx(styles.buttonIcon, {
                   [styles.buttonIcon2]: homepage,
                 })}
-                to="facebook"
+                to="https://www.facebook.com/intellection.kz"
               />
             </div>
             <div className={styles.socialButton}>
@@ -44,7 +44,7 @@ const Footer = ({homepage}) => (
                 className={cx(styles.buttonIcon3, {
                   [styles.buttonIcon4]: homepage,
                 })}
-                to="instagram"
+                to="https://www.instagram.com/intellection.kz/"
               />
             </div>
           </div>
