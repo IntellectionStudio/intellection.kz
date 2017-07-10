@@ -9,9 +9,10 @@ import 'react-modal-video/scss/modal-video.scss';
 import './index.global.css';
 import './highlight.global.css';
 
-require('babel-polyfill');
+// require('babel-polyfill');
 
 const AppContainer = ({location: {query}, children}) => {
+  console.log(JSON.stringify(query));
   const intlConfig = getIntlForLocale(query.locale);
 
   return (
