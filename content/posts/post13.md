@@ -4,8 +4,8 @@ description: Machine learning is a type of artificial intelligence (AI) that pro
 questionId: 4
 topic: ios
 image: knowledgebase-ios.jpg
-video:
-link:
-linkImage:
-text:
+video: null
+link: null
+linkImage: null
+text: null
 ---

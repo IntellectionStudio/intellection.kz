@@ -9,7 +9,7 @@ const CONTEXT_DIR = path.join(__dirname, '..');
 const CONTENT_DIR_PATH = path.join(CONTEXT_DIR, CONTENT_DIR);
 const CONFIG_FILE_PATH = path.join(CONTEXT_DIR, 'admin', 'config.yml');
 
-const meta = [{label: "Publish Date",name: "date",widget: "datetime"}];
+const meta = [{ label: "Publish Date", name: "date", widget: "datetime" }];
 
 let config = {
   backend: {
@@ -45,7 +45,13 @@ const rewriteFile = (filePath, contents) => {
 
 // LOGIC
 const mapToNetlifyFields = (value, key, result = []) => {
-  if (typeof value === 'string') {
+  if (!value) {
+    result.push({
+      label: capitalize(key),
+      name: key,
+      widget: 'string'
+    })
+  } else if (typeof value === 'string') {
     if (key === 'body') {
       result.push({
         label: capitalize(key),
@@ -121,7 +127,7 @@ const walk = (file, context) => {
         });
       }
       fs.readdirSync(filePath)
-      .forEach(f => walk(f, filePath));
+        .forEach(f => walk(f, filePath));
     }
   } else { // then it is just a record
     let lastCollection = config.collections[config.collections.length - 1];

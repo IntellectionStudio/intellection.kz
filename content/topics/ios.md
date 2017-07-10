@@ -2,7 +2,6 @@
 id: ios
 title: iOS
 route: /knowledge/ios
-date: 2016-01-22
 layout: TopicPage
 featured: true
 about: They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.

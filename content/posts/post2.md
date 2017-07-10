@@ -4,8 +4,8 @@ description: Machine learning is a type of artificial intelligence (AI) that pro
 questionId: 1
 topic: vr
 image: knowledgebase-vr.jpg
-video:
+video: null
 link: https://www.android.com/
 linkImage: videoPlaceholder.jpg
-text:
+text: null
 ---
