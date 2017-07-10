@@ -8,9 +8,7 @@ hero:
     text: UNDERSTANDING PERFECTION
     image: videoPlaceholder.jpg
     sources:
-      mp4: https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.mp4
-      ogv: https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.ogv
-      webm: https://d125fmws0bore1.cloudfront.net/videos/video-bg-udacity.webm
+      mp4: assets/video.mp4
     playIcon: logo-mainpage-playbutton.svg
   cards:
     startups:
