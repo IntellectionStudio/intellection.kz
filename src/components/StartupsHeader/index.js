@@ -97,7 +97,6 @@ class StartupsHeader extends Component {
         className={styles.logoButton}
         onClick={handleClick}
       >
-
         <SVGImage
           className={styles.logo}
           name={

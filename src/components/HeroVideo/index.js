@@ -46,8 +46,12 @@ class HeroVideo extends Component {
           </div>
           <div className={styles.overlay}>
             <div className={styles.content}>
-              <p className={styles.text}>{text}</p>
-              <h1 className={styles.title}>{title}</h1>
+              <p className={styles.text}>
+                {text}
+              </p>
+              <h1 className={styles.title}>
+                {title}
+              </h1>
               <button
                 className={styles.playIconButton}
                 onClick={this.handlePlayButtonClick}

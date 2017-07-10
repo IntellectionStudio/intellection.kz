@@ -18,7 +18,7 @@ const Posts = ({question}, {collection}) => {
     <div className={styles.mainDiv}>
       {posts.length
         ? <div className={styles.posts}>
-            {posts.map(post => (
+            {posts.map(post =>
               <div key={post.title} className={styles.post}>
                 {post.image &&
                   <div>
@@ -28,8 +28,12 @@ const Posts = ({question}, {collection}) => {
                       background
                       alt={post.title}
                     />
-                    <div className={styles.postTitle}>{post.title}</div>
-                    <div className={styles.postText}>{post.description}</div>
+                    <div className={styles.postTitle}>
+                      {post.title}
+                    </div>
+                    <div className={styles.postText}>
+                      {post.description}
+                    </div>
                   </div>}
                 {post.video &&
                   <div>
@@ -40,8 +44,12 @@ const Posts = ({question}, {collection}) => {
                       width="100%"
                       height="240px"
                     />
-                    <div className={styles.postTitle}>{post.title}</div>
-                    <div className={styles.postText}>{post.description}</div>
+                    <div className={styles.postTitle}>
+                      {post.title}
+                    </div>
+                    <div className={styles.postText}>
+                      {post.description}
+                    </div>
                   </div>}
                 {post.link &&
                   <div>
@@ -60,16 +68,24 @@ const Posts = ({question}, {collection}) => {
                         ОТКРЫТЬ
                       </Link>
                     </div>
-                    <div className={styles.postTitle}>{post.title}</div>
-                    <div className={styles.postText}>{post.description}</div>
+                    <div className={styles.postTitle}>
+                      {post.title}
+                    </div>
+                    <div className={styles.postText}>
+                      {post.description}
+                    </div>
                   </div>}
                 {post.text &&
                   <div>
-                    <div className={styles.postTitle}>{post.title}</div>
-                    <div className={styles.postText}>{post.description}</div>
+                    <div className={styles.postTitle}>
+                      {post.title}
+                    </div>
+                    <div className={styles.postText}>
+                      {post.description}
+                    </div>
                   </div>}
-              </div>
-            ))}
+              </div>,
+            )}
           </div>
         : 'No posts yett.'}
     </div>

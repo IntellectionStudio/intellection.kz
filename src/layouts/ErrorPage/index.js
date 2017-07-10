@@ -20,17 +20,18 @@ const ErrorPage = ({
         ...pageProps,
         head: {
           ...pageProps.head,
-          hero: 'https://farm8.staticflickr.com/7559/16101654539_bee5151340_k.jpg',
+          hero:
+            'https://farm8.staticflickr.com/7559/16101654539_bee5151340_k.jpg',
         },
       }}
     >
       <div className={styles.container}>
-        <div className={styles.oops}>{'😱 Oooops!'}</div>
+        <div className={styles.oops}>
+          {'😱 Oooops!'}
+        </div>
         <div className={styles.text}>
           <p className={styles.title}>
-            <strong>{error}</strong>
-            {' '}
-            {errorText}
+            <strong>{error}</strong> {errorText}
           </p>
           {error === STATUS_CODE_NOT_FOUND &&
             <div>

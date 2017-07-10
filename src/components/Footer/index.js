@@ -5,7 +5,7 @@ import React from 'react';
 
 import styles from './index.css';
 
-const Footer = ({homepage}) => (
+const Footer = ({homepage}) =>
   <footer
     className={cx(styles.footer, {
       [styles.whiteBackground]: homepage,
@@ -51,12 +51,8 @@ const Footer = ({homepage}) => (
         </div>
         <div className={styles.copyright}>
           <div className={styles.copyrightText}>
-            <div>
-              © 2017 Intellection.kz
-            </div>
-            <div>
-              All Right Reserved
-            </div>
+            <div>© 2017 Intellection.kz</div>
+            <div>All Right Reserved</div>
           </div>
           <Link
             to="/"
@@ -66,9 +62,7 @@ const Footer = ({homepage}) => (
           />
         </div>
       </div>
-
     </div>
-  </footer>
-);
+  </footer>;
 
 export default pure(Footer);
