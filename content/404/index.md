@@ -1,8 +1,9 @@
 ---
-layout: ErrorPage
+layout: 'ErrorPage '
 route: 404.html
 ---
 <!---
   Content here not used, see ``src/layouts/PageError``
   Please edit PageError layout instead.
 -->
+
