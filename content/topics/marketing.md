@@ -4,6 +4,6 @@ title: Marketing
 route: /knowledge/marketing
 layout: TopicPage
 featured: false
-about: They waited till midnight; but no change took place among the guards.
+about: Можно нанять маркетинговое агенство или крутого “маркетолога”. А можно научиться все делать самому. Здесь собраны ссылки на ресурсы цифрового и традиционного маркетинга. 
 image: knowledgebase-marketing.jpg
 ---

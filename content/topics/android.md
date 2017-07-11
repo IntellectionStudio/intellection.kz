@@ -4,7 +4,7 @@ title: Android
 route: /knowledge/android
 layout: TopicPage
 featured: true
-about: Ресурсы для обучения разработки мобильных приложений на Android. На данный момент эта платформа имеет наибольшее количество пользователей. 
+about: Ресурсы для обучения разработки мобильных приложений на Android. На данный момент эта платформа имеет наибольшее количество пользователей по всему миру. Точнее говоря, семеро из десяти посетителей нашего сайта заходят с Android устройства. Если ты меня читаешь, то - привет Андроидер!
 # hero credit: https://www.flickr.com/photos/igotz/15669216853/
 hero: https://farm8.staticflickr.com/7479/15669216853_aa8e70eae1_o.jpg
 image: knowledgebase-android.jpg

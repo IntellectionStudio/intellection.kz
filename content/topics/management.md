@@ -4,6 +4,6 @@ title: Management
 route: /knowledge/management
 layout: TopicPage
 featured: false
-about: They waited till midnight; but no change took place among the guards.
+about: Стадо баранов во главе со львом побеждает стадо львов во главе с бараном - гласит известная арабская пословица. Научиться быть львом вам помогут знания собранные здесь.
 image: knowledgebase-management.jpg
 ---

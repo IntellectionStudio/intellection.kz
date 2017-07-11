@@ -4,6 +4,6 @@ title: Virtual Reality
 route: /knowledge/vr
 layout: TopicPage
 featured: true
-about: They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
+about: Потребность на разработчиков VR растет не по годам, а по часам. В прошлом году например, на 800%. Ожидается, что VR индустрия станет очень крупной. Знание технологий разработки на VR платформы - большое преимущество.
 image: knowledgebase-vr.jpg
 ---

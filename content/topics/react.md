@@ -4,6 +4,6 @@ title: React
 route: /knowledge/react
 layout: TopicPage
 featured: false
-about: They waited till midnight; but no change took place among the guards.
+about: Технология разработки веб сайтов на языке Javascript. Эта маленькая библиотека от Facebook успела завоевать сердца и умы самых прогрессивных программистов своей простотой и надежностью. Вы знали, что Instagram написан на React? Правда только веб версия.
 image: knowledgebase-react.jpg
 ---

@@ -4,7 +4,7 @@ title: iOS
 route: /knowledge/ios
 layout: TopicPage
 featured: true
-about: They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
+about: На сегодняшний день самая популярная платформа на мобильные устройства. Компания Apple самая дорогая компания в истории не просто так. Узнайте, как на самом деле просто и приятно создавать мобильные приложения на iOS. 
 image: knowledgebase-ios.jpg
 ---
 
