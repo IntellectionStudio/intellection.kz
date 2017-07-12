@@ -1,11 +1,11 @@
 ---
-title: New version of iOS
-description: Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data.
+title: Android - самая популярная система для мобильных устройств 
+description: Android - это операционная система для смартфонов, планшетов, электронных книг, цифровых проигрывателей, наручных часов, игровых приставок, нетбуков, смартбуков, очков Google, телевизоров и других устройств
 questionId: 1
 topic: ios
-image: knowledgebase-ios.jpg
+image: null
 video: null
 link: null
 linkImage: null
-text: null
+text: text
 ---

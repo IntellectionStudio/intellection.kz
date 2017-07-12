@@ -18,7 +18,7 @@ const Posts = ({question}, {collection}) => {
     <div className={styles.mainDiv}>
       {posts.length
         ? <div className={styles.posts}>
-            {posts.map(post => (
+            {posts.map(post =>
               <div key={post.title} className={styles.post}>
                 {post.image &&
                   <div>
@@ -84,8 +84,8 @@ const Posts = ({question}, {collection}) => {
                       {post.description}
                     </div>
                   </div>}
-              </div>
-            ))}
+              </div>,
+            )}
           </div>
         : 'No posts yett.'}
     </div>

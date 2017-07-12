@@ -1,11 +1,11 @@
 ---
-title: New version of Android 2
-description: Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data.
+title: Официальная документация Android
+description: На официальном сайте разработчика Android вы найдете всю необходимую информацию по созданию мобильных приложений. Инструкция по началу работы с Android Studio, теоретические основы языка Java, API к основным компонентам системы Android, лучшие и рекомендуемые практики написания кода - все это есть на официальном сайте. Решения на большинство ваших вопросов скорее всего найдутся именно на этом ресурсе. 
 questionId: 2
 topic: android
 image: null
 video: null
-link: null
-linkImage: null
-text: text
+link: https://developer.android.com/guide/index.html?hl=ru
+linkImage: knowledgebase-android-developer-website.png
+text: null
 ---

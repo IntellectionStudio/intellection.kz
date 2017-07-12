@@ -1,7 +1,7 @@
 ---
 id: 2
-title: Augmented Reality
-question: What is Augmented Reality?
+title: UselessTitle
+question: Образовательные материалы
 subject: android
 items: 4
 ---

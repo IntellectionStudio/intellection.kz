@@ -1,11 +1,11 @@
 ---
-title: New version of Augmented Reality 2
-description: Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data.
+title: Туториалы на сайте Vogella
+description: Хорошая подборка туториалов для программистов разного уровня. На сайте вы найдете текстовые мини туториалы от начала работы с Android Studio до специфичных задач для опытных пользователей, таких как использование API датчиков для GPS либо создание анимации по движению пальцев. 
 questionId: 2
-topic: ar
+topic: android
 image: null
-video: https://www.youtube.com/watch?v=04MdMSuw-Q0
-link: null
-linkImage: null
+video: null
+link: http://www.vogella.com/tutorials/android.html
+linkImage: knowledgebase-vogella.png
 text: null
 ---

@@ -1,11 +1,11 @@
 ---
-title: New version of Virtual Reality
-description: Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data.
+title: Среда разработки Android Studio
+description: Для разработки приложений вам потребуется скачать Android Studio с официального сайта разработчика Android. 
 questionId: 1
 topic: vr
-image: knowledgebase-vr.jpg
+image: null
 video: null
-link: https://www.android.com/
-linkImage: videoPlaceholder.jpg
+link: https://developer.android.com/studio/index.html
+linkImage: knowledgebase-android-studio-logo.png
 text: null
 ---

@@ -1,11 +1,11 @@
 ---
-title: New version of Virtual Reality 2
-description: Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data.
-questionId: 2
-topic: vr
+title: Установка Java JDK на Windows
+description: Для корректной работы Android Studio на Windows также требуется Java JDK. Видео-инструкция по установке Java JDK на Windows.
+questionId: 1
+topic: android
 image: null
-video: null
-link: https://www.android.com/
-linkImage: knowledgebase-vr.jpg
+video: https://www.youtube.com/watch?v=cUjata1f_84
+link: null
+linkImage: null
 text: null
 ---
