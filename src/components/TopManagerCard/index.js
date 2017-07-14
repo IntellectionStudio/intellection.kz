@@ -7,7 +7,7 @@ import styles from './index.css';
 
 const TopManagerCard = ({
   teamMember: {image, firstName, lastName, position, text},
-}) =>
+}) => (
   <div className={styles.container}>
     <div className={styles.profile}>
       <div className={styles.imageWrapper}>
@@ -27,6 +27,7 @@ const TopManagerCard = ({
         {text}
       </div>
     </div>
-  </div>;
+  </div>
+);
 
 export default pure(TopManagerCard);
