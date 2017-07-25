@@ -9,6 +9,8 @@ module.exports = {
     'no-underscore-dangle': 0,
     'eslint-comments/no-unused-disable': 0,
     'jsx-a11y/accessible-emoji': 0,
+    'eslint-comments/disable-enable-pair': 0,
+    'eslint-comments/no-unlimited-disable': 0,
   },
   settings: {
     'import/resolver': {
