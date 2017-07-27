@@ -17,7 +17,7 @@ hero:
       title: Стартапы
       text: Наши проекты в сфере мобильных приложений, веб-сайтов, технологий виртуальной реальности
     knowledgeBase:
-      link: "knowledgeBase"
+      link: "knowledge"
       image: homepage-card-resources.jpg
       title: Ресурсы
       text: Мы не боимся делиться нашими знаниями. Здесь полезные ссылки из разных источников
