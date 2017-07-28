@@ -1,5 +1,9 @@
 import {IntlProvider} from 'react-intl';
 import React from 'react';
+import 'autotrack';
+import 'autotrack/lib/plugins/event-tracker';
+import 'autotrack/lib/plugins/outbound-link-tracker';
+import 'autotrack/lib/plugins/url-change-tracker';
 
 import {Container, Content, DefaultHeadMeta} from 'components';
 import getIntlForLocale from 'utils/getIntlForLocale';
@@ -13,26 +17,13 @@ import './highlight.global.css';
 // GOOGLE Analytics, part 1/2
 const GOOGLE_ANALYTICS_UA = 'UA-73008937-1';
 if (typeof window !== 'undefined') {
-  window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
-  // ga comes from google-analytics script injected below
   ga('create', GOOGLE_ANALYTICS_UA, 'auto');
 
-  // autotrack
-  // https://github.com/googleanalytics/autotrack
-
-  // most important plugin for phenomic
+  ga('require', 'eventTracker');
+  ga('require', 'outboundLinkTracker');
   ga('require', 'urlChangeTracker');
 
-  // some plugins you might like
-  ga('require', 'cleanUrlTracker');
-  ga('require', 'outboundFormTracker');
-  ga('require', 'outboundLinkTracker');
-
-  // check out more here https://github.com/googleanalytics/autotrack#plugins
-
-  // now that everything is ready, log initial page
   ga('send', 'pageview');
-  console.log('pageview');
 }
 /* eslint-enable */
 
