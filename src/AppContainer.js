@@ -16,8 +16,14 @@ if (typeof window !== 'undefined') {
   window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
   ga('create', GOOGLE_ANALYTICS_UA, 'auto');
 
+  ga('require', 'cleanUrlTracker');
   ga('require', 'eventTracker');
+  ga('require', 'impressionTracker');
+  ga('require', 'maxScrollTracker');
+  ga('require', 'mediaQueryTracker');
+  ga('require', 'outboundFormTracker');
   ga('require', 'outboundLinkTracker');
+  ga('require', 'pageVisibilityTracker');
   ga('require', 'urlChangeTracker');
 
   ga('send', 'pageview');
