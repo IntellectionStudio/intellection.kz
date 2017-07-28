@@ -1,6 +1,5 @@
 import {IntlProvider} from 'react-intl';
 import React from 'react';
-import 'autotrack';
 import 'autotrack/lib/plugins/event-tracker';
 import 'autotrack/lib/plugins/outbound-link-tracker';
 import 'autotrack/lib/plugins/url-change-tracker';
@@ -17,6 +16,7 @@ import './highlight.global.css';
 // GOOGLE Analytics, part 1/2
 const GOOGLE_ANALYTICS_UA = 'UA-73008937-1';
 if (typeof window !== 'undefined') {
+  window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
   ga('create', GOOGLE_ANALYTICS_UA, 'auto');
 
   ga('require', 'eventTracker');
@@ -28,7 +28,6 @@ if (typeof window !== 'undefined') {
 /* eslint-enable */
 
 const AppContainer = ({location: {query}, children}) => {
-  console.log(JSON.stringify(query));
   const intlConfig = getIntlForLocale(query.locale);
 
   return (
@@ -38,6 +37,7 @@ const AppContainer = ({location: {query}, children}) => {
           scripts={[
             // GOOGLE Analytics, part 2/2
             {async: true, src: 'https://www.google-analytics.com/analytics.js'},
+            {async: true, src: '/assets/autotrack.js'},
           ]}
         />
         <Content>
