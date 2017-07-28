@@ -1,8 +1,5 @@
 import {IntlProvider} from 'react-intl';
 import React from 'react';
-import 'autotrack/lib/plugins/event-tracker';
-import 'autotrack/lib/plugins/outbound-link-tracker';
-import 'autotrack/lib/plugins/url-change-tracker';
 
 import {Container, Content, DefaultHeadMeta} from 'components';
 import getIntlForLocale from 'utils/getIntlForLocale';
@@ -19,9 +16,9 @@ if (typeof window !== 'undefined') {
   window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
   ga('create', GOOGLE_ANALYTICS_UA, 'auto');
 
-  ga('require', 'eventTracker');
-  ga('require', 'outboundLinkTracker');
-  ga('require', 'urlChangeTracker');
+  // ga('require', 'eventTracker');
+  // ga('require', 'outboundLinkTracker');
+  // ga('require', 'urlChangeTracker');
 
   ga('send', 'pageview');
 }
