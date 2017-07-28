@@ -16,9 +16,9 @@ if (typeof window !== 'undefined') {
   window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
   ga('create', GOOGLE_ANALYTICS_UA, 'auto');
 
-  // ga('require', 'eventTracker');
-  // ga('require', 'outboundLinkTracker');
-  // ga('require', 'urlChangeTracker');
+  ga('require', 'eventTracker');
+  ga('require', 'outboundLinkTracker');
+  ga('require', 'urlChangeTracker');
 
   ga('send', 'pageview');
 }
