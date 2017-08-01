@@ -55,36 +55,35 @@ class FaceImage extends Component {
     document.addEventListener('mousemove', this.handleMouseMove);
   }
 
-  getFaceImageForMouseArea = mouseArea => {
-    const {faceImageCollection} = this.props;
+  getFaceImageForMouseArea = () =>
+    // const {faceImageCollection} = this.props;
 
-    if (!faceImageCollection) {
-      return this.props.defaultImage;
-    }
+    // if (!faceImageCollection) {
+    this.props.defaultImage;
+  // }
 
-    switch (mouseArea) {
-      case 'CENTER':
-        return faceImageCollection.center;
-      case 'TOP':
-        return faceImageCollection.top;
-      case 'TOP_RIGHT':
-        return faceImageCollection.topRight;
-      case 'RIGHT':
-        return faceImageCollection.right;
-      case 'BOTTOM_RIGHT':
-        return faceImageCollection.bottomRight;
-      case 'BOTTOM':
-        return faceImageCollection.bottom;
-      case 'BOTTOM_LEFT':
-        return faceImageCollection.bottomLeft;
-      case 'LEFT':
-        return faceImageCollection.left;
-      case 'TOP_LEFT':
-        return faceImageCollection.topLeft;
-      default:
-        return faceImageCollection.topLeft;
-    }
-  };
+  // switch (mouseArea) {
+  //   case 'CENTER':
+  //     return faceImageCollection.center;
+  //   case 'TOP':
+  //     return faceImageCollection.top;
+  //   case 'TOP_RIGHT':
+  //     return faceImageCollection.topRight;
+  //   case 'RIGHT':
+  //     return faceImageCollection.right;
+  //   case 'BOTTOM_RIGHT':
+  //     return faceImageCollection.bottomRight;
+  //   case 'BOTTOM':
+  //     return faceImageCollection.bottom;
+  //   case 'BOTTOM_LEFT':
+  //     return faceImageCollection.bottomLeft;
+  //   case 'LEFT':
+  //     return faceImageCollection.left;
+  //   case 'TOP_LEFT':
+  //     return faceImageCollection.topLeft;
+  //   default:
+  //     return faceImageCollection.topLeft;
+  // }
 
   captureImage = img => {
     this.img = img;
