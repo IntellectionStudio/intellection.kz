@@ -28,7 +28,7 @@ team:
   text: Самая светлая и молодая команда из экспертов мирового уровня. При всех наших достижениях главное для нас - оставаться хорошими.
   topManagers:
     Bakytzhan:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-bakhytzhan.jpg
       firstName: Бакытжан
       lastName: Байжикенов
       position: CEO
@@ -40,7 +40,7 @@ team:
       position: Product Inventor
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
     Gulsum:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-gusi.jpg
       firstName: Гульсум
       lastName: Байжикенова
       position: CFO
@@ -57,123 +57,63 @@ team:
         topRight: aboutus-face-top-right.jpg
         bottom: aboutus-face-bottom.jpg
         left: aboutus-face-left.jpg
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-almas.jpg
       firstName: Алмас
       lastName: Акчабаев
       position: Full stack developer
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
-    Binur:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Бинур
-      lastName: Конарбай
-      position: Frontend Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Anuar:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-anchik.jpg
       firstName: Ануар
       lastName: Жаксылыкбаев
       position: VR Developer
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Damir:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-damir.jpg
       firstName: Дамир
       lastName: Фамилия
       position: Designer
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Aizhan:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-aizh.jpg
       firstName: Айжан
       lastName: Фамилия
       position: Designer
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Assel:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-asselya.jpg
       firstName: Асель
       lastName: Касембекова
       position: Frontend Developer
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
-    Zhenya:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Евгений
-      lastName: Телегин
-      position: Frontend Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Dariga:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-dari.jpg
       firstName: Дарига
       lastName: Байбулсынова
       position: Video Creator
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Adilkhan:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-adilkhan.jpg
       firstName: Адильхан
       lastName: Фамилия
       position: Developer
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
-    Azhar:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Ажар
-      lastName: Куанышева
-      position: Legal advisory
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Bauyrzhan:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-bauka.jpg
       firstName: Бауыржан
       lastName: Алжанов
       position: Developer
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Yerkezhan:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-erkesha.jpg
       firstName: Еркежан
       lastName: Фамилия
       position: Sales
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
-    Aibek:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Айбек
-      lastName: Фамилия
-      position: Sales
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
-    Aktilek:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Актилек
-      lastName: Жумадил
-      position: Sales
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
     Sultan:
-      image: aboutus-dummy-profile.jpeg
+      image: profile-photo-sulta.jpg
       firstName: Султан
       lastName: Фамилия
       position: IOS Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
-    Zhangali:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Жангали
-      lastName: Пернебаев
-      position: IOS Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
-    Yersultan:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Ерсултан
-      lastName: Фамилия
-      position: Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
-    Yerdaulet:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Ердаулет
-      lastName: Беков
-      position: Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
-    Zhanna:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Жанна
-      lastName: Фамилия
-      position: Content maker
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
-    AlmasKairatuly:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Алмас
-      lastName: Кайратулы
-      position: Developer
       text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
 ---
