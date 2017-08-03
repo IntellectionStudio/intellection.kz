@@ -31,20 +31,20 @@ team:
       image: profile-photo-bakhytzhan.jpg
       firstName: Бакытжан
       lastName: Байжикенов
-      position: CEO
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
+      position: CEO, iOS and Android Developer
+      text: Обладатель золотой медали на IOI, финалист ACM-ICPC. Работал в IMO.IM (Palo Alto, USA) и Crozdesk.com (London, UK). Основатель компании Intellection и Intellection Studio
+    Galym:
+      image: profile-photo-galym.png
+      firstName: Галым
+      lastName: Чуашев
+      position: Investor
+      text: Предприниматель, инвестор. Владелец нескольких успешных бизнес проектов в Казахстане. Основатель компании Intellection Studio
     Ilyas:
-      image: aboutus-dummy-profile.jpeg
-      firstName: Ильяс
+      image: profile-photo-iliyas.jpg
+      firstName: Илияс
       lastName: Исатаев
       position: Product Inventor
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
-    Gulsum:
-      image: profile-photo-gusi.jpg
-      firstName: Гульсум
-      lastName: Байжикенова
-      position: CFO
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on. They waited till midnight; but no change took place among the guards. They waited till midnight; but no change took place among the guards.
+      text: Предприниматель, инвестор. Основатель сети фитнес центров Invictus, Crossfit Astana, супермаркетов A2, ресторана Shoreditch 
   teamMembers:
     Almas:
       faceImageCollection:
@@ -60,60 +60,66 @@ team:
       image: profile-photo-almas.jpg
       firstName: Алмас
       lastName: Акчабаев
-      position: Full stack developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+      position: CTO, Full stack developer
+      text: Разработчик и технический руководитель наших проектов. Увлекается программированием и новыми трэндами в разработке. Пришел к нам из мира финансов
     Anuar:
       image: profile-photo-anchik.jpg
       firstName: Ануар
       lastName: Жаксылыкбаев
-      position: VR Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+      position: VR, Android and iOS Developer
+      text: Учится в СДУ. Участник NFactorialIncubator. Создал более 5-ти мобильных приложений. Недавно переквалифицировался в VR разработчика
     Damir:
       image: profile-photo-damir.jpg
       firstName: Дамир
-      lastName: Фамилия
+      lastName: Бектилов
       position: Designer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+      text: Самый молодой участник нашей команды. Очень быстро научился основным трэндам в дизайне. Работает в Intellection, потому что не хочет идти в армию 
     Aizhan:
       image: profile-photo-aizh.jpg
       firstName: Айжан
-      lastName: Фамилия
+      lastName: Есекина
       position: Designer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+      text: Учила графический дизайн в London College of Communication. Умеет красиво петь и играть на гитаре. Основатель проекта AquaPoint. 
     Assel:
       image: profile-photo-asselya.jpg
       firstName: Асель
       lastName: Касембекова
       position: Frontend Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+      text: Раньше работала в Price Waterhouse Cooper. Сейчас увлекается web-разработкой и частенько засиживается до поздна. 
     Dariga:
       image: profile-photo-dari.jpg
       firstName: Дарига
       lastName: Байбулсынова
       position: Video Creator
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+      text: Мастер на все руки. Создает красивые видео для Intellection, пишет блог посты и даже умеет создавать дизайны мобильных приложений и кодить. 
+    Gulsum:
+      image: profile-photo-gusi.jpg
+      firstName: Гульсум
+      lastName: Байжикенова
+      position: CFO
+      text: Генеральный менеджер и лицо нашей компании. К ней можно обратиться с любым непонятным вопросом либо просьбой. Занимается бизнес развитием и маркетингом. Хочет научится "дизайнить". 
     Adilkhan:
       image: profile-photo-adilkhan.jpg
       firstName: Адильхан
-      lastName: Фамилия
-      position: Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+      lastName: Кенжетаев
+      position: Mobile and Web Developer
+      text: Скромный разработчик мобильных и WEB приложений. Увлекается React-Native и хочет научиться Machine Learning, чтобы  искусственный интеллект писал за него код 
     Bauyrzhan:
       image: profile-photo-bauka.jpg
       firstName: Бауыржан
       lastName: Алжанов
-      position: Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+      position: VR, WEB and Android Developer
+      text: Имеет большой опыт в разработке Android приложений. Недавно научился разрабатывать VR технологии в Unity. Также неплохо знает Web и React. 
     Yerkezhan:
       image: profile-photo-erkesha.jpg
       firstName: Еркежан
-      lastName: Фамилия
-      position: Sales
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+      lastName: Женисова
+      position: iOS Developer, Teacher and Sales Manager
+      text: iOS разработчик и по совместительству маркетолог. Преподает дистанционные курсы и записывает видео уроки. Умеет красиво рисовать на iPad-е 
     Sultan:
       image: profile-photo-sulta.jpg
       firstName: Султан
-      lastName: Фамилия
-      position: IOS Developer
-      text: They waited till midnight; but no change took place among the guards, and it became apparent that their yielding to sleep could not be counted on.
+      lastName: Бухарбай
+      position: Web, iOS and Android Developer
+      text: Участник NFactorialIncubator. Умеет программировать мобильные приложения и Web технологии. Любит шутить и приходить на работу раньше всех 
 ---
