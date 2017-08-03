@@ -7016,6 +7016,10 @@ react-player@^0.18.0:
     lodash.omit "^4.5.0"
     prop-types "^15.5.6"
 
+react-popup@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/react-popup/-/react-popup-0.8.0.tgz#ea8f3e5f009b0bb5b41c471d9fd740de8c278cd7"
+
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
   resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-3.0.0-alpha.1.tgz#4400426bcfa80caa6724c7755695315209fa4b07"

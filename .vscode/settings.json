@@ -7,6 +7,8 @@
 
   "flow.useNPMPackagedFlow": true,
 
+  "files.trimTrailingWhitespace": true,
+
   "javascript.validate.enable": false,
   "vsicons.presets.angular": false
 }

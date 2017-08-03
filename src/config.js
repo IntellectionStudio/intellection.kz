@@ -1,6 +1,10 @@
 const config = {
   headerLinks: [
     {
+      title: 'Услуги',
+      path: '/services',
+    },
+    {
       title: 'О нас',
       path: '/about',
     },
@@ -23,6 +27,11 @@ const config = {
     {
       title: 'Блог',
       path: 'https://blog.intellection.kz/',
+    },
+    {
+      title: 'Связаться с нами',
+      path: '/contact',
+      cta: true,
     },
   ],
 };
