@@ -18,11 +18,12 @@ class Header extends Component {
       isOpen: !prevState.isOpen,
     }));
 
-  renderLink = ({title, path}) => (
+  renderLink = ({title, path, cta = false}) => (
     <Link
       key={`${title}-${path}`}
       className={cx(styles.navItem, {
         [styles.navItemOpen]: this.state.isOpen,
+        [styles.ctaButton]: cta,
       })}
       to={path}
     >

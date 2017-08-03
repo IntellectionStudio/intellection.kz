@@ -25,6 +25,9 @@ const Footer = ({homepage}) => (
           <p className={styles.text}>
             ул. Сатпаева 30а/3, этаж 3, Алматы, Казахстан
           </p>
+          <p className={styles.text}>
+            тел: +7 (747) 153 82 30
+          </p>
         </div>
       </div>
       <div className={styles.bottomContainer}>

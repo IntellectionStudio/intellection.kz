@@ -1,0 +1,39 @@
+.container {
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 35px 46px;
+}
+
+.titleContainer {
+  margin-bottom: 36px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.inputTitle {
+  font-size: 12px;
+  font-weight: 100;
+  text-align: left;
+  color: #747e80;
+}
+
+.input {
+  align-items: center;
+  background-color: #eff0f4;
+  border-color: transparent;
+  border-radius: 10px;
+  justify-content: center;
+  padding: 10px 5px;
+  width: 100%;
+  margin: auto;
+}
+
+.textArea {
+  min-height: 120px;
+}
