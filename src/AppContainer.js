@@ -42,8 +42,7 @@ const AppContainer = ({location: {query}, children}) => {
             {async: true, src: 'https://www.google-analytics.com/analytics.js'},
             {
               async: true,
-              src:
-                'https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js',
+              src: 'https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js',
             },
           ]}
         />
