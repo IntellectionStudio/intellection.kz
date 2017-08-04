@@ -12,11 +12,11 @@ const ContactPage = props => (
   <Page {...Page.pickPageProps(props)}>
     <div>
       <div className={styles.cardsContainer}>
-        <CardContainer>
+        <CardContainer containerClassName={styles.contact}>
           <Contact />
         </CardContainer>
 
-        <CardContainer>
+        <CardContainer containerClassName={styles.contactUs}>
           <ContactUs />
         </CardContainer>
       </div>

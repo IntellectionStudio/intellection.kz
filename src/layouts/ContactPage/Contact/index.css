@@ -6,10 +6,6 @@
   padding: 35px 33px;
 }
 
-.form {
-  width: 0;
-}
-
 .titleContainer {
   margin-bottom: 36px;
 }
@@ -20,29 +16,7 @@
   text-align: center;
 }
 
-.itemContainer {
-  margin-bottom: 36px;
-  justify-content: space-between;
-}
-
-.itemTitleContainer {
-  margin-bottom: 15px;
-}
-
-.itemTitle {
-  font-size: 16px;
-  font-weight: 100;
-  text-align: left;
-  color: #747e80;
-}
-
-.itemContentContainer {
-  background-color: white;
-}
-
-.itemContent {
-  font-size: 14px;
-  font-weight: 100;
-  text-align: left;
-  color: #747e80;
+.itemsContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
