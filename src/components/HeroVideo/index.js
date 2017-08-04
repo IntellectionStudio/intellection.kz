@@ -17,7 +17,7 @@ class HeroVideo extends Component {
   renderSource = src => <source key={src} src={src} />;
 
   render() {
-    const {image, playIcon, sources, text, title} = this.props;
+    const {playIcon, sources, text, title} = this.props;
 
     return (
       <div className={styles.heroVideo}>
@@ -35,7 +35,6 @@ class HeroVideo extends Component {
           <div className={styles.heroVideoBackground}>
             <video
               className={styles.responsiveVideo}
-              poster={image}
               playsInline
               autoPlay
               muted
