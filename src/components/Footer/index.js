@@ -5,7 +5,7 @@ import React from 'react';
 
 import styles from './index.css';
 
-const Footer = ({homepage}) =>
+const Footer = ({homepage}) => (
   <footer
     className={cx(styles.footer, {
       [styles.whiteBackground]: homepage,
@@ -24,6 +24,9 @@ const Footer = ({homepage}) =>
           <h3 className={styles.title}>Контакты</h3>
           <p className={styles.text}>
             ул. Сатпаева 30а/3, этаж 3, Алматы, Казахстан
+          </p>
+          <p className={styles.text}>
+            тел: +7 (747) 153 82 30
           </p>
         </div>
       </div>
@@ -63,6 +66,7 @@ const Footer = ({homepage}) =>
         </div>
       </div>
     </div>
-  </footer>;
+  </footer>
+);
 
 export default pure(Footer);
