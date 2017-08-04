@@ -8,8 +8,6 @@ import PhenomicLoaderFeedWebpackPlugin
 import PhenomicLoaderSitemapWebpackPlugin
   from "phenomic/lib/loader-sitemap-webpack-plugin";
 import CopyWebpackPlugin from "copy-webpack-plugin";
-import ImageminPlugin from "imagemin-webpack-plugin";
-import imageminMozjpeg from "imagemin-mozjpeg";
 
 import pkg from "./package.json";
 
@@ -34,48 +32,6 @@ export default (config = {}) => {
     module: {
       noParse: /\.min\.js/,
       rules: [
-        // src-set loader is first dur to https://github.com/timse/srcset-loader#user-content-why-is-the-srcset-loader-before-the-other-loaders
-        {
-          // match image files
-          test: /\.(jpe?g|png|svg|gif)$/,
-
-          // match one of the loader's main parameters (sizes and placeholder)
-          resourceQuery: /[?&](sizes|placeholder)(=|&|\[|$)/,
-
-          use: [
-            "srcset-loader",
-
-            // any other loader
-            {
-              loader: "file-loader",
-              query: {
-                hash: "sha512",
-                digest: "hex",
-                name: "[path][name].[hash].[ext]",
-                context: path.join(__dirname, config.source)
-              }
-            },
-            "image-webpack-loader?optimizationLevel=7&interlaced=false",
-            {
-              loader: "image-webpack-loader",
-              query: {
-                mozjpeg: {
-                  progressive: true
-                },
-                gifsicle: {
-                  interlaced: false
-                },
-                optipng: {
-                  optimizationLevel: 4
-                },
-                pngquant: {
-                  quality: "75-90",
-                  speed: 3
-                }
-              }
-            }
-          ]
-        },
         // *.md => consumed via phenomic special webpack loader
         // allow to generate collection and rss feed.
         {
@@ -198,19 +154,7 @@ export default (config = {}) => {
 
         // copy assets and return generated path in js
         {
-          test: /\.(jpe?g|png|gif)$/,
-          loaders: [
-            {
-              loader: "responsive-loader",
-              query: {
-                name: "[path][name].[hash].",
-                context: path.join(__dirname, config.source)
-              }
-            }
-          ]
-        },
-        {
-          test: /\.(html|ico|eot|otf|webp|ttf|woff|woff2)$/,
+          test: /\.(html|ico|jpe?g|png|gif|eot|otf|webp|ttf|woff|woff2)$/,
           loader: "file-loader",
           query: {
             name: "[path][name].[hash].[ext]",
@@ -240,17 +184,6 @@ export default (config = {}) => {
           // LoaderOptionsPlugin, we must specify it again, otherwise,
           // context is missing (and css modules names can be broken)!
           context: __dirname
-        }
-      }),
-
-      new webpack.LoaderOptionsPlugin({
-        test: /\.(jpe?g|png|gif)$/,
-        options: {
-          responsiveLoader: {
-            sizes: [250, 500, 1000, 2500, 5000, 10000],
-            placeholder: true,
-            placeholderSize: 50
-          }
         }
       }),
 
@@ -286,38 +219,7 @@ export default (config = {}) => {
       new CopyWebpackPlugin([{ from: "admin", to: "admin" }]),
 
       ...(config.production && [
-        new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
-
-        new ImageminPlugin({
-          test: /\.(jpe?g|png|gif|svg)$/i,
-          optipng: {
-            optimizationLevel: 7
-          },
-          pngquant: {
-            quality: "65-90",
-            speed: 4
-          },
-          gifsicle: {
-            optimizationLevel: 3
-          },
-          svgo: {
-            plugins: [
-              {
-                removeViewBox: false,
-                removeEmptyAttrs: true
-              }
-            ]
-          },
-          jpegtran: {
-            progressive: true
-          },
-          plugins: [
-            imageminMozjpeg({
-              quality: 90,
-              progressive: true
-            })
-          ]
-        })
+        new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })
       ])
     ],
 

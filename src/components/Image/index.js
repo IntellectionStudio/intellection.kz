@@ -38,22 +38,11 @@ class Image extends Component {
     });
 
   render() {
-    const info = require(`../../../content/assets/images/${this.props.name}`); // eslint-disable-line import/no-dynamic-require, global-require
+    const info = {
+      src: require(`../../../content/assets/images/${this.props.name}`) // eslint-disable-line
+    };
     if (this.props.background) {
-      const images = info.srcSet
-        .split(',')
-        .map(intermediateValue => intermediateValue.split(' '))
-        .map(array => ({width: array[1], path: array[0]}));
-
-      const imagesBigger = images.filter(
-        image => parseInt(image.width, 10) > this.state.image.width,
-      );
-      let bestFitImage;
-      if (imagesBigger.length === 0) {
-        bestFitImage = images[images.length - 1].path;
-      } else {
-        bestFitImage = imagesBigger[0].path;
-      }
+      const bestFitImage = require(`../../../content/assets/images/${this.props.name}`); // eslint-disable-line
       return (
         <Measure onMeasure={this.handleBackgroundMeasure}>
           <div
@@ -69,11 +58,11 @@ class Image extends Component {
         </Measure>
       );
     }
+
     return (
       <img
         className={this.props.className}
         src={info.src}
-        srcSet={info.srcSet}
         alt={this.props.alt}
         ref={this.props.ref}
       />
