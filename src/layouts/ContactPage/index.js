@@ -10,7 +10,7 @@ import styles from './index.css';
 
 const ContactPage = props => (
   <Page {...Page.pickPageProps(props)}>
-    <div>
+    <div className={styles.container}>
       <div className={styles.cardsContainer}>
         <CardContainer containerClassName={styles.contact}>
           <Contact />

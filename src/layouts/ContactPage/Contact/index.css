@@ -1,8 +1,8 @@
 .container {
+  min-width: 239px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  background-color: white;
   padding: 35px 33px;
 }
 

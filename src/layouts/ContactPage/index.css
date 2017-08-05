@@ -1,9 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cardsContainer {
   width: 85%;
   height: 35%;
-  margin: auto;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;

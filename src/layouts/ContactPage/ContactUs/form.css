@@ -64,4 +64,6 @@
 .submitButtonTitle {
   font-size: 14px;
   color: #fff;
+  background-color: transparent;
+  border-width: 0;
 }
