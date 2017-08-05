@@ -3,10 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5%;
+  margin-bottom: 100px;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 16%;
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    margin-bottom: 100px;
   }
 }
 
@@ -14,9 +18,8 @@
   margin-top: -50px;
   z-index: 999;
   width: 85%;
-  height: 35%;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
