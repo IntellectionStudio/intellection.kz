@@ -1,18 +1,15 @@
 /* @flow */
 
 import {pure} from 'recompact';
-import cx from 'classnames';
 import Popup from 'react-popup';
 import React, {Component} from 'react';
 
+import Form from './Form';
 import styles from './index.css';
 
 type ContactUsStateType = {|
-  email: string,
   isModalOpen: boolean,
-  message: string,
   modalContent: string,
-  name: string,
 |};
 
 const MAND_LINK = 'https://mandrillapp.com/api/1.0/messages/send.json';
@@ -25,21 +22,15 @@ const MESSAGE_NOT_RECEVIED = 'Сообщение не доставлено';
 
 class ContactUs extends Component {
   state: ContactUsStateType = {
-    email: '',
     isModalOpen: false,
-    message: '',
     modalContent: 'Message recevied',
-    name: '',
   };
 
-  handleNameChange = event => this.setState({name: event.target.value});
-
-  handleEmailChange = event => this.setState({email: event.target.value});
-
-  handleMessageChange = event => this.setState({message: event.target.value});
-
-  handleSubmit = event => {
-    event.preventDefault();
+  handleSubmit = (messageParams: {
+    email: string,
+    message: string,
+    name: string,
+  }) => {
     fetch(MAND_LINK, {
       method: 'POST',
       body: JSON.stringify({
@@ -53,7 +44,7 @@ class ContactUs extends Component {
             },
           ],
           subject: 'CONTACT US FORM (intellection.kz)',
-          html: `Name: ${this.state.name}<br/>Email: ${this.state.email}<br/>Message: ${this.state.message}`,
+          html: `Name: ${messageParams.name}<br/>Email: ${messageParams.email}<br/>Message: ${messageParams.message}`,
         },
       }),
     })
@@ -70,45 +61,7 @@ class ContactUs extends Component {
           </h1>
         </div>
 
-        <form className={styles.form} onSubmit={this.handleSubmit}>
-          <div>
-            <h2 className={styles.inputTitle}>ВАШЕ ИМЯ</h2>
-            <input
-              className={styles.input}
-              type="text"
-              name="name"
-              placeholder={'Denis'}
-              value={this.state.name}
-              onChange={this.handleNameChange}
-            />
-          </div>
-
-          <div>
-            <h2 className={styles.inputTitle}>ВАШЕ EMAIL</h2>
-            <input
-              className={styles.input}
-              type="email"
-              name="email"
-              placeholder={'johndoe@gmail.com'}
-              value={this.state.email}
-              onChange={this.handleEmailChange}
-            />
-          </div>
-
-          <div>
-            <h2 className={styles.inputTitle}>ВАШЕ СООБЩЕНИЕ</h2>
-            <textarea
-              className={cx(styles.input, {
-                [styles.textArea]: true,
-              })}
-              name="message"
-              value={this.state.message}
-              onChange={this.handleMessageChange}
-            />
-          </div>
-
-          <input type="submit" value="Submit" />
-        </form>
+        <Form onSubmitButtonPress={this.handleSubmit} />
 
         <Popup />
       </div>

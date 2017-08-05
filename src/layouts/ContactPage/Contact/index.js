@@ -1,37 +1,31 @@
+/* @flow */
+
 import {pure} from 'recompact';
 import React, {Component} from 'react';
 
+import ContactData from './ContactData';
 import styles from './index.css';
 
 class Contact extends Component {
   config = [
     {
+      order: 1,
       title: 'ADDRESS',
       content: ['30A/3 Satpayev str.  Almaty 050000, Kazakhstan'],
     },
     {
+      order: 2,
       title: 'E-MAIL',
       content: ['info@intellection.kz'],
     },
     {
+      order: 3,
       title: 'TELEPHONE',
       content: ['+7 (747) 153 82 30'],
     },
   ];
 
-  renderContent = item => (
-    <div className={styles.itemContainer}>
-      <div className={styles.itemTitleContainer}>
-        <h2 className={styles.itemTitle} key={item}>{item.title}</h2>
-      </div>
-
-      <div className={styles.itemContentContainer}>
-        {item.content.map(content => (
-          <h2 className={styles.itemContent} key={content}>{content}</h2>
-        ))}
-      </div>
-    </div>
-  );
+  renderContent = item => <ContactData item={item} />;
 
   render() {
     return (
@@ -42,7 +36,9 @@ class Contact extends Component {
           </h1>
         </div>
 
-        {this.config.map(item => this.renderContent(item))}
+        <div className={styles.itemsContainer}>
+          {this.config.map(item => this.renderContent(item))}
+        </div>
       </div>
     );
   }
