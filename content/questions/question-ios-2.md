@@ -1,7 +1,7 @@
 ---
-id: 12
-question: What is Android?
-title: Android
+id: 20
+question: Образовательные ресурсы
+title: Образовательные ресурсы
 subject: ios
-items: 5
+items: 3
 ---

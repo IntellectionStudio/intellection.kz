@@ -1,7 +1,7 @@
 ---
-id: 11
-question: What is Android?
-title: Android
+id: 19
+question: Начало работы с iOS
+title: Начало работы с iOS
 subject: ios
-items: 5
+items: 2
 ---
