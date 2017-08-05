@@ -64,7 +64,6 @@
     "ramda": "^0.24.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-google-maps": "^7.2.0",
     "react-helmet": "^5.0.3",
     "react-image-webp": "^0.1.10",
     "react-measure": "^1.4.7",
