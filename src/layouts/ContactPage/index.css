@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 5%;
@@ -10,6 +11,8 @@
 }
 
 .cardsContainer {
+  margin-top: -50px;
+  z-index: 999;
   width: 85%;
   height: 35%;
 
