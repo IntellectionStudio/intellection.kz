@@ -4,13 +4,15 @@ import cx from 'classnames';
 
 import styles from './index.css';
 
-const Button = ({children, containerClassName}) => (
+const Button = ({
+  params: {type, value, containerClassName, inputClassName},
+}) => (
   <div
     className={cx(styles.root, {
       [containerClassName]: !!containerClassName,
     })}
   >
-    {children}
+    <input className={inputClassName} type={type} value={value} />
   </div>
 );
 
