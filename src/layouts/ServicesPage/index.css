@@ -1,0 +1,186 @@
+.container {
+  display: block;
+}
+
+.intro {
+  display: block;
+  flex: column;
+  padding: 60px 30px 0;
+  background-color: #51a9f2;
+  line-height: 1;
+  color: white;
+  height: 1303px;
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    padding-left: 133px;
+    padding-right: 133px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .intro {
+    height: 555px;
+    display: flex;
+    flex: row;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .intro1 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .intro2 {
+    width: 50%;
+  }
+}
+
+.lists {
+  list-style: none;
+  padding: 0;
+}
+
+.list {
+  color: white;
+}
+
+.list::before {
+  padding-right: 11px;
+  content: url('/assets/icons/list-item-ptichka.svg');
+}
+
+.form {
+  background: white;
+  border-radius: 8px;
+  color: black;
+  text-align: center;
+  padding: 25px 37px;
+  font-size: 11px;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    padding: 25px 70px;
+  }
+}
+
+.firstForm {
+  display: flex;
+  flex-flow: column;
+}
+
+@media screen and (min-width: 768px) {
+  .firstForm {
+    flex-flow: row;
+  }
+}
+
+.nameForm {
+  display: block;
+  text-align: left;
+}
+
+.emailForm {
+  display: block;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .nameForm {
+    width: 45%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .emailForm {
+    width: 45%;
+    float: right;
+    margin-left: 61px;
+  }
+}
+
+.textInput {
+  padding: 11px 15px;
+  background: #eff0f4;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.textInput3 {
+  padding: 11px 15px;
+  background: #eff0f4;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.textInput2 {
+  padding: 11px 15px;
+  background: #eff0f4;
+  border: 0;
+  height: initial;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#submit {
+  margin: auto;
+  margin-top: 30px;
+  color: white;
+  font-size: 9px;
+  padding: 13px 17px;
+  width: 77%;
+  background: #51a9f2;
+  border: 0;
+  border-radius: 40px;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  #submit {
+    width: 299px;
+    margin: auto;
+    margin-top: 33px;
+  }
+}
+
+.icon1 {
+  border-radius: 50%;
+  size: 100px;
+}
+
+.process1 {
+  width: 100%;
+}
+
+.process2 {
+  text-align: center;
+  display: block;
+  flex: column;
+  margin: auto;
+  padding-left: 89px;
+  padding-right: 89px;
+}
+
+.projects {
+  background-color: #51a9f2;
+}
+
+.ptitle {
+  text-align: center;
+  color: white;
+  size: 27px;
+  width: 100%;
+  padding: 50px;
+}
+
+.circle1 {
+  size: 100px;
+}
+
