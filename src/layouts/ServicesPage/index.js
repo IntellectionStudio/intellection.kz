@@ -221,38 +221,40 @@ class ServicesPage extends Component {
             <div className={styles.titlePrice}>
               <p>Pricing</p>
             </div>
-            <div className={styles.price}>
-              <p className={styles.simple}>
-                SIMPLE
-              </p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
-            </div>
-            <div className={styles.price}>
-              <p className={styles.simple}>
-                SIMPLE
-              </p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
-            </div>
-            <div className={styles.price}>
-              <p className={styles.simple}>
-                SIMPLE
-              </p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+            <div className={styles.pricesBlock}>
+              <div className={styles.price}>
+                <p className={styles.simple}>
+                  SIMPLE
+                </p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+              </div>
+              <div className={styles.price}>
+                <p className={styles.simple}>
+                  SIMPLE
+                </p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+              </div>
+              <div className={styles.price}>
+                <p className={styles.simple}>
+                  SIMPLE
+                </p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+              </div>
             </div>
             <button
               className={styles.submit2}

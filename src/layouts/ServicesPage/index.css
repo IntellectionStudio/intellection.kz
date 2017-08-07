@@ -235,6 +235,12 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .projects {
+    height: 577px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .projectsName {
     display: flex;
     flex-flow: row;
@@ -383,5 +389,24 @@ a:link {
   border-radius: 10px;
   text-align: center;
   margin-bottom: 23px;
+}
+
+@media screen and (min-width: 768px) {
+  .pricesBlock {
+    display: flex;
+    flex: row;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .pricesBlock {
+    display: flex;
+    margin-top: 55px;
+    flex: row;
+    padding-left: 221px;
+    padding-right: 221px;
+  }
 }
 
