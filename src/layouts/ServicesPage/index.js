@@ -134,30 +134,46 @@ class ServicesPage extends Component {
           </div>
           <div className={styles.process}>
             <div className={styles.process1}>
-              <h1 style={{textAlign: 'center', paddingTop: '33px'}}>
+              <p style={{textAlign: 'center', paddingTop: '33px'}}>
                 Process
-              </h1>
+              </p>
             </div>
             <div className={styles.process2}>
               <div className={styles.icon1}>
                 <div className={styles.circle1}>
-                  <img alt="" src={'/assets/icons/circle1.png'} />
+                  <img
+                    className={styles.img1}
+                    alt=""
+                    src={'/assets/icons/circle1.png'}
+                  />
                 </div>
                 <p>Analysis and planning</p>
               </div>
-              <div className={styles.icon2}>
-                <div className={styles.circle2} />
-                <img alt="" src={'/assets/icons/circle2.png'} />
+              <div className={styles.icon1}>
+                <div className={styles.circle1} />
+                <img
+                  className={styles.img1}
+                  alt=""
+                  src={'/assets/icons/circle2.png'}
+                />
                 <p>Design</p>
               </div>
-              <div className={styles.icon3}>
-                <div className={styles.circle3} />
-                <img alt="" src={'/assets/icons/circle3.png'} />
+              <div className={styles.icon1}>
+                <div className={styles.circle1} />
+                <img
+                  className={styles.img1}
+                  alt=""
+                  src={'/assets/icons/circle3.png'}
+                />
                 <p>Development</p>
               </div>
-              <div className={styles.icon4}>
-                <div className={styles.circle4} />
-                <img alt="" src={'/assets/icons/circle4.png'} />
+              <div className={styles.icon1}>
+                <div className={styles.circle1} />
+                <img
+                  className={styles.img1}
+                  alt=""
+                  src={'/assets/icons/circle4.png'}
+                />
                 <p>Support</p>
               </div>
             </div>
@@ -168,6 +184,84 @@ class ServicesPage extends Component {
                 Some of projects we have built
               </h2>
             </div>
+            <div className={styles.projectsName}>
+              <div className={styles.firstProject}>
+                <img
+                  className={styles.logo}
+                  alt=""
+                  src={'/assets/icons/Qazaq__logo.png'}
+                />
+                <h3 className={styles.projectName}>Qazaq App</h3>
+                <p className={styles.aboutProject}>Another awesome app</p>
+              </div>
+              <div className={styles.secondProject}>
+                <img
+                  className={styles.logo}
+                  alt=""
+                  src={'/assets/icons/Fenix_logo.png'}
+                />
+                <h3 className={styles.projectName}>Fenix News</h3>
+                <p className={styles.aboutProject}>Another awesome app</p>
+              </div>
+              <div className={styles.thirdProject}>
+                <img
+                  className={styles.logo}
+                  alt=""
+                  src={'/assets/icons/Star_logo.png'}
+                />
+                <h3 className={styles.projectName}>I Am Star</h3>
+                <p className={styles.aboutProject}>Another awesome app</p>
+              </div>
+            </div>
+            <div className={styles.ssylka}>
+              <a className={styles.link} href="">and more</a>
+            </div>
+          </div>
+          <div className={styles.prices}>
+            <div className={styles.titlePrice}>
+              <p>Pricing</p>
+            </div>
+            <div className={styles.price}>
+              <p className={styles.simple}>
+                SIMPLE
+              </p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+            </div>
+            <div className={styles.price}>
+              <p className={styles.simple}>
+                SIMPLE
+              </p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+            </div>
+            <div className={styles.price}>
+              <p className={styles.simple}>
+                SIMPLE
+              </p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p>Вы научитесь писать код</p>
+              <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+            </div>
+            <button
+              className={styles.submit2}
+              type="reset"
+              value="Reset"
+              onClick={this.submit}
+            >
+              GET STARTED WITH YOUR IDEA
+            </button>
           </div>
         </div>
       </Page>
