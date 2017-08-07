@@ -1,16 +1,23 @@
 import {Link} from 'phenomic';
 import {pure} from 'recompact';
-import React, {Component} from 'react';
 import cx from 'classnames';
+import React, {Component} from 'react';
 
 import config from 'config';
-import {SVGImage} from 'components';
+import {ChatForm, SVGImage} from 'components';
 
 import styles from './index.css';
 
 class Header extends Component {
   state = {
     isOpen: false,
+    isChatFromOpened: false,
+  };
+
+  handleContactUsClick = () => {
+    this.setState({
+      isChatFromOpened: !this.state.isChatFromOpened,
+    });
   };
 
   handleBurgerButtonClick = () =>
@@ -18,12 +25,11 @@ class Header extends Component {
       isOpen: !prevState.isOpen,
     }));
 
-  renderLink = ({title, path, cta = false}) => (
+  renderLink = ({title, path}) => (
     <Link
       key={`${title}-${path}`}
       className={cx(styles.navItem, {
         [styles.navItemOpen]: this.state.isOpen,
-        [styles.ctaButton]: cta,
       })}
       to={path}
     >
@@ -60,6 +66,15 @@ class Header extends Component {
             })}
           >
             {config.headerLinks.map(this.renderLink)}
+
+            <button
+              className={styles.ctaButton}
+              onClick={this.handleContactUsClick}
+            >
+              <div className={styles.ctaTitle}>
+                Связаться с нами
+              </div>
+            </button>
           </nav>
           <button
             className={cx(styles.burger, {
@@ -75,6 +90,14 @@ class Header extends Component {
             <span />
           </button>
         </header>
+
+        <div className={styles.chatForm}>
+          <ChatForm
+            opened={this.state.isChatFromOpened}
+            handleClose={this.handleContactUsClick}
+          />
+        </div>
+
       </div>
     );
   }
