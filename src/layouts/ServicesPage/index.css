@@ -1,0 +1,387 @@
+.container {
+  display: block;
+}
+
+.intro {
+  display: block;
+  flex: column;
+  padding: 60px 30px 0;
+  background-color: #51a9f2;
+  line-height: 1;
+  color: white;
+  height: 1303px;
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    height: 1009px;
+    padding-left: 133px;
+    padding-right: 133px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .intro {
+    height: 555px;
+    display: flex;
+    flex: row;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .intro1 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .intro2 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intro2 {
+    padding-top: 111px;
+  }
+}
+
+.lists {
+  list-style: none;
+  padding: 0;
+}
+
+.list {
+  color: white;
+}
+
+.list::before {
+  padding-right: 11px;
+  content: url('/assets/icons/list-item-ptichka.svg');
+}
+
+.form {
+  background: white;
+  border-radius: 8px;
+  color: black;
+  text-align: center;
+  padding: 25px 37px;
+  font-size: 11px;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    padding: 25px 70px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .intro2 {
+    padding-top: 0;
+  }
+}
+
+.firstForm {
+  display: flex;
+  flex-flow: column;
+}
+
+@media screen and (min-width: 768px) {
+  .firstForm {
+    flex-flow: row;
+  }
+}
+
+.nameForm {
+  display: block;
+  text-align: left;
+}
+
+.emailForm {
+  display: block;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .nameForm {
+    width: 45%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .emailForm {
+    width: 45%;
+    float: right;
+    margin-left: 61px;
+  }
+}
+
+.textInput {
+  padding: 11px 15px;
+  background: #eff0f4;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.textInput3 {
+  padding: 11px 15px;
+  background: #eff0f4;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.textInput2 {
+  padding: 11px 15px;
+  background: #eff0f4;
+  border: 0;
+  height: initial;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#submit {
+  margin: auto;
+  margin-top: 30px;
+  color: white;
+  font-size: 9px;
+  padding: 13px 17px;
+  width: 100%;
+  background: #51a9f2;
+  border: 0;
+  border-radius: 40px;
+  display: block;
+}
+
+
+.submit2 {
+  margin: auto;
+  margin-top: 30px;
+  color: white;
+  font-size: 11px;
+  padding: 13px 17px;
+  width: 230px;
+  background: #51a9f2;
+  border: 0;
+  border-radius: 40px;
+  display: block;
+  margin-bottom: 33px;
+}
+
+
+@media screen and (min-width: 768px) {
+  #submit {
+    width: 299px;
+    margin: auto;
+    margin-top: 33px;
+  }
+}
+
+.icon1 {
+  border-radius: 50%;
+  size: 100px;
+}
+
+.process1 {
+  width: 100%;
+  color: black;
+  font-size: 25px;
+}
+
+.process2 {
+  text-align: center;
+  display: block;
+  flex: column;
+  margin: auto;
+  padding-left: 89px;
+  padding-right: 89px;
+}
+
+@media screen and (min-width: 768px) {
+  .process2 {
+    display: flex;
+    flex-flow: row;
+    margin: auto;
+    padding-left: 77px;
+    padding-right: 77px;
+    padding-bottom: 27px;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .process2 {
+    display: flex;
+    flex-flow: row;
+    margin: auto;
+    padding-left: 221px;
+    padding-right: 221px;
+    padding-bottom: 33px;
+    justify-content: space-between;
+  }
+}
+
+.projects {
+  background-color: #51a9f2;
+  height: 1063px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    height: 1095px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .projectsName {
+    display: flex;
+    flex-flow: row;
+  }
+}
+
+.ptitle {
+  text-align: center;
+  color: white;
+  size: 27px;
+  width: 100%;
+  padding: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .ptitle {
+    font-size: 25px;
+  }
+}
+
+.icon1 {
+  padding: 11px;
+}
+
+.img1 {
+  height: 100px;
+  width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .img1 {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+.logo {
+  justify-content: center;
+  display: block;
+  width: 85px;
+  height: 130px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.projectName {
+  display: block;
+  margin: auto;
+  width: 155px;
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  padding-top: 23px;
+}
+
+.aboutProject {
+  display: block;
+  padding-top: 11px;
+  margin: auto;
+  width: 155px;
+  color: white;
+  text-align: center;
+}
+
+.firstProject {
+  margin: auto;
+  display: block;
+  flex: column;
+  height: 257px;
+  width: 100%;
+  background-color: #5fc873;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .firstProject {
+    width: 411px;
+    margin-bottom: 19px;
+  }
+}
+
+.secondProject {
+  display: block;
+  flex: column;
+  margin: auto;
+  height: 257px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(251, 206, 51, 1) 0%, rgba(238, 86, 48, 1) 100%);
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .secondProject {
+    margin-bottom: 19px;
+    width: 411px;
+  }
+}
+
+.thirdProject {
+  display: block;
+  flex: column;
+  margin: auto;
+  height: 257px;
+  width: 100%;
+  background-color: #2595fa;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .thirdProject {
+    width: 411px;
+  }
+}
+
+a:link {
+  text-decoration: underline;
+  color: #ffff;
+  font-size: 19px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  padding-top: 43px;
+}
+
+.titlePrice {
+  margin-top: 77px;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.simple {
+  color: #a8acb9;
+  font-size: 19px;
+  text-align: center;
+}
+
+.price {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: auto;
+  width: 230px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 23px;
+}
+
