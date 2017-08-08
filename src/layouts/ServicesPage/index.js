@@ -9,6 +9,8 @@ class ServicesPage extends Component {
     name: '',
     email: '',
     message: '',
+    buttonText: 'GET STARTED WITH YOUR IDEA',
+    disabled: '',
   };
 
   handleChandle(property, value) {
@@ -16,6 +18,9 @@ class ServicesPage extends Component {
     console.log(this.state.name, this.state.email, this.state.message);
   }
   submit = () => {
+    this.submit1();
+  };
+  submit1 = () => {
     fetch('https://mandrillapp.com/api/1.0/messages/send.json', {
       method: 'POST',
       body: JSON.stringify({
@@ -42,11 +47,11 @@ class ServicesPage extends Component {
       });
   };
   success = () => {
-    // document.getElementById('comment').val('');
-    // document.getElementById('name').val('');
-    // // document.getElementById('email').val('');
-    document.getElementById('submit').style.visibility = 'hidden';
-    alert('Hello White');
+    this.setState({email: ''});
+    this.setState({name: ''});
+    this.setState({message: ''});
+    this.setState({buttonText: 'SUCCESSFULLY CREATED'});
+    this.setState({disabled: 'true'});
   };
   render() {
     return (
@@ -94,6 +99,7 @@ class ServicesPage extends Component {
                       id={styles.name}
                       className={styles.textInput}
                       placeholder="Damir"
+                      value={this.state.name}
                       onChange={a => this.handleChandle('name', a.target.value)}
                     />
                   </div>
@@ -103,6 +109,7 @@ class ServicesPage extends Component {
                       id={styles.email}
                       className={styles.textInput3}
                       placeholder="damir331company@gmail.com"
+                      value={this.state.email}
                       onChange={b =>
                         this.handleChandle('email', b.target.value)}
                     />
@@ -113,6 +120,7 @@ class ServicesPage extends Component {
                   ABOUT PROJECT
                 </p>
                 <textarea
+                  value={this.state.message}
                   className={styles.textInput2}
                   rows="7"
                   cols="50"
@@ -121,14 +129,13 @@ class ServicesPage extends Component {
                   id="comment"
                   onChange={c => this.handleChandle('message', c.target.value)}
                 />
-                <button
+                <input
+                  type="button"
                   id={styles.submit}
-                  type="reset"
-                  value="Reset"
+                  value={this.state.buttonText}
                   onClick={this.submit}
-                >
-                  GET STARTED WITH YOUR IDEA
-                </button>
+                  disabled={this.state.disabled}
+                />
               </div>
             </div>
           </div>

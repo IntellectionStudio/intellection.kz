@@ -9,7 +9,7 @@
   background-color: #51a9f2;
   line-height: 1;
   color: white;
-  height: 1303px;
+  height: 1111px;
 }
 
 @media screen and (min-width: 768px) {
@@ -34,6 +34,10 @@
   }
 }
 
+.intro2 {
+  padding-top: 63px;
+}
+
 @media screen and (min-width: 1440px) {
   .intro2 {
     width: 50%;
@@ -42,6 +46,9 @@
 
 @media screen and (min-width: 768px) {
   .intro2 {
+    display: block;
+    margin: auto;
+    width: 465px;
     padding-top: 111px;
   }
 }
