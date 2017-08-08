@@ -1,0 +1,46 @@
+.itemContainer {
+  margin-bottom: 36px;
+  justify-content: space-between;
+  width: 239px;
+}
+
+.itemTitleContainer {
+  margin-bottom: 15px;
+}
+
+.itemTitle {
+  font-size: 16px;
+  font-weight: 100;
+  text-align: left;
+  color: #747e80;
+}
+
+.itemContentContainer {
+  background-color: white;
+}
+
+.itemContent {
+  font-size: 14px;
+  font-weight: 100;
+  text-align: left;
+  color: #747e80;
+}
+
+/* .itemOrder1 {
+  order: 1,
+}
+
+.itemOrder2 {
+  order: 2,
+
+  @media screen and (min-width: 930px) {
+    order: 3,
+  }
+}
+
+.itemOrder3 {
+  order: 3,
+  @media screen and (min-width: 930px) {
+    order: 2,
+  }
+} */

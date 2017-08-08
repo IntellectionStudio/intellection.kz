@@ -1,8 +1,6 @@
-import {IntlProvider} from 'react-intl';
 import React from 'react';
 
 import {Container, Content, DefaultHeadMeta} from 'components';
-import getIntlForLocale from 'utils/getIntlForLocale';
 
 import 'normalize.css/normalize.css';
 import 'react-modal-video/scss/modal-video.scss';
@@ -30,28 +28,22 @@ if (typeof window !== 'undefined') {
 }
 /* eslint-enable */
 
-const AppContainer = ({location: {query}, children}) => {
-  const intlConfig = getIntlForLocale(query.locale);
-
-  return (
-    <IntlProvider {...intlConfig}>
-      <Container>
-        <DefaultHeadMeta
-          scripts={[
-            // GOOGLE Analytics, part 2/2
-            {async: true, src: 'https://www.google-analytics.com/analytics.js'},
-            {
-              async: true,
-              src: 'https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js',
-            },
-          ]}
-        />
-        <Content>
-          {children}
-        </Content>
-      </Container>
-    </IntlProvider>
-  );
-};
+const AppContainer = ({children}) => (
+  <Container>
+    <DefaultHeadMeta
+      scripts={[
+        // GOOGLE Analytics, part 2/2
+        {async: true, src: 'https://www.google-analytics.com/analytics.js'},
+        {
+          async: true,
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js',
+        },
+      ]}
+    />
+    <Content>
+      {children}
+    </Content>
+  </Container>
+);
 
 export default AppContainer;

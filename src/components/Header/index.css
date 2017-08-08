@@ -128,7 +128,8 @@
 }
 
 .ctaButton {
-  background-color: purple;
+  color: white;
+  background-color: #51a9f2;
   padding: 10px 15px;
   border-radius: 10px;
 }

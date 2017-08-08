@@ -15,7 +15,6 @@ class ServicesPage extends Component {
 
   handleChandle(property, value) {
     this.setState({[property]: value});
-    console.log(this.state.name, this.state.email, this.state.message);
   }
   submit = () => {
     this.submit1();

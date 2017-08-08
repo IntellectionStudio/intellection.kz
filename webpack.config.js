@@ -1,82 +1,37 @@
-import path from "path"
+import path from "path";
 
-import webpack from "webpack"
-import ExtractTextPlugin from "extract-text-webpack-plugin"
-import { phenomicLoader } from "phenomic"
+import webpack from "webpack";
+import ExtractTextPlugin from "extract-text-webpack-plugin";
+import { phenomicLoader } from "phenomic";
 import PhenomicLoaderFeedWebpackPlugin
-  from "phenomic/lib/loader-feed-webpack-plugin"
+  from "phenomic/lib/loader-feed-webpack-plugin";
 import PhenomicLoaderSitemapWebpackPlugin
-  from "phenomic/lib/loader-sitemap-webpack-plugin"
-import CopyWebpackPlugin from "copy-webpack-plugin"
-import ImageminPlugin from 'imagemin-webpack-plugin'
-import imageminMozjpeg from 'imagemin-mozjpeg';
+  from "phenomic/lib/loader-sitemap-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 
-import pkg from "./package.json"
+import pkg from "./package.json";
 
 export default (config = {}) => {
-
   // hot loading for postcss config
   // until this is officially supported
   // https://github.com/postcss/postcss-loader/issues/66
-  const postcssPluginFile = require.resolve("./postcss.config.js")
-  const postcssPlugins = (webpackInstance) => {
-    webpackInstance.addDependency(postcssPluginFile)
-    delete require.cache[postcssPluginFile]
-    return require(postcssPluginFile)(config)
-  }
+  const postcssPluginFile = require.resolve("./postcss.config.js");
+  const postcssPlugins = webpackInstance => {
+    webpackInstance.addDependency(postcssPluginFile);
+    delete require.cache[postcssPluginFile];
+    return require(postcssPluginFile)(config);
+  };
 
   return {
-    ...config.dev && {
-      devtool: "#cheap-module-eval-source-map",
-    },
+    ...(config.dev && {
+      devtool: "#cheap-module-eval-source-map"
+    }),
     node: {
-      fs: "empty",
+      fs: "empty"
     },
     module: {
       noParse: /\.min\.js/,
       rules: [
-        // src-set loader is first dur to https://github.com/timse/srcset-loader#user-content-why-is-the-srcset-loader-before-the-other-loaders
-        {
-          // match image files
-          test: /\.(jpe?g|png|svg|gif)$/,
-
-          // match one of the loader's main parameters (sizes and placeholder)
-          resourceQuery: /[?&](sizes|placeholder)(=|&|\[|$)/,
-
-          use: [
-            'srcset-loader',
-
-            // any other loader
-            {
-              loader: "file-loader",
-              query: {
-                hash: 'sha512',
-                digest: 'hex',
-                name: "[path][name].[hash].[ext]",
-                context: path.join(__dirname, config.source),
-              },
-            },
-            'image-webpack-loader?optimizationLevel=7&interlaced=false',
-            {
-              loader: 'image-webpack-loader',
-              query: {
-                mozjpeg: {
-                  progressive: true,
-                },
-                gifsicle: {
-                  interlaced: false,
-                },
-                optipng: {
-                  optimizationLevel: 4,
-                },
-                pngquant: {
-                  quality: '75-90',
-                  speed: 3,
-                },
-              }
-            }
-          ],
-        },
         // *.md => consumed via phenomic special webpack loader
         // allow to generate collection and rss feed.
         {
@@ -84,12 +39,12 @@ export default (config = {}) => {
           test: /\.(md|markdown)$/,
           loader: phenomicLoader,
           query: {
-            context: path.join(__dirname, config.source),
+            context: path.join(__dirname, config.source)
             // plugins: [
             //   ...require("phenomic/lib/loader-preset-markdown").default
             // ]
             // see https://phenomic.io/docs/usage/plugins/
-          },
+          }
         },
 
         // *.js => babel + eslint
@@ -97,12 +52,12 @@ export default (config = {}) => {
           test: /\.js$/,
           include: [
             path.resolve(__dirname, "scripts"),
-            path.resolve(__dirname, "src"),
+            path.resolve(__dirname, "src")
           ],
           loaders: [
             "babel-loader?cacheDirectory",
-            "eslint-loader" + (config.dev ? "?emitWarning" : ""),
-          ],
+            "eslint-loader" + (config.dev ? "?emitWarning" : "")
+          ]
         },
 
         // ! \\
@@ -124,22 +79,20 @@ export default (config = {}) => {
                 loader: "css-loader",
                 query: {
                   modules: true,
-                  localIdentName: (
-                    config.production
+                  localIdentName: config.production
                     ? "[hash:base64:5]"
                     : "[path][name]--[local]--[hash:base64:5]"
-                  ),
-                },
+                }
               },
               {
                 loader: "postcss-loader",
                 // query for postcss can't be used right now
                 // https://github.com/postcss/postcss-loader/issues/99
                 // meanwhile, see webpack.LoaderOptionsPlugin in plugins list
-                query: { plugins: postcssPlugins },
-              },
-            ],
-          }),
+                query: { plugins: postcssPlugins }
+              }
+            ]
+          })
         },
         // *.global.css => global (normal) css
         {
@@ -154,10 +107,10 @@ export default (config = {}) => {
                 // query for postcss can't be used right now
                 // https://github.com/postcss/postcss-loader/issues/99
                 // meanwhile, see webpack.LoaderOptionsPlugin in plugins list
-                query: { plugins: postcssPlugins },
-              },
-            ],
-          }),
+                query: { plugins: postcssPlugins }
+              }
+            ]
+          })
         },
         // ! \\
         // If you want global CSS only, just remove the 2 sections above
@@ -172,7 +125,7 @@ export default (config = {}) => {
           include: [
             path.resolve(__dirname, "node_modules", "normalize.css"),
             path.resolve(__dirname, "node_modules", "tachyons", "css"),
-            path.resolve(__dirname, "node_modules", "react-modal-video", "scss"),
+            path.resolve(__dirname, "node_modules", "react-modal-video", "scss")
           ],
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
@@ -180,13 +133,13 @@ export default (config = {}) => {
               "css-loader",
               {
                 loader: "postcss-loader",
-                query: { "plugins": postcssPlugins },
+                query: { plugins: postcssPlugins }
               },
               {
-                loader: "sass-loader",
-              },
+                loader: "sass-loader"
+              }
             ]
-          }),
+          })
         },
         // ! \\ if you want to use Sass or LESS, you can add sass-loader or
         // less-loader after postcss-loader (or replacing it).
@@ -201,32 +154,20 @@ export default (config = {}) => {
 
         // copy assets and return generated path in js
         {
-          test: /\.(jpe?g|png|gif)$/,
-          loaders: [
-            {
-              loader: 'responsive-loader',
-              query: {
-                name: "[path][name].[hash].",
-                context: path.join(__dirname, config.source),
-              }
-            }
-          ]
-        },
-        {
-          test: /\.(html|ico|eot|otf|webp|ttf|woff|woff2)$/,
+          test: /\.(html|ico|jpe?g|png|gif|eot|otf|webp|ttf|woff|woff2)$/,
           loader: "file-loader",
           query: {
             name: "[path][name].[hash].[ext]",
-            context: path.join(__dirname, config.source),
-          },
+            context: path.join(__dirname, config.source)
+          }
         },
 
         // svg as raw string to be inlined
         {
           test: /\.svg$/,
-          loader: "raw-loader",
-        },
-      ],
+          loader: "raw-loader"
+        }
+      ]
     },
 
     plugins: [
@@ -242,18 +183,7 @@ export default (config = {}) => {
           // this is normally the default value, but when we use
           // LoaderOptionsPlugin, we must specify it again, otherwise,
           // context is missing (and css modules names can be broken)!
-          context: __dirname,
-        },
-      }),
-
-      new webpack.LoaderOptionsPlugin({
-        test: /\.(jpe?g|png|gif)$/,
-        options: {
-          responsiveLoader: {
-            sizes: [100, 250, 500, 750, 1000, 2500, 5000, 10000],
-            placeholder: true,
-            placeholderSize: 50
-          }
+          context: __dirname
         }
       }),
 
@@ -261,7 +191,7 @@ export default (config = {}) => {
         // here you define generic metadata for your feed
         feedsOptions: {
           title: pkg.name,
-          site_url: pkg.homepage,
+          site_url: pkg.homepage
         },
         feeds: {
           // here we define one feed, but you can generate multiple, based
@@ -271,67 +201,34 @@ export default (config = {}) => {
               filter: { layout: "Post" },
               sort: "date",
               reverse: true,
-              limit: 20,
-            },
-          },
-        },
+              limit: 20
+            }
+          }
+        }
       }),
 
       new PhenomicLoaderSitemapWebpackPlugin({
-        site_url: pkg.homepage,
+        site_url: pkg.homepage
       }),
 
       new ExtractTextPlugin({
         filename: "[name].[hash].css",
-        disable: config.dev,
+        disable: config.dev
       }),
 
-      new CopyWebpackPlugin([
-        {from: 'admin', to: 'admin'},
-      ]),
+      new CopyWebpackPlugin([{ from: "admin", to: "admin" }]),
 
-      ...config.production && [
-        new webpack.optimize.UglifyJsPlugin(
-          { compress: { warnings: false } }
-        ),
-
-        new ImageminPlugin({
-          test: /\.(jpe?g|png|gif|svg)$/i,
-          optipng: {
-              optimizationLevel: 7,
-          },
-          pngquant: {
-              quality: '65-90',
-              speed: 4,
-          },
-          gifsicle: {
-              optimizationLevel: 3,
-          },
-          svgo: {
-              plugins: [{
-                  removeViewBox: false,
-                  removeEmptyAttrs: true,
-              }],
-          },
-          jpegtran: {
-              progressive: true,
-          },
-          plugins: [
-              imageminMozjpeg({
-                  quality: 90,
-                  progressive: true,
-              }),
-          ],
-        }),
-      ],
+      ...(config.production && [
+        new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })
+      ])
     ],
 
     output: {
       path: path.join(__dirname, config.destination),
       publicPath: config.baseUrl.pathname,
-      filename: "[name].[hash].js",
+      filename: "[name].[hash].js"
     },
 
-    resolve: { extensions: [ ".js", ".json" ] },
-  }
-}
+    resolve: { extensions: [".js", ".json"] }
+  };
+};
