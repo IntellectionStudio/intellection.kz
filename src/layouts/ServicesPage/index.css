@@ -362,7 +362,7 @@
   }
 }
 
-a:link {
+.link {
   text-decoration: underline;
   color: #ffff;
   font-size: 19px;
