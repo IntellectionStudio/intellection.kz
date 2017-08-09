@@ -1,10 +1,12 @@
 import Button from './Button';
 import Card from './Card';
 import CardContainer from './CardContainer';
+import ChatForm from './ChatForm';
 import Container from './Container';
 import Content from './Content';
 import DefaultHeadMeta from './DefaultHeadMeta';
 import Footer from './Footer';
+import FormButton from './FormButton';
 import Header from './Header';
 import HeroVideo from './HeroVideo';
 import Image from './Image';
@@ -24,10 +26,12 @@ export {
   Button,
   Card,
   CardContainer,
+  ChatForm,
   Container,
   Content,
   DefaultHeadMeta,
   Footer,
+  FormButton,
   Header,
   HeroVideo,
   Image,

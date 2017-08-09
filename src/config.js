@@ -29,9 +29,8 @@ const config = {
       path: 'https://blog.intellection.kz/',
     },
     {
-      title: 'Связаться с нами',
+      title: 'Контакты',
       path: '/contact',
-      cta: true,
     },
   ],
 };

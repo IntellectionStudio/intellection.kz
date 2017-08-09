@@ -18,6 +18,12 @@
   }
 }
 
+.chatForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .white {
   background-color: #fff;
   color: var(--colorPrimary);
@@ -128,10 +134,15 @@
 }
 
 .ctaButton {
-  color: white;
   background-color: #51a9f2;
   padding: 10px 15px;
   border-radius: 10px;
+  border-color: transparent;
+  margin-left: 2.25rem;
+}
+
+.ctaTitle {
+  color: white;
 }
 
 .navItemOpen {
