@@ -77,11 +77,15 @@ class Summary extends Component {
           <tbody>
             <tr>
               <td>Name</td>
-              <td>{nameInput.value}</td>
+              <td>
+                {nameInput.value}
+              </td>
             </tr>
             <tr>
               <td>Connection</td>
-              <td>{connectionType.value}</td>
+              <td>
+                {connectionType.value}
+              </td>
               <td>
                 {(telInput && telInput.value) ||
                   (emailInput && emailInput.value)}
@@ -89,7 +93,9 @@ class Summary extends Component {
             </tr>
             <tr>
               <td>Service type</td>
-              <td>{servicesType.value}</td>
+              <td>
+                {servicesType.value}
+              </td>
             </tr>
           </tbody>
         </table>

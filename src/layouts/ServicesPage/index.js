@@ -9,6 +9,8 @@ class ServicesPage extends Component {
     name: '',
     email: '',
     message: '',
+    buttonText: 'GET STARTED WITH YOUR IDEA',
+    disabled: '',
   };
 
   handleChandle(property, value) {
@@ -16,6 +18,9 @@ class ServicesPage extends Component {
     console.log(this.state.name, this.state.email, this.state.message);
   }
   submit = () => {
+    this.submit1();
+  };
+  submit1 = () => {
     fetch('https://mandrillapp.com/api/1.0/messages/send.json', {
       method: 'POST',
       body: JSON.stringify({
@@ -29,24 +34,23 @@ class ServicesPage extends Component {
             },
           ],
           subject: 'APPLICATION FORM (intellection.kz)',
-          html: `Name: ${this.state.name} <br />Email: ${this.state.email} <br />Message: ${this.state.message} <br />`,
+          html: `Name: ${this.state.name} <br />Email: ${this.state
+            .email} <br />Message: ${this.state.message} <br />`,
         },
       }),
     })
-      .then((res) =>  // eslint-disable-line
-        this.success()
-      ) // eslint-disable-line promise/prefer-await-to-then
+      .then(() => this.success()) // eslint-disable-line promise/prefer-await-to-then
       .catch(err => {
         // TODO
         console.log(err);
       });
   };
   success = () => {
-    // document.getElementById('comment').val('');
-    // document.getElementById('name').val('');
-    // // document.getElementById('email').val('');
-    document.getElementById('submit').style.visibility = 'hidden';
-    alert('Hello White');
+    this.setState({email: ''});
+    this.setState({name: ''});
+    this.setState({message: ''});
+    this.setState({buttonText: 'SUCCESSFULLY CREATED'});
+    this.setState({disabled: 'true'});
   };
   render() {
     return (
@@ -54,33 +58,20 @@ class ServicesPage extends Component {
         <div className={styles.container}>
           <div className={styles.intro}>
             <div className={styles.intro1}>
-              <h1>
-                Have an Uber like App idea?
-              </h1>
+              <h1>Have an Uber like App idea?</h1>
               <h1> We can power it </h1>
               <p>
-                As experts in this space,
-                we understand the core technology
-                that will make your On Demand Idea click.
-                We are dedicated to deliver fully customized
-                solutions and develop Uber clones for your specific business model.
+                As experts in this space, we understand the core technology that
+                will make your On Demand Idea click. We are dedicated to deliver
+                fully customized solutions and develop Uber clones for your
+                specific business model.
               </p>
-              <h2>
-                Why choose us?
-              </h2>
+              <h2>Why choose us?</h2>
               <ul className={styles.lists}>
-                <li className={styles.list}>
-                  Вы научитесь писать код
-                </li>
-                <li className={styles.list}>
-                  Вы научитесь писать код
-                </li>
-                <li className={styles.list}>
-                  Вы научитесь писать код
-                </li>
-                <li className={styles.list}>
-                  Вы научитесь писать код
-                </li>
+                <li className={styles.list}>Вы научитесь писать код</li>
+                <li className={styles.list}>Вы научитесь писать код</li>
+                <li className={styles.list}>Вы научитесь писать код</li>
+                <li className={styles.list}>Вы научитесь писать код</li>
               </ul>
             </div>
             <div className={styles.intro2}>
@@ -94,6 +85,7 @@ class ServicesPage extends Component {
                       id={styles.name}
                       className={styles.textInput}
                       placeholder="Damir"
+                      value={this.state.name}
                       onChange={a => this.handleChandle('name', a.target.value)}
                     />
                   </div>
@@ -103,6 +95,7 @@ class ServicesPage extends Component {
                       id={styles.email}
                       className={styles.textInput3}
                       placeholder="damir331company@gmail.com"
+                      value={this.state.email}
                       onChange={b =>
                         this.handleChandle('email', b.target.value)}
                     />
@@ -113,6 +106,7 @@ class ServicesPage extends Component {
                   ABOUT PROJECT
                 </p>
                 <textarea
+                  value={this.state.message}
                   className={styles.textInput2}
                   rows="7"
                   cols="50"
@@ -121,22 +115,19 @@ class ServicesPage extends Component {
                   id="comment"
                   onChange={c => this.handleChandle('message', c.target.value)}
                 />
-                <button
+                <input
+                  type="button"
                   id={styles.submit}
-                  type="reset"
-                  value="Reset"
+                  value={this.state.buttonText}
                   onClick={this.submit}
-                >
-                  GET STARTED WITH YOUR IDEA
-                </button>
+                  disabled={this.state.disabled}
+                />
               </div>
             </div>
           </div>
           <div className={styles.process}>
             <div className={styles.process1}>
-              <p style={{textAlign: 'center', paddingTop: '33px'}}>
-                Process
-              </p>
+              <p style={{textAlign: 'center', paddingTop: '33px'}}>Process</p>
             </div>
             <div className={styles.process2}>
               <div className={styles.icon1}>
@@ -180,9 +171,7 @@ class ServicesPage extends Component {
           </div>
           <div className={styles.projects}>
             <div className={styles.ptitle}>
-              <h2>
-                Some of projects we have built
-              </h2>
+              <h2>Some of projects we have built</h2>
             </div>
             <div className={styles.projectsName}>
               <div className={styles.firstProject}>
@@ -214,45 +203,43 @@ class ServicesPage extends Component {
               </div>
             </div>
             <div className={styles.ssylka}>
-              <a className={styles.link} href="">and more</a>
+              <a className={styles.link} href="">
+                and more
+              </a>
             </div>
           </div>
           <div className={styles.prices}>
             <div className={styles.titlePrice}>
               <p>Pricing</p>
             </div>
-            <div className={styles.price}>
-              <p className={styles.simple}>
-                SIMPLE
-              </p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
-            </div>
-            <div className={styles.price}>
-              <p className={styles.simple}>
-                SIMPLE
-              </p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
-            </div>
-            <div className={styles.price}>
-              <p className={styles.simple}>
-                SIMPLE
-              </p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p>Вы научитесь писать код</p>
-              <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+            <div className={styles.pricesBlock}>
+              <div className={styles.price}>
+                <p className={styles.simple}>SIMPLE</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+              </div>
+              <div className={styles.price}>
+                <p className={styles.simple}>SIMPLE</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+              </div>
+              <div className={styles.price}>
+                <p className={styles.simple}>SIMPLE</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p>Вы научитесь писать код</p>
+                <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+              </div>
             </div>
             <button
               className={styles.submit2}

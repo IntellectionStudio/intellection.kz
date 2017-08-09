@@ -56,9 +56,7 @@ class ContactUs extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-          <h1 className={styles.title}>
-            Свяжитесь с нами
-          </h1>
+          <h1 className={styles.title}>Свяжитесь с нами</h1>
         </div>
 
         <Form onSubmitButtonPress={this.handleSubmit} />

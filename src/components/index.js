@@ -1,3 +1,4 @@
+import Button from './Button';
 import Card from './Card';
 import CardContainer from './CardContainer';
 import ChatForm from './ChatForm';
@@ -22,6 +23,7 @@ import Topics from './Topics';
 import TopManagerCard from './TopManagerCard';
 
 export {
+  Button,
   Card,
   CardContainer,
   ChatForm,

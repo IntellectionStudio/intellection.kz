@@ -8,7 +8,7 @@ import Contact from './Contact';
 import ContactUs from './ContactUs';
 import styles from './index.css';
 
-const ContactPage = props => (
+const ContactPage = props =>
   <Page {...Page.pickPageProps(props)}>
     <div className={styles.container}>
       <Map />
@@ -22,7 +22,6 @@ const ContactPage = props => (
         </CardContainer>
       </div>
     </div>
-  </Page>
-);
+  </Page>;
 
 export default pure(ContactPage);

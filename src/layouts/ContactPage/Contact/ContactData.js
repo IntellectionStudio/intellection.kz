@@ -28,13 +28,17 @@ class Contact extends Component { // eslint-disable-line
     return (
       <div className={cx(styles.itemContainer, {})}>
         <div className={styles.itemTitleContainer}>
-          <h2 className={styles.itemTitle} key={item}>{item.title}</h2>
+          <h2 className={styles.itemTitle} key={item}>
+            {item.title}
+          </h2>
         </div>
 
         <div className={styles.itemContentContainer}>
-          {item.content.map(content => (
-            <h2 className={styles.itemContent} key={content}>{content}</h2>
-          ))}
+          {item.content.map(content =>
+            <h2 className={styles.itemContent} key={content}>
+              {content}
+            </h2>,
+          )}
         </div>
       </div>
     );
