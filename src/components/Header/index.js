@@ -35,7 +35,6 @@ class Header extends Component {
     >
       {title}
     </Link>;
-
   render() {
     const {white} = this.props;
     const {isOpen} = this.state;

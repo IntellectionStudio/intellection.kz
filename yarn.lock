@@ -6918,6 +6918,10 @@ random-id@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/random-id/-/random-id-0.0.2.tgz#291b7d76d39c914196ca4b19d83509e67cdf1590"
 
+random-id@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/random-id/-/random-id-0.0.2.tgz#291b7d76d39c914196ca4b19d83509e67cdf1590"
+
 randomatic@^1.1.3:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-1.1.7.tgz#c7abe9cc8b87c0baa876b19fde83fd464797e38c"
@@ -6957,6 +6961,10 @@ react-addons-css-transition-group@^15.4.2:
 react-deep-force-update@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-2.1.0.tgz#1c5f36ea96bcbf411605ec063f36c568ea4df86c"
+
+react-dom-factories@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-dom-factories/-/react-dom-factories-1.0.1.tgz#c50692ac5ff1adb39d86dfe6dbe3485dacf58455"
 
 react-dom-factories@^1.0.0:
   version "1.0.1"
@@ -7092,6 +7100,17 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
+
+react-simple-chatbot@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/react-simple-chatbot/-/react-simple-chatbot-0.2.2.tgz#61b8fc587139c82684edb895c29a15c539b454c6"
+  dependencies:
+    circular-json "^0.3.1"
+    lodash "^4.17.4"
+    prop-types "^15.5.8"
+    random-id "0.0.2"
+    react "^15.5.4"
+    react-dom "^15.5.4"
 
 react-simple-chatbot@^0.2.2:
   version "0.2.2"
