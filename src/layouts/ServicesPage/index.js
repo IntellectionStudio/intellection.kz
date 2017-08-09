@@ -34,13 +34,12 @@ class ServicesPage extends Component {
             },
           ],
           subject: 'APPLICATION FORM (intellection.kz)',
-          html: `Name: ${this.state.name} <br />Email: ${this.state.email} <br />Message: ${this.state.message} <br />`,
+          html: `Name: ${this.state.name} <br />Email: ${this.state
+            .email} <br />Message: ${this.state.message} <br />`,
         },
       }),
     })
-      .then((res) =>  // eslint-disable-line
-        this.success()
-      ) // eslint-disable-line promise/prefer-await-to-then
+      .then(() => this.success()) // eslint-disable-line promise/prefer-await-to-then
       .catch(err => {
         // TODO
         console.log(err);
@@ -59,33 +58,20 @@ class ServicesPage extends Component {
         <div className={styles.container}>
           <div className={styles.intro}>
             <div className={styles.intro1}>
-              <h1>
-                Have an Uber like App idea?
-              </h1>
+              <h1>Have an Uber like App idea?</h1>
               <h1> We can power it </h1>
               <p>
-                As experts in this space,
-                we understand the core technology
-                that will make your On Demand Idea click.
-                We are dedicated to deliver fully customized
-                solutions and develop Uber clones for your specific business model.
+                As experts in this space, we understand the core technology that
+                will make your On Demand Idea click. We are dedicated to deliver
+                fully customized solutions and develop Uber clones for your
+                specific business model.
               </p>
-              <h2>
-                Why choose us?
-              </h2>
+              <h2>Why choose us?</h2>
               <ul className={styles.lists}>
-                <li className={styles.list}>
-                  Вы научитесь писать код
-                </li>
-                <li className={styles.list}>
-                  Вы научитесь писать код
-                </li>
-                <li className={styles.list}>
-                  Вы научитесь писать код
-                </li>
-                <li className={styles.list}>
-                  Вы научитесь писать код
-                </li>
+                <li className={styles.list}>Вы научитесь писать код</li>
+                <li className={styles.list}>Вы научитесь писать код</li>
+                <li className={styles.list}>Вы научитесь писать код</li>
+                <li className={styles.list}>Вы научитесь писать код</li>
               </ul>
             </div>
             <div className={styles.intro2}>
@@ -141,9 +127,7 @@ class ServicesPage extends Component {
           </div>
           <div className={styles.process}>
             <div className={styles.process1}>
-              <p style={{textAlign: 'center', paddingTop: '33px'}}>
-                Process
-              </p>
+              <p style={{textAlign: 'center', paddingTop: '33px'}}>Process</p>
             </div>
             <div className={styles.process2}>
               <div className={styles.icon1}>
@@ -187,9 +171,7 @@ class ServicesPage extends Component {
           </div>
           <div className={styles.projects}>
             <div className={styles.ptitle}>
-              <h2>
-                Some of projects we have built
-              </h2>
+              <h2>Some of projects we have built</h2>
             </div>
             <div className={styles.projectsName}>
               <div className={styles.firstProject}>
@@ -221,7 +203,9 @@ class ServicesPage extends Component {
               </div>
             </div>
             <div className={styles.ssylka}>
-              <a className={styles.link} href="">and more</a>
+              <a className={styles.link} href="">
+                and more
+              </a>
             </div>
           </div>
           <div className={styles.prices}>
@@ -230,9 +214,7 @@ class ServicesPage extends Component {
             </div>
             <div className={styles.pricesBlock}>
               <div className={styles.price}>
-                <p className={styles.simple}>
-                  SIMPLE
-                </p>
+                <p className={styles.simple}>SIMPLE</p>
                 <p>Вы научитесь писать код</p>
                 <p>Вы научитесь писать код</p>
                 <p>Вы научитесь писать код</p>
@@ -241,9 +223,7 @@ class ServicesPage extends Component {
                 <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
               </div>
               <div className={styles.price}>
-                <p className={styles.simple}>
-                  SIMPLE
-                </p>
+                <p className={styles.simple}>SIMPLE</p>
                 <p>Вы научитесь писать код</p>
                 <p>Вы научитесь писать код</p>
                 <p>Вы научитесь писать код</p>
@@ -252,9 +232,7 @@ class ServicesPage extends Component {
                 <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
               </div>
               <div className={styles.price}>
-                <p className={styles.simple}>
-                  SIMPLE
-                </p>
+                <p className={styles.simple}>SIMPLE</p>
                 <p>Вы научитесь писать код</p>
                 <p>Вы научитесь писать код</p>
                 <p>Вы научитесь писать код</p>
