@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import styles from './index.css';
 
-const Button = ({
+const FormButton = ({
   params: {type, value, containerClassName, inputClassName},
 }) => (
   <div
@@ -16,4 +16,4 @@ const Button = ({
   </div>
 );
 
-export default pure(Button);
+export default pure(FormButton);

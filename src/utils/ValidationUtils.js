@@ -9,6 +9,7 @@ const ValidationUtils = {
     ),
   isValidPassword: (candidate: string) =>
     candidate.length >= PASSWORD_MIN_LENGTH,
+  isValidTel: (candidate: number) => isNaN(candidate) || candidate < 0,
 };
 
 export default ValidationUtils;

@@ -1,3 +1,5 @@
+/* @flow */
+
 import React, {Component} from 'react';
 import {pure} from 'recompact';
 import ModalVideo from 'react-modal-video';
@@ -12,9 +14,15 @@ class CoursesPage extends Component {
     super();
     this.state = {
       isOpen: false,
+      isModalFormVisible: false,
+      courseTitle: '',
     };
     this.openModal = this.openModal.bind(this);
   }
+
+  handleLeaveMessage = (courseTitle: string) => {
+    this.setState({isModalFormVisible: true, courseTitle});
+  };
 
   openModal() {
     this.setState({isOpen: true});
@@ -143,6 +151,7 @@ class CoursesPage extends Component {
                     </div>
                     <div className={styles.ctaContainer}>
                       <button
+                        onClick={() => this.handleLeaveMessage(course.title)}
                         className={
                           course.button.color === 'blue'
                             ? styles.cta
