@@ -1,11 +1,19 @@
+/* @flow */
+
 import React, {Component} from 'react';
 import Popup from 'react-popup';
 
+import ValidationUtils from 'utils/ValidationUtils';
 import Page from 'layouts/Page';
 
 import styles from './index.css';
 
 const MESSAGE_NOT_RECEVIED = 'Сообщение не доставлено';
+
+const POP_UP_MESSAGE = {
+  invalidEmail: () => Popup.alert('Не правильный email'),
+  emptyInput: () => Popup.alert('Заполните все поля'),
+};
 
 class ServicesPage extends Component {
   state = {
@@ -16,11 +24,26 @@ class ServicesPage extends Component {
     disabled: '',
   };
 
-  handleChandle(property, value) {
+  handleChange = (property, value) => {
     this.setState({[property]: value});
-    console.log(this.state.name, this.state.email, this.state.message);
-  }
+  };
+
+  validInput = (): boolean =>
+    ValidationUtils.isValidEmail(this.state.email) &&
+    this.state.message &&
+    this.state.name;
+
   handleSubmit = () => {
+    if (!ValidationUtils.isValidEmail(this.state.email)) {
+      POP_UP_MESSAGE.invalidEmail();
+      return;
+    }
+
+    if (!this.validInput()) {
+      POP_UP_MESSAGE.emptyInput();
+      return;
+    }
+
     this.sendMessage();
   };
   sendMessage = () => {
@@ -58,10 +81,7 @@ class ServicesPage extends Component {
         <div className={styles.container}>
           <div className={styles.intro}>
             <div className={styles.intro1}>
-              <h1>
-                Только что придумали новый Instagram? Мы можем построить его для
-                Вас
-              </h1>
+              <h1>Придумали новый Instagram? Мы построим его для вас</h1>
               <p>
                 Мы предлагаем услуги разработки мобильных приложений и
                 веб-сайтов любой сложности. Наша команда состоит из 15-ти
@@ -83,50 +103,58 @@ class ServicesPage extends Component {
             <div className={styles.intro2}>
               <div className={styles.form}>
                 <h1>Создайте свой цифровой продукт сегодня</h1>
-                <p>Позвольте нам воплотить вашу идею в реальность</p>
+                <p className={styles.let12}>
+                  Позвольте нам воплотить вашу идею в реальность
+                </p>
                 <div className={styles.firstForm}>
                   <div className={styles.nameForm}>
                     <p style={{color: '#a8acb9'}}>ВАШЕ ИМЯ</p>
                     <input
                       id={styles.name}
                       className={styles.textInput}
-                      placeholder="имя"
+                      placeholder="Имя"
                       value={this.state.name}
-                      onChange={a => this.handleChandle('name', a.target.value)}
+                      onChange={a => this.handleChange('name', a.target.value)}
                     />
                   </div>
                   <div className={styles.emailForm}>
                     <p style={{color: '#a8acb9'}}>EMAIL</p>
                     <input
                       id={styles.email}
+                      type="email"
                       className={styles.textInput3}
                       placeholder="example@gmail.com"
                       value={this.state.email}
-                      onChange={b =>
-                        this.handleChandle('email', b.target.value)}
+                      onChange={b => this.handleChange('email', b.target.value)}
                     />
                   </div>
                 </div>
                 <div className={styles.secondForm} />
-                <p style={{color: '#a8acb9', textAlign: 'left'}}>
+                <p
+                  style={{
+                    color: '#a8acb9',
+                    textAlign: 'left',
+                    marginTop: '23px',
+                  }}
+                >
                   ОПИШИТЕ ВАШ ПРОЕКТ
                 </p>
                 <textarea
                   value={this.state.message}
                   className={styles.textInput2}
-                  placeholder="опишите проект в 2-3 предложениях. Напишите, что вам требуется: мобильное приложение, веб-сайт, игра на Unity, проект по виртуальной реальности, искусственный интеллект..."
+                  placeholder="Опишите проект в 2-3 предложениях. Напишите, что вам требуется: мобильное приложение, веб-сайт, игра на Unity, проект по виртуальной реальности, искусственный интеллект..."
                   rows="7"
                   cols="50"
                   name="comment"
                   form="usrform"
                   id="comment"
-                  onChange={c => this.handleChandle('message', c.target.value)}
+                  onChange={c => this.handleChange('message', c.target.value)}
                 />
                 <input
                   type="button"
                   id={styles.submit}
                   value={this.state.buttonText}
-                  onClick={this.submit}
+                  onClick={this.handleSubmit}
                   disabled={this.state.disabled}
                 />
               </div>
@@ -134,7 +162,14 @@ class ServicesPage extends Component {
           </div>
           <div className={styles.process}>
             <div className={styles.process1}>
-              <p style={{textAlign: 'center', paddingTop: '33px'}}>Процесс</p>
+              <h3
+                style={{
+                  textAlign: 'center',
+                  paddingTop: '33px',
+                }}
+              >
+                Процесс
+              </h3>
             </div>
             <div className={styles.process2}>
               <div className={styles.icon1}>
@@ -178,7 +213,7 @@ class ServicesPage extends Component {
           </div>
           <div className={styles.projects}>
             <div className={styles.ptitle}>
-              <h2>Некоторые наши проекты</h2>
+              <h3>Некоторые наши проекты</h3>
             </div>
             <div className={styles.projectsName}>
               <div className={styles.firstProject}>
@@ -187,20 +222,20 @@ class ServicesPage extends Component {
                   alt=""
                   src={'/assets/icons/Qazaq__logo.png'}
                 />
-                <h3 className={styles.projectName}>Qazaq App</h3>
+                <p className={styles.projectName}>Qazaq App</p>
                 <p className={styles.aboutProject}>
                   Приложение по изучению казахского языка
                 </p>
               </div>
               <div className={styles.secondProject}>
                 <img
-                  className={styles.logo}
+                  className={styles.logoFenix}
                   alt=""
                   src={'/assets/icons/Fenix_logo.png'}
                 />
-                <h3 className={styles.projectName}>Fenix News</h3>
+                <p className={styles.projectName}>Fenix News</p>
                 <p className={styles.aboutProject}>
-                  Аггрегатор новостных сайтов
+                  Агрегатор новостных сайтов
                 </p>
               </div>
               <div className={styles.thirdProject}>
@@ -209,7 +244,7 @@ class ServicesPage extends Component {
                   alt=""
                   src={'/assets/icons/Star_logo.png'}
                 />
-                <h3 className={styles.projectName}>Я звезда!</h3>
+                <p className={styles.projectName}>Я звезда!</p>
                 <p className={styles.aboutProject}>
                   Проведение кастингов и конкурсов онлайн
                 </p>
@@ -223,7 +258,7 @@ class ServicesPage extends Component {
           </div>
           <div className={styles.prices}>
             <div className={styles.titlePrice}>
-              <p>Примерные цены</p>
+              <h3>Примерные цены</h3>
             </div>
             <div className={styles.pricesBlock}>
               <div className={styles.price}>
@@ -264,6 +299,8 @@ class ServicesPage extends Component {
             </button>
           </div>
         </div>
+
+        <Popup />
       </Page>
     );
   }
