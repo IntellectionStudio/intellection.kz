@@ -22,7 +22,8 @@
 
 @media screen and (min-width: 1440px) {
   .intro {
-    height: 555px;
+    padding-top: 25px;
+    height: 565px;
     display: flex;
     flex: row;
   }
@@ -34,9 +35,32 @@
   }
 }
 
-.text {
-  line-height: 25px;
-  font-size: 19px;
+.intro1 h1 {
+  width: 500px;
+  letter-spacing: 1px;
+  line-height: 49px;
+  margin-bottom: 15px;
+}
+
+.intro1 h2 {
+  padding-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .intro1 h2 {
+    padding-top: 15px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .intro1 p {
+    letter-spacing: 1px;
+    line-height: 31px;
+    font-size: 16px;
+    margin-top: 0;
+    width: 500px;
+  }
 }
 
 .intro2 {
@@ -65,7 +89,7 @@
 
 .list {
   line-height: 35px;
-  font-size: 19px;
+  font-size: 16px;
   color: white;
 }
 
@@ -79,20 +103,36 @@
   border-radius: 8px;
   color: black;
   text-align: center;
-  padding: 25px 37px;
   font-size: 11px;
 }
 
 @media screen and (min-width: 768px) {
   .form {
     padding: 25px 70px;
+    height: 465px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .form {
+    padding: 30px 70px;
+    height: 465px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .intro2 {
+    margin-top: 110px;
+    height: 465px;
+    width: 635px;
     padding-top: 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 18px 1px rgba(0, 0, 0, 0.11);
   }
+}
+
+.let12 {
+  font-size: 18px;
 }
 
 .firstForm {
@@ -118,7 +158,7 @@
 
 @media screen and (min-width: 768px) {
   .nameForm {
-    width: 41%;
+    width: 40%;
     float: left;
   }
 }
@@ -128,13 +168,20 @@
   opacity: 0.2;
 }
 
+.textInput2::placeholder {
+  color: gray;
+  opacity: 0.2;
+  line-height: 19px;
+}
+
 .textInput3::placeholder {
   color: gray;
+  opacity: 0.2;
 }
 
 @media screen and (min-width: 768px) {
   .emailForm {
-    width: 77%;
+    width: 60%;
     float: right;
     margin-left: 21px;
   }
@@ -160,37 +207,43 @@
   padding: 11px 15px;
   background: #eff0f4;
   border: 0;
-  height: initial;
+  height: 120px;
   border-radius: 5px;
   width: 100%;
 }
 
 #submit {
+  font-weight: normal;
   margin: auto;
   margin-top: 30px;
   color: white;
-  font-size: 9px;
-  padding: 13px 17px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  padding: 3px 17px;
   width: 100%;
   background: #51a9f2;
   border: 0;
   border-radius: 40px;
   display: block;
+  height: 50px;
 }
 
 
 .submit2 {
+  font-weight: normal;
   margin: auto;
   margin-top: 30px;
   color: white;
-  font-size: 11px;
-  padding: 13px 17px;
-  width: 230px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  padding: 3px 17px;
+  width: 290px;
   background: #51a9f2;
   border: 0;
   border-radius: 40px;
   display: block;
-  margin-bottom: 33px;
+  height: 50px;
+  margin-bottom: 55px;
 }
 
 
@@ -205,6 +258,12 @@
 .icon1 {
   border-radius: 50%;
   size: 100px;
+}
+
+@media screen and (min-width: 1440px) {
+  .process {
+    margin-top: 90px;
+  }
 }
 
 .process1 {
@@ -239,6 +298,7 @@
     display: flex;
     flex-flow: row;
     margin: auto;
+    height: 315px;
     padding-left: 221px;
     padding-right: 221px;
     padding-bottom: 33px;
@@ -309,13 +369,24 @@
   padding-top: 50px;
 }
 
+
+.logoFenix {
+  justify-content: center;
+  display: block;
+  width: 120px;
+  height: 130px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+
 .projectName {
   display: block;
   margin: auto;
   width: 155px;
   color: white;
   text-align: center;
-  font-size: 23px;
+  font-size: 25px;
   padding-top: 23px;
 }
 
@@ -323,9 +394,10 @@
   display: block;
   padding-top: 11px;
   margin: auto;
-  width: 155px;
   color: white;
   text-align: center;
+  width: 280px;
+  font-size: 18px;
 }
 
 .firstProject {
@@ -343,6 +415,10 @@
     width: 411px;
     margin-bottom: 19px;
   }
+}
+
+.secondForm p {
+  margin-top: 33px;
 }
 
 .secondProject {
@@ -404,11 +480,12 @@
 
 .price {
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   display: block;
   margin: auto;
-  width: 230px;
+  width: 280px;
   border-radius: 10px;
   text-align: center;
   margin-bottom: 23px;
@@ -428,8 +505,8 @@
     display: flex;
     margin-top: 55px;
     flex: row;
-    padding-left: 221px;
-    padding-right: 221px;
+    padding-left: 199px;
+    padding-right: 199px;
   }
 }
 
