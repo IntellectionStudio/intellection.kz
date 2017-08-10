@@ -1,4 +1,5 @@
 /* @flow */
+import {isValidNumber} from 'libphonenumber-js';
 
 const PASSWORD_MIN_LENGTH = 8;
 
@@ -9,7 +10,7 @@ const ValidationUtils = {
     ),
   isValidPassword: (candidate: string) =>
     candidate.length >= PASSWORD_MIN_LENGTH,
-  isValidTel: (candidate: number) => isNaN(candidate) || candidate < 0,
+  isValidTel: (candidate: string) => isValidNumber(candidate, 'KZ'),
 };
 
 export default ValidationUtils;
