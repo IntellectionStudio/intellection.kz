@@ -1,6 +1,6 @@
 import {Link} from 'phenomic';
-import {pure} from 'recompact';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import config from 'config';
@@ -9,15 +9,12 @@ import {ChatForm, SVGImage} from 'components';
 import styles from './index.css';
 
 class Header extends Component {
-  state = {
-    isOpen: false,
-    isChatFromOpened: false,
-  };
+  state = {isOpen: false};
 
-  handleContactUsClick = () => {
-    this.setState({
-      isChatFromOpened: !this.state.isChatFromOpened,
-    });
+  static contextTypes = {
+    handleContactUsClick: PropTypes.func.isRequired,
+    isChatFormOpened: PropTypes.bool.isRequired,
+    stepsType: PropTypes.string.isRequired,
   };
 
   handleBurgerButtonClick = () =>
@@ -36,10 +33,12 @@ class Header extends Component {
       {title}
     </Link>
   );
+
   render() {
     const {white} = this.props;
     const {isOpen} = this.state;
-
+    const {stepsType, handleContactUsClick, isChatFormOpened} = this.context;
+    console.log(isChatFormOpened);
     return (
       <div
         className={cx(styles.headerWrapper, {
@@ -66,10 +65,7 @@ class Header extends Component {
           >
             {config.headerLinks.map(this.renderLink)}
 
-            <button
-              className={styles.ctaButton}
-              onClick={this.handleContactUsClick}
-            >
+            <button className={styles.ctaButton} onClick={handleContactUsClick}>
               <div className={styles.ctaTitle}>Связаться с нами</div>
             </button>
           </nav>
@@ -88,14 +84,11 @@ class Header extends Component {
           </button>
         </header>
 
-        <div
-          className={cx(styles.chatForm, {
-            [styles.hiddenChatForm]: !this.state.isChatFromOpened,
-          })}
-        >
+        <div className={styles.chatForm}>
           <ChatForm
-            opened={this.state.isChatFromOpened}
-            handleClose={this.handleContactUsClick}
+            stepsType={stepsType}
+            opened={isChatFormOpened}
+            handleClose={handleContactUsClick}
           />
         </div>
       </div>
@@ -103,4 +96,4 @@ class Header extends Component {
   }
 }
 
-export default pure(Header);
+export default Header;

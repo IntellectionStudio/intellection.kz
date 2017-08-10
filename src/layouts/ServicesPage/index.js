@@ -13,7 +13,7 @@ class ServicesPage extends Component {
     disabled: '',
   };
 
-  handleChandle(property, value) {
+  handleChange(property, value) {
     this.setState({[property]: value});
     console.log(this.state.name, this.state.email, this.state.message);
   }
@@ -34,8 +34,7 @@ class ServicesPage extends Component {
             },
           ],
           subject: 'APPLICATION FORM (intellection.kz)',
-          html: `Name: ${this.state.name} <br />Email: ${this.state
-            .email} <br />Message: ${this.state.message} <br />`,
+          html: `Name: ${this.state.name} <br />Email: ${this.state.email} <br />Message: ${this.state.message} <br />`,
         },
       }),
     })
@@ -86,7 +85,7 @@ class ServicesPage extends Component {
                       className={styles.textInput}
                       placeholder="Damir"
                       value={this.state.name}
-                      onChange={a => this.handleChandle('name', a.target.value)}
+                      onChange={a => this.handleChange('name', a.target.value)}
                     />
                   </div>
                   <div className={styles.emailForm}>
@@ -96,8 +95,7 @@ class ServicesPage extends Component {
                       className={styles.textInput3}
                       placeholder="damir331company@gmail.com"
                       value={this.state.email}
-                      onChange={b =>
-                        this.handleChandle('email', b.target.value)}
+                      onChange={b => this.handleChange('email', b.target.value)}
                     />
                   </div>
                 </div>
@@ -113,7 +111,7 @@ class ServicesPage extends Component {
                   name="comment"
                   form="usrform"
                   id="comment"
-                  onChange={c => this.handleChandle('message', c.target.value)}
+                  onChange={c => this.handleChange('message', c.target.value)}
                 />
                 <input
                   type="button"

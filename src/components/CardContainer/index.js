@@ -4,13 +4,14 @@ import cx from 'classnames';
 
 import styles from './index.css';
 
-const CardContainer = ({children, containerClassName}) =>
+const CardContainer = ({children, containerClassName}) => (
   <div
     className={cx(styles.container, {
       [containerClassName]: !!containerClassName,
     })}
   >
     {children}
-  </div>;
+  </div>
+);
 
 export default pure(CardContainer);

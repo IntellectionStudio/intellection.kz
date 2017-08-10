@@ -8,7 +8,7 @@ import styles from './index.css';
 const API_KEY = 'AIzaSyDHzwnCkK6DwTntBvi2avh6imL2Y5W_Ts0';
 const googleMapURL = `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=Intellection`;
 
-const Map = ({className}) =>
+const Map = ({className}) => (
   <div
     className={cx(styles.intrinsicContainer, {
       [className]: !!className,
@@ -20,6 +20,7 @@ const Map = ({className}) =>
       src={googleMapURL}
       allowFullScreen
     />
-  </div>;
+  </div>
+);
 
 export default Map;
