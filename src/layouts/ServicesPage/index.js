@@ -20,7 +20,7 @@ class ServicesPage extends Component {
     name: '',
     email: '',
     message: '',
-    buttonText: 'GET STARTED WITH YOUR IDEA',
+    buttonText: 'НАЧАТЬ ПРОЕКТ',
     disabled: '',
   };
 
@@ -79,33 +79,39 @@ class ServicesPage extends Component {
         <div className={styles.container}>
           <div className={styles.intro}>
             <div className={styles.intro1}>
-              <h1>Have an Uber like App idea?</h1>
-              <h2> We can power it </h2>
-              <p className={styles.text}>
-                As experts in this space, we understand the core technology that
-                will make your On Demand Idea click. We are dedicated to deliver
-                fully customized solutions and develop Uber clones for your
-                specific business model.
+              <h1>
+                Только что придумали новый Instagram? Мы можем построить его для
+                Вас
+              </h1>
+              <p>
+                Мы предлагаем услуги разработки мобильных приложений и
+                веб-сайтов любой сложности. Наша команда состоит из 15-ти
+                одаренных программистов и дизайнеров, которые уже создали более
+                20 проектов для местных и зарубежных клиентов.
               </p>
-              <h2>Why choose us?</h2>
+              <h2>Почему именно мы?</h2>
               <ul className={styles.lists}>
-                <li className={styles.list}>Вы научитесь писать код</li>
-                <li className={styles.list}>Вы научитесь писать код</li>
-                <li className={styles.list}>Вы научитесь писать код</li>
-                <li className={styles.list}>Вы научитесь писать код</li>
+                <li className={styles.list}>
+                  Итеративный процесс разработки (Agile)
+                </li>
+                <li className={styles.list}>Для нас качество выше цены</li>
+                <li className={styles.list}>У нас самый лучший дизайн</li>
+                <li className={styles.list}>
+                  Абсолютная прозрачность ценообразования
+                </li>
               </ul>
             </div>
             <div className={styles.intro2}>
               <div className={styles.form}>
-                <h1>Create your Marketplace App</h1>
-                <p>Let Juggernaut power your On-Demand App</p>
+                <h1>Создайте свой цифровой продукт сегодня</h1>
+                <p>Позвольте нам воплотить вашу идею в реальность</p>
                 <div className={styles.firstForm}>
                   <div className={styles.nameForm}>
-                    <p style={{color: '#a8acb9'}}>YOUR NAME</p>
+                    <p style={{color: '#a8acb9'}}>ВАШЕ ИМЯ</p>
                     <input
                       id={styles.name}
                       className={styles.textInput}
-                      placeholder="Damir"
+                      placeholder="имя"
                       value={this.state.name}
                       onChange={a => this.handleChange('name', a.target.value)}
                     />
@@ -115,7 +121,7 @@ class ServicesPage extends Component {
                     <input
                       id={styles.email}
                       className={styles.textInput3}
-                      placeholder="damir331company@gmail.com"
+                      placeholder="example@gmail.com"
                       value={this.state.email}
                       onChange={b =>
                         this.handleChandle('email', b.target.value)}
@@ -124,11 +130,12 @@ class ServicesPage extends Component {
                 </div>
                 <div className={styles.secondForm} />
                 <p style={{color: '#a8acb9', textAlign: 'left'}}>
-                  ABOUT PROJECT
+                  ОПИШИТЕ ВАШ ПРОЕКТ
                 </p>
                 <textarea
                   value={this.state.message}
                   className={styles.textInput2}
+                  placeholder="опишите проект в 2-3 предложениях. Напишите, что вам требуется: мобильное приложение, веб-сайт, игра на Unity, проект по виртуальной реальности, искусственный интеллект..."
                   rows="7"
                   cols="50"
                   name="comment"
@@ -148,7 +155,7 @@ class ServicesPage extends Component {
           </div>
           <div className={styles.process}>
             <div className={styles.process1}>
-              <p style={{textAlign: 'center', paddingTop: '33px'}}>Process</p>
+              <p style={{textAlign: 'center', paddingTop: '33px'}}>Процесс</p>
             </div>
             <div className={styles.process2}>
               <div className={styles.icon1}>
@@ -159,7 +166,7 @@ class ServicesPage extends Component {
                     src={'/assets/icons/circle1.png'}
                   />
                 </div>
-                <p>Analysis and planning</p>
+                <p>Анализ и планирование</p>
               </div>
               <div className={styles.icon1}>
                 <div className={styles.circle1} />
@@ -168,7 +175,7 @@ class ServicesPage extends Component {
                   alt=""
                   src={'/assets/icons/circle2.png'}
                 />
-                <p>Design</p>
+                <p>Дизайн</p>
               </div>
               <div className={styles.icon1}>
                 <div className={styles.circle1} />
@@ -177,7 +184,7 @@ class ServicesPage extends Component {
                   alt=""
                   src={'/assets/icons/circle3.png'}
                 />
-                <p>Development</p>
+                <p>Разработка</p>
               </div>
               <div className={styles.icon1}>
                 <div className={styles.circle1} />
@@ -186,13 +193,13 @@ class ServicesPage extends Component {
                   alt=""
                   src={'/assets/icons/circle4.png'}
                 />
-                <p>Support</p>
+                <p>Поддержка</p>
               </div>
             </div>
           </div>
           <div className={styles.projects}>
             <div className={styles.ptitle}>
-              <h2>Some of projects we have built</h2>
+              <h2>Некоторые наши проекты</h2>
             </div>
             <div className={styles.projectsName}>
               <div className={styles.firstProject}>
@@ -202,7 +209,9 @@ class ServicesPage extends Component {
                   src={'/assets/icons/Qazaq__logo.png'}
                 />
                 <h3 className={styles.projectName}>Qazaq App</h3>
-                <p className={styles.aboutProject}>Another awesome app</p>
+                <p className={styles.aboutProject}>
+                  Приложение по изучению казахского языка
+                </p>
               </div>
               <div className={styles.secondProject}>
                 <img
@@ -211,7 +220,9 @@ class ServicesPage extends Component {
                   src={'/assets/icons/Fenix_logo.png'}
                 />
                 <h3 className={styles.projectName}>Fenix News</h3>
-                <p className={styles.aboutProject}>Another awesome app</p>
+                <p className={styles.aboutProject}>
+                  Аггрегатор новостных сайтов
+                </p>
               </div>
               <div className={styles.thirdProject}>
                 <img
@@ -219,47 +230,49 @@ class ServicesPage extends Component {
                   alt=""
                   src={'/assets/icons/Star_logo.png'}
                 />
-                <h3 className={styles.projectName}>I Am Star</h3>
-                <p className={styles.aboutProject}>Another awesome app</p>
+                <h3 className={styles.projectName}>Я звезда!</h3>
+                <p className={styles.aboutProject}>
+                  Проведение кастингов и конкурсов онлайн
+                </p>
               </div>
             </div>
             <div className={styles.ssylka}>
-              <a className={styles.link} href="">
-                and more
+              <a className={styles.link} href="/startups">
+                посмотреть все
               </a>
             </div>
           </div>
           <div className={styles.prices}>
             <div className={styles.titlePrice}>
-              <p>Pricing</p>
+              <p>Примерные цены</p>
             </div>
             <div className={styles.pricesBlock}>
               <div className={styles.price}>
-                <p className={styles.simple}>SIMPLE</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+                <p className={styles.simple}>Базовый функционал</p>
+                <p>от 100 до 300 часов работы </p>
+                <p>Около 5-ти экранов </p>
+                <p>Одна платформа </p>
+                <p>Несложный функционал </p>
+                <p>Публикация на рынках App Store, Google Play </p>
+                <p style={{color: '#51a9f2', fontSize: '33px'}}>$1000-$4000</p>
               </div>
               <div className={styles.price}>
-                <p className={styles.simple}>SIMPLE</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+                <p className={styles.simple}>Средняя сложность</p>
+                <p>от 300 до 800 часов работы </p>
+                <p>Около 10-ти экранов </p>
+                <p>Несколько платформ </p>
+                <p>Более сложный функционал </p>
+                <p>Публикация на рынках App Store, Google Play </p>
+                <p style={{color: '#51a9f2', fontSize: '33px'}}>$4000-$12000</p>
               </div>
               <div className={styles.price}>
-                <p className={styles.simple}>SIMPLE</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p>Вы научитесь писать код</p>
-                <p style={{color: '#51a9f2', fontSize: '33px'}}>$6,800</p>
+                <p className={styles.simple}>Сложное решение</p>
+                <p>Более 800 часов работы </p>
+                <p>Более 10-ти экранов </p>
+                <p>Несколько платформ </p>
+                <p>Сложный функционал </p>
+                <p>Публикация на рынках App Store, Google Play </p>
+                <p style={{color: '#51a9f2', fontSize: '33px'}}>&gt;$12000</p>
               </div>
             </div>
             <button
@@ -268,7 +281,7 @@ class ServicesPage extends Component {
               value="Reset"
               onClick={this.submit}
             >
-              GET STARTED WITH YOUR IDEA
+              НАЧАТЬ ПРОЕКТ
             </button>
           </div>
         </div>
