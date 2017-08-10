@@ -4,7 +4,7 @@ layout: CoursesPage
 heading:
   text: IOS ANDROID REACT-NATIVE
   title: Стань разработчиком мобильных приложений
-youtubeVideoId: FC0pT9xg1oI
+youtubeVideoId: cs1a_Kml89M
 about:
   title: Почему именно наш курс?
   text:
