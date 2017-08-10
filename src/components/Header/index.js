@@ -25,7 +25,7 @@ class Header extends Component {
       isOpen: !prevState.isOpen,
     }));
 
-  renderLink = ({title, path}) =>
+  renderLink = ({title, path}) => (
     <Link
       key={`${title}-${path}`}
       className={cx(styles.navItem, {
@@ -34,7 +34,8 @@ class Header extends Component {
       to={path}
     >
       {title}
-    </Link>;
+    </Link>
+  );
   render() {
     const {white} = this.props;
     const {isOpen} = this.state;
@@ -87,7 +88,11 @@ class Header extends Component {
           </button>
         </header>
 
-        <div className={styles.chatForm}>
+        <div
+          className={cx(styles.chatForm, {
+            [styles.hiddenChatForm]: !this.state.isChatFromOpened,
+          })}
+        >
           <ChatForm
             opened={this.state.isChatFromOpened}
             handleClose={this.handleContactUsClick}

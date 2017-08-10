@@ -97,7 +97,8 @@ const Tel = {
     id: 'telInput',
     user: true,
     trigger,
-    validator: value => ValidationUtils.isValidTel(value),
+    validator: value =>
+      ValidationUtils.isValidTel(value) ? true : 'Неправильный номер телефона',
   }),
   update: (trigger: string) => ({
     id: 'updateEmail',
