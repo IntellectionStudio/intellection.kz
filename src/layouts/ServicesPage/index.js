@@ -24,25 +24,27 @@ class ServicesPage extends Component {
     disabled: '',
   };
 
-  handleChandle(property, value) {
+  handleChange = (property, value) => {
     this.setState({[property]: value});
-    console.log(this.state.name, this.state.email, this.state.message);
-  }
+  };
+
   validInput = (): boolean =>
     ValidationUtils.isValidEmail(this.state.email) &&
     this.state.message &&
     this.state.name;
 
   handleSubmit = () => {
-    console.log('Click');
+    if (!ValidationUtils.isValidEmail(this.state.email)) {
+      POP_UP_MESSAGE.invalidEmail();
+      return;
+    }
+
     if (!this.validInput()) {
-      Popup.alert(POP_UP_MESSAGE.emptyInput());
+      POP_UP_MESSAGE.emptyInput();
+      return;
     }
-    if (!this.isValidEmail()) {
-      Popup.alert(POP_UP_MESSAGE.invalidEmail());
-    } else {
-      this.sendMessage();
-    }
+
+    this.sendMessage();
   };
   sendMessage = () => {
     fetch('https://mandrillapp.com/api/1.0/messages/send.json', {
@@ -119,11 +121,11 @@ class ServicesPage extends Component {
                     <p style={{color: '#a8acb9'}}>EMAIL</p>
                     <input
                       id={styles.email}
+                      type="email"
                       className={styles.textInput3}
                       placeholder="example@gmail.com"
                       value={this.state.email}
-                      onChange={b =>
-                        this.handleChandle('email', b.target.value)}
+                      onChange={b => this.handleChange('email', b.target.value)}
                     />
                   </div>
                 </div>
@@ -146,13 +148,13 @@ class ServicesPage extends Component {
                   name="comment"
                   form="usrform"
                   id="comment"
-                  onChange={c => this.handleChandle('message', c.target.value)}
+                  onChange={c => this.handleChange('message', c.target.value)}
                 />
                 <input
                   type="button"
                   id={styles.submit}
                   value={this.state.buttonText}
-                  onClick={this.submit}
+                  onClick={this.handleSubmit}
                   disabled={this.state.disabled}
                 />
               </div>
@@ -297,6 +299,8 @@ class ServicesPage extends Component {
             </button>
           </div>
         </div>
+
+        <Popup />
       </Page>
     );
   }
