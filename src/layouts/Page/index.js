@@ -35,7 +35,13 @@ const Page = (
   ];
   return (
     <div className={styles.page}>
-      <Helmet title={head.title} meta={meta} />
+      <Helmet title={head.title} meta={meta}>
+        <link
+          rel="shortcut-icon"
+          type="image/x-icon"
+          href="/assets/icons/favicon.ico"
+        />
+      </Helmet>
       <div className={styles.wrapper}>
         <Header white={__url !== '/'} />
         {isLoading ? <Loading /> : children}
