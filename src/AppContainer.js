@@ -28,7 +28,7 @@ if (typeof window !== 'undefined') {
 }
 /* eslint-enable */
 
-const AppContainer = ({children}) =>
+const AppContainer = ({children}) => (
   <Container>
     <DefaultHeadMeta
       scripts={[
@@ -36,14 +36,14 @@ const AppContainer = ({children}) =>
         {async: true, src: 'https://www.google-analytics.com/analytics.js'},
         {
           async: true,
-          src:
-            'https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js',
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js',
         },
       ]}
     />
     <Content>
       {children}
     </Content>
-  </Container>;
+  </Container>
+);
 
 export default AppContainer;

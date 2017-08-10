@@ -24,6 +24,10 @@
   align-items: center;
 }
 
+.hiddenChatForm {
+  height: 0;
+}
+
 .white {
   background-color: #fff;
   color: var(--colorPrimary);
