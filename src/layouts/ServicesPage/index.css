@@ -34,6 +34,11 @@
   }
 }
 
+.text {
+  line-height: 25px;
+  font-size: 19px;
+}
+
 .intro2 {
   padding-top: 63px;
 }
@@ -59,6 +64,8 @@
 }
 
 .list {
+  line-height: 35px;
+  font-size: 19px;
   color: white;
 }
 
@@ -111,16 +118,25 @@
 
 @media screen and (min-width: 768px) {
   .nameForm {
-    width: 45%;
+    width: 41%;
     float: left;
   }
 }
 
+.textInput::placeholder {
+  color: gray;
+  opacity: 0.2;
+}
+
+.textInput3::placeholder {
+  color: gray;
+}
+
 @media screen and (min-width: 768px) {
   .emailForm {
-    width: 45%;
+    width: 77%;
     float: right;
-    margin-left: 61px;
+    margin-left: 21px;
   }
 }
 

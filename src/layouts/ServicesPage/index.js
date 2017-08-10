@@ -80,8 +80,8 @@ class ServicesPage extends Component {
           <div className={styles.intro}>
             <div className={styles.intro1}>
               <h1>Have an Uber like App idea?</h1>
-              <h1> We can power it </h1>
-              <p>
+              <h2> We can power it </h2>
+              <p className={styles.text}>
                 As experts in this space, we understand the core technology that
                 will make your On Demand Idea click. We are dedicated to deliver
                 fully customized solutions and develop Uber clones for your
