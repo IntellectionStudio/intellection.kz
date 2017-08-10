@@ -1,11 +1,19 @@
+/* @flow */
+
 import React, {Component} from 'react';
 import Popup from 'react-popup';
 
+import ValidationUtils from 'utils/ValidationUtils';
 import Page from 'layouts/Page';
 
 import styles from './index.css';
 
 const MESSAGE_NOT_RECEVIED = 'Сообщение не доставлено';
+
+const POP_UP_MESSAGE = {
+  invalidEmail: () => Popup.alert('Не правильный email'),
+  emptyInput: () => Popup.alert('Заполните все поля'),
+};
 
 class ServicesPage extends Component {
   state = {
@@ -20,8 +28,21 @@ class ServicesPage extends Component {
     this.setState({[property]: value});
     console.log(this.state.name, this.state.email, this.state.message);
   }
+  validInput = (): boolean =>
+    ValidationUtils.isValidEmail(this.state.email) &&
+    this.state.message &&
+    this.state.name;
+
   handleSubmit = () => {
-    this.sendMessage();
+    console.log('Click');
+    if (!this.validInput()) {
+      Popup.alert(POP_UP_MESSAGE.emptyInput());
+    }
+    if (!this.isValidEmail()) {
+      Popup.alert(POP_UP_MESSAGE.invalidEmail());
+    } else {
+      this.sendMessage();
+    }
   };
   sendMessage = () => {
     fetch('https://mandrillapp.com/api/1.0/messages/send.json', {
@@ -86,7 +107,7 @@ class ServicesPage extends Component {
                       className={styles.textInput}
                       placeholder="Damir"
                       value={this.state.name}
-                      onChange={a => this.handleChandle('name', a.target.value)}
+                      onChange={a => this.handleChange('name', a.target.value)}
                     />
                   </div>
                   <div className={styles.emailForm}>
