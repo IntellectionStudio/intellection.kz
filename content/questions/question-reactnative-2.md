@@ -1,6 +1,6 @@
 ---
 id: 36
-question: Начало знакомства с React Native
+question: Узнай больше о React Native
 title: React Native
 subject: reactnative
 items: 2

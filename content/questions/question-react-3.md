@@ -1,7 +1,7 @@
 ---
 id: 34
-question: Начало знакомства с React
+question: Пройди курсы и получи сертификацию
 title: React
 subject: react
-items: 2
+items: 1
 ---

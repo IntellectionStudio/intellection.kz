@@ -1,11 +1,11 @@
 ---
-title: "The Right Way to Test React Components"
-description: Just finished your react courses and want to play with it? This is the right place to do that.
+title: "Universal React"
+description: Explore universal react & start building amazing apps
 questionId: 33
 topic: react
 image: null
 video: null
-link: https://medium.freecodecamp.org/the-right-way-to-test-react-components-548a4736ab22
-linkImage: knowledgebase-main.jpg
+link: https://github.com/este/este
+linkImage: reactuniversal.png
 text: null
 ---

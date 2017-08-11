@@ -6,6 +6,6 @@ topic: reactnative
 image: null
 video: null
 link: https://github.com/airbnb/lottie-react-native
-linkImage: knowledgebase-main.jpg
+linkImage: lottie.png
 text: null
 ---

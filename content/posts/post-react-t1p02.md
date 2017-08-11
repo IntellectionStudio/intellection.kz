@@ -1,11 +1,11 @@
 ---
 title: "Awesome-React-Components"
-description: Catalog of React Components & Libriaries
-questionId: 33
+description: Catalog of react components & libriaries
+questionId: 32
 topic: react
 image: null
 video: null
 link: https://github.com/brillout/awesome-react-components
-linkImage: knowledgebase-main.jpg
+linkImage: lazy.png
 text: null
 ---

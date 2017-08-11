@@ -1,7 +1,7 @@
 ---
 id: 33
-question: Начало знакомства с React
+question: Прокачай свои навыки
 title: React
 subject: react
-items: 3
+items: 2
 ---

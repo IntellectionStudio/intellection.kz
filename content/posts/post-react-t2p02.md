@@ -1,11 +1,11 @@
 ---
-title: "Atom Setup for Your Next React Porject"
-description: Levelup by preparing your IDE
+title: "React-Redux"
+description: Curated tutorial and resource links
 questionId: 33
 topic: react
 image: null
 video: null
-link: https://medium.com/@yjose/list-atom-setup-for-your-next-react-project-ed35e0694e10
-linkImage: knowledgebase-main.jpg
+link: https://github.com/markerikson/react-redux-links
+linkImage: reactredux.png
 text: null
 ---

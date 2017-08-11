@@ -1,6 +1,6 @@
 ---
 id: 35
-question: Начало знакомства с React Native
+question: UI и анимации на React Native
 title: React Native
 subject: reactnative
 items: 2

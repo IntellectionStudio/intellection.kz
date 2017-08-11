@@ -1,11 +1,11 @@
 ---
 title: "Story Books"
-description: Interactive development & testing environment for React and React-Native UI components
+description: Interactive development & testing environment for react and react-native UI components
 questionId: 36
 topic: reactnative
 image: null
 video: null
 link: https://github.com/storybooks/storybook
-linkImage: knowledgebase-main.jpg
+linkImage: storybook.png
 text: null
 ---

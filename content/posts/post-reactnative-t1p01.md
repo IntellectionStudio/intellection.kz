@@ -6,6 +6,6 @@ topic: reactnative
 image: null
 video: null
 link: https://reactnativeanimations.com/
-linkImage: knowledgebase-main.jpg
+linkImage: animation.png
 text: null
 ---
