@@ -1,6 +1,5 @@
 import enhanceCollection from 'phenomic/lib/enhance-collection';
 import React, {Component} from 'react';
-import {pure} from 'recompact';
 import PropTypes from 'prop-types';
 import {Link} from 'phenomic';
 
@@ -65,4 +64,4 @@ class TopicPage extends Component {
   }
 }
 
-export default pure(TopicPage);
+export default TopicPage;

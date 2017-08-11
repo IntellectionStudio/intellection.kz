@@ -20,23 +20,19 @@ const defineSteps = (stepsType: StepsType): Object => {
   }
 };
 
-const ChatForm = ({opened, handleClose, stepsType}) => {
-  const steps = defineSteps(stepsType);
-
-  return (
-    <ChatBot
-      floating
-      botDelay={100}
-      bubbleStyle={bubbleStyle}
-      customDelay={100}
-      headerComponent={ChatFormHeader({handleClose})}
-      hideBotAvatar
-      hideUserAvatar
-      opened={opened}
-      toggleFloating={handleClose}
-      steps={steps}
-    />
-  );
-};
+const ChatForm = ({opened, handleClose, stepsType}) =>
+  <ChatBot
+    key={`chatbot-component-${stepsType}`}
+    floating
+    botDelay={100}
+    bubbleStyle={bubbleStyle}
+    customDelay={100}
+    headerComponent={ChatFormHeader({handleClose})}
+    hideBotAvatar
+    hideUserAvatar
+    opened={opened}
+    toggleFloating={handleClose}
+    steps={defineSteps(stepsType)}
+  />;
 
 export default ChatForm;

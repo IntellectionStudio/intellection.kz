@@ -1,5 +1,4 @@
 import {Link} from 'phenomic';
-import {pure} from 'recompact';
 import enhanceCollection from 'phenomic/lib/enhance-collection';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
@@ -71,21 +70,21 @@ class StartupsPage extends Component {
     );
   };
 
-  renderContent = () => (
+  renderContent = () =>
     <div className={styles.content}>
       {this.state.selectedStartupIdx !== null &&
-        this.state.selectedStartupIdx !== undefined
+      this.state.selectedStartupIdx !== undefined
         ? this.renderStartup()
         : this.renderDefaultStartup()}
-    </div>
-  );
+    </div>;
 
   render() {
     const {collection} = this.context;
     const startups = enhanceCollection(collection, {
       filter: contents =>
-        !!(contents.__filename &&
-          contents.__filename.startsWith('startups-list')),
+        !!(
+          contents.__filename && contents.__filename.startsWith('startups-list')
+        ),
     });
 
     return (
@@ -109,4 +108,4 @@ StartupsPage.contextTypes = {
   collection: PropTypes.array.isRequired,
 };
 
-export default pure(StartupsPage);
+export default StartupsPage;

@@ -1,5 +1,4 @@
 import React from 'react';
-import {pure} from 'recompact';
 
 import Page from 'layouts/Page';
 
@@ -20,7 +19,8 @@ const ErrorPage = ({
         ...pageProps,
         head: {
           ...pageProps.head,
-          hero: 'https://farm8.staticflickr.com/7559/16101654539_bee5151340_k.jpg',
+          hero:
+            'https://farm8.staticflickr.com/7559/16101654539_bee5151340_k.jpg',
         },
       }}
     >
@@ -45,4 +45,4 @@ const ErrorPage = ({
   );
 };
 
-export default pure(ErrorPage);
+export default ErrorPage;

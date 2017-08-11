@@ -6,14 +6,13 @@ import styles from './index.css';
 
 const FormButton = ({
   params: {type, value, containerClassName, inputClassName},
-}) => (
+}) =>
   <div
     className={cx(styles.root, {
       [containerClassName]: !!containerClassName,
     })}
   >
     <input className={inputClassName} type={type} value={value} />
-  </div>
-);
+  </div>;
 
 export default pure(FormButton);
