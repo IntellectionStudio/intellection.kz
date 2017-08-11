@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 import Page from 'layouts/Page';
 
@@ -13,9 +14,14 @@ class ServicesPage extends Component {
     disabled: '',
   };
 
+  static contextTypes = {
+    handleChatFormClick: PropTypes.func.isRequired,
+  };
+
+  handleGetStartedClicked = () => this.context.handleChatFormClick('SERVICES');
+
   handleChange(property, value) {
     this.setState({[property]: value});
-    console.log(this.state.name, this.state.email, this.state.message);
   }
   submit = () => {
     this.submit1();
@@ -243,7 +249,7 @@ class ServicesPage extends Component {
               className={styles.submit2}
               type="reset"
               value="Reset"
-              onClick={this.submit}
+              onClick={this.handleGetStartedClicked}
             >
               GET STARTED WITH YOUR IDEA
             </button>

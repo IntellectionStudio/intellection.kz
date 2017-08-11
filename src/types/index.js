@@ -1,3 +1,3 @@
 /* @flow */
 
-export type StepsType = 'CONTACT_US' | 'COURSES';
+export type StepsType = 'CONTACT_US' | 'COURSES' | 'SERVICES';
