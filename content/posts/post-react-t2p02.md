@@ -1,8 +1,8 @@
 ---
-title: Atom Setup for Your Next React Porject
+title: "Atom Setup for Your Next React Porject"
 description: Levelup by preparing your IDE
 questionId: 33
-topic: React
+topic: react
 image: null
 video: null
 link: https://medium.com/@yjose/list-atom-setup-for-your-next-react-project-ed35e0694e10

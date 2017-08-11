@@ -2,6 +2,6 @@
 id: 34
 question: Начало знакомства с React
 title: React
-subject: Dive to React
+subject: react
 items: 2
 ---

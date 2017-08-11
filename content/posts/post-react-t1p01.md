@@ -1,8 +1,8 @@
 ---
-title: React Nanodegree
+title: "React Nanodegree"
 description: Udacity react nanodegree course
 questionId: 32
-topic: React
+topic: react
 image: null
 video: null
 link: https://www.udacity.com/course/react-nanodegree--nd019

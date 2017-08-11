@@ -1,8 +1,8 @@
 ---
-title: Lottie-React-Native
+title: "Lottie-React-Native"
 description: Lottie wrapper for React Native
 questionId: 35
-topic: React Native
+topic: reactnative
 image: null
 video: null
 link: https://github.com/airbnb/lottie-react-native

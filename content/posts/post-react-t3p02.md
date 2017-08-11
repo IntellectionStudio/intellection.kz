@@ -1,8 +1,8 @@
 ---
-title: React-Redux
+title: "React-Redux"
 description: Curated tutorial and resource links
 questionId: 34
-topic: React
+topic: react
 image: null
 video: null
 link: https://github.com/markerikson/react-redux-links

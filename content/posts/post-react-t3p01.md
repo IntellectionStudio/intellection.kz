@@ -1,8 +1,8 @@
 ---
-title: Universal React
+title: "Universal React"
 description: Explore Universal React & Start Building Amazing Apps
 questionId: 34
-topic: React
+topic: react
 image: null
 video: null
 link: https://github.com/este/este
