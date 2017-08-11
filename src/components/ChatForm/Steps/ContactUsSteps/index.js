@@ -2,6 +2,7 @@ import {
   ConnectionType,
   Email,
   Name,
+  PickUp,
   review,
   ServiceType,
   Tel,
@@ -10,18 +11,27 @@ import {
 export default [
   {
     id: 1,
-    message: 'Здравствуйте! Меня зовут Intellection и я хотел бы с Вами пообщаться',
-    trigger: 'name',
+    message: 'Здравствуйте! Меня зовут Intellection Bot и я рад приветствовать Вас на нашем сайте.',
+    trigger: 'pickUp',
   },
   {
+    id: 'pickUp',
+    message: 'Можно с Вами познакомиться?',
+    trigger: PickUp.id,
+  },
+  PickUp.options({
+    positive: 'name',
+    negative: 'end-message',
+  }),
+  {
     id: 'name',
-    message: 'Для начала, как Вас зовут?',
+    message: 'Как Вас зовут?',
     trigger: Name.id,
   },
   Name.input('services'),
   {
     id: 'services',
-    message: 'Что вас интересует?',
+    message: 'Что Вас интересует? (Нажмите на правильный вариант ответа)',
     trigger: ServiceType.id,
   },
   ServiceType.options('connection'),
@@ -55,7 +65,7 @@ export default [
   review('end-message'),
   {
     id: 'end-message',
-    message: 'Спасибо! Мне было очень приятно с вами поговорить!',
+    message: 'Спасибо! Кто нибудь из нашей команды обязательно с Вами свяжется.Если вы желаете отправить форму заново просто перезагрузите страницу.',
     end: true,
   },
 ];

@@ -5,6 +5,31 @@ import ValidationUtils from 'utils/ValidationUtils';
 
 import Summary from './Summary';
 
+const PickUp = {
+  id: 'pickUpOpt',
+  updateId: 'updatePickUp',
+  options: (trigger: {|positive: string, negative: string|}) => ({
+    id: 'pickUpOpt',
+    options: [
+      {
+        value: 'yes',
+        label: 'Да',
+        trigger: trigger.positive,
+      },
+      {
+        value: 'no',
+        label: 'Нет',
+        trigger: trigger.negative,
+      },
+    ],
+  }),
+  update: (trigger: string) => ({
+    id: 'updatePickUp',
+    update: 'pickUpOpt',
+    trigger,
+  }),
+};
+
 const Name = {
   id: 'nameInput',
   updateId: 'updateName',
@@ -114,4 +139,4 @@ const review = (trigger: string) => ({
   trigger,
 });
 
-export {ConnectionType, Email, Name, review, ServiceType, Tel};
+export {ConnectionType, Email, Name, review, ServiceType, Tel, PickUp};
