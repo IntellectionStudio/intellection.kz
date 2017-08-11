@@ -74,17 +74,17 @@ class CoursesPage extends Component {
               <h2 className={styles.aboutTitle}>
                 {about.title}
               </h2>
-              {about.text.map(text => (
+              {about.text.map(text =>
                 <p key={text} className={styles.aboutText}>
                   {text}
-                </p>
-              ))}
+                </p>,
+              )}
               <ul className={styles.benefits}>
-                {benefits.map(benefit => (
+                {benefits.map(benefit =>
                   <li key={benefit} className={styles.benefit}>
                     {benefit}
-                  </li>
-                ))}
+                  </li>,
+                )}
               </ul>
             </div>
             <div className={styles.mainRight}>
@@ -112,13 +112,13 @@ class CoursesPage extends Component {
                   />
                 </div>
               </div>
-              {courses.map(course => (
+              {courses.map(course =>
                 <div key={course.title} className={styles.course}>
                   <h2 className={styles.courseTitle}>
                     {course.title}
                   </h2>
                   <div className={styles.attributes}>
-                    {course.attributes.map(attr => (
+                    {course.attributes.map(attr =>
                       <div
                         key={attr.header ? attr.header : attr.src}
                         className={styles.attribute}
@@ -135,8 +135,8 @@ class CoursesPage extends Component {
                         <p className={styles.attributeText}>
                           {attr.text}
                         </p>
-                      </div>
-                    ))}
+                      </div>,
+                    )}
                   </div>
                   <div className={styles.courseSummary}>
                     <div className={styles.price}>
@@ -160,8 +160,8 @@ class CoursesPage extends Component {
                       </button>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>,
+              )}
             </div>
           </div>
         </div>

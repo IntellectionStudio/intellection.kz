@@ -16,7 +16,8 @@ import ChatFormHeader from './ChatFormHeader';
 const steps = [
   {
     id: 1,
-    message: 'Здравствуйте! Меня зовут Intellection и я хотел бы с Вами пообщаться',
+    message:
+      'Здравствуйте! Меня зовут Intellection и я хотел бы с Вами пообщаться',
     trigger: 'name',
   },
   {
@@ -71,7 +72,7 @@ const bubbleStyle = {
   background: '#51a9f2',
 };
 
-const ChatForm = ({opened, handleClose}) => (
+const ChatForm = ({opened, handleClose}) =>
   <ChatBot
     floating
     botDelay={100}
@@ -83,7 +84,6 @@ const ChatForm = ({opened, handleClose}) => (
     opened={opened}
     toggleFloating={handleClose}
     steps={steps}
-  />
-);
+  />;
 
 export default ChatForm;
