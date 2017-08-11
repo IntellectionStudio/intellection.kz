@@ -207,12 +207,19 @@
 
 @media screen and (min-width: 768px) {
   .let12 {
-    width: 560px;
+    width: 495px;
     margin-left: 0;
     margin-right: 0;
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .let12 {
+    width: 560px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 .firstForm {
   display: flex;
@@ -631,7 +638,7 @@
   @media screen and (min-width: 320px) {
     width: 230px;
     padding-top: 9px;
-    height: 399px;
+    height: 420px;
   }
 
   @media screen and (min-width: 768px) {
