@@ -45,7 +45,6 @@ class AppContainer extends Component {
 
   static childContextTypes = {
     handleChatFormClick: PropTypes.func,
-    handleContactUsClick: PropTypes.func,
     isChatFormOpened: PropTypes.bool,
     stepsType: PropTypes.string,
   };
@@ -53,16 +52,10 @@ class AppContainer extends Component {
   getChildContext(): Object {
     return {
       handleChatFormClick: this.handleChatFormClick,
-      handleContactUsClick: this.handleContactUsClick,
       isChatFormOpened: this.state.isChatFormOpened,
       stepsType: this.state.stepsType,
     };
   }
-
-  handleContactUsClick = () =>
-    this.setState({
-      isChatFormOpened: !this.state.isChatFormOpened,
-    });
 
   handleChatFormClick = (stepsType: StepsType) =>
     this.setState({stepsType, isChatFormOpened: !this.state.isChatFormOpened});

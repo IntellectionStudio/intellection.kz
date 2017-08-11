@@ -12,7 +12,7 @@ class Header extends Component {
   state = {isOpen: false};
 
   static contextTypes = {
-    handleContactUsClick: PropTypes.func.isRequired,
+    handleChatFormClick: PropTypes.func.isRequired,
     isChatFormOpened: PropTypes.bool.isRequired,
     stepsType: PropTypes.string.isRequired,
   };
@@ -21,6 +21,8 @@ class Header extends Component {
     this.setState(prevState => ({
       isOpen: !prevState.isOpen,
     }));
+
+  handleContactUs = () => this.context.handleChatFormClick('');
 
   renderLink = ({title, path}) => (
     <Link
@@ -37,8 +39,8 @@ class Header extends Component {
   render() {
     const {white} = this.props;
     const {isOpen} = this.state;
-    const {stepsType, handleContactUsClick, isChatFormOpened} = this.context;
-    console.log(isChatFormOpened);
+    const {stepsType, isChatFormOpened} = this.context;
+
     return (
       <div
         className={cx(styles.headerWrapper, {
@@ -65,7 +67,7 @@ class Header extends Component {
           >
             {config.headerLinks.map(this.renderLink)}
 
-            <button className={styles.ctaButton} onClick={handleContactUsClick}>
+            <button className={styles.ctaButton} onClick={this.handleContactUs}>
               <div className={styles.ctaTitle}>Связаться с нами</div>
             </button>
           </nav>
@@ -88,7 +90,7 @@ class Header extends Component {
           <ChatForm
             stepsType={stepsType}
             opened={isChatFormOpened}
-            handleClose={handleContactUsClick}
+            handleClose={this.handleContactUs}
           />
         </div>
       </div>
