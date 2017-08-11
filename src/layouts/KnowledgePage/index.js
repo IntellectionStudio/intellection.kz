@@ -1,5 +1,4 @@
 import React from 'react';
-import {pure} from 'recompact';
 
 import {Topics} from 'components';
 
@@ -12,4 +11,4 @@ const KnowledgePage = props =>
     </div>
   </Page>;
 
-export default pure(KnowledgePage);
+export default KnowledgePage;

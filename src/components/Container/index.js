@@ -1,4 +1,3 @@
-import {pure} from 'recompact';
 import React from 'react';
 
 import styles from './index.css';
@@ -8,4 +7,4 @@ const Container = ({children}) =>
     {children}
   </div>;
 
-export default pure(Container);
+export default Container;

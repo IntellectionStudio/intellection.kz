@@ -1,6 +1,6 @@
 import {Link} from 'phenomic';
-import {pure} from 'recompact';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import config from 'config';
@@ -9,21 +9,20 @@ import {ChatForm, SVGImage} from 'components';
 import styles from './index.css';
 
 class Header extends Component {
-  state = {
-    isOpen: false,
-    isChatFromOpened: false,
-  };
+  state = {isOpen: false};
 
-  handleContactUsClick = () => {
-    this.setState({
-      isChatFromOpened: !this.state.isChatFromOpened,
-    });
+  static contextTypes = {
+    handleChatFormClick: PropTypes.func.isRequired,
+    isChatFormOpened: PropTypes.bool.isRequired,
+    stepsType: PropTypes.string.isRequired,
   };
 
   handleBurgerButtonClick = () =>
     this.setState(prevState => ({
       isOpen: !prevState.isOpen,
     }));
+
+  handleContactUs = () => this.context.handleChatFormClick('');
 
   renderLink = ({title, path}) =>
     <Link
@@ -35,9 +34,11 @@ class Header extends Component {
     >
       {title}
     </Link>;
+
   render() {
     const {white} = this.props;
     const {isOpen} = this.state;
+    const {stepsType, isChatFormOpened} = this.context;
 
     return (
       <div
@@ -65,10 +66,7 @@ class Header extends Component {
           >
             {config.headerLinks.map(this.renderLink)}
 
-            <button
-              className={styles.ctaButton}
-              onClick={this.handleContactUsClick}
-            >
+            <button className={styles.ctaButton} onClick={this.handleContactUs}>
               <div className={styles.ctaTitle}>Связаться с нами</div>
             </button>
           </nav>
@@ -87,14 +85,11 @@ class Header extends Component {
           </button>
         </header>
 
-        <div
-          className={cx(styles.chatForm, {
-            [styles.hiddenChatForm]: !this.state.isChatFromOpened,
-          })}
-        >
+        <div className={styles.chatForm}>
           <ChatForm
-            opened={this.state.isChatFromOpened}
-            handleClose={this.handleContactUsClick}
+            stepsType={stepsType}
+            opened={isChatFormOpened}
+            handleClose={this.handleContactUs}
           />
         </div>
       </div>
@@ -102,4 +97,4 @@ class Header extends Component {
   }
 }
 
-export default pure(Header);
+export default Header;

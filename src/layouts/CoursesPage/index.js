@@ -1,30 +1,32 @@
 /* @flow */
 
-import React, {Component} from 'react';
-import {pure} from 'recompact';
 import ModalVideo from 'react-modal-video';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 
-import Page from 'layouts/Page';
 import {Image, SVGImage} from 'components';
+import Page from 'layouts/Page';
 
 import styles from './index.css';
 
-class CoursesPage extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isOpen: false,
-    };
-    this.openModal = this.openModal.bind(this);
-  }
+type CoursesPageStateType = {|
+  isOpen: boolean,
+|};
 
-  handleLeaveMessage = () => {
-    console.log('Props: ', this.props);
+class CoursesPage extends Component {
+  state: CoursesPageStateType = {
+    isOpen: false,
   };
 
-  openModal() {
+  static contextTypes = {
+    handleChatFormClick: PropTypes.func.isRequired,
+  };
+
+  handleLeaveMessage = () => this.context.handleChatFormClick('COURSES');
+
+  openModal = () => {
     this.setState({isOpen: true});
-  }
+  };
 
   render() {
     const {
@@ -170,4 +172,4 @@ class CoursesPage extends Component {
   }
 }
 
-export default pure(CoursesPage);
+export default CoursesPage;

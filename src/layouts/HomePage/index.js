@@ -1,5 +1,4 @@
 import React from 'react';
-import {pure} from 'recompact';
 
 import {Card, HeroVideo} from 'components';
 import mapValues from 'utils/mapValues';
@@ -20,4 +19,4 @@ const HomePage = props =>
     </div>
   </Page>;
 
-export default pure(HomePage);
+export default HomePage;

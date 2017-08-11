@@ -1,4 +1,3 @@
-import {pure} from 'recompact';
 import Helmet from 'react-helmet';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -47,4 +46,4 @@ DefaultHeadMeta.contextTypes = {
   metadata: PropTypes.object.isRequired,
 };
 
-export default pure(DefaultHeadMeta);
+export default DefaultHeadMeta;

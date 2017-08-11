@@ -1,5 +1,4 @@
 import {Link} from 'phenomic';
-import {pure} from 'recompact';
 import enhanceCollection from 'phenomic/lib/enhance-collection';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
@@ -109,4 +108,4 @@ StartupsPage.contextTypes = {
   collection: PropTypes.array.isRequired,
 };
 
-export default pure(StartupsPage);
+export default StartupsPage;

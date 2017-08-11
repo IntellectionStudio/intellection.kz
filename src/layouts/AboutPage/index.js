@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {pure} from 'recompact';
 import ModalVideo from 'react-modal-video';
 
 import mapValues from 'utils/mapValues';
@@ -137,4 +136,4 @@ class AboutPage extends Component {
   }
 }
 
-export default pure(AboutPage);
+export default AboutPage;

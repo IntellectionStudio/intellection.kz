@@ -1,5 +1,4 @@
 import React from 'react';
-import {pure} from 'recompact';
 
 import {CardContainer, Map} from 'components';
 import Page from 'layouts/Page';
@@ -24,4 +23,4 @@ const ContactPage = props =>
     </div>
   </Page>;
 
-export default pure(ContactPage);
+export default ContactPage;

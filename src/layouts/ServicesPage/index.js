@@ -1,6 +1,7 @@
 /* @flow */
 
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Popup from 'react-popup';
 
 import ValidationUtils from 'utils/ValidationUtils';
@@ -24,8 +25,17 @@ class ServicesPage extends Component {
     disabled: '',
   };
 
-  handleChange = (property, value) => {
+  static contextTypes = {
+    handleChatFormClick: PropTypes.func.isRequired,
+  };
+
+  handleGetStartedClicked = () => this.context.handleChatFormClick('SERVICES');
+
+  handleChange(property, value) {
     this.setState({[property]: value});
+  }
+  submit = () => {
+    this.submit1();
   };
 
   validInput = (): boolean =>
@@ -295,7 +305,7 @@ class ServicesPage extends Component {
               className={styles.submit2}
               type="reset"
               value="Reset"
-              onClick={this.submit}
+              onClick={this.handleGetStartedClicked}
             >
               НАЧАТЬ ПРОЕКТ
             </button>
