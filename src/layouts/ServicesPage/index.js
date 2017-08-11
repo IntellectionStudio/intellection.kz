@@ -130,33 +130,35 @@ class ServicesPage extends Component {
                   </div>
                 </div>
                 <div className={styles.secondForm} />
-                <p
-                  style={{
-                    color: '#a8acb9',
-                    textAlign: 'left',
-                    marginTop: '23px',
-                  }}
-                >
-                  ОПИШИТЕ ВАШ ПРОЕКТ
-                </p>
-                <textarea
-                  value={this.state.message}
-                  className={styles.textInput2}
-                  placeholder="Опишите проект в 2-3 предложениях. Напишите, что вам требуется: мобильное приложение, веб-сайт, игра на Unity, проект по виртуальной реальности, искусственный интеллект..."
-                  rows="7"
-                  cols="50"
-                  name="comment"
-                  form="usrform"
-                  id="comment"
-                  onChange={c => this.handleChange('message', c.target.value)}
-                />
-                <input
-                  type="button"
-                  id={styles.submit}
-                  value={this.state.buttonText}
-                  onClick={this.handleSubmit}
-                  disabled={this.state.disabled}
-                />
+                <div className={styles.messageInput}>
+                  <p
+                    style={{
+                      color: '#a8acb9',
+                      textAlign: 'left',
+                      marginTop: '23px',
+                    }}
+                  >
+                    ОПИШИТЕ ВАШ ПРОЕКТ
+                  </p>
+                  <textarea
+                    value={this.state.message}
+                    className={styles.textInput2}
+                    placeholder="Опишите проект в 2-3 предложениях. Напишите, что вам требуется: мобильное приложение, веб-сайт, игра на Unity, проект по виртуальной реальности, искусственный интеллект..."
+                    rows="7"
+                    cols="50"
+                    name="comment"
+                    form="usrform"
+                    id="comment"
+                    onChange={c => this.handleChange('message', c.target.value)}
+                  />
+                  <input
+                    type="button"
+                    id={styles.submit}
+                    value={this.state.buttonText}
+                    onClick={this.handleSubmit}
+                    disabled={this.state.disabled}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -268,7 +270,7 @@ class ServicesPage extends Component {
                 <p>Одна платформа </p>
                 <p>Несложный функционал </p>
                 <p>Публикация на рынках App Store, Google Play </p>
-                <p style={{color: '#51a9f2', fontSize: '33px'}}>$1000-$4000</p>
+                <p className={styles.dollar}>$1000-$4000</p>
               </div>
               <div className={styles.price}>
                 <p className={styles.simple}>Средняя сложность</p>
@@ -277,7 +279,7 @@ class ServicesPage extends Component {
                 <p>Несколько платформ </p>
                 <p>Более сложный функционал </p>
                 <p>Публикация на рынках App Store, Google Play </p>
-                <p style={{color: '#51a9f2', fontSize: '33px'}}>$4000-$12000</p>
+                <p className={styles.dollar}>$4000-$12000</p>
               </div>
               <div className={styles.price}>
                 <p className={styles.simple}>Сложное решение</p>
@@ -286,7 +288,7 @@ class ServicesPage extends Component {
                 <p>Несколько платформ </p>
                 <p>Сложный функционал </p>
                 <p>Публикация на рынках App Store, Google Play </p>
-                <p style={{color: '#51a9f2', fontSize: '33px'}}>&gt;$12000</p>
+                <p className={styles.dollar}>$12000</p>
               </div>
             </div>
             <button
