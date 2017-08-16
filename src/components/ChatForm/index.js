@@ -14,6 +14,7 @@ const bubbleStyle = {
 };
 
 const defineSteps = (stepsType: StepsType): Object => {
+  // TODO: add more steps
   switch (stepsType) {
     default:
       return ContactUsSteps;
