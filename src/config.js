@@ -1,12 +1,12 @@
 const config = {
   headerLinks: [
     {
-      title: 'Услуги',
-      path: '/services',
-    },
-    {
       title: 'О нас',
       path: '/about',
+    },
+    {
+      title: 'Услуги',
+      path: '/services',
     },
     {
       title: 'Стартапы',
