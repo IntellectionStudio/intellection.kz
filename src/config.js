@@ -1,35 +1,35 @@
 const config = {
   headerLinks: [
     {
-      title: 'О нас',
+      title: 'About us',
       path: '/about',
     },
     {
-      title: 'Услуги',
+      title: 'Services',
       path: '/services',
     },
     {
-      title: 'Стартапы',
+      title: 'Portfolio',
       path: '/startups',
     },
     {
-      title: 'Курсы',
+      title: 'Courses',
       path: '/courses',
     },
     {
-      title: 'Ресурсы',
+      title: 'Resources',
       path: '/knowledge',
     },
     {
-      title: 'Видео',
+      title: 'Video',
       path: 'https://www.youtube.com/channel/UCtQaoQC6hC0v5uVpJ8iB-xg',
     },
     {
-      title: 'Блог',
+      title: 'Blog',
       path: 'https://blog.intellection.kz/',
     },
     {
-      title: 'Контакты',
+      title: 'Contact Us',
       path: '/contact',
     },
   ],

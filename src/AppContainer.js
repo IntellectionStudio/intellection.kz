@@ -14,7 +14,7 @@ import './highlight.global.css';
 
 /* eslint-disable */
 // GOOGLE Analytics, part 1/2
-const GOOGLE_ANALYTICS_UA = "UA-73008937-1";
+const GOOGLE_ANALYTICS_UA = "UA-73008937-4";
 if (typeof window !== "undefined") {
   window.ga =
     window.ga ||
@@ -74,7 +74,7 @@ class AppContainer extends Component {
 
     return (
       <Container>
-        <Favicon url="https://intellection.kz/assets/icons/favicon.ico" />
+        <Favicon url="https://intellectionstudio.com/assets/icons/favicon.ico" />
         <DefaultHeadMeta
           scripts={[
             // GOOGLE Analytics, part 2/2
