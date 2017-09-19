@@ -74,7 +74,7 @@
     "react-popup": "^0.8.0",
     "react-responsive-image": "^3.3.5",
     "react-router": "2.3.0",
-    "react-simple-chatbot": "^0.2.2",
+    "react-simple-chatbot": "0.2.6",
     "react-slick": "^0.14.11",
     "react-svg-inline": "^2.0.0",
     "react-topbar-progress-indicator": "^1.0.0",
