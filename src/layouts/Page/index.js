@@ -42,11 +42,13 @@ const Page = (
           href="/assets/icons/favicon.ico"
         />
       </Helmet>
-      <div className={styles.wrapper}>
-        <Header white={__url !== '/'} />
-        {isLoading ? <Loading /> : children}
-        <Footer homepage={__url === '/'} />
-      </div>
+      {isLoading
+        ? <Loading />
+        : <div className={styles.wrapper}>
+            <Header white={__url !== '/'} />
+            {children}
+            <Footer homepage={__url === '/'} />
+          </div>}
     </div>
   );
 };

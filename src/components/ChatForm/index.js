@@ -36,6 +36,8 @@ const ChatForm = ({opened, handleClose, stepsType}) =>
       botDelay={100}
       // bubbleStyle={bubbleStyle}
       customDelay={100}
+      headerTitle="Intellection Bot"
+      placeholder="Напишите что нибудь.."
       // headerComponent={ChatFormHeader({handleClose})}
       // hideBotAvatar
       // hideUserAvatar
