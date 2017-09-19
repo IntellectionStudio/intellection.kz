@@ -8,6 +8,7 @@
       {
         "ignoreProperties": ["composes"]
       }
-    ]
+    ],
+    "declaration-colon-newline-after": null
   }
 }

@@ -11,7 +11,8 @@ module.exports = config => [
         {
           "ignoreProperties": ["composes"]
         }
-      ]
+      ],
+      "declaration-colon-newline-after": null
     },
   }),
   require('postcss-cssnext')({
