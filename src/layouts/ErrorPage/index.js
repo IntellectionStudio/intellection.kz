@@ -25,20 +25,19 @@ const ErrorPage = ({
       }}
     >
       <div className={styles.container}>
-        <div className={styles.oops}>
-          {'😱 Oooops!'}
-        </div>
+        <div className={styles.oops}>{'😱 Oooops!'}</div>
         <div className={styles.text}>
           <p className={styles.title}>
             <strong>{error}</strong> {errorText}
           </p>
-          {error === STATUS_CODE_NOT_FOUND &&
+          {error === STATUS_CODE_NOT_FOUND && (
             <div>
               {'It seems you found a broken link. '}
               {'Sorry about that. '}
               <br />
               {'Do not hesitate to report this page 😁.'}
-            </div>}
+            </div>
+          )}
         </div>
       </div>
     </Page>

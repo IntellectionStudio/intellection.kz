@@ -46,9 +46,7 @@ class TopicPage extends Component {
             Knowledge Base
           </Link>
           <div className={styles.gt}>&gt;</div>
-          <div className={styles.pathColored}>
-            {this.props.head.title}
-          </div>
+          <div className={styles.pathColored}>{this.props.head.title}</div>
         </div>
         <div className={styles.questions}>
           <Questions

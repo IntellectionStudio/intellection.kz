@@ -34,11 +34,11 @@ class Contact extends Component { // eslint-disable-line
         </div>
 
         <div className={styles.itemContentContainer}>
-          {item.content.map(content =>
+          {item.content.map(content => (
             <h2 className={styles.itemContent} key={content}>
               {content}
-            </h2>,
-          )}
+            </h2>
+          ))}
         </div>
       </div>
     );

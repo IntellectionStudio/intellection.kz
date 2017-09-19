@@ -27,53 +27,48 @@ class Topics extends Component {
         <div className={styles.knowledgeTopicTable}>
           {topics.map(
             topic =>
-              this.state.fullClickable
-                ? <Link key={`${topic.title}Full`} to={topic.__url}>
-                    <div className={styles.cellSquare}>
+              this.state.fullClickable ? (
+                <Link key={`${topic.title}Full`} to={topic.__url}>
+                  <div className={styles.cellSquare}>
+                    <Image
+                      className={styles.cellImage}
+                      name={topic.image}
+                      alt={topic.title}
+                    />
+                    <div className={styles.textWrapper}>
+                      <h4 className={styles.cellTitle}>{topic.title}</h4>
+                      <p className={styles.cellText}>{topic.about}</p>
+                    </div>
+                    <button className={styles.button}>ПОДРОБНЕЕ</button>
+                  </div>
+                </Link>
+              ) : (
+                <div key={`${topic.title}NotFull`}>
+                  <div className={styles.cellSquare}>
+                    <Link to={topic.__url}>
                       <Image
                         className={styles.cellImage}
                         name={topic.image}
                         alt={topic.title}
                       />
-                      <div className={styles.textWrapper}>
-                        <h4 className={styles.cellTitle}>
-                          {topic.title}
-                        </h4>
-                        <p className={styles.cellText}>
-                          {topic.about}
-                        </p>
-                      </div>
-                      <button className={styles.button}>ПОДРОБНЕЕ</button>
-                    </div>
-                  </Link>
-                : <div key={`${topic.title}NotFull`}>
-                    <div className={styles.cellSquare}>
+                    </Link>
+                    <div className={styles.textWrapper}>
                       <Link to={topic.__url}>
-                        <Image
-                          className={styles.cellImage}
-                          name={topic.image}
-                          alt={topic.title}
-                        />
+                        <h4 className={styles.cellTitle}>{topic.title}</h4>
                       </Link>
-                      <div className={styles.textWrapper}>
-                        <Link to={topic.__url}>
-                          <h4 className={styles.cellTitle}>
-                            {topic.title}
-                          </h4>
-                        </Link>
-                        <p className={styles.cellText}>
-                          {topic.about}
-                        </p>
-                      </div>
-                      <Link to={topic.__url} className={styles.button}>
-                        ПОДРОБНЕЕ
-                      </Link>
+                      <p className={styles.cellText}>{topic.about}</p>
                     </div>
-                  </div>,
+                    <Link to={topic.__url} className={styles.button}>
+                      ПОДРОБНЕЕ
+                    </Link>
+                  </div>
+                </div>
+              ),
           )}
         </div>
       );
     }
+
     return <div>No posts yet.</div>;
   };
 
@@ -81,6 +76,7 @@ class Topics extends Component {
     const topics = enhanceCollection(this.context.collection, {
       filter: {layout: 'TopicPage'},
     });
+
     return (
       <div className={styles.mainDiv}>
         <Image
@@ -99,23 +95,25 @@ class Topics extends Component {
           </div>
         </Image>
         <div>
-          {topics.length
-            ? <div className={styles.featuredTopics}>
-                {topics.filter(topic => topic.featured).map(topic =>
-                  <Link key={topic.title} to={topic.__url}>
-                    <div className={styles.featuredTopic}>
-                      <Image
-                        className={styles.featuredTopicImage}
-                        name={topic.image}
-                        background
-                        alt={topic.title}
-                      />
-                      <Topic {...topic} />
-                    </div>
-                  </Link>,
-                )}
-              </div>
-            : 'No posts yet.'}
+          {topics.length ? (
+            <div className={styles.featuredTopics}>
+              {topics.filter(topic => topic.featured).map(topic => (
+                <Link key={topic.title} to={topic.__url}>
+                  <div className={styles.featuredTopic}>
+                    <Image
+                      className={styles.featuredTopicImage}
+                      name={topic.image}
+                      background
+                      alt={topic.title}
+                    />
+                    <Topic {...topic} />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            'No posts yet.'
+          )}
         </div>
         <Measure
           onMeasure={({width}) =>

@@ -50,14 +50,16 @@ class Page extends Component {
             href="/assets/icons/favicon.ico"
           />
         </Helmet>
-        {isLoading
-          ? <Loading />
-          : <div className={styles.wrapper}>
-              <Header white={__url !== '/'} />
-              {children}
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <div className={styles.wrapper}>
+            <Header white={__url !== '/'} />
+            {children}
 
-              <Footer homepage={__url === '/'} />
-            </div>}
+            <Footer homepage={__url === '/'} />
+          </div>
+        )}
 
         <div className={styles.chatForm}>
           <ChatForm

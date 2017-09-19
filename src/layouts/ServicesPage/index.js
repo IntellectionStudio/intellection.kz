@@ -46,11 +46,13 @@ class ServicesPage extends Component {
   handleSubmit = () => {
     if (!ValidationUtils.isValidEmail(this.state.email)) {
       POP_UP_MESSAGE.invalidEmail();
+
       return;
     }
 
     if (!this.validInput()) {
       POP_UP_MESSAGE.emptyInput();
+
       return;
     }
 

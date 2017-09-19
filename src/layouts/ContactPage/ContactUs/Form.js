@@ -66,6 +66,7 @@ class ContactUs extends Component {
 
     if (!this.validInput()) {
       POP_UP_MESSAGE.emptyInput();
+
       return;
     }
 

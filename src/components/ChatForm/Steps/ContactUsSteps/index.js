@@ -8,7 +8,7 @@ import {
   Tel,
 } from './inputSteps';
 
-export default [
+const steps = [
   {
     id: 1,
     message:
@@ -71,3 +71,5 @@ export default [
     end: true,
   },
 ];
+
+export default steps;

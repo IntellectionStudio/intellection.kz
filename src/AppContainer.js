@@ -54,7 +54,7 @@ class AppContainer extends Component {
     stepsType: PropTypes.string,
   };
 
-  getChildContext(): Object {
+  getChildContext() {
     return {
       handleChatFormClick: this.handleChatFormClick,
       isChatFormOpened: this.state.isChatFormOpened,
@@ -87,9 +87,7 @@ class AppContainer extends Component {
             },
           ]}
         />
-        <Content>
-          {children}
-        </Content>
+        <Content>{children}</Content>
       </Container>
     );
   }

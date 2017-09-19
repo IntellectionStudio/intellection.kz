@@ -20,7 +20,7 @@ const theme = {
   userFontColor: '#4a4a4a',
 };
 
-const defineSteps = (stepsType: StepsType): Object => {
+const defineSteps = (stepsType: StepsType) => {
   // TODO: add more steps
   switch (stepsType) {
     default:
@@ -28,7 +28,7 @@ const defineSteps = (stepsType: StepsType): Object => {
   }
 };
 
-const ChatForm = ({opened, handleClose, stepsType}) =>
+const ChatForm = ({opened, handleClose, stepsType}) => (
   <ThemeProvider theme={theme}>
     <ChatBot
       key={`chatbot-component-${stepsType}`}
@@ -45,6 +45,7 @@ const ChatForm = ({opened, handleClose, stepsType}) =>
       toggleFloating={handleClose}
       steps={defineSteps(stepsType)}
     />
-  </ThemeProvider>;
+  </ThemeProvider>
+);
 
 export default ChatForm;

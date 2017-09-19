@@ -2,7 +2,7 @@ import Helmet from 'react-helmet';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}) =>
+const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}) => (
   <div hidden>
     <Helmet
       meta={[
@@ -37,10 +37,9 @@ const DefaultHeadMeta = ({meta, scripts}, {metadata: {pkg}}) =>
         },
       ]}
     />
-    <style>
-      {'@-ms-viewport { width: device-width; }'}
-    </style>
-  </div>;
+    <style>{'@-ms-viewport { width: device-width; }'}</style>
+  </div>
+);
 
 DefaultHeadMeta.contextTypes = {
   metadata: PropTypes.object.isRequired,

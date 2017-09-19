@@ -19,23 +19,19 @@ class StartupsPage extends Component {
   renderDefaultStartup = () => {
     const {image, title, text} = this.props.head.default || {};
 
-    return image
-      ? <Image
-          className={styles.imageStartup}
-          name={image}
-          background
-          alt="Intellection Startup Background"
-        >
-          <div className={styles.defaultBox}>
-            <h1 className={styles.defaultStartupTitle}>
-              {title}
-            </h1>
-            <p className={styles.defaultStartupText}>
-              {text}
-            </p>
-          </div>
-        </Image>
-      : null;
+    return image ? (
+      <Image
+        className={styles.imageStartup}
+        name={image}
+        background
+        alt="Intellection Startup Background"
+      >
+        <div className={styles.defaultBox}>
+          <h1 className={styles.defaultStartupTitle}>{title}</h1>
+          <p className={styles.defaultStartupText}>{text}</p>
+        </div>
+      </Image>
+    ) : null;
   };
 
   renderStartup = () => {
@@ -47,12 +43,8 @@ class StartupsPage extends Component {
     return (
       <div>
         <div className={styles.info}>
-          <h1 className={styles.startupTitle}>
-            {title}
-          </h1>
-          <p className={styles.startupText}>
-            {text}
-          </p>
+          <h1 className={styles.startupTitle}>{title}</h1>
+          <p className={styles.startupText}>{text}</p>
           <div className={styles.learnMore}>
             <Link to={link}>Подробнее &gt;</Link>
           </div>
@@ -70,13 +62,14 @@ class StartupsPage extends Component {
     );
   };
 
-  renderContent = () =>
+  renderContent = () => (
     <div className={styles.content}>
       {this.state.selectedStartupIdx !== null &&
       this.state.selectedStartupIdx !== undefined
         ? this.renderStartup()
         : this.renderDefaultStartup()}
-    </div>;
+    </div>
+  );
 
   render() {
     const {collection} = this.context;
@@ -90,13 +83,15 @@ class StartupsPage extends Component {
     return (
       <Page {...this.props}>
         <div className={styles.container}>
-          {startups.length
-            ? <StartupsHeader
-                startups={startups}
-                selectedStartupIdx={this.state.selectedStartupIdx}
-                onStartupSelect={this.handleStartupSelect}
-              />
-            : 'No startups yet.'}
+          {startups.length ? (
+            <StartupsHeader
+              startups={startups}
+              selectedStartupIdx={this.state.selectedStartupIdx}
+              onStartupSelect={this.handleStartupSelect}
+            />
+          ) : (
+            'No startups yet.'
+          )}
         </div>
         {this.renderContent()}
       </Page>

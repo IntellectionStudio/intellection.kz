@@ -1,7 +1,6 @@
 import {pure} from 'recompact';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Measure from 'react-measure';
 
 class Image extends Component {
   static propTypes = {
@@ -23,13 +22,6 @@ class Image extends Component {
     background: false,
   };
 
-  state = {
-    image: {
-      width: 0,
-    },
-    ref: null,
-  };
-
   handleBackgroundMeasure = dimensions =>
     this.setState({
       image: {
@@ -39,30 +31,31 @@ class Image extends Component {
 
   render() {
     const info = {
-      src: require(`../../../content/assets/images/${this.props.name}`) // eslint-disable-line
+      src: require(`../../../content/assets/images/${this.props.name}`), // eslint-disable-line
     };
     if (this.props.background) {
-      const bestFitImage = require(`../../../content/assets/images/${this.props.name}`); // eslint-disable-line
+      // eslint-disable-next-line
+      const bestFitImage = require(`../../../content/assets/images/${this.props
+        .name}`);
+
       return (
-        <Measure onMeasure={this.handleBackgroundMeasure}>
-          <div
-            className={this.props.className}
-            style={{
-              background:
-                typeof this.props.background === 'string'
-                  ? `${this.props
-                      .background}, url('${bestFitImage}') center center / ${this
-                      .props.contain
-                      ? 'contain'
-                      : 'cover'} no-repeat`
-                  : `url('${bestFitImage}') center center / ${this.props.contain
-                      ? 'contain'
-                      : 'cover'} no-repeat`,
-            }}
-          >
-            {this.props.children}
-          </div>
-        </Measure>
+        <div
+          className={this.props.className}
+          style={{
+            background:
+              typeof this.props.background === 'string'
+                ? `${this.props
+                    .background}, url('${bestFitImage}') center center / ${this
+                    .props.contain
+                    ? 'contain'
+                    : 'cover'} no-repeat`
+                : `url('${bestFitImage}') center center / ${this.props.contain
+                    ? 'contain'
+                    : 'cover'} no-repeat`,
+          }}
+        >
+          {this.props.children}
+        </div>
       );
     }
 

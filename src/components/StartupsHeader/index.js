@@ -115,25 +115,25 @@ class StartupsHeader extends Component {
     const logosRight = logos.left + logos.width;
     const startupsHeaderRight = startupsHeader.width;
 
-    return logosRight > startupsHeaderRight
-      ? <button
-          className={styles.scrollRightButton}
-          onClick={this.handleRightButtonClick}
-        >
-          <SVGImage name="logo-startups-right.svg" alt="scrollbutton" />
-        </button>
-      : null;
+    return logosRight > startupsHeaderRight ? (
+      <button
+        className={styles.scrollRightButton}
+        onClick={this.handleRightButtonClick}
+      >
+        <SVGImage name="logo-startups-right.svg" alt="scrollbutton" />
+      </button>
+    ) : null;
   };
 
   renderLeftButton = () =>
-    this.state.logos.left < 0
-      ? <button
-          className={styles.scrollLeftButton}
-          onClick={this.handleLeftButtonClick}
-        >
-          <SVGImage name="logo-startups-left.svg" alt="left" />
-        </button>
-      : null;
+    this.state.logos.left < 0 ? (
+      <button
+        className={styles.scrollLeftButton}
+        onClick={this.handleLeftButtonClick}
+      >
+        <SVGImage name="logo-startups-left.svg" alt="left" />
+      </button>
+    ) : null;
 
   render() {
     const {startupsHeader, logos} = this.state;

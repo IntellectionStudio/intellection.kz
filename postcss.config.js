@@ -1,5 +1,19 @@
+const path = require('path')
+
 module.exports = config => [
-  require('stylelint')({}),
+  require('stylelint')({
+    ignoreFiles: 'node_modules/**/*.(css|scss)',
+    extends: 'stylelint-config-standard',
+    rules: {
+      "max-empty-lines": 2,
+      "property-no-unknown": [
+        true,
+        {
+          "ignoreProperties": ["composes"]
+        }
+      ]
+    },
+  }),
   require('postcss-cssnext')({
     browsers: 'last 2 versions',
     features: {

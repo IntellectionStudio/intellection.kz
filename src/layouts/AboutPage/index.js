@@ -7,16 +7,18 @@ import {TeamMemberCard, TopManagerCard, Image, SVGImage} from 'components';
 
 import styles from './index.css';
 
-const renderTopManagerCard = topManager =>
+const renderTopManagerCard = topManager => (
   <TopManagerCard
     key={`${topManager.firstName}-${topManager.lastName}`}
     teamMember={topManager}
-  />;
-const renderTeamMemberCard = teamMember =>
+  />
+);
+const renderTeamMemberCard = teamMember => (
   <TeamMemberCard
     key={`${teamMember.firstName}-${teamMember.lastName}`}
     teamMember={teamMember}
-  />;
+  />
+);
 
 class AboutPage extends Component {
   constructor() {
@@ -37,12 +39,8 @@ class AboutPage extends Component {
         <div className={styles.hero}>
           <div className={styles.heroWrapper}>
             <div className={styles.heroContent}>
-              <h1 className={styles.heroTitle}>
-                {this.props.head.hero.title}
-              </h1>
-              <p className={styles.heroText}>
-                {this.props.head.hero.text}
-              </p>
+              <h1 className={styles.heroTitle}>{this.props.head.hero.title}</h1>
+              <p className={styles.heroText}>{this.props.head.hero.text}</p>
             </div>
           </div>
         </div>
@@ -56,18 +54,20 @@ class AboutPage extends Component {
                 <div className={styles.videoText}>
                   {mapValues(
                     (text, key) =>
-                      typeof text.detail === 'string'
-                        ? <p key={key} className={styles.p}>
-                            <b>{text.title}</b> - {text.detail}
-                          </p>
-                        : <div key={key}>
-                            <b>{text.title}</b>:
-                            {text.detail.map((listItem, index) =>
-                              <p key={listItem}>
-                                {index + 1}) {listItem}
-                              </p>,
-                            )}
-                          </div>,
+                      typeof text.detail === 'string' ? (
+                        <p key={key} className={styles.p}>
+                          <b>{text.title}</b> - {text.detail}
+                        </p>
+                      ) : (
+                        <div key={key}>
+                          <b>{text.title}</b>:
+                          {text.detail.map((listItem, index) => (
+                            <p key={listItem}>
+                              {index + 1}) {listItem}
+                            </p>
+                          ))}
+                        </div>
+                      ),
                     this.props.head.video.texts,
                   )}
                 </div>
@@ -112,12 +112,8 @@ class AboutPage extends Component {
         <div className={styles.team}>
           <div className={styles.teamWrapper}>
             <div className={styles.teamContent}>
-              <h1 className={styles.teamTitle}>
-                {this.props.head.team.title}
-              </h1>
-              <p className={styles.teamText}>
-                {this.props.head.team.text}
-              </p>
+              <h1 className={styles.teamTitle}>{this.props.head.team.title}</h1>
+              <p className={styles.teamText}>{this.props.head.team.text}</p>
             </div>
           </div>
         </div>

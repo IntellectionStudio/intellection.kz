@@ -1,5 +1,4 @@
 scripts/
 dist/
-!.eslintrc.js
 webpack.config.js
 postcss.config.js

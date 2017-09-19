@@ -105,35 +105,35 @@
 }
 
 .buttonIcon {
-  composes: grow from 'tachyons/src/_hovers.css';
+  composes: grow from "tachyons/src/_hovers.css";
   width: 100%;
   max-width: 24px;
   height: 24px;
-  background: url('/assets/icons/facebook-white.svg') center center no-repeat;
+  background: url("/assets/icons/facebook-white.svg") center center no-repeat;
 }
 
 .buttonIcon2 {
-  composes: grow from 'tachyons/src/_hovers.css';
+  composes: grow from "tachyons/src/_hovers.css";
   width: 100%;
   max-width: 24px;
   height: 24px;
-  background: url('/assets/icons/Facebook.svg') center center no-repeat;
+  background: url("/assets/icons/Facebook.svg") center center no-repeat;
 }
 
 .buttonIcon3 {
-  composes: grow from 'tachyons/src/_hovers.css';
+  composes: grow from "tachyons/src/_hovers.css";
   width: 100%;
   max-width: 24px;
   height: 24px;
-  background: url('/assets/icons/instagram-white.svg') center center no-repeat;
+  background: url("/assets/icons/instagram-white.svg") center center no-repeat;
 }
 
 .buttonIcon4 {
-  composes: grow from 'tachyons/src/_hovers.css';
+  composes: grow from "tachyons/src/_hovers.css";
   width: 100%;
   max-width: 24px;
   height: 24px;
-  background: url('/assets/icons/Instagram.svg') center center no-repeat;
+  background: url("/assets/icons/Instagram.svg") center center no-repeat;
 }
 
 .copyright {
@@ -157,21 +157,23 @@
 }
 
 .logoLink {
-  composes: grow from 'tachyons/src/_hovers.css';
+  composes: grow from "tachyons/src/_hovers.css";
   width: 85px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: url('/assets/icons/logo-intellection-white.svg') center center no-repeat;
+  background: url("/assets/icons/logo-intellection-white.svg") center center
+    no-repeat;
 }
 
 .logoGreyLink {
-  composes: grow from 'tachyons/src/_hovers.css';
+  composes: grow from "tachyons/src/_hovers.css";
   width: 85px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: url('/assets/icons/logo-intellection-grey.svg') center center no-repeat;
+  background: url("/assets/icons/logo-intellection-grey.svg") center center
+    no-repeat;
 
   @media screen and (min-width: 664px) {
     order: 2;
@@ -182,8 +184,7 @@
   width: 70%;
   padding-left: 0;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: center;
 
   @media screen and (min-width: 664px) {

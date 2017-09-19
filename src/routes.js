@@ -15,7 +15,7 @@ import TopicPage from 'layouts/TopicPage';
 
 import AppContainer from './AppContainer';
 
-const PageContainer = props =>
+const PageContainer = props => (
   <PhenomicPageContainer
     {...props}
     layouts={{
@@ -30,7 +30,8 @@ const PageContainer = props =>
       ServicesPage,
       TopicPage,
     }}
-  />;
+  />
+);
 
 const Routes = (
   <Route component={AppContainer}>
