@@ -53,6 +53,7 @@
     "react-dom": "^15.6.1",
     "react-helmet": "^5.2.0",
     "react-image-webp": "^0.2.0",
+    "react-measure": "1.4.7",
     "react-modal": "^2.3.2",
     "react-modal-video": "^1.0.7",
     "react-player": "^0.24.5",
