@@ -10,3 +10,11 @@
   width: 100%;
   background: white;
 }
+
+.chatForm {
+  z-index: 9999;
+}
+
+.hiddenChatForm {
+  height: 0;
+}

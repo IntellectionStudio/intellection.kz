@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import config from 'config';
-import {ChatForm, SVGImage} from 'components';
+import {SVGImage} from 'components';
 
 import styles from './index.css';
 
@@ -38,7 +38,6 @@ class Header extends Component {
   render() {
     const {white} = this.props;
     const {isOpen} = this.state;
-    const {stepsType, isChatFormOpened} = this.context;
 
     return (
       <div
@@ -84,14 +83,6 @@ class Header extends Component {
             <span />
           </button>
         </header>
-
-        <div className={styles.chatForm}>
-          <ChatForm
-            stepsType={stepsType}
-            opened={isChatFormOpened}
-            handleClose={this.handleContactUs}
-          />
-        </div>
       </div>
     );
   }
