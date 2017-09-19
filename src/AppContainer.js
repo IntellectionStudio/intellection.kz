@@ -2,6 +2,7 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Favicon from 'react-favicon';
 
 import {Container, Content, DefaultHeadMeta} from 'components';
 import type {StepsType} from 'types';
@@ -73,6 +74,7 @@ class AppContainer extends Component {
 
     return (
       <Container>
+        <Favicon url="https://intellection.kz/assets/icons/favicon.ico" />
         <DefaultHeadMeta
           scripts={[
             // GOOGLE Analytics, part 2/2

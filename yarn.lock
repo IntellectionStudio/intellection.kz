@@ -7217,6 +7217,10 @@ react-dom@^15.1.0, react-dom@^15.4.2, react-dom@^15.5.4, react-dom@^15.6.1:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
+react-favicon@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/react-favicon/-/react-favicon-0.0.9.tgz#1765a902f68277d0b7ed6ddc8588d5164b53f43a"
+
 react-helmet@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.2.0.tgz#a81811df21313a6d55c5f058c4aeba5d6f3d97a7"
