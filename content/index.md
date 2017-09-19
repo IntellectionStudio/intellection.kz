@@ -1,10 +1,10 @@
 ---
-description: Стартап центр и студия разработки в сфере мобильных приложений, веб-сайтов, технологий виртуальной реальности
-title: Стартап центр - intellection.kz
+description: Software Development Studio. We build mobile apps and website of any complexity
+title: Intellection Studio
 layout: HomePage
 hero:
   video:
-    title: Стартап центр Intellection
+    title: Intellection Studio
     text: UNDERSTANDING PERFECTION
     image: videoPlaceholder.jpg
     sources:
@@ -14,16 +14,16 @@ hero:
     startups:
       link: "startups"
       image: homepage-card-startup.jpg
-      title: Стартапы
-      text: Наши проекты в сфере мобильных приложений, веб-сайтов, технологий виртуальной реальности
+      title: Portfolio
+      text: Our main technical advantage is iOS, Android and Web apps. But we are also good at VR, AR and Machine Learning
     knowledgeBase:
       link: "knowledge"
       image: homepage-card-resources.jpg
-      title: Ресурсы
-      text: Мы не боимся делиться нашими знаниями. Здесь полезные ссылки из разных источников
+      title: Resources
+      text: We are ready to share our knowledge with everybody. Here are collection of useful resources for interesting topics
     courses:
       link: "courses"
       image: homepage-card-courses.jpg
-      title: Курсы
-      text: Обучение в нашем центре это первый шаг в вашей карьере программиста, бизнесмена или стартапера
+      title: Courses
+      text: In addition, we offer one-to-one online courses teaching mobile app development for iOS and Android, React for Web
 ---

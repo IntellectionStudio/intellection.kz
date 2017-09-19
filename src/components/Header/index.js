@@ -67,7 +67,7 @@ class Header extends Component {
             {config.headerLinks.map(this.renderLink)}
 
             <button className={styles.ctaButton} onClick={this.handleContactUs}>
-              <div className={styles.ctaTitle}>Связаться с нами</div>
+              <div className={styles.ctaTitle}>Get in touch</div>
             </button>
           </nav>
           <button

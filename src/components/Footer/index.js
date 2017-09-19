@@ -14,23 +14,21 @@ const Footer = ({homepage}) => (
     <div className={styles.container}>
       <div className={styles.topContainer}>
         <div className={styles.studio}>
-          <h3 className={styles.title}>О студии</h3>
+          <h3 className={styles.title}>About studio</h3>
           <p className={styles.text}>
-            Мы любим программирование и новые технологии и даже верим, что живем
-            в VR.
+            We love programming, new technologies, and even believe that we all
+            live in VR
           </p>
         </div>
         <div className={styles.contacts}>
-          <h3 className={styles.title}>Контакты</h3>
-          <p className={styles.text}>
-            ул. Сатпаева 30а/3, этаж 3, Алматы, Казахстан
-          </p>
-          <p className={styles.text}>тел: +7 (747) 153 82 30</p>
+          <h3 className={styles.title}>Contact Us</h3>
+          <p className={styles.text}>30a/3 Satpaev st., Almaty, Kazakhstan</p>
+          <p className={styles.text}>tel: +7 (747) 153 82 30</p>
         </div>
       </div>
       <div className={styles.bottomContainer}>
         <div className={styles.socialBlock}>
-          <h3 className={styles.title}>Мы в сети</h3>
+          <h3 className={styles.title}>Social Links</h3>
           <div className={styles.social}>
             <div className={styles.socialButton}>
               <Link
@@ -52,7 +50,7 @@ const Footer = ({homepage}) => (
         </div>
         <div className={styles.copyright}>
           <div className={styles.copyrightText}>
-            <div>© 2017 Intellection.kz</div>
+            <div>© 2017 Intellection Studio</div>
             <div>All Right Reserved</div>
           </div>
           <Link
