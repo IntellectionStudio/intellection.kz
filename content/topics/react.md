@@ -4,6 +4,6 @@ title: React
 route: /knowledge/react
 layout: TopicPage
 featured: false
-about: Технология разработки веб сайтов на языке Javascript. Эта маленькая библиотека от Facebook успела завоевать сердца и умы самых прогрессивных программистов своей простотой и надежностью. Вы знали, что Instagram написан на React? Правда только веб версия.
+about: Technology to build websites using Javascript from Facebook. Small library already has a huge community around. It is simple and reliable. Did you know that Instagram was built using React? Only the web version though.
 image: knowledgebase-react.jpg
 ---

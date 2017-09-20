@@ -4,6 +4,6 @@ title: Management
 route: /knowledge/management
 layout: TopicPage
 featured: false
-about: Стадо баранов во главе со львом побеждает стадо львов во главе с бараном - гласит известная арабская пословица. Научиться быть львом вам помогут знания собранные здесь.
+about: You can have a lot of talents in your team. But it is more important how you manage them. Management resources are here to help. 
 image: knowledgebase-management.jpg
 ---

@@ -31,7 +31,7 @@ class Contact extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-          <h1 className={styles.title}>Контакты</h1>
+          <h1 className={styles.title}>Contacts</h1>
         </div>
 
         <div className={styles.itemsContainer}>

@@ -1,5 +1,5 @@
 ---
-title: Intellection Studio | About Us
+title: Intellection Studio|About Us
 layout: AboutPage
 hero:
   title: Intellection Studio
@@ -44,7 +44,7 @@ team:
       firstName: Iliyas
       lastName: Исатаев
       position: Product Inventor
-      text: Предприниматель, инвестор. Основатель сети фитнес центров Invictus, Crossfit Astana, супермаркетов A2, ресторана Shoreditch
+      text: Serial Enterpreneur. Founder of fitness chains Invictus and Crossfit Astana, supermarket chain A2, restaurant Shoreditch
   teamMembers:
     Almas:
       faceImageCollection:
@@ -61,65 +61,65 @@ team:
       firstName: Алмас
       lastName: Акчабаев
       position: CTO, Full stack developer
-      text: Разработчик и технический руководитель наших проектов. Увлекается программированием и новыми трэндами в разработке. Пришел к нам из мира финансов
+      text: Web developer and CTO of our company. Loves programming and new trends in development. Came to us from the Finance
     Anuar:
       image: profile-photo-anchik.jpg
-      firstName: Ануар
-      lastName: Жаксылыкбаев
+      firstName: Anuar
+      lastName: Zhaxylykbayev
       position: VR, Android and iOS Developer
-      text: Учится в СДУ. Участник NFactorialIncubator. Создал более 5-ти мобильных приложений. Недавно переквалифицировался в VR разработчика
+      text: NFactorialIncubator participant. Launched more than 5 mobile apps. Recently is more excited about VR development.
     Damir:
       image: profile-photo-damir.jpg
-      firstName: Дамир
-      lastName: Бектилов
+      firstName: Damir
+      lastName: Bektilov
       position: Designer
-      text: Самый молодой участник нашей команды. Очень быстро научился основным трэндам в дизайне. Работает в Intellection, потому что не хочет идти в армию
+      text: The youngest member of our team. Quickly learns design and constantly improves his results. Joined Intellection because does not like College at all
     Aizhan:
       image: profile-photo-aizh.jpg
-      firstName: Айжан
-      lastName: Есекина
+      firstName: Aizhan
+      lastName: Yessekina
       position: Designer
-      text: Учила графический дизайн в London College of Communication. Умеет красиво петь и играть на гитаре. Основатель проекта AquaPoint.
+      text: Graduated from London College of Communication. Knows how to dance and play a guitar. Founder of AquaPoint
     Assel:
       image: profile-photo-asselya.jpg
-      firstName: Асель
-      lastName: Касембекова
+      firstName: Assel
+      lastName: Kasymbekova
       position: Frontend Developer
-      text: Раньше работала в Price Waterhouse Cooper. Сейчас увлекается web-разработкой и частенько засиживается до поздна.
+      text: Previously worked at Price Waterhouse Cooper. Now is interested in web development and usually stays at work till late
     Dariga:
       image: profile-photo-dari.jpg
-      firstName: Дарига
-      lastName: Байбулсынова
+      firstName: Dariga
+      lastName: Baybulsinova
       position: Video Creator
-      text: Мастер на все руки. Создает красивые видео для Intellection, пишет блог посты и даже умеет создавать дизайны мобильных приложений и кодить.
+      text: She can do everything. Really. She makes amazing videos for Intellection, writes blog posts, creates designs for mobile apps and even codes them
     Gulsum:
       image: profile-photo-gusi.jpg
-      firstName: Гульсум
-      lastName: Байжикенова
+      firstName: Gulsum
+      lastName: Baizhikenova
       position: CFO
-      text: Генеральный менеджер и лицо нашей компании. К ней можно обратиться с любым непонятным вопросом либо просьбой. Занимается бизнес развитием и маркетингом. Хочет научится "дизайнить".
+      text: General Manager of our company. She helps running the company and solving difficult situations. Wants to learn design
     Adilkhan:
       image: profile-photo-adilkhan.jpg
-      firstName: Адильхан
-      lastName: Кенжетаев
+      firstName: Adilkhan
+      lastName: Kenzhetayev
       position: Mobile and Web Developer
-      text: Скромный разработчик мобильных и WEB приложений. Увлекается React-Native и хочет научиться Machine Learning, чтобы  искусственный интеллект писал за него код
+      text: Calm and serious web and mobile apps developer. Have a deep understanding of React and Webpack. Wants to create AI that will code for him
     Bauyrzhan:
       image: profile-photo-bauka.jpg
-      firstName: Бауыржан
-      lastName: Алжанов
+      firstName: Bauyrzhan
+      lastName: Alzhanov
       position: VR, WEB and Android Developer
-      text: Имеет большой опыт в разработке Android приложений. Недавно научился разрабатывать VR технологии в Unity. Также неплохо знает Web и React.
+      text: Have a great deal of expertise in Android. Recently, switched to our VR Project. Also knows React, Web and Unity
     Yerkezhan:
       image: profile-photo-erkesha.jpg
-      firstName: Еркежан
-      lastName: Женисова
+      firstName: Yerkezhan
+      lastName: Zhenisova
       position: iOS Developer, Teacher and Sales Manager
-      text: iOS разработчик и по совместительству маркетолог. Преподает дистанционные курсы и записывает видео уроки. Умеет красиво рисовать на iPad-е
+      text: iOS developer and part-time marketer of our products. Records our online courses and knows how to make beautiful pictures on her iPad
     Sultan:
       image: profile-photo-sulta.jpg
-      firstName: Султан
-      lastName: Бухарбай
+      firstName: Sultan
+      lastName: Bukharbay
       position: Web, iOS and Android Developer
-      text: Участник NFactorialIncubator. Умеет программировать мобильные приложения и Web технологии. Любит шутить и приходить на работу раньше всех
+      text: NFactorialIncubator participant. Loves to program, making jokes and coming to work way too early
 ---

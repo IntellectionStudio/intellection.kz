@@ -39,7 +39,7 @@ class Topics extends Component {
                       <h4 className={styles.cellTitle}>{topic.title}</h4>
                       <p className={styles.cellText}>{topic.about}</p>
                     </div>
-                    <button className={styles.button}>ПОДРОБНЕЕ</button>
+                    <button className={styles.button}>Learn more</button>
                   </div>
                 </Link>
               ) : (
@@ -59,7 +59,7 @@ class Topics extends Component {
                       <p className={styles.cellText}>{topic.about}</p>
                     </div>
                     <Link to={topic.__url} className={styles.button}>
-                      ПОДРОБНЕЕ
+                      Learn more
                     </Link>
                   </div>
                 </div>
@@ -86,11 +86,11 @@ class Topics extends Component {
           alt="knowledge main background"
         >
           <div className={styles.heroTextWrapper}>
-            <h1 className={styles.heroTitle}>Ресурсы</h1>
+            <h1 className={styles.heroTitle}>Resources</h1>
             <p className={styles.heroText}>
-              Мы не боимся делиться нашими знаниями. Здесь мы собрали для вас
-              полезные ссылки из разных источников и отсортировали по темам,
-              которые нас интересуют.
+              We want to share our knowledge. Here, we collected useful tips and
+              links from various sources sorted by topics and questions we are
+              interested in
             </p>
           </div>
         </Image>

@@ -4,7 +4,7 @@ title: iOS
 route: /knowledge/ios
 layout: TopicPage
 featured: true
-about: На сегодняшний день самая популярная платформа на мобильные устройства. Компания Apple самая дорогая компания в истории не просто так. Узнайте, как на самом деле просто и приятно создавать мобильные приложения на iOS. 
+about: Most popular platform, even so not everybody can afford these devices. Apple is the most valuable company in the world for a reason. At the same time, programming for iOS have never been easier. Keep these resources for future use. 
 image: knowledgebase-ios.jpg
 ---
 

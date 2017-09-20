@@ -4,6 +4,6 @@ title: React Native
 route: /knowledge/reactnative
 layout: TopicPage
 featured: false
-about: Цена разработки мобильных приложений упала больше чем вдвое после появления кросс-платформенных технологий. Самая быстро развивающаяся и качественная - React Native. Кстати, знание React почти что означает что вы знаете React Native. Поэтому одной пулей - сразу 3-х зайцев!
+about: "The cost of development dropped more than twice because of cross-platform solutions. One of the most trending - React Native. It comes with bonus: If you know React-Native, you know React and vice versa"   
 image: knowledgebase-reactnative.jpg
 ---

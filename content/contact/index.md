@@ -1,4 +1,4 @@
 ---
-title: Связаться с нами
+title: Intellection Studio|Contact Us
 layout: ContactPage
 ---

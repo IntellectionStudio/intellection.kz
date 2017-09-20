@@ -1,8 +1,8 @@
 ---
-title: Наши стартапы
+title: Intellection Studio|Portfolio
 layout: StartupsPage
 default:
   image: startup-main-image.jpg
-  title: Наши стартапы
-  text: Большинство наших проектов это инновационный симбиоз традиционного бизнеса и цифровых технологий. Мы поддерживаем предпринимателей, которые стремятся решить реальные проблемы людей и бизнесов. В создании наших цифровых продуктов мы используем только самые актуальные технологии и языки программирования. Мы первая студия в Казахстане, которая занимается одновременно продуктами в сфере мобильных приложений, адаптивных веб-сайтов, виртуальной реальности и искусственного интеллекта.
+  title: Our portfolio
+  text: We are first software development studio in Kazakhstan making complex apps for international clients using latest technological trends like React, React-Native, Virtual Reality, Augmented Reality for iOS, Anroid and Web.
 ---

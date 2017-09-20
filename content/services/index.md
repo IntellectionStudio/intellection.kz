@@ -1,4 +1,4 @@
 ---
-title: Наши услуги
+title: Intellection Studio | Our services
 layout: ServicesPage
 ---

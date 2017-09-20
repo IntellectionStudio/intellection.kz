@@ -9,11 +9,11 @@ import Page from 'layouts/Page';
 
 import styles from './index.css';
 
-const MESSAGE_NOT_RECEVIED = 'Сообщение не доставлено';
+const MESSAGE_NOT_RECEVIED = 'Message not sent';
 
 const POP_UP_MESSAGE = {
-  invalidEmail: () => Popup.alert('Не правильный email'),
-  emptyInput: () => Popup.alert('Заполните все поля'),
+  invalidEmail: () => Popup.alert('invalid email'),
+  emptyInput: () => Popup.alert('Please, fill the blanks'),
 };
 
 class ServicesPage extends Component {
@@ -21,7 +21,7 @@ class ServicesPage extends Component {
     name: '',
     email: '',
     message: '',
-    buttonText: 'НАЧАТЬ ПРОЕКТ',
+    buttonText: 'START PROJECT',
     disabled: '',
   };
 
@@ -84,7 +84,7 @@ class ServicesPage extends Component {
     this.setState({email: ''});
     this.setState({name: ''});
     this.setState({message: ''});
-    this.setState({buttonText: 'SUCCESSFULLY CREATED'});
+    this.setState({buttonText: 'MESSAGE SENT! THANK YOU'});
     this.setState({disabled: 'true'});
   };
   render() {
@@ -93,38 +93,34 @@ class ServicesPage extends Component {
         <div className={styles.container}>
           <div className={styles.intro}>
             <div className={styles.intro1}>
-              <h1>Придумали новый Instagram? Мы построим его для вас</h1>
+              <h1>Have an idea for new Instagram? We can help you build it</h1>
               <p>
-                Мы предлагаем услуги разработки мобильных приложений и
-                веб-сайтов любой сложности. Наша команда состоит из 15-ти
-                одаренных программистов и дизайнеров, которые уже создали более
-                20 проектов для местных и зарубежных клиентов.
+                We offer mobile app and web app development services. Our team
+                consists of 15 talented designers and developers, who already
+                created more than 20 projects for local and international
+                clients.
               </p>
-              <h2>Почему именно мы?</h2>
+              <h2>Why choose us?</h2>
               <ul className={styles.lists}>
                 <li className={styles.list}>
-                  Итеративный процесс разработки (Agile)
+                  We use SCRUM for Agile development
                 </li>
-                <li className={styles.list}>Для нас качество выше цены</li>
-                <li className={styles.list}>У нас самый лучший дизайн</li>
-                <li className={styles.list}>
-                  Абсолютная прозрачность ценообразования
-                </li>
+                <li className={styles.list}>Quality for us is above all</li>
+                <li className={styles.list}>We believe in a good design</li>
+                <li className={styles.list}>We charge only 20 USD per hour</li>
               </ul>
             </div>
             <div className={styles.intro2}>
               <div className={styles.form}>
-                <h1>Создайте свой цифровой продукт сегодня</h1>
-                <p className={styles.let12}>
-                  Позвольте нам воплотить вашу идею в реальность
-                </p>
+                <h1>Build your digital product today</h1>
+                <p className={styles.let12}>and let us help you</p>
                 <div className={styles.firstForm}>
                   <div className={styles.nameForm}>
-                    <p style={{color: '#a8acb9'}}>ВАШЕ ИМЯ</p>
+                    <p style={{color: '#a8acb9'}}>YOUR NAME</p>
                     <input
                       id={styles.name}
                       className={styles.textInput}
-                      placeholder="Имя"
+                      placeholder="name"
                       value={this.state.name}
                       onChange={a => this.handleChange('name', a.target.value)}
                     />
@@ -150,12 +146,12 @@ class ServicesPage extends Component {
                       marginTop: '23px',
                     }}
                   >
-                    ОПИШИТЕ ВАШ ПРОЕКТ
+                    PROJECT DESCRIPTION
                   </p>
                   <textarea
                     value={this.state.message}
                     className={styles.textInput2}
-                    placeholder="Опишите проект в 2-3 предложениях. Напишите, что вам требуется: мобильное приложение, веб-сайт, игра на Unity, проект по виртуальной реальности, искусственный интеллект..."
+                    placeholder="Tell us more about a project"
                     rows="7"
                     cols="50"
                     name="comment"
@@ -182,7 +178,7 @@ class ServicesPage extends Component {
                   paddingTop: '33px',
                 }}
               >
-                Процесс
+                OUR PROCESS
               </h3>
             </div>
             <div className={styles.process2}>
@@ -194,7 +190,7 @@ class ServicesPage extends Component {
                     src={'/assets/icons/circle1.png'}
                   />
                 </div>
-                <p>Анализ и планирование</p>
+                <p>Analysis and Planning</p>
               </div>
               <div className={styles.icon1}>
                 <div className={styles.circle1} />
@@ -203,7 +199,7 @@ class ServicesPage extends Component {
                   alt=""
                   src={'/assets/icons/circle2.png'}
                 />
-                <p>Дизайн</p>
+                <p>Design</p>
               </div>
               <div className={styles.icon1}>
                 <div className={styles.circle1} />
@@ -212,7 +208,7 @@ class ServicesPage extends Component {
                   alt=""
                   src={'/assets/icons/circle3.png'}
                 />
-                <p>Разработка</p>
+                <p>Development</p>
               </div>
               <div className={styles.icon1}>
                 <div className={styles.circle1} />
@@ -221,13 +217,13 @@ class ServicesPage extends Component {
                   alt=""
                   src={'/assets/icons/circle4.png'}
                 />
-                <p>Поддержка</p>
+                <p>Maintenance</p>
               </div>
             </div>
           </div>
           <div className={styles.projects}>
             <div className={styles.ptitle}>
-              <h3>Некоторые наши проекты</h3>
+              <h3>Some of our projects</h3>
             </div>
             <div className={styles.projectsName}>
               <div className={styles.firstProject}>
@@ -238,7 +234,7 @@ class ServicesPage extends Component {
                 />
                 <p className={styles.projectName}>Qazaq App</p>
                 <p className={styles.aboutProject}>
-                  Приложение по изучению казахского языка
+                  Kazakh language learning app for iOS and Android
                 </p>
               </div>
               <div className={styles.secondProject}>
@@ -249,7 +245,7 @@ class ServicesPage extends Component {
                 />
                 <p className={styles.projectName}>Fenix News</p>
                 <p className={styles.aboutProject}>
-                  Агрегатор новостных сайтов
+                  News aggregator for Web, iOS and Android
                 </p>
               </div>
               <div className={styles.thirdProject}>
@@ -258,49 +254,47 @@ class ServicesPage extends Component {
                   alt=""
                   src={'/assets/icons/Star_logo.png'}
                 />
-                <p className={styles.projectName}>Я звезда!</p>
-                <p className={styles.aboutProject}>
-                  Проведение кастингов и конкурсов онлайн
-                </p>
+                <p className={styles.projectName}>I am star!</p>
+                <p className={styles.aboutProject}>Online video castings</p>
               </div>
             </div>
             <div className={styles.ssylka}>
               <a className={styles.link} href="/startups">
-                посмотреть все
+                learn more
               </a>
             </div>
           </div>
           <div className={styles.prices}>
             <div className={styles.titlePrice}>
-              <h3>Примерные цены</h3>
+              <h3>Pricing</h3>
             </div>
             <div className={styles.pricesBlock}>
               <div className={styles.price}>
-                <p className={styles.simple}>Базовый функционал</p>
-                <p>от 100 до 300 часов работы </p>
-                <p>Около 5-ти экранов </p>
-                <p>Одна платформа </p>
-                <p>Несложный функционал </p>
-                <p>Публикация на рынках App Store, Google Play </p>
-                <p className={styles.dollar}>$1000-$4000</p>
+                <p className={styles.simple}>Easy apps</p>
+                <p>from 100 to 300 hours </p>
+                <p>around 5 screens </p>
+                <p>one platform </p>
+                <p>non-complex functionality </p>
+                <p>publish to App Store, Google Play </p>
+                <p className={styles.dollar}>$2000-$6000</p>
               </div>
               <div className={styles.price}>
-                <p className={styles.simple}>Средняя сложность</p>
-                <p>от 300 до 800 часов работы </p>
-                <p>Около 10-ти экранов </p>
-                <p>Несколько платформ </p>
-                <p>Более сложный функционал </p>
-                <p>Публикация на рынках App Store, Google Play </p>
-                <p className={styles.dollar}>$4000-$12000</p>
+                <p className={styles.simple}>Middle complexity</p>
+                <p>from 300 to 800 hours </p>
+                <p>around 10 screens </p>
+                <p>two or more platforms </p>
+                <p>more complex functionality </p>
+                <p>publish to App Store, Google Play</p>
+                <p className={styles.dollar}>$6000-$16000</p>
               </div>
               <div className={styles.price}>
-                <p className={styles.simple}>Сложное решение</p>
-                <p>Более 800 часов работы </p>
-                <p>Более 10-ти экранов </p>
-                <p>Несколько платформ </p>
-                <p>Сложный функционал </p>
-                <p>Публикация на рынках App Store, Google Play </p>
-                <p className={styles.dollar}>$12000</p>
+                <p className={styles.simple}>Complex solutions</p>
+                <p>more than 800 hours </p>
+                <p>More than 10 screen </p>
+                <p>two or more platforms </p>
+                <p>Complex functionality </p>
+                <p>publish to App Store, Google Play</p>
+                <p className={styles.dollar}>{'>'}$16000</p>
               </div>
             </div>
             <button
@@ -309,7 +303,7 @@ class ServicesPage extends Component {
               value="Reset"
               onClick={this.handleGetStartedClicked}
             >
-              НАЧАТЬ ПРОЕКТ
+              START PROJECT
             </button>
           </div>
         </div>

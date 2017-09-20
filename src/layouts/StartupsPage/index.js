@@ -46,7 +46,7 @@ class StartupsPage extends Component {
           <h1 className={styles.startupTitle}>{title}</h1>
           <p className={styles.startupText}>{text}</p>
           <div className={styles.learnMore}>
-            <Link to={link}>Подробнее &gt;</Link>
+            <Link to={link}>Learn more &gt;</Link>
           </div>
         </div>
         <div className={styles.imageWrapper}>

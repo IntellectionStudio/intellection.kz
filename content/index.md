@@ -1,5 +1,5 @@
 ---
-description: Software Development Studio. We build mobile apps and website of any complexity
+description: Software Development Studio. We build mobile apps and websites of any complexity
 title: Intellection Studio
 layout: HomePage
 hero:

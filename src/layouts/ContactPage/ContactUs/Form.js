@@ -26,21 +26,21 @@ type ContactUsStateType = {|
 
 const FORM_CONTENT = {
   name: {
-    title: 'Ваше имя',
+    title: 'Your name',
     placeholder: 'Denis',
   },
   email: {
-    title: 'Ваш email',
+    title: 'Your email',
     placeholder: 'johndoe@gmail.com',
   },
   message: {
-    title: 'Ваше сообщение',
+    title: 'Your message',
   },
 };
 
 const POP_UP_MESSAGE = {
-  invalidEmail: () => Popup.alert('Не правильный email'),
-  emptyInput: () => Popup.alert('Заполните все поля'),
+  invalidEmail: () => Popup.alert('Incorrect email'),
+  emptyInput: () => Popup.alert('Please, fill the blanks'),
 };
 
 class ContactUs extends Component {

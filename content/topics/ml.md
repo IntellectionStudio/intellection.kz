@@ -4,6 +4,6 @@ title: Machine Learning
 route: /knowledge/machinelearning
 layout: TopicPage
 featured: false
-about: Все мы с детства смотрели фильмы про восстание роботов. Благодаря машинному обучению это может стать реальностью. Искусственный интеллект, автопилоты для машин, рекомендательные системы, ... у всех корень один - машинное обучение. 
+about: Aren't you afraid that machines are becoming smarter and smarter? That's because now they can learn. Artificial Intelligence, self-driving cars, recommendation systems, ... - all based on Machine Learning. 
 image: knowledgebase-machinelearning.jpg
 ---

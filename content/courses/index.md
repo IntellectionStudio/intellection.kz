@@ -1,63 +1,63 @@
 ---
-title: Наши курсы
+title: Intellection Studio|Online courses
 layout: CoursesPage
 heading:
-  text: IOS ANDROID REACT-NATIVE
-  title: Стань разработчиком мобильных приложений
+  text: ONE-TO-ONE online course
+  title: Become Mobile App Developer
 youtubeVideoId: cs1a_Kml89M
 about:
-  title: Почему именно наш курс?
+  title: Why our one-to-one course?
   text:
-    - Путь разработчика мобильных приложений всегда начинается с идеи создать свое уникальное приложение. Мы не можем знать, какая именно у вас затея, но зато, мы можем дать все необходимые инструменты для воплощения вашей мечты в реальность.
-    - На нашем курсе вы создадите 10 новых аппов для вашего портфолио, изучите основы программирования на Swift, Java или React-native, узнаете как хранить код на Github, научитесь загружать приложения в Apple Store и Google Play, а также запустите свой сервер для хранения данных в облаке. Наши преподаватели за ручку проведут вас от идеи приложения до его запуска на рынке мобильных приложений. Курс рассчитан на пользователей без опыта программирования, и для тех, кто уже знает основы программирования. Для тех, кто уже знаком с разработкой мобильных приложений на iOS и Android, у нас есть усложненный курс по кросс-платформенной разработке React-Native.
+    - Programmers are hackers, but they are also builders. We love programming. And we love dreaming about success. We believe that one day our dreams will come true. And we also think, that everybody has a nice idea about potentially successful technology. We want to give you tools to test that idea. Our Individual courses are designed to take you from an idea to Apple Store or Google Play. During the course you will create 10 mobile apps together with us.
+    - You will also have challenging tasks by improving these apps and adding something of your own. Our instructors are currently employed programmers and they will give only relevant and actual information about latest development trends. Course assumes no-programming experience. For our experienced clients we have developed advanced React-Native course.
+    - Each lesson is a 120 minute Skype or Google Hangout call. Each course has 24 lessons.
+
 benefits:
-  - разрабатывать в среде Xcode, Android Studio или Atom
-  - программировать Java, Swift или Javascript
-  - создать свое приложение
-  - загрузить приложение в Apple Store или Google Play
-  - возможность получить работу
+  - Xcode, Android Studio and Atom for React/React-Native
+  - Java, Swift and Javascript
+  - create 10 mobile apps and one of your own
+  - launch a website, upload to Google Play, upload to Apple Store
+  - employment possibility
 salary:
   amount: $125k
-  text: СРЕДНЯЯ ЗАРПЛАТА
+  text: Average Salary
 courses:
-  - title: Индивидуальный Курс
+  - title: Individual Course
     attributes:
       - image: false
         header: 8
-        text: Недель длительность
+        text: weeks duration
       - image: false
         header: 48
-        text: Индивидуальных часов
-      - image: true
-        src: logo-courses-appleicon.svg
-        alt: Apple Icon
-        text: Пробный урок
+        text: individual hours
+      - image: false
+        header: FREE
+        text: sample lesson
       - image: false
         header: ∞
-        text: Доступ к видеоурокам
-    price: 60 тыс.
-    text: тенге за курс
+        text: access to video content
+    price: 900 USD
+    text: for complete course
     button:
-      text: Оставить заявку
+      text: Get in Touch
       color: blue
-  - title: Корпоративный Курс
+  - title: Group Course
     attributes:
       - image: false
         header: 3
-        text: Человека в группе
+        text: people in one group
       - image: false
-        header: 17
-        text: Адаптированный силлабус
-      - image: true
-        src: logo-courses-appleicon.svg
-        alt: Apple Icon
-        text: Пробный урок
+        header: 48
+        text: group hours
+      - image: false
+        header: FREE
+        text: sample lesson
       - image: false
         header: ∞
-        text: Доступ к видеоурокам
-    price: 160 тыс.
-    text: тенге за курс
+        text: access to video content
+    price: 2400 USD.
+    text: for 3 people
     button:
-      text: Оставить заявку
+      text: Learn More
       color: grey
 ---

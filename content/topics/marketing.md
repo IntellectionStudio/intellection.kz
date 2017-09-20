@@ -4,6 +4,6 @@ title: Marketing
 route: /knowledge/marketing
 layout: TopicPage
 featured: false
-about: Можно нанять маркетинговое агенство или крутого “маркетолога”. А можно научиться все делать самому. Здесь собраны ссылки на ресурсы цифрового и традиционного маркетинга. 
+about: You can hire marketing agency or marketing 'guru'. OR you can learn it by yourself. Here is the knowledge you need to grasp first.
 image: knowledgebase-marketing.jpg
 ---

@@ -4,6 +4,6 @@ title: Virtual Reality
 route: /knowledge/vr
 layout: TopicPage
 featured: true
-about: Потребность на разработчиков VR растет не по годам, а по часам. В прошлом году например, на 800%. Ожидается, что VR индустрия станет очень крупной. Знание технологий разработки на VR платформы - большое преимущество.
+about: Demand for VR developers increasing at an increasing pace. Last year it was 800% increase. Imagine. It is expected that VR industry will become huge. Knowing VR development - big advantage.
 image: knowledgebase-vr.jpg
 ---

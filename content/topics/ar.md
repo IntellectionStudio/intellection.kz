@@ -4,6 +4,6 @@ title: Augmented Reality
 route: /knowledge/ar
 layout: TopicPage
 featured: false
-about: Технологии дополненной реальности еще не раз удивят наш мир. Чего стоит необратимое нашествие покемонов по всему миру. А вы тоже ловите покемонов ? 
+about: Augmented Reality is yet to suprise all of us. And we are talking not only about pokemons, but much much more. Speaking of pokemons, do you also catch them in your leisure time?
 image: knowledgebase-ar.jpg
 ---
