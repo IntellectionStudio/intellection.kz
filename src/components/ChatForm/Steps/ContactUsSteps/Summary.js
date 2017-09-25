@@ -16,8 +16,8 @@ const KEY = 'B1AoYTIo1KTLERLF1WOiRg';
 const MAND_EMAIL = 'info@intellection.kz';
 const INTELLECTION_EMAIL = 'intellection.kz@gmail.com';
 
-const MESSAGE_RECEVIED = 'Сообщение доставлено';
-const MESSAGE_NOT_RECEVIED = 'Сообщение не доставлено';
+const MESSAGE_RECEVIED = 'Message delivered';
+const MESSAGE_NOT_RECEVIED = 'Message not delivered';
 
 class Summary extends Component {
   state: SummaryStateType = {
@@ -45,7 +45,7 @@ class Summary extends Component {
               type: 'to',
             },
           ],
-          subject: 'CONTACT US FORM (intellection.kz)',
+          subject: 'CONTACT US FORM (intellectionstudio.com)',
           html: `Name: ${messageParams.name}<br/>Contact: ${messageParams.contact}<br/>Message: ${messageParams.servicesType}`,
         },
       }),

@@ -13,12 +13,12 @@ const PickUp = {
     options: [
       {
         value: 'yes',
-        label: 'Да',
+        label: 'Yes',
         trigger: trigger.positive,
       },
       {
         value: 'no',
-        label: 'Нет',
+        label: 'No',
         trigger: trigger.negative,
       },
     ],
@@ -54,13 +54,13 @@ const ServiceType = {
     id: 'servicesType',
     options: [
       {
-        value: 'Дистанционные курсы iOS или Android',
-        label: 'Дистанционные курсы iOS или Android',
+        value: 'Online courses for iOS and Android development',
+        label: 'Online courses for iOS and Android development',
         trigger,
       },
       {
-        value: 'Услуги разработки мобильных приложений и веб-сайтов',
-        label: 'Услуги разработки мобильных приложений и веб-сайтов',
+        value: 'Mobile and web apps development services',
+        label: 'Mobile and web apps development services',
         trigger,
       },
     ],
@@ -83,10 +83,10 @@ const ConnectionType = {
     id: 'connectionType',
     options: [
       {value: 'email', label: 'Email', trigger: params.triggerEmail},
-      {value: 'tel', label: 'Телефон', trigger: params.triggerTel},
+      {value: 'tel', label: 'Telephone', trigger: params.triggerTel},
       {
         value: 'no_connection',
-        label: 'Лучше со мной не связываться',
+        label: 'I do not want to connect',
         trigger: params.triggerNo,
       },
     ],
@@ -123,7 +123,7 @@ const Tel = {
     user: true,
     trigger,
     validator: value =>
-      ValidationUtils.isValidTel(value) ? true : 'Неправильный номер телефона',
+      ValidationUtils.isValidTel(value) ? true : 'Incorrect phone number',
   }),
   update: (trigger: string) => ({
     id: 'updateEmail',

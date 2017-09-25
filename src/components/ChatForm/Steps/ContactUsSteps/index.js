@@ -12,12 +12,12 @@ const steps = [
   {
     id: 1,
     message:
-      'Здравствуйте! Меня зовут Intellection Bot и я рад приветствовать Вас на нашем сайте.',
+      'Good day! My name is Intellection Bot and I would like to welcome you at our website!',
     trigger: 'pickUp',
   },
   {
     id: 'pickUp',
-    message: 'Можно с Вами познакомиться?',
+    message: 'Do you want to tell me a little more about yourself?',
     trigger: PickUp.id,
   },
   PickUp.options({
@@ -26,19 +26,19 @@ const steps = [
   }),
   {
     id: 'name',
-    message: 'Как Вас зовут?',
+    message: 'What is your name?',
     trigger: Name.id,
   },
   Name.input('services'),
   {
     id: 'services',
-    message: 'Что Вас интересует? (Нажмите на правильный вариант ответа)',
+    message: 'What are you interested in? (Please, press the correct answer)',
     trigger: ServiceType.id,
   },
   ServiceType.options('connection'),
   {
     id: 'connection',
-    message: 'Как нам с вами лучше связаться?',
+    message: 'What is the best way to connect with you?',
     trigger: ConnectionType.id,
   },
   ConnectionType.options({
@@ -53,13 +53,13 @@ const steps = [
   },
   {
     id: 'email',
-    message: 'Можно ваш e-mail?',
+    message: 'Please, give us your e-mail',
     trigger: Email.id,
   },
   Email.input('review'),
   {
     id: 'tel',
-    message: 'Можно ваш телефон?',
+    message: 'Please, give us your phone number',
     trigger: Tel.id,
   },
   Tel.input('review'),
@@ -67,7 +67,7 @@ const steps = [
   {
     id: 'end-message',
     message:
-      'Спасибо! Кто нибудь из нашей команды обязательно с Вами свяжется.Если вы желаете отправить форму заново просто перезагрузите страницу.',
+      'Thank you! Somebody from our team will be in touch soon! Refresh the page to send a form again',
     end: true,
   },
 ];
