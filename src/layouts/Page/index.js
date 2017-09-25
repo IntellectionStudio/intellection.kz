@@ -1,4 +1,3 @@
-import {joinUri} from 'phenomic';
 import {pick} from 'ramda';
 import Helmet from 'react-helmet';
 import React, {Component} from 'react';
@@ -24,7 +23,7 @@ class Page extends Component {
       {property: 'og:title', content: head.title},
       {
         property: 'og:url',
-        content: joinUri(process.env.PHENOMIC_USER_URL, __url),
+        content: 'https://intellection.kz',
       },
       // {property: 'og:image', content: socialImage},
       {property: 'og:description', content: head.description},
@@ -37,6 +36,7 @@ class Page extends Component {
       {name: 'twitter:description', content: head.description},
       // {name: 'twitter:image', content: socialImage},
       {name: 'description', content: head.description},
+      {name: 'title', content: head.title},
     ];
 
     const {stepsType, isChatFormOpened} = this.context;
