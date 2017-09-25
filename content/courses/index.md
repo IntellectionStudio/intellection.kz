@@ -1,5 +1,6 @@
 ---
-title: Наши курсы
+title: Дистанционные курсы iOS, Android и React-Native.
+description: На нашем курсе вы создадите 10 новых аппов для вашего портфолио, изучите основы программирования на Swift, Java или React-native, узнаете как хранить код на Github, научитесь загружать приложения в Apple Store и Google Play.
 layout: CoursesPage
 heading:
   text: IOS ANDROID REACT-NATIVE

@@ -1,5 +1,6 @@
 ---
 title: Наши стартапы
+description: Наши проекты в сфере мобильных приложений, веб-сайтов, игр и технологий виртуальной реальности
 layout: StartupsPage
 default:
   image: startup-main-image.jpg

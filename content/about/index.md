@@ -1,5 +1,6 @@
 ---
-title: О нас
+title: О нас | Intellection Studio
+description: Мы пишем мобильные приложения и создаем очень быстрые веб-сайты любой сложности. Также у нас отличный дизайн
 layout: AboutPage
 hero:
   title: Стартап центр Intellection
@@ -44,7 +45,7 @@ team:
       firstName: Илияс
       lastName: Исатаев
       position: Product Inventor
-      text: Предприниматель, инвестор. Основатель сети фитнес центров Invictus, Crossfit Astana, супермаркетов A2, ресторана Shoreditch 
+      text: Предприниматель, инвестор. Основатель сети фитнес центров Invictus, Crossfit Astana, супермаркетов A2, ресторана Shoreditch
   teamMembers:
     Almas:
       faceImageCollection:
@@ -73,53 +74,53 @@ team:
       firstName: Дамир
       lastName: Бектилов
       position: Designer
-      text: Самый молодой участник нашей команды. Очень быстро научился основным трэндам в дизайне. Работает в Intellection, потому что не хочет идти в армию 
+      text: Самый молодой участник нашей команды. Очень быстро научился основным трэндам в дизайне. Работает в Intellection, потому что не хочет идти в армию
     Aizhan:
       image: profile-photo-aizh.jpg
       firstName: Айжан
       lastName: Есекина
       position: Designer
-      text: Учила графический дизайн в London College of Communication. Умеет красиво петь и играть на гитаре. Основатель проекта AquaPoint. 
+      text: Учила графический дизайн в London College of Communication. Умеет красиво петь и играть на гитаре. Основатель проекта AquaPoint.
     Assel:
       image: profile-photo-asselya.jpg
       firstName: Асель
       lastName: Касембекова
       position: Frontend Developer
-      text: Раньше работала в Price Waterhouse Cooper. Сейчас увлекается web-разработкой и частенько засиживается до поздна. 
+      text: Раньше работала в Price Waterhouse Cooper. Сейчас увлекается web-разработкой и частенько засиживается до поздна.
     Dariga:
       image: profile-photo-dari.jpg
       firstName: Дарига
       lastName: Байбулсынова
       position: Video Creator
-      text: Мастер на все руки. Создает красивые видео для Intellection, пишет блог посты и даже умеет создавать дизайны мобильных приложений и кодить. 
+      text: Мастер на все руки. Создает красивые видео для Intellection, пишет блог посты и даже умеет создавать дизайны мобильных приложений и кодить.
     Gulsum:
       image: profile-photo-gusi.jpg
       firstName: Гульсум
       lastName: Байжикенова
       position: CFO
-      text: Генеральный менеджер и лицо нашей компании. К ней можно обратиться с любым непонятным вопросом либо просьбой. Занимается бизнес развитием и маркетингом. Хочет научится "дизайнить". 
+      text: Генеральный менеджер и лицо нашей компании. К ней можно обратиться с любым непонятным вопросом либо просьбой. Занимается бизнес развитием и маркетингом. Хочет научится "дизайнить".
     Adilkhan:
       image: profile-photo-adilkhan.jpg
       firstName: Адильхан
       lastName: Кенжетаев
       position: Mobile and Web Developer
-      text: Скромный разработчик мобильных и WEB приложений. Увлекается React-Native и хочет научиться Machine Learning, чтобы  искусственный интеллект писал за него код 
+      text: Скромный разработчик мобильных и WEB приложений. Увлекается React-Native и хочет научиться Machine Learning, чтобы  искусственный интеллект писал за него код
     Bauyrzhan:
       image: profile-photo-bauka.jpg
       firstName: Бауыржан
       lastName: Алжанов
       position: VR, WEB and Android Developer
-      text: Имеет большой опыт в разработке Android приложений. Недавно научился разрабатывать VR технологии в Unity. Также неплохо знает Web и React. 
+      text: Имеет большой опыт в разработке Android приложений. Недавно научился разрабатывать VR технологии в Unity. Также неплохо знает Web и React.
     Yerkezhan:
       image: profile-photo-erkesha.jpg
       firstName: Еркежан
       lastName: Женисова
       position: iOS Developer, Teacher and Sales Manager
-      text: iOS разработчик и по совместительству маркетолог. Преподает дистанционные курсы и записывает видео уроки. Умеет красиво рисовать на iPad-е 
+      text: iOS разработчик и по совместительству маркетолог. Преподает дистанционные курсы и записывает видео уроки. Умеет красиво рисовать на iPad-е
     Sultan:
       image: profile-photo-sulta.jpg
       firstName: Султан
       lastName: Бухарбай
       position: Web, iOS and Android Developer
-      text: Участник NFactorialIncubator. Умеет программировать мобильные приложения и Web технологии. Любит шутить и приходить на работу раньше всех 
+      text: Участник NFactorialIncubator. Умеет программировать мобильные приложения и Web технологии. Любит шутить и приходить на работу раньше всех
 ---

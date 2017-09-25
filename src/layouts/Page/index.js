@@ -19,7 +19,6 @@ class Page extends Component {
   render() {
     const {__url, head, children, isLoading} = this.props;
     const {pkg} = this.context.metadata;
-    console.log(head);
     const meta = [
       {property: 'og:type', content: 'article'},
       {property: 'og:title', content: head.title},
