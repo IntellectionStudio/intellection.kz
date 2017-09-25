@@ -1,5 +1,6 @@
 ---
 title: Intellection Studio|Online courses
+description: Online one-to-one courses in Mobile applications development using Swift, Java, Android Studio, XCode, and React-Native
 layout: CoursesPage
 heading:
   text: ONE-TO-ONE online course

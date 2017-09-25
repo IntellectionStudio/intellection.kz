@@ -1,5 +1,6 @@
 ---
 title: Intellection Studio|About Us
+description: Web and mobile apps studio. We create mobile applications for iOS, Android using native technologies like Swift, Xcode, Java and Android studio. Also we are fond of cross-platform technologies like React and React-Native.
 layout: AboutPage
 hero:
   title: Intellection Studio

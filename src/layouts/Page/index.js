@@ -83,7 +83,7 @@ Page.contextTypes = {
 Page.pickPageProps = props =>
   pick(['__filename', '__url', 'head'])({
     ...props,
-    head: pick(['title', 'footer', 'children'])(props.head),
+    head: pick(['title', 'description', 'footer', 'children'])(props.head),
   });
 
 export default Page;
