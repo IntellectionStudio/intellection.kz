@@ -19,6 +19,7 @@ class Page extends Component {
   render() {
     const {__url, head, children, isLoading} = this.props;
     const {pkg} = this.context.metadata;
+    console.log(head);
     const meta = [
       {property: 'og:type', content: 'article'},
       {property: 'og:title', content: head.title},
@@ -83,7 +84,7 @@ Page.contextTypes = {
 Page.pickPageProps = props =>
   pick(['__filename', '__url', 'head'])({
     ...props,
-    head: pick(['title', 'footer', 'children'])(props.head),
+    head: pick(['title', 'description', 'footer', 'children'])(props.head),
   });
 
 export default Page;
