@@ -121,6 +121,10 @@
   }
 }
 
+.navItemWrapper {
+  max-width: 80px;
+}
+
 .navItem {
   composes: grow from "tachyons/src/_hovers.css";
   margin-left: 2.25rem;

@@ -25,15 +25,17 @@ class Header extends Component {
   handleContactUs = () => this.context.handleChatFormClick('');
 
   renderLink = ({title, path}) => (
-    <Link
-      key={`${title}-${path}`}
-      className={cx(styles.navItem, {
-        [styles.navItemOpen]: this.state.isOpen,
-      })}
-      to={path}
-    >
-      {title}
-    </Link>
+    <div className={styles.navItemWrapper}>
+      <Link
+        key={`${title}-${path}`}
+        className={cx(styles.navItem, {
+          [styles.navItemOpen]: this.state.isOpen,
+        })}
+        to={path}
+      >
+        {title}
+      </Link>
+    </div>
   );
 
   render() {
