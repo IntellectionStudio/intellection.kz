@@ -28,6 +28,17 @@ class Summary extends Component {
     tel: '',
   };
 
+  componentDidMount() {
+    const {steps} = this.props;
+    const {emailInput, nameInput, servicesType, telInput} = steps;
+
+    this.sendMessage({
+      contact: (telInput && telInput.value) || (emailInput && emailInput.value),
+      name: nameInput.value,
+      servicesType: servicesType.value,
+    });
+  }
+
   sendMessage = (messageParams: {
     name: string,
     servicesType: string,
@@ -45,7 +56,7 @@ class Summary extends Component {
               type: 'to',
             },
           ],
-          subject: 'CONTACT US FORM (intellection.kz)',
+          subject: `CONTACT US FORM (intellection.kz) ${messageParams.name} ${messageParams.contact}`,
           html: `Name: ${messageParams.name}<br/>Contact: ${messageParams.contact}<br/>Message: ${messageParams.servicesType}`,
         },
       }),
@@ -63,12 +74,6 @@ class Summary extends Component {
       servicesType,
       telInput,
     } = steps;
-
-    this.sendMessage({
-      contact: (telInput && telInput.value) || (emailInput && emailInput.value),
-      name: nameInput.value,
-      servicesType: servicesType.value,
-    });
 
     return (
       <div style={{width: '100%'}}>
