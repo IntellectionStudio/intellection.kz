@@ -1,12 +1,14 @@
 /* @flow */
 
-import ChatBot from 'react-simple-chatbot';
-import React from 'react';
 import {ThemeProvider} from 'styled-components';
+import ChatBot from 'react-simple-chatbot';
+import cx from 'classnames';
+import React, {Component} from 'react';
 
 import type {StepsType} from 'types';
 
 import {ContactUsSteps} from './Steps';
+import styles from './index.css';
 
 // all available props
 const theme = {
@@ -28,24 +30,47 @@ const defineSteps = (stepsType: StepsType) => {
   }
 };
 
-const ChatForm = ({opened, handleClose, stepsType}) => (
-  <ThemeProvider theme={theme}>
-    <ChatBot
-      key={`chatbot-component-${stepsType}`}
-      floating
-      botDelay={100}
-      // bubbleStyle={bubbleStyle}
-      customDelay={100}
-      headerTitle="Intellection Bot"
-      placeholder="Напишите что нибудь.."
-      // headerComponent={ChatFormHeader({handleClose})}
-      // hideBotAvatar
-      // hideUserAvatar
-      opened={opened}
-      toggleFloating={handleClose}
-      steps={defineSteps(stepsType)}
-    />
-  </ThemeProvider>
-);
+class ChatForm extends Component {
+  state = {
+    isChatbotVisible: false,
+  };
+
+  componentDidMount() {
+    this.showChatBot();
+  }
+
+  showChatBot = () => this.setState({isChatbotVisible: true});
+
+  render() {
+    const {opened, handleClose, stepsType} = this.props;
+
+    return (
+      <div
+        className={cx('', {
+          [styles.visible]: this.state.isChatbotVisible,
+          [styles.notVisible]: !this.state.isChatbotVisible,
+        })}
+      >
+        <ThemeProvider theme={theme}>
+          <ChatBot
+            key={`chatbot-component-${stepsType}`}
+            floating
+            botDelay={100}
+            // bubbleStyle={bubbleStyle}
+            customDelay={100}
+            headerTitle="Intellection Bot"
+            placeholder="Type something..."
+            // headerComponent={ChatFormHeader({handleClose})}
+            // hideBotAvatar
+            // hideUserAvatar
+            opened={opened}
+            toggleFloating={handleClose}
+            steps={defineSteps(stepsType)}
+          />
+        </ThemeProvider>
+      </div>
+    );
+  }
+}
 
 export default ChatForm;

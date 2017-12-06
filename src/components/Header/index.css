@@ -23,6 +23,10 @@
   color: var(--colorPrimary);
 }
 
+.navItemWrapper {
+  max-width: 80px;
+}
+
 .header {
   height: 100%;
   width: 100%;
@@ -124,6 +128,14 @@
 .navItem {
   composes: grow from "tachyons/src/_hovers.css";
   margin-left: 2.25rem;
+
+  @media screen and (min-width: 992px) {
+    margin-left: 1.25rem;
+  }
+
+  @media screen and (min-width: 1062px) {
+    margin-left: 2.25rem;
+  }
 }
 
 .ctaButton {
