@@ -44,7 +44,9 @@ class ContactUs extends Component {
             },
           ],
           subject: 'CONTACT US FORM (intellection.kz)',
-          html: `Name: ${messageParams.name}<br/>Email: ${messageParams.email}<br/>Message: ${messageParams.message}`,
+          html: `Name: ${messageParams.name}<br/>Email: ${
+            messageParams.email
+          }<br/>Message: ${messageParams.message}`,
         },
       }),
     })

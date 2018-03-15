@@ -45,8 +45,12 @@ class Summary extends Component {
               type: 'to',
             },
           ],
-          subject: `CONTACT US FORM (intellectionstudio.com) ${messageParams.name} ${messageParams.contact}`,
-          html: `Name: ${messageParams.name}<br/>Contact: ${messageParams.contact}<br/>Message: ${messageParams.servicesType}`,
+          subject: `CONTACT US FORM (intellectionstudio.com) ${
+            messageParams.name
+          } ${messageParams.contact}`,
+          html: `Name: ${messageParams.name}<br/>Contact: ${
+            messageParams.contact
+          }<br/>Message: ${messageParams.servicesType}`,
         },
       }),
     })

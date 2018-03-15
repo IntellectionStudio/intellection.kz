@@ -72,8 +72,9 @@ class ServicesPage extends Component {
             },
           ],
           subject: 'APPLICATION FORM (intellection.kz)',
-          html: `Name: ${this.state.name} <br />Email: ${this.state
-            .email} <br />Message: ${this.state.message} <br />`,
+          html: `Name: ${this.state.name} <br />Email: ${
+            this.state.email
+          } <br />Message: ${this.state.message} <br />`,
         },
       }),
     })

@@ -35,8 +35,7 @@ class Image extends Component {
     };
     if (this.props.background) {
       // eslint-disable-next-line
-      const bestFitImage = require(`../../../content/assets/images/${this.props
-        .name}`);
+      const bestFitImage = require(`../../../content/assets/images/${this.props.name}`);
 
       return (
         <div
@@ -44,14 +43,14 @@ class Image extends Component {
           style={{
             background:
               typeof this.props.background === 'string'
-                ? `${this.props
-                    .background}, url('${bestFitImage}') center center / ${this
-                    .props.contain
-                    ? 'contain'
-                    : 'cover'} no-repeat`
-                : `url('${bestFitImage}') center center / ${this.props.contain
-                    ? 'contain'
-                    : 'cover'} no-repeat`,
+                ? `${
+                    this.props.background
+                  }, url('${bestFitImage}') center center / ${
+                    this.props.contain ? 'contain' : 'cover'
+                  } no-repeat`
+                : `url('${bestFitImage}') center center / ${
+                    this.props.contain ? 'contain' : 'cover'
+                  } no-repeat`,
           }}
         >
           {this.props.children}

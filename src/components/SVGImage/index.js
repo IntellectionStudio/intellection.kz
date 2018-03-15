@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {pure} from 'recompact';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
