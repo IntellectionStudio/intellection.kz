@@ -56,8 +56,12 @@ class Summary extends Component {
               type: 'to',
             },
           ],
-          subject: `CONTACT US FORM (intellection.kz) ${messageParams.name} ${messageParams.contact}`,
-          html: `Name: ${messageParams.name}<br/>Contact: ${messageParams.contact}<br/>Message: ${messageParams.servicesType}`,
+          subject: `CONTACT US FORM (intellection.kz) ${messageParams.name} ${
+            messageParams.contact
+          }`,
+          html: `Name: ${messageParams.name}<br/>Contact: ${
+            messageParams.contact
+          }<br/>Message: ${messageParams.servicesType}`,
         },
       }),
     })

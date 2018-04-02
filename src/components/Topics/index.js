@@ -119,7 +119,8 @@ class Topics extends Component {
           onMeasure={({width}) =>
             width < BREAKPOINT
               ? this.setState({fullClickable: true})
-              : this.setState({fullClickable: false})}
+              : this.setState({fullClickable: false})
+          }
         >
           <div className={styles.knowledgeTopicTableFrame}>
             {this.renderTopicTableCell(topics)}
