@@ -47,22 +47,6 @@ team:
       position: Product Inventor
       text: Предприниматель, инвестор. Основатель сети фитнес центров Invictus, Crossfit Astana, супермаркетов A2, ресторана Shoreditch
   teamMembers:
-    Almas:
-      faceImageCollection:
-        top: aboutus-face-top.jpg
-        right: aboutus-face-right.jpg
-        center: aboutus-face-center.jpg
-        bottomLeft: aboutus-face-bottom-left.jpg
-        bottomRight: aboutus-face-bottom-right.jpg
-        topLeft: aboutus-face-top-left.jpg
-        topRight: aboutus-face-top-right.jpg
-        bottom: aboutus-face-bottom.jpg
-        left: aboutus-face-left.jpg
-      image: profile-photo-almas.jpg
-      firstName: Алмас
-      lastName: Акчабаев
-      position: CTO, Full stack developer
-      text: Разработчик и технический руководитель наших проектов. Увлекается программированием и новыми трэндами в разработке. Пришел к нам из мира финансов
     Anuar:
       image: profile-photo-anchik.jpg
       firstName: Ануар
@@ -75,18 +59,6 @@ team:
       lastName: Бектилов
       position: Designer
       text: Самый молодой участник нашей команды. Очень быстро научился основным трэндам в дизайне. Работает в Intellection, потому что не хочет идти в армию
-    Aizhan:
-      image: profile-photo-aizh.jpg
-      firstName: Айжан
-      lastName: Есекина
-      position: Designer
-      text: Учила графический дизайн в London College of Communication. Умеет красиво петь и играть на гитаре. Основатель проекта AquaPoint.
-    Assel:
-      image: profile-photo-asselya.jpg
-      firstName: Асель
-      lastName: Касембекова
-      position: Frontend Developer
-      text: Раньше работала в Price Waterhouse Cooper. Сейчас увлекается web-разработкой и частенько засиживается до поздна.
     Dariga:
       image: profile-photo-dari.jpg
       firstName: Дарига
@@ -123,4 +95,34 @@ team:
       lastName: Бухарбай
       position: Web, iOS and Android Developer
       text: Участник NFactorialIncubator. Умеет программировать мобильные приложения и Web технологии. Любит шутить и приходить на работу раньше всех
+    Vladimir:
+      image: profile-photo-galym.jpg
+      firstName: Владимир
+      lastName: Токарев
+      position: Web разработчик
+      text: Хорошо разбирается в Web, Mobile разработке, а также в Электронике и Робототехнике. Проходил обучение в стартап акселераторах HAX и TechStars. Очень быстро самообучается.
+    Galym:
+      image: profile-photo-vovan.jpg
+      firstName: Галым
+      lastName: Нуссипхожин
+      position: Front-end разработчик
+      text: Выживший стажер. Верный напарник Владимира. На "ты" с React и Redax.
+    Bayan:
+      image: profile-photo-bayan.jpg
+      firstName: Баян
+      lastName: Накипбекова
+      position: Менеджер
+      text: Отвечает на все вопросы клиентов и координирует работу сотрудников. Административно-хозяйственное обеспечение компании.
+    Daniyar:
+      image: profile-photo-daniyar.jpg
+      firstName: Данияр
+      lastName: Комашев
+      position: Android-разработчик
+      text: Заканчивает СДУ. С легкостью закодит любое приложение и научит делать это остальных!
+    Evgeniy:
+      image: profile-photo-zhenya.jpg
+      firstName: Евгений
+      lastName: Телегин
+      position: Front-end разработчик
+      text: Программист на все руки. Кодит на Swift, знает React, React Native. Всегда приносит вкусняшки в офис.
 ---

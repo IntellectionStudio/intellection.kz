@@ -5,8 +5,6 @@ import React, {Component} from 'react';
 import {ThemeProvider} from 'styled-components';
 import cx from 'classnames';
 
-import type {StepsType} from 'types';
-
 import {ContactUsSteps} from './Steps';
 import styles from './index.css';
 
@@ -22,7 +20,7 @@ const theme = {
   userFontColor: '#4a4a4a',
 };
 
-const defineSteps = (stepsType: StepsType) => {
+const defineSteps = stepsType => {
   // TODO: add more steps
   switch (stepsType) {
     default:
