@@ -47,22 +47,6 @@ team:
       position: Product Inventor
       text: Serial Enterpreneur. Founder of fitness chains Invictus and Crossfit Astana, supermarket chain A2, restaurant Shoreditch
   teamMembers:
-    Almas:
-      faceImageCollection:
-        top: aboutus-face-top.jpg
-        right: aboutus-face-right.jpg
-        center: aboutus-face-center.jpg
-        bottomLeft: aboutus-face-bottom-left.jpg
-        bottomRight: aboutus-face-bottom-right.jpg
-        topLeft: aboutus-face-top-left.jpg
-        topRight: aboutus-face-top-right.jpg
-        bottom: aboutus-face-bottom.jpg
-        left: aboutus-face-left.jpg
-      image: profile-photo-almas.jpg
-      firstName: Алмас
-      lastName: Акчабаев
-      position: CTO, Full stack developer
-      text: Web developer and CTO of our company. Loves programming and new trends in development. Came to us from the Finance
     Anuar:
       image: profile-photo-anchik.jpg
       firstName: Anuar
@@ -75,18 +59,6 @@ team:
       lastName: Bektilov
       position: Designer
       text: The youngest member of our team. Quickly learns design and constantly improves his results. Joined Intellection because does not like College at all
-    Aizhan:
-      image: profile-photo-aizh.jpg
-      firstName: Aizhan
-      lastName: Yessekina
-      position: Designer
-      text: Graduated from London College of Communication. Knows how to dance and play a guitar. Founder of AquaPoint
-    Assel:
-      image: profile-photo-asselya.jpg
-      firstName: Assel
-      lastName: Kasymbekova
-      position: Frontend Developer
-      text: Previously worked at Price Waterhouse Cooper. Now is interested in web development and usually stays at work till late
     Dariga:
       image: profile-photo-dari.jpg
       firstName: Dariga
@@ -123,4 +95,34 @@ team:
       lastName: Bukharbay
       position: Web, iOS and Android Developer
       text: NFactorialIncubator participant. Loves to program, making jokes and coming to work way too early
+    Vladimir:
+      image: profile-photo-vovan.jpg
+      firstName: Vladimir
+      lastName: Tokarev
+      position: Web developer
+      text: Very good at Web, Mobile development, as well as in Electronics and Robotics. Had trainings in HAX and TechStars startup accelerators. Learns new things extremely fast.
+    Galym:
+      image: profile-photo-galym.jpg
+      firstName: Galym
+      lastName: Nussipkhozhin
+      position: Front-end developer
+      text: The only one survived intern. A faithful partner of Vladimir. In good relationships with React and Redax.
+    Bayan:
+      image: profile-photo-bayan.jpg
+      firstName: Bayan
+      lastName: Nakipbekova
+      position: Manager
+      text: Responds to all customer questions and coordinates the work of employees. Provides administrative and economic support of the company.
+    Daniyar:
+      image: profile-photo-daniyar.jpg
+      firstName: Daniyar
+      lastName: Komashev
+      position: Android developer
+      text: Studies at SDU. Easily codes any application and teaches others how to do it!
+    Evgeniy:
+      image: profile-photo-zhenya.jpg
+      firstName: Evgeniy
+      lastName: Telegin
+      position: Front-end developer
+      text: Good at all. Codes in Swift, knows React and React Native. Always brings snacks to the office.
 ---
