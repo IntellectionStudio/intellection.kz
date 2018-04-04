@@ -1,31 +1,23 @@
 import {pure} from 'recompact';
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import SVGInline from 'react-svg-inline';
 
-class SVGImage extends Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    alt: PropTypes.string,
-  };
+const SVGImage = ({name, className, alt}) => {
+  const info = require(`../../../content/assets/icons/${name}`); // eslint-disable-line import/no-dynamic-require, global-require
 
-  static defaultProps = {
-    className: null,
-    alt: null,
-  };
+  return <SVGInline className={className} svg={info} alt={alt} />;
+};
 
-  render() {
-    const info = require(`../../../content/assets/icons/${this.props.name}`); // eslint-disable-line import/no-dynamic-require, global-require
+SVGImage.propTypes = {
+  name: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  alt: PropTypes.string,
+};
 
-    return (
-      <SVGInline
-        className={this.props.className}
-        svg={info}
-        alt={this.props.alt}
-      />
-    );
-  }
-}
+SVGImage.defaultProps = {
+  className: null,
+  alt: null,
+};
 
 export default pure(SVGImage);
