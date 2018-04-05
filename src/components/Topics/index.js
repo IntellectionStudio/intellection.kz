@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import enhanceCollection from 'phenomic/lib/enhance-collection';
 import {pure} from 'recompact';
 import React, {Component} from 'react';

@@ -1,4 +1,5 @@
 /* @flow */
+/* eslint-disable */
 
 import {pure} from 'recompact';
 import Popup from 'react-popup';
