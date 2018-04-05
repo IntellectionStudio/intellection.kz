@@ -96,13 +96,13 @@ team:
       position: Web, iOS and Android Developer
       text: Участник NFactorialIncubator. Умеет программировать мобильные приложения и Web технологии. Любит шутить и приходить на работу раньше всех
     Vladimir:
-      image: profile-photo-galym.jpg
+      image: profile-photo-vovan.jpg
       firstName: Владимир
       lastName: Токарев
       position: Web разработчик
       text: Хорошо разбирается в Web, Mobile разработке, а также в Электронике и Робототехнике. Проходил обучение в стартап акселераторах HAX и TechStars. Очень быстро самообучается.
     Galym:
-      image: profile-photo-vovan.jpg
+      image: profile-photo-galym.jpg
       firstName: Галым
       lastName: Нуссипхожин
       position: Front-end разработчик
