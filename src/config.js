@@ -6,7 +6,7 @@ const config = {
     },
     {
       title: 'Услуги',
-      path: '/services',
+      path: 'http://services.intellection.kz/',
     },
     {
       title: 'Стартапы',
